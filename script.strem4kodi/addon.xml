@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.4.0" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.5.0" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
