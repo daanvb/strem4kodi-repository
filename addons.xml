@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.1" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.2" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
@@ -18,7 +18,7 @@
     <platform>all</platform>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/daanvb/Stremio-for-Kodi-private</source>
-    <news>1.8.1: cyan geometric wordmark and play icon; dedicated Auto Play settings; independent movie, series and animation modes; manual Sources button and episode action; cinematic cards and GB ratings.</news>
+    <news>1.8.2: automatic retry for unavailable sources and known provider error videos; configurable retry limit; provider file sizes; clearer Playback setting inheritance; compact skip button and return-to-start icon.</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.png</fanart>
