@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.4" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.5" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
@@ -18,7 +18,7 @@
     <platform>all</platform>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/daanvb/Stremio-for-Kodi-private</source>
-    <news>1.8.4: remote-app text input targets the search field; clearer Type with phone action; fast IMDb movie/series suggestions with relevance filtering and Cinemeta fallback; redesigned search keyboard and poster suggestions.</news>
+    <news>1.8.5: native Kodi keyboard for search and hidden API keys; compact title suggestions; corrected rounded texture slices; smaller year/runtime/genre row and scrolling descriptions; private GitHub smart credits sync with offline cache, conflict merging and verified uploads; working catalogue thumbnail chooser and live stream resolution/audio/bitrate labels.</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.png</fanart>
