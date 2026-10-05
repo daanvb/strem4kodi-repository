@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addon id="repository.strem4kodi" name="Strem4Kodi Repository" version="1.0.1" provider-name="daanvb">
+<addon id="repository.strem4kodi" name="Strem4Kodi Repository" version="1.0.2" provider-name="daanvb">
   <extension point="xbmc.addon.repository" name="Strem4Kodi Repository">
     <dir>
-      <info compressed="false">https://daanvb.github.io/strem4kodi-repository/addons.xml</info>
-      <checksum verify="sha256">https://daanvb.github.io/strem4kodi-repository/addons.xml.sha256</checksum>
-      <datadir zip="true">https://daanvb.github.io/strem4kodi-repository/</datadir>
+      <info compressed="false">https://raw.githubusercontent.com/daanvb/strem4kodi-repository/main/addons.xml</info>
+      <checksum verify="sha256">https://raw.githubusercontent.com/daanvb/strem4kodi-repository/main/addons.xml.sha256</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/daanvb/strem4kodi-repository/main/</datadir>
       <hashes>false</hashes>
     </dir>
   </extension>
