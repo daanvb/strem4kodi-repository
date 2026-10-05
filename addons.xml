@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.7.0" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.0" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
@@ -18,7 +18,7 @@
     <platform>all</platform>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/daanvb/Stremio-for-Kodi-private</source>
-    <news>1.2.0: Up Next at IntroDB credits start with configurable fallback; clearer source rows show quality, size, provider, source type, video/HDR/codec and audio/language.</news>
+    <news>1.8.0: blue play logo; movie, series and animation automatic source profiles; closest-match fallback; cleaner cinematic cards; actual GB age classifications from TMDB; Windows repository checksum compatibility fix.</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.png</fanart>
