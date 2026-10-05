@@ -1,4 +1,4 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.5" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.6" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
@@ -17,7 +17,7 @@
     <platform>all</platform>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/daanvb/Stremio-for-Kodi-private</source>
-    <news>1.8.5: native Kodi keyboard for search and hidden API keys; compact title suggestions; corrected rounded texture slices; smaller year/runtime/genre row and scrolling descriptions; private GitHub smart credits sync with offline cache, conflict merging and verified uploads; working catalogue thumbnail chooser and live stream resolution/audio/bitrate labels.</news>
+    <news>1.8.6: restored styled search keyboard with movie/series autocomplete and recent history; native hidden Kodi input for API keys; unclipped catalogue menus; UK age badges; audio, quality and reported P7 FEL filters; structured stream metadata; live feeds open without an extra range probe; BetterPosters artwork and consolidated duplicate catalogues.</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.png</fanart>
