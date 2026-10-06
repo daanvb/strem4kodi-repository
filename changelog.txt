@@ -1,3 +1,15 @@
+1.8.14
+- Add an optional anonymous ChaptersDB fallback for missing embedded chapters, with exact episode matching, edition selection, validated start times and a bounded 24-hour cache.
+- Start Strem4Kodi videos with full subtitles off by default. Automatically enable matching English forced tracks, or download explicitly forced subtitles from enabled Stremio addons when the release filename matches exactly. Preserve manual choices and explicit AI subtitle mode; guard against episode changes during downloads.
+- Add Chapters to playback Settings for seekable files with chapter data. Show Kodi's chapter names, start times and saved bookmarks in a clean matching list, with native chapter seeking on Kodi 21.
+- Simplify the companion player bar to Play/Pause, Audio, Subtitles and Settings. Add quick subtitle language/Off/download choices and group advanced adjustments and Stop playback in a matching menu.
+- Install the companion player skin automatically as an app dependency from the repository. Include both packages in the feed; keep global skin activation an explicit choice. Requires Kodi 21 or later.
+- Add the optional Strem4Kodi Player companion skin with a clean progress bar, labelled controls and native Kodi playback settings.
+- Add a two-line audio track picker and active language/format display. Only report Atmos/DTS:X as detected when Kodi supplies the codec extension; keep track-title hints separate.
+- Smooth finish-time estimates to prevent adjacent-minute flicker while still following pauses, seeking and buffering.
+- Add a playback-control auto-hide setting: Kodi default, 5, 10 or 15 seconds. Default to five seconds of inactivity during identified Strem4Kodi playback.
+- Keep controls visible during pause, seeking, fast forward/rewind and audio/subtitle submenus; do not affect other Kodi playback or close unrelated dialogs.
+
 1.8.13
 - Dismiss the playback loading overlay directly on Kodi AV start, independently of media-details refresh.
 - Add an attempt-bound background check for missed playback callbacks and a 50-second overlay cleanup limit; never stop a running video during cleanup.

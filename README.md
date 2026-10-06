@@ -6,16 +6,19 @@
 
 **Your Stremio library, built for the Kodi remote.**
 
-Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own interface without replacing your Kodi skin.
+Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.13.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.14.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
-## What’s new in 1.8.13
+## What’s new in 1.8.14
 
-- Dismiss the loading screen directly when Kodi reports playback has started.
-- Independently check playback every 200 ms if that notification is missed, so video does not remain hidden behind the loading screen.
-- Keep loading-screen cleanup tied to its source attempt; an old retry cannot dismiss a newer attempt’s screen.
-- Avoid false startup failures when video is already running. Cleanup never stops the running video.
+- New Strem4Kodi Player companion skin: four clear controls, a slim seek bar, audio languages/formats and matching subtitle/settings menus.
+- Stable finish estimates and configurable playback-control auto-hide.
+- Embedded chapter navigation, with an optional ChaptersDB fallback and edition selection when embedded chapters are missing.
+- Full subtitles start off by default. Matching English forced tracks can be enabled automatically, with exact-release forced subtitle downloads from enabled Stremio addons when available.
+- The companion skin installs automatically with the app; activating it remains your choice. Requires **Kodi 21 or later**.
+
+To use the new player graphics, open **Strem4Kodi Settings → Appearance → Player appearance** and select **Strem4Kodi Player** in Kodi’s skin list. Restart Kodi after updating so its playback service reloads. [Player configuration and limitations](docs/player-skin.md).
 
 ## What Strem4Kodi includes
 
@@ -40,7 +43,7 @@ Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface,
 3. Open **Install from repository → Strem4Kodi Repository → Program add-ons → Strem4Kodi** and install it.
 4. Launch Strem4Kodi and connect your Stremio account using the sign-in screen.
 
-For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.4**) and app version (**1.8.13**) are different numbers.
+For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.4**) and app version (**1.8.14**) are different numbers.
 
 The repository page also provides a direct app ZIP. Installing it manually is an alternative; you do not need a script for routine updates.
 
@@ -61,6 +64,8 @@ Connect the same Stremio account on each device. Your installed Stremio addons p
 Strem4Kodi caches the generated layout and records `startup.layout` and `startup.visible` timings in the local performance profile and Kodi log. These measure the app's own startup, not power-on to Kodi ready.
 
 **Playback → Back during fullscreen playback** offers Kodi default, one press to stop, or two presses to stop. Double Back is the new default unless a previous installation explicitly disabled our Back override. First Back shows a reminder; another Back within three seconds stops playback. This keymap applies to Kodi fullscreen video. Player menus and dialogs retain their normal Back actions. Settings changed inside Strem4Kodi apply immediately; native Kodi add-on settings apply when Strem4Kodi next opens.
+
+**Development update:** Playback → Hide playback controls after adds a five-second inactivity timeout for the control bar during Strem4Kodi playback, with ten/fifteen-second and Kodi-default alternatives. Pause, seeking and audio/subtitle submenus keep the controls visible. This does not change other Kodi playback.
 
 ### Search providers and episode descriptions
 
