@@ -1,0 +1,577 @@
+1.8.10
+- Add optional MDBList episode-matrix enrichment for Supporter API keys, with a separate episode switch, exact season/episode matching, ratings-policy caching and six compact rating slots. Never use free-account aggregate scores as episode scores.
+- Adapt upstream 0d24a03: handle metadata-embedded episode streams through the existing AV parser and recover Kodi add-on context during updates only when the running context is Strem4Kodi.
+- Apply the same title validation to autocomplete and full search: hide entries without usable artwork, missing names/IDs and explicit people, episodes or games; use available background artwork when a poster is absent.
+- Restore original artwork for watched episodes if metadata retains Strem4Kodi's own spoiler-blur wrapper; use Kodi's standard transform URL for new blur images and preserve unrelated provider transformations.
+- Refresh visible episode thumbnails and watched markers when saved history changes, including episodes watched before spoiler blur was enabled, without moving selection or focus.
+- Tighten title search: share punctuation/accent-insensitive matching, rank exact titles, support year qualifiers and reject unrelated provider results. Query search catalogues with four bounded workers; retry punctuation-sensitive providers only on empty results.
+- Reuse equivalent/prefix suggestion caches, avoid duplicate requests and unnecessary list resets, deduplicate history without punctuation, and remove repeated Recent search captions.
+- Give search titles two lines with selected-text scrolling. Open selected suggestions and unique exact matches directly in media details; keep choices for ambiguous titles.
+- Keep development independent and add an on-demand upstream comparison report without automatic merges or publishing.
+- Remove unused appliance settings handlers and 39 obsolete release workflows, including old MKGA release-sync hooks. Keep the settings choice helper and current validation/publishing workflows.
+- Remove legacy donation links and support dialog, Nimbus API-key import and old product labels/User-Agent branding. Rename the external player configuration for Strem4Kodi; retain licence credits and compatibility identifiers.
+- Rewrite the project README for Strem4Kodi branding, current features, setup and troubleshooting.
+- Remove unused weather runtime, setup hooks, datasets and icons, obsolete donation assets and unused settings constants. Preserve saved user data and licensing.
+
+1.8.9
+- Clarify every settings description, load categories on highlight, and group API keys at the top. Pair Show Movie Rating and Show Episode Rating switches; movie switches also govern overall series ratings and enable their provider on episodes.
+- Show ten-point ratings with one decimal place; keep percentage scores as percentages.
+- Fix catalogue-thumbnail selection being overwritten and make longer settings explanations scroll.
+- Use one primary Play/Resume action for autoplay, or Choose source for manual selection. Switch to manual after exhausted automatic attempts; keep manual selection under More.
+- Remove Inspect selected and its HLS-only inspection code. Keep FEL/Profile 7 filters, hints and existing reported AV metadata.
+- Add episode spoiler protection: Off, Blur unwatched episodes, or Blur unless provider artwork. Preserve supplied thumbnails in the third mode; watched episodes use original supplied artwork.
+- Preserve catalogue positions, filters and loaded results when returning from Settings, including after appearance changes.
+- Expand stream rows so wrapped technical details have enough height; scroll longer selected details and audio.
+
+1.8.8
+- Replace expanding and duplicated detail icons with fixed Play/Resume, Choose source and More actions. Keep trailer, library and restart actions in a labelled menu.
+- Separate actions, season/section selectors, recommendation attribution and cards with consistent spacing; keep episode dates within card bounds.
+- Show a fullscreen playback loading screen with Cancel. Close on playback start, failure or timeout; prevent cancelled or timed-out attempts resolving late into playback.
+- Organise Sources, Trailers and Skip & Up Next into separate settings sections. Keep GitHub smart-credits setup only in Account & Stremio; clarify inherited preferences and rating availability.
+- Provider rating switches also control episode cards and IMDb title fallback. Recognise Rotten Tomatoes episode field aliases and fresh/rotten icons; never substitute series ratings for missing episode scores.
+- Use uniform source-filter controls, predictable remote navigation and more space for provider names.
+- Retain structured codec, channel, language, bit depth, frame rate, bitrate and Dolby Vision fields through collection and caching. Avoid duplicate Dolby Digital/DTS labels.
+- Add Inspect selected for bounded HLS manifest reads, reporting advertised resolution, codecs, bitrate and frame rate without fetching video segments. Missing information remains unknown; this does not verify FEL/MEL. No companion media analyser is included.
+
+1.8.7
+- Prevent live/sports progress from blocking movie/series uploads. Preserve old unsupported entries in a local archive and retry valid queued updates; retain account isolation and lost-response protection.
+- Sync now signals the service to retry immediately. Show live pending progress count and safe failure reasons, expand clipped notifications, and expose GitHub smart-credits token setup in Account & Stremio.
+- Detect reported P7 FEL from structured fields, top-level filenames, cached filenames and underscore-separated names. Filtering works with FEL hints hidden; keep Profile 7 with unknown enhancement layer separate from explicitly reported FEL and exclude P8 conversions.
+- Strip unsupported provider symbols from display text, avoid codec/size/bitrate duplication in Source labels, darken picker surfaces, wrap technical details and stop scrolling row labels.
+- Independently configure episode rating providers; add exact-season TMDB episode scores using the viewer's key. Other provider scores display only when supplied for the episode; no series rating substitution.
+- Animated movies use the Movies autoplay profile; Animation is now Animated series. Suppress automatic Continue Watching previews both while browsing and on details pages.
+- Space Similar, recommendation attribution and poster rows; arrange episode ratings and date on separate lines; redraw the PG badge with sharper lettering and sensible padding.
+
+1.8.6
+- Restore the styled search keyboard with title-only IMDb/Cinemeta suggestions, debounce, cached results and local recent searches. Keep hidden Kodi keyboard input for API keys and optional Kodi keyboard for phone searches.
+- Clean complete-row filter menus without scrolling labels or garbled provider separators; wider catalogue labels.
+- UK age-rating image badges using actual GB metadata, with space reserved to prevent clipping.
+- Source picker: source, audio, quality and video filters, including reported P7 FEL; remove codec selection from the picker.
+- Read structured resolution, audio and source data and common HD/FHD/UHD labels. Unknown data remains unknown.
+- Open live feeds directly in Kodi rather than consume or reject a session with an extra range probe. Live playback requires device verification.
+- Consolidate duplicate BetterPosters catalogue wrappers and apply artwork to IMDb-backed movies and series, preserving supplied styles where available.
+
+1.8.5
+- Fix catalogue thumbnail chooser preselection and parse live resolution dimensions, stereo and bitrate; distinguish live streams from file sizes.
+- Native Kodi keyboard for search and hidden keys, supporting phone remotes.
+- Compact title chooser, corrected nine-slice corners, compact hero metadata and scrolling descriptions.
+- Optional private GitHub smart credits sync: merge learned timings and series overrides, offline cache, SHA conflicts and upload verification.
+
+1.8.4
+- Search field is the default text-input target for Kodi remote apps; Type with phone opens Kodi native keyboard notifications.
+- Fast IMDb title autocomplete filters people and promotional entries, ranks relevant movies and series, and falls back to Cinemeta.
+- Debounced requests, instant recent/cached queries and bounded workers; stale results never replace a newer query.
+- Cleaner two-column search screen with poster thumbnails, content type and year.
+
+1.8.3
+- Redesigned Up Next card with larger artwork and profile-aware Play Next / Choose Source action.
+- Smart credits fallback learns the median from at least three observed episodes with reliable IntroDB markers, preferring the same season and similar runtime.
+- Episode menu presets override fallback per series; exact IntroDB markers still take priority. Learning and overrides are stored on this device.
+- Cleaner artwork-led episode cards, inline metadata, watched icons and slim progress.
+- Minimal poster and wide card framing, theme-aware focus and cropped wide artwork.
+
+1.8.2
+- Auto play tries the next eligible source after failure, preserving resume and excluding failed URLs.
+- Detect known ElfHosted error videos, HTTP errors and structured provider errors before playback.
+- Configurable automatic attempt limit; manual picker when exhausted.
+- Preserve provider-reported byte sizes through collection and cache; support binary units and decimal commas.
+- Rename inherited Auto Play preferences to Use Playback settings.
+- Compact skip control and standard return-to-start icon.
+
+1.8.1
+- Cyan geometric wordmark and matching play-symbol icon.
+- Dedicated Auto Play menu with separate movie, series and animation settings.
+- Independent Off, Highlight and Auto Play modes; choose sources manually at any time.
+
+1.8.0
+- New original blue folded-play logo.
+- Separate automatic stream selection profiles for movies, series and animation.
+- Highlight or play the best match, with closest-match fallback within the device quality ceiling.
+- Preserve resume and return to manual sources after playback failure.
+- Cleaner cinematic poster cards and wide thumbnail frames.
+- Actual GB age classifications from TMDB on media headers (requires a TMDB API key).
+- Repository checksums now use Kodi-compatible LF bytes on every platform.
+
+1.7.0
+- Removed Support and Weather menus, weather display and background weather refresh.
+- Per-catalogue posters or wide thumbnails in Discover and Appearance settings.
+- Kept TMDB attribution alongside its key in Ratings.
+
+1.6.0
+- Search suggestions, recent queries and native Kodi phone keyboard/paste.
+- Provider and language choice lists; clearer trailer settings and startup diagnostics.
+- Refined skip and Up Next cards; crisp context icons.
+- Optional TMDB cast/crew portraits and exact-title recommendations.
+- Conservative matching-genre recommendation fallback.
+- English defaults for source language and AI subtitle translation.
+
+v1.0.80
+- After a passing Raspberry Pi 3 low-power benchmark, ask the tester to explicitly confirm the remote-only couch test.
+- Store only a local boolean couch-pass flag and include it in the reviewed performance report; no raw model, device ID or extra hardware identifiers are added.
+- Reset couch validation whenever the benchmark does not pass or the hardware is not classified as Raspberry Pi 3.
+- MKGA independently re-checks every benchmark target and requires owner review before GitHub issue #47 can close.
+- Add regression coverage for the validation payload and confirmation rules.
+
+v1.0.79
+- Add Settings Ã¢â€ â€™ Support Ã¢â€ â€™ Run low-power benchmark for Raspberry Pi-class hardware.
+- Measure five-sample medians for cached Home, Home snapshot reads, Continue Watching SQLite, local account-state reads and stream-cache SQLite without making network requests.
+- Store benchmark timings plus a coarse hardware class (for example Raspberry Pi 3) in the existing reviewed privacy-safe performance report; never send the raw model or device ID.
+- Document a repeatable Raspberry Pi 3 couch/navigation pass and the low-power rules that must remain true.
+- Keep GitHub issue #47 open until an actual Raspberry Pi 3 result is reviewed.
+
+v1.0.78
+- Preserve provider-supplied rich Cast/Crew person metadata, including profile photos and character/job labels, while keeping initials fallback for name-only providers such as Cinemeta.
+- Show stream Audio and Language information explicitly alongside quality, video format, size and provider.
+- Convert flag-emoji language markers to plain two-letter codes so older Kodi fonts do not show missing/strange glyphs.
+- Keep Home sidebar focused and unfocused labels at the same size; focus remains visible through color and the left indicator.
+- Add regression coverage for the remaining UI/UX items in GitHub issue #39.
+
+v1.0.77
+- Keep a successfully extracted embedded subtitle usable when Gemini/MKGA translation is temporarily unavailable.
+- Treat AI translation as optional after embedded extraction instead of turning a provider timeout/quota/model failure into subtitle loss.
+- Preserve the translation failure as a sanitized Support diagnostic while clearly telling the viewer the original video subtitle remains active.
+- Add regression coverage for GitHub issue #40.
+
+v1.0.76
+- Make Home infinite catalog pagination independent of WindowXML D-pad callbacks on Fire TV and other Kodi devices.
+- Poll the active Home row selection while Home is visible and trigger the existing lazy loader when focus reaches the final four cards.
+- Keep the existing 16-item lightweight page size, provider skip cursor, duplicate filtering and background loading behavior unchanged.
+- Add regression coverage proving pagination is checked from the Home watcher as well as normal remote navigation.
+
+v1.0.75
+- Make the Settings left navigation and right settings panel visually distinguish selected state from actual D-pad focus.
+- Keep the inactive column selection dim instead of leaving both columns with the same full active highlight.
+- Show the bright purple focus background, accent marker and bright text only when that column actually owns focus.
+- Preserve existing left/right remote navigation behavior.
+- Add regression coverage for both Settings columns.
+
+v1.0.74
+- Refresh local Continue Watching immediately after a confirmed Stremio playback write-back instead of waiting for the 15-minute maintenance pass.
+- Resolve a completed series episode to its already-aired next episode from the metadata already loaded for playback, so the series stays at the front of Continue Watching.
+- Notify open Home and media-info windows after confirmed playback sync and patch their local UI state without another account network pull.
+- Refresh episode watched badges/resume state immediately after Stop/End while preserving the currently viewed season and episode-list position.
+- Add regression coverage for partial progress, completed-series next-episode pointers, local progress signaling and Home/Info refresh wiring.
+
+v1.0.73
+- Give full-episode BYOK subtitle translations time to finish instead of abandoning each request after 15 seconds.
+- Scale the request timeout by subtitle cue count and text size, up to 90 seconds per request.
+- Keep the existing 15-second timeout for short translations and preserve model fallback and cancellation behavior.
+- Add regression coverage for small, full-episode, text-heavy, and maximum-size subtitle requests.
+
+v1.0.72
+- Keep a confirmed Exit closed instead of returning to the launcher and reopening Stremio.
+- Return to Kodi Home after Exit dialogs close.
+- Ignore queued launch requests for three seconds after confirmed Exit; normal opening works again after that short guard.
+- Preserve Cancel behavior and add Exit/session cleanup regression tests.
+
+v1.0.71
+- Honor MKGA.TV Auto translate: turning it off skips both MKGA Cloud and local BYOK translation during playback.
+- Keep original subtitles available when automatic translation is disabled.
+- Handle an embedded-only subtitle source with no result without an unbound local variable error.
+- Add runtime preference coverage and strengthen isolated startup/Back/Exit lifecycle validation.
+
+v1.0.70
+- Restore the original proven two-press Back/Exit guard from before the September 30 exit-flow change.
+- First Back only focuses Home/sidebar and arms exit; it never opens the Exit dialog.
+- A separate second Back opens the Exit confirmation.
+- Remove the later page-aware/debounce exit experiments.
+
+v1.0.69
+- Debounce duplicate Kodi Back events so one remote press cannot both open the Home sidebar and trigger Exit.
+- Keep v1.0.68 AI playback-context retry and MKGA Repository support.
+
+v1.0.68
+- Fix AI subtitle startup race: wait briefly for playback context after Kodi onAVStarted instead of silently abandoning translation.
+- First Back on Home now visibly focuses Home in the sidebar; only the next Back opens Exit confirmation.
+- Back from other main pages still returns directly to Home first.
+
+v1.0.67
+- Back from Search, Discover, Library, Addons or Settings now returns to Home first.
+- Exit confirmation is shown only when Back is pressed from Home.
+- Keeps the one-press Home exit confirmation while avoiding accidental exit prompts elsewhere.
+
+v1.0.66
+- Fix MKGA.TV Smart Subtitles being silently blocked by the legacy local AI master switch.
+- When subtitle settings source is MKGA.TV, the website Smart Subtitles toggle is now authoritative.
+- Keep local master switch behavior only when Local settings are selected.
+
+v1.0.65
+- Read Skip Intro, Recap, Outro and Post-Credits preferences from MKGA Settings.
+- Allow each skip button type to be enabled or disabled independently from the MKGA account.
+- Keep all four skip preferences enabled by default for backward compatibility.
+
+v1.0.64
+- Add Supporter Skip Intro, Skip Recap, Skip Outro and Skip Post-Credits buttons.
+- Use IntroDB's free read API for per-episode/movie community timestamps; no IntroDB API key is required.
+- Cache IntroDB lookups locally for 24 hours and query only the item currently playing.
+- Keep the feature entitlement-controlled by MKGA Supporter status while the timestamp provider itself remains free.
+- Show IntroDB attribution on the skip overlay.
+
+v1.0.63
+- Keep the original subtitle visible immediately while AI translation runs in the background.
+- Replace the source subtitle only after a complete translated subtitle file is ready.
+- Allow MKGA-hosted AI translation for eligible Supporters without requiring a local Gemini BYOK key.
+- Stop long Gemini fallback chains: retry at most two models with a 15-second timeout each.
+- Fall back quickly to the original subtitle when MKGA Cloud and BYOK translation are unavailable.
+
+v1.0.62
+- Fix Home infinite-scroll cursor drift when providers return duplicate items.
+- Patch only changed Home rows instead of repopulating the full Home window.
+- Preserve focus, selection and unaffected pagination state during background refresh.
+- Move Stremio library, Continue Watching series resolution and addon-order sync out of the Home refresh path.
+- Keep periodic account/CW maintenance on a daemon worker.
+- Skip maintenance and stream prefetch while video playback is active.
+- Re-read account state after network I/O before saving to avoid overwriting concurrent playback progress.
+
+v1.0.61
+- Upgrade Streams SQLite cache with fresh/stale/expiry state.
+- Show last-known-good cached streams immediately while stale entries refresh in background.
+- Invalidate stream cache when Stremio provider/addon configuration changes.
+- Discard stream cache older than 24 hours.
+- Prefetch recent Continue Watching stream sources while Kodi is idle.
+- Limit background prefetch to two missing/stale titles per 15-minute cycle.
+- Never prefetch streams while video playback is active.
+- Move periodic Stremio/CW sync work off the Kodi UI thread.
+
+v1.0.60
+- Treat Stremio 1ms series pointers as unresolved next-episode state, not partial playback.
+- Verify the pointed episode has already aired before showing it in Continue Watching.
+- Do not mark a series finished merely because one metadata response has no next episode.
+- Mark finished only when series metadata positively reports an ended/canceled series.
+- Back off ambiguous metadata checks for 24 hours and retry immediately when Stremio state changes.
+- Rebuild Continue Watching SQLite with logic version 3.
+
+v1.0.59
+- Fix v1.0.58 Continue Watching over-import.
+- Exclude watched and 90%+ completed movies even when Stremio keeps a stale offset.
+- Treat 90%+/watched series episodes as unresolved until metadata confirms an already-aired next episode.
+- Keep future/unreleased next episodes out of Home.
+- Automatically rebuild the local Continue Watching SQLite index with corrected rules.
+
+v1.0.58
+- Persist all Continue Watching state in local SQLite instead of limiting completed-series checks.
+- Keep completed series ready for the next aired episode and re-check finished series for new episodes/seasons.
+- Refresh Stremio Continue Watching state in the background every 15 minutes.
+- Add MKGA server-side subtitle resolver using linked Stremio subtitle addons and cloud translation cache.
+- Prefer fast external subtitle sources before slow embedded extraction on remote 4K streams.
+- Add Noiro-style large-batch translation behavior and MKGA cloud fallback.
+- Use Kodi User-Agent for MKGA API requests to avoid Cloudflare bot filtering.
+
+v1.0.57
+- Remove the obsolete Premium category, pricing, checkout handoff and Premium purchase UI from Strem4Kodi.
+- Keep MKGA.TV account/session transport only for secure Account Hub and subtitle-profile sync.
+- Add Last MKGA sync and Sync from MKGA.TV now to the MKGA subtitle settings mode.
+- Add Orange subtitle color support for MKGA.TV profiles using Kodi's AARRGGBB color format.
+- Keep Support development optional and keep core functionality free.
+
+v1.0.56
+- Make MKGA.TV Account the recommended subtitle settings source for linked Stremio users.
+- Keep a This device - Local mode that restores the existing Kodi subtitle and AI preference controls.
+- Keep the local AI master switch, provider selection and Gemini API key on the Kodi device in both modes.
+- Never upload the user's Gemini API key to MKGA.TV.
+- Preserve existing local subtitle settings during upgrades so switching back to Local mode does not lose configuration.
+
+v1.0.55
+- Sync MKGA.TV Stremio Account Hub subtitle preferences into Strem4Kodi.
+- Refresh linked subtitle settings in the background about every 30 seconds without requiring an addon restart.
+- Apply website subtitle size, position and color through Kodi settings APIs.
+- Read preferred-language priority, Smart Subtitles, Auto Translate, Generate from Audio, source priority, community cache and timing preferences from the verified Stremio identity.
+- Keep local/free BYOK subtitle behavior available when MKGA.TV is unavailable.
+
+v1.0.54
+- Move Strem4Kodi Premium/session/entitlement control-plane URLs from the retired Vortexo site to MKGA.TV.
+- Move the anonymous report sync feed from Vortexo to MKGA Lab.
+- Keep existing free functionality intact if MKGA Premium services are unavailable.
+
+1.0.51 (2026-09-30)
+
+- Make legacy StremioELEC profile migration best-effort so malformed/read-only old profile data cannot block current addon startup or Stremio sign-in.
+- Add optional native Kodi Search keyboard support for Yatse/Kore, physical keyboards and Bluetooth HID input while keeping the Nimbus input as default.
+- Add regression coverage for broken legacy profiles and native Search keyboard wiring.
+
+1.0.50 (2026-09-30)
+
+- Reduce Home row materialization from 100 to 40 items so Kodi creates far fewer ListItems on constrained devices.
+- Limit account Home catalog refresh to two workers to avoid CPU/network contention on Raspberry Pi-class hardware.
+- Remove per-series network metadata verification from the Home refresh path; native Stremio progress state remains local and details playback verifies metadata when needed.
+- Keep the existing stale-while-revalidate Home snapshot so cached Home remains immediately usable while the bounded refresh runs in the background.
+- Add regression coverage for the low-power Home performance budget.
+- Add privacy-safe local PERF timings for cached Home, account sync, catalogs, library sync and Kodi UI population so N60/Pi bottlenecks can be measured from kodi.log.
+- Add Support Ã¢â€ â€™ Send performance report: an explicit reviewed report containing only allowlisted Home timings/counts and broad software/platform versions; no kodi.log, account data, URLs, titles, keys or device IDs.
+
+1.0.49 (2026-09-30)
+
+- Port Noiro's whole-track Gemini batching strategy to Strem4Kodi.
+- Pack a normal movie/episode subtitle into one validated Gemini request instead of dozens of small requests.
+- Split only unusually large tracks at 2,400 cues or 120,000 subtitle-text characters.
+- Use Noiro's proven Flash-Lite-first Gemini model order.
+- Remember the last successful Gemini model in the running Kodi service and try it first on the next translation.
+- Allow up to 120 seconds for a healthy whole-track Gemini response instead of prematurely timing out at 25 seconds.
+- Keep the v1.0.47 themed progress UI, LibreELEC FFmpeg Tools support, exact timestamp preservation, caching and sanitized AI diagnostics.
+
+1.0.48 (2026-09-30)
+
+- Keep the themed AI subtitle preparation and translation progress indicator.
+- Restore the proven 80-cue Gemini batch size after real N60 testing showed that 160-cue batches could fail on a full subtitle track.
+- Translate up to two validated 80-cue batches concurrently to reduce first-translation time without increasing per-request payload size.
+- Remove the old deliberate inter-batch wait.
+- Preserve the real embedded/Gemini diagnostic when no Stremio subtitle fallback exists instead of overwriting it with a generic source-selection error.
+- Keep exact cue IDs, cue count, original timestamps and translation caching unchanged.
+
+1.0.47 (2026-09-30)
+
+- Add a themed background progress indicator for AI subtitle preparation and translation.
+- Show video-source detection, source language, target language and translation percentage instead of appearing idle during the first translation.
+- Increase validated Gemini translation batches from 80 to 160 subtitle cues to reduce request count on full-length tracks.
+- Reduce the deliberate inter-batch delay from 2.0 seconds to 0.25 seconds.
+- Keep exact cue IDs, cue count and original timestamps unchanged.
+- Show cached translations as ready immediately and apply the same progress reporting to Stremio-addon fallback translation.
+
+1.0.46 (2026-09-30)
+
+- Detect the official LibreELEC FFmpeg Tools addon binaries for embedded subtitle extraction on LibreELEC/Kodi boxes.
+- Keep standard PATH, Homebrew and system ffmpeg/ffprobe discovery for other platforms.
+- Capture sanitized AI subtitle extraction, source-selection and translation failures as Last Error while keeping playback unaffected.
+- Make Support Ã¢â€ â€™ Report last error actionable for AI subtitle failures without storing API keys or stream URLs.
+- Keep Auto source behavior: video subtitles first for sync, then Stremio subtitle addons when a usable fallback exists.
+
+1.0.45 (2026-09-30)
+
+- Restore native Stremio playback progress write-back on Stop/End while keeping playback independent of sync failures.
+- Preserve real watched time separately from seek position, resume partial playback, and advance completed series playback to the next aired episode.
+- Keep completed final episodes and completed movies out of Continue Watching while preserving partial rewatches.
+- Add fast stale-while-revalidate Home startup using a local display-only snapshot, useful on slower devices such as Raspberry Pi.
+- Add theme-aware poster progress bars and native Kodi resume points.
+- Add state-aware long-press menus for episodes and Continue Watching.
+- Episode actions include Resume/Play, Play from Beginning, Mark as Watched/Unwatched, Mark Here as Watched/Unwatched and More Info.
+- Mark Here actions update every regular episode from the start of the series through the selected episode and never show both directions at once.
+- Continue Watching actions include Watch from Beginning, series navigation where applicable, watched-state toggle, Remove from Continue Watching and More Info.
+- Add addon-owned themed message, confirmation, select, text, input, notification and progress dialogs.
+- Run native watch-progress observation and AUTO AI subtitle preparation together in the persistent Kodi service.
+- Avoid unnecessary Python-window probing on a fresh Kodi session during cold startup.
+- Retain the 1.0.44 Linux Home-template resolution fix and Android Stremio sign-in retry hardening.
+
+1.0.44 (2026-09-29)
+
+- Fix Program entry/Home startup failures on Linux/Kodi installations where Kodi's reported addon path cannot directly resolve the bundled Nimbus XML template.
+- Resolve the Home template relative to the installed Strem4Kodi module first, with a translated-path compatibility fallback.
+- Make Android Stremio QR sign-in tolerate brief upstream/network polling failures instead of aborting after the first transient AccountError.
+- Retry temporary link polling failures with bounded backoff; only treat five consecutive failures as a real sign-in failure.
+- Add regression coverage for virtual/unusable Kodi addon paths and transient sign-in polling recovery.
+
+1.0.43 (2026-09-29)
+
+- Add optional free AI subtitle translation using the viewer's own Gemini API key.
+- Keep the Gemini key in local Kodi add-on settings and send it only to Google's Gemini API.
+- Translate complete SRT/WebVTT cue sets while preserving original cue IDs, order and timestamps.
+- Cache successful translated subtitle files and reuse them without another AI request.
+- Fall back to the original subtitle on missing keys, unsupported formats, quota/network failures or invalid/incomplete AI output.
+- Show Vortexo Premium hosted AI as In construction: planned $4.99 USD/month, no Gemini API key required, using the existing verified Stremio identity model.
+- Do not enable Premium checkout or hosted production AI before the website/backend release gates are complete.
+- Add Auto subtitle source selection: prefer a clean full subtitle embedded in the exact video for best sync, then fall back to the best subtitle returned by the user's Stremio addons.
+- Translate Gemini subtitles in validated batches, preserving every cue and timestamp; cache successful results and keep the original subtitle on any failure.
+- Add a full addon-owned Settings interface instead of Kodi's native Add-on Settings dialogs.
+- Reorganize Settings into General, Account & Stremio, Playback, Subtitles & AI, Appearance, Weather, Ratings, Cache, Support and Premium.
+- Keep list choices, confirmations, weather results, cache controls, AI controls and subtitle appearance inside the Strem4Kodi design; use Kodi's keyboard only when text must be entered.
+- Put Kodi subtitle font, size, style, color, position, background, border, shadow and style-override controls directly under Subtitles & AI.
+- Prevent Language/Region changes from reloading Kodi's global skin while the addon Settings window is open.
+- Keep Vortexo Premium visible only as an In construction $4.99 USD/month hosted-AI option; Free BYOK remains available without Premium.
+
+1.0.42 (2026-09-29)
+
+This release consolidates the locally reviewed interface, support and reliability updates.
+
+- Replace the cramped Sources popup with a theme-coloured, translucent stream panel over the hero, with reversible 3D transitions and readable source rows.
+- Hide any active lower row while choosing a stream, then restore its section, season, selection and scroll position on Back.
+- Remove the redundant Quality and All Sources controls; retain Refresh and Back inside the stream panel.
+- Add rounded episode cards with code, title and available runtime/rating/date badges. Keep the final episode fully visible instead of focusing the clipped teaser.
+- Add rounded controls, a narrower icon sidebar with Search above Home, top clock/date and bottom coloured weather.
+- Add country-scoped ZIP/postal-code and city selection; temperature units follow the addon's selected country.
+- Add configurable catalog, search, metadata and ratings cache lifetimes, custom values, Unlimited/off and separate size limits, with safe category clearing.
+- Add manual bug/feature submissions, review before sending, Report last error, and consistent issue-label classification.
+- Add stream-style addon cards/buttons, an automatically closing sidebar, and a private local QR configuration dialog with Refresh QR, Sync addons, Done and Back.
+- Improve launch recovery and account-save retries, including transient Windows folder/temporary-file locks; retain the previous account state on storage failures.
+- Add Dark Cinematic branding, optional live Stripe developer support, and four in-Kodi preview images.
+- Update the Kodi repository installer to 1.0.1 and publish all declared artwork beside the package, so both installed and repository information screens can load it.
+
+1.0.41
+- Redesign episode cards to match the approved TV layout.
+- Overlay "SxxExx - Episode title" directly on the episode thumbnail.
+- Add small dark translucent metadata pills for runtime, IMDb rating and release date when providers supply those fields.
+- Keep watched-state indicators and remote focus behavior.
+- Do not add episode descriptions to the cards.
+- Add regression coverage for episode metadata formatting and card XML.
+
+1.0.40
+- Fix Windows sign-in crashes on Python builds without os.fchmod.
+- Keep account-state permission hardening best-effort and convert persistent write failures into a stable account error.
+- Strengthen retry handling for transient Windows file locks while saving Stremio account state.
+- Fall back to sequential Home catalog loading when Kodi cannot create worker threads.
+- Reduce Home catalog worker count on constrained devices.
+- Show SxxExx episode numbers and episode titles directly under episode thumbnails.
+- Add regression tests for GitHub issues #11, #14, #15, #16 and #17.
+
+1.0.36
+- Add optional Kodi-start autolaunch using a service addon, with immediate/1/2/3/5 second delay choices.
+- Launch Strem4Kodi at the earliest supported Kodi service point while keeping the public setting off by default.
+- Guard against duplicate launches within the same Kodi session.
+- Make top-level Back show Exit or Cancel; Cancel leaves the Stremio UI unchanged and only Exit closes the app.
+- Keep normal Back navigation inside media-detail dialogs.
+
+1.0.35
+- Fix Stremio QR linking compatibility with current link-service response variants, including authKey/auth_key and nested/top-level response shapes.
+- Keep valid direct HTTPS debrid streams when providers also include infoHash or externalUrl metadata.
+- Preserve the safety rejection for streams that require proxyHeaders.
+- Add focused regression coverage for the public Reddit reports.
+
+1.0.34
+- Make the GitHub source and Kodi repository distribution public-ready while keeping Premium authority server-side on vortexo.app.
+- Add Vortexo Premium status and entitlement checks using the existing verified Stremio session; no second Vortexo login is required.
+- Keep free functionality available if the Premium service is unavailable, and reject client-supplied UID/payment/grant claims.
+- Add in-skin one-click error reporting with no browser or GitHub form.
+- Enable anonymous automatic crash reporting by default with an opt-out under Settings > Support.
+- Show a one-time notice that automatic anonymous reporting is enabled.
+- Send only addon/Kodi/Python versions, broad platform, error type, Error ID and sanitized basename/function/line stack frames.
+- Exclude tokens, addon/provider URLs, API keys, media URLs, account details, device IDs, local paths and raw exception messages.
+- Aggregate matching reports and sync them into GitHub issues without putting GitHub credentials in the Kodi addon.
+
+1.0.33
+- Add privacy-preserving GitHub issue drafts for unexpected sign-in, program and plugin errors.
+- Add Settings > Support > Report a problem on GitHub.
+- Generated reports include addon/Kodi/platform/error type and sanitized stack frames only; tokens, addon/provider URLs, API keys, media URLs and raw exception messages are excluded.
+
+1.0.32
+- Choose automatic trailers in Home hero only, Media info hero only, or both.
+- Keep the autoplay master switch and manual fullscreen Trailer button independent.
+
+1.0.31
+- Suspend Home previews while media info is open and stop queued previews on navigation.
+- Resolve hero trailers during the autoplay delay and cache direct URLs briefly.
+- Add a one-second autoplay delay while preserving existing delay choices.
+- Top-align wide hero videos and hide static artwork during playback.
+
+1.0.30
+- Add selection-delayed trailer previews to Home.
+- Match hero background dimensions and add video edge fade in Home and details.
+- Back stops hero previews and restores artwork.
+- Add reversible fullscreen Back-to-Stop setting for all Kodi videos.
+
+1.0.29
+- Autoplay trailers inside the details hero while keeping information and cards visible.
+- Keep the Trailer button fullscreen; cancel hero previews on navigation and exit.
+
+1.0.28
+- Built-in direct IMDb trailers in the native Kodi player, without external trailer addons or login.
+- Add trailer quality setting and preserve autoplay controls.
+- Route both embedded details and Kodi metadata trailer actions through this addon.
+
+1.0.27
+- Render media info dropdown menus above Similar posters and other cards.
+
+1.0.26
+- Derive Library types only from visible saved items, excluding removed and temporary sync records.
+- Reset stale Library type selection to All.
+
+1.0.25
+- Discover: separate type, catalog and genre dropdowns.
+- Library: separate type, sort and refresh controls.
+- Anchor menus under their controls; keep extra Discover options in the context menu.
+
+1.0.24
+- Open Similar by default for movies.
+- Match Discover and Library filter buttons and selectors to Nimbus detail controls.
+
+1.0.23
+- Display Similar titles with the Home portrait poster layout and focus.
+
+1.0.22
+- Move episode cards lower to give the season controls more space.
+
+1.0.21
+- Detail action icons expand to show their labels when focused.
+
+1.0.20
+- Refine detail action buttons with persistent labels, rounded Nimbus backgrounds and clear focus.
+- Restyle section and season selectors and their dropdown panels.
+
+1.0.19
+- Compact rating icons and values into one horizontal row.
+
+1.0.18
+- Fix blank Home on reopening Kodi by avoiding strptime in embedded Python.
+- Expand descriptions to six lines.
+
+1.0.17
+- Use original Nimbus metadata chips with provider date, certification, genres and runtime.
+- Expand hero description space below the ratings.
+
+1.0.16
+- Adapt Nimbus HorizontalRatingSlotTemplate and bundle its original rating icons.
+- Separate rating badges from metadata facts, with two rows for enabled sources.
+- Match Nimbus rating scales and add optional MDbList score.
+
+1.0.15
+- Select each MDbList rating source independently and display multiple enabled ratings.
+- Add trailer enable, playback provider, detail-screen autoplay and delay settings.
+- Cancel pending trailer autoplay on navigation or closing details.
+
+1.0.14
+- Add addon-owned focus color, animation and sidebar row dimming preferences.
+- Add title logo/text and hero description, rating, genre and runtime toggles.
+- Add cache information and clearing actions while preserving account data.
+
+1.0.13
+- Add optional addon-owned MDbList API key and rating source settings.
+- Import an existing Nimbus key without changing global skin settings.
+- Load focused title ratings asynchronously with 24-hour caching and Stremio rating fallback.
+
+1.0.12
+- Persist catalog and metadata responses in the Kodi addon profile for faster repeated browsing across restarts.
+- Bound response data to 64 MiB; expire catalogs after 15 minutes and metadata after 24 hours.
+- Keep account sync, streams and subtitles outside the browse cache.
+
+1.0.11
+- Prepare Continue Watching hero metadata before displaying Home, reusing loaded catalogs and fetching missing details concurrently.
+- Use cached hero details immediately on repeated focus.
+
+1.0.10
+- Use a small Filters button with the current selection shown separately beside it.
+
+1.0.9
+- Make the Discover/Library filter button compact and slide it with the rows when opening the sidebar.
+
+1.0.8
+- Use the Home hero, information and aligned poster rows in Discover and Library.
+- Read Discover catalogs and supported filters from account addons.
+- Sync saved library titles with type, sorting and refresh controls.
+- Enrich sparse library metadata for the hero without blocking navigation.
+- Remove the obsolete Bingie Home (10 rows) settings action.
+
+1.0.7
+- Build Home rows from the signed-in account catalog collection and order instead of two fixed Cinemeta rows.
+- Add account Continue Watching and support a dynamic number of rows.
+- Skip filtered-only catalogs and isolate unavailable providers; retain row alignment and next-row titles.
+
+1.0.6
+- Show the next available row title below the focused Home row.
+
+1.0.5
+- Align each focused Home row to the same position and hide the preceding row above the viewport.
+
+1.0.4
+- Load bundled masks and overlays directly to preserve the Nimbus appearance on other Kodi skins.
+- Replace locale Welcome with Stremio QR account linking and expiry countdown.
+- Require a saved login before opening Home; setup completion alone is not login.
+- Move language and location to add-on settings.
+- Add visible purple button focus and left/right navigation.
+
+1.0.3
+- Remove the unused Main skin and rename the active Nimbus skin folder to Main.
+- Update Home, welcome and detail window paths without changing their appearance.
+
+1.0.2
+- Combine program interface, media backend and subtitle service in one addon.
+- Rename the addon to Strem4Kodi.
+- Preserve the supplied Nimbus interface and assets.
+- Migrate legacy profile data without overwriting current data.
+- Open Nimbus on ordinary addon launch.

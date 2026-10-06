@@ -13,12 +13,8 @@
   <extension point="xbmc.subtitle.module" library="subtitle_service.py" />
   <extension point="xbmc.service" library="service.py" />
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Stremio experience on Kodi</summary>
-    <description lang="en_GB">Strem4Kodi brings your Stremio library to Kodi with cinematic browsing, configurable automatic playback, clear source selection, shared progress and IntroDB skip controls. Kodi handles video playback.</description>
     <platform>all</platform>
     <license>GPL-2.0-or-later</license>
-    <source>https://github.com/daanvb/Stremio-for-Kodi-private</source>
-    <news>1.8.9: clearer settings and API-key setup; paired movie/episode rating controls and decimal scores; optional episode spoiler blur; catalogue position retained after Settings; one primary playback action with manual fallback; taller stream rows; remove HLS inspection while retaining FEL/Profile 7 filters.</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.png</fanart>
@@ -27,8 +23,13 @@
       <screenshot>resources/previews/streams.jpg</screenshot>
       <screenshot>resources/previews/addons.jpg</screenshot>
     </assets>
-  </extension>
-</addon><addon id="repository.strem4kodi" name="Strem4Kodi Repository" version="1.0.2" provider-name="daanvb">
+  <summary lang="en_GB">Stremio experience on Kodi</summary>
+    <description lang="en_GB">Strem4Kodi brings your Stremio library to Kodi with cinematic browsing, configurable automatic playback, clear source selection, shared progress and IntroDB skip controls. Kodi handles video playback.</description>
+    <website>https://daanvb.github.io/strem4kodi-repository/</website>
+    <source>https://github.com/daanvb/strem4kodi-repository</source>
+    <news>1.8.10: independent Strem4Kodi branding; cleaner title search and search history; watched episode artwork refresh; optional MDbList episode ratings; embedded video stream support.</news>
+    </extension>
+</addon><addon id="repository.strem4kodi" name="Strem4Kodi Repository" version="1.0.3" provider-name="daanvb">
   <extension point="xbmc.addon.repository" name="Strem4Kodi Repository">
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/daanvb/strem4kodi-repository/main/addons.xml</info>
@@ -42,7 +43,8 @@
     <description lang="en_GB">Independent Strem4Kodi addon repository maintained by daanvb.</description>
     <platform>all</platform>
     <license>GPL-2.0-or-later</license>
-    <source>https://github.com/daanvb/Stremio-for-Kodi-private</source>
+    <website>https://daanvb.github.io/strem4kodi-repository/</website>
+    <source>https://github.com/daanvb/strem4kodi-repository</source>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.png</fanart>
@@ -51,6 +53,6 @@
       <screenshot>resources/previews/streams.jpg</screenshot>
       <screenshot>resources/previews/addons.jpg</screenshot>
     </assets>
-    <news>1.0.0: Initial independent repository.</news>
+    <news>1.0.3: Strem4Kodi artwork, public configuration guide and independent repository description.</news>
   </extension>
 </addon></addons>

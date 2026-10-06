@@ -1,4 +1,4 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.9" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.10" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
@@ -13,11 +13,12 @@
   <extension point="xbmc.service" library="service.py" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en_GB">Stremio experience on Kodi</summary>
-    <description lang="en_GB">Strem4Kodi program addon with embedded Nimbus Home and media information. Nimbus layouts and artwork by Ivar Brandt. Kodi remains the playback engine; the global Kodi skin is unchanged.</description>
+    <description lang="en_GB">Strem4Kodi brings your Stremio library to Kodi with cinematic browsing, configurable automatic playback, clear source selection, shared progress and IntroDB skip controls. Kodi handles video playback.</description>
     <platform>all</platform>
     <license>GPL-2.0-or-later</license>
-    <source>https://github.com/daanvb/Stremio-for-Kodi-private</source>
-    <news>1.8.8: clearer fixed Play/Resume, Choose source and More actions; better detail/card spacing; cancellable playback loading screen; reorganised settings without duplicate sync options; episode ratings respect provider switches; neater source filters; retain structured audio/video metadata and optional bounded HLS manifest inspection.</news>
+    <website>https://daanvb.github.io/strem4kodi-repository/</website>
+    <source>https://github.com/daanvb/strem4kodi-repository</source>
+    <news>1.8.10: independent Strem4Kodi branding; cleaner title search and search history; watched episode artwork refresh; optional MDbList episode ratings; embedded video stream support.</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.png</fanart>

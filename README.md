@@ -8,7 +8,7 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own interface without replacing your Kodi skin.
 
-**Latest published version: 1.8.10.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](https://github.com/daanvb/Stremio-for-Kodi-private/blob/strem4kodi/changelog.txt)
+**Latest published version: 1.8.10.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
 ## What’s new in 1.8.10
 
@@ -37,12 +37,12 @@ Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface,
 
 ## Install or update
 
-1. Download **Strem4Kodi Repository 1.0.2** from the [repository page](https://daanvb.github.io/strem4kodi-repository/).
+1. Download **Strem4Kodi Repository 1.0.3** from the [repository page](https://daanvb.github.io/strem4kodi-repository/).
 2. In Kodi, open **Settings → Add-ons → Install from zip file** and select the repository ZIP. Enable unknown sources if Kodi asks.
 3. Open **Install from repository → Strem4Kodi Repository → Program add-ons → Strem4Kodi** and install it.
 4. Launch Strem4Kodi and connect your Stremio account using the sign-in screen.
 
-For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.2**) and app version (**1.8.9**) are different numbers.
+For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.3**) and app version (**1.8.10**) are different numbers.
 
 The repository page also provides a direct app ZIP. Installing it manually is an alternative; you do not need a script for routine updates.
 
@@ -55,6 +55,14 @@ Open **Settings** inside Strem4Kodi. Changes save immediately; appearance change
 Connect the same Stremio account on each device. Your installed Stremio addons provide the catalogues, streams and subtitles they support. Manage them through **Stremio addons**.
 
 **Catalog manifest** selects the main catalogue/metadata provider; it does not replace your installed stream providers. Artwork enhancements such as BetterPosters are applied to matching titles rather than treated as separate browsing categories where wrappers can be identified.
+
+### Search providers and episode descriptions
+
+The typing suggestions use IMDb title autocomplete, with a Cinemeta fallback. Full Search queries Cinemeta and installed movie/series catalogue providers that declare search support, including AIOMetadata when configured. AIOStreams supplies stream sources rather than the title suggestion list.
+
+Series details merge installed metadata providers with the default metadata source. Episode descriptions depend on the returned episode metadata; an overall series synopsis is not an episode synopsis. The development changes above add a cached TMDB fallback for missing descriptions using your configured TMDB key.
+
+BetterPosters artwork wrappers are supported. Standard catalogues from other Stremio add-ons can be browsed, but companion features that depend on Stremio-specific detail links or playback events are not automatically implemented. More Like This and Content Deep Dive need dedicated contextual integration; they are excluded from generic title autocomplete.
 
 ### API keys
 
@@ -155,7 +163,7 @@ Watched episodes use the original supplied image. Off cannot reconstruct an imag
 | No Rotten Tomatoes episode badge | Check both rating switches and whether the metadata contains an actual episode score. MDbList’s show-level score is not an episode score. |
 | No trailer | Check Allow trailers, automatic preview scope and delay; some titles have no available trailer. |
 | Smart credits not shared | Check the GitHub token, its access to the fixed private repository and the Smart credits sync status. |
-| New update not listed | Refresh the repository and confirm repository 1.0.2. Check the app version separately. |
+| New update not listed | Refresh the repository and confirm repository 1.0.3. Check the app version separately. |
 
 Watch-progress sync uses Stremio’s library state, watched flags and episode state. It is not an exhaustive timestamped viewing-event history. Concurrent playback of the same title follows newer remote activity; queued older progress is protected against overwriting newer server state.
 
