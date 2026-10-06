@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.6" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.7" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
@@ -18,7 +18,7 @@
     <platform>all</platform>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/daanvb/Stremio-for-Kodi-private</source>
-    <news>1.8.6: restored styled search keyboard with movie/series autocomplete and recent history; native hidden Kodi input for API keys; unclipped catalogue menus; UK age badges; audio, quality and reported P7 FEL filters; structured stream metadata; live feeds open without an extra range probe; BetterPosters artwork and consolidated duplicate catalogues.</news>
+    <news>1.8.7: fix blocked watch-progress uploads from unsupported live/sports entries; immediate manual retries with readable status; GitHub credits setup in Account; stronger reported FEL/Profile 7 detection and separate unknown-layer filter; clean stream text, opaque source cards and wrapped details; configurable episode ratings with exact TMDB season scores; animated-series-only autoplay; no automatic previews for Continue Watching; recommendation spacing and improved PG badge.</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.png</fanart>
