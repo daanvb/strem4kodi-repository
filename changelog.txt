@@ -1,3 +1,12 @@
+1.8.11
+- Add configurable double Back to stop fullscreen video within three seconds, preserving explicitly disabled Back overrides and other user keymaps.
+- Cache generated Home layouts and record app startup timings; invalidate the cache when layout sources, appearance or row counts change.
+- Add a Home Up Next row for resolved next episodes. Open episode details before playback and keep partially watched episodes in Continue Watching.
+- Show the selected episode synopsis and fill missing descriptions from cached TMDB season metadata when a TMDB key is configured, independently of rating visibility.
+- Improve possessive title searches such as bobs / Bob's Burgers; merge bounded suggestion variants and preserve selection during updates.
+- Fix clipped search rows and give suggestions and recent searches a clear focus highlight.
+- Refresh independent Strem4Kodi fanart, metadata and configuration documentation.
+
 1.8.10
 - Add optional MDBList episode-matrix enrichment for Supporter API keys, with a separate episode switch, exact season/episode matching, ratings-policy caching and six compact rating slots. Never use free-account aggregate scores as episode scores.
 - Adapt upstream 0d24a03: handle metadata-embedded episode streams through the existing AV parser and recover Kodi add-on context during updates only when the running context is Strem4Kodi.

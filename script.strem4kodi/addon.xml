@@ -1,4 +1,4 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.10" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.11" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
@@ -18,7 +18,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.10: independent Strem4Kodi branding; cleaner title search and search history; watched episode artwork refresh; optional MDbList episode ratings; embedded video stream support.</news>
+    <news>1.8.11: configurable double Back to stop playback; cached startup layouts and launch timings; episode descriptions with TMDB fallback; Home Up Next row; improved title search and selection; refreshed Strem4Kodi artwork.</news>
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.png</fanart>

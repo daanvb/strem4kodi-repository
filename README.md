@@ -8,16 +8,16 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own interface without replacing your Kodi skin.
 
-**Latest published version: 1.8.10.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.11.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
-## What’s new in 1.8.10
+## What’s new in 1.8.11
 
-- Faster, more accurate title search with punctuation-insensitive matching, year qualifiers and direct opening of selected titles or unique exact matches.
-- Cleaner search history and wrapped title text; filter out incomplete entries, non-title records and results without artwork.
-- Refresh watched episode artwork when history changes and restore originals from retained Strem4Kodi spoiler transforms.
-- Optional MDBList episode scores for Supporter API keys, exact season/episode matching and six compact rating slots. Enable both MDBList rating switches under Ratings.
-- Support streams embedded in episode metadata while preserving AV/FEL details, and recover Kodi add-on context during updates.
-- Personalised documentation and removal of unused weather, donation assets and old branding. Keep licence credits and independent upstream comparison.
+- Double Back to stop fullscreen playback, with one-press and Kodi-default alternatives in Playback settings.
+- Cached Home layouts and local startup timings to help measure launch speed.
+- A Home **Up Next** row that opens the next episode’s details before you choose to play.
+- Selected episode descriptions, with cached TMDB enrichment for missing synopses when your key is configured.
+- Better possessive title matching, including **bobs → Bob’s Burgers**, and clear selection highlights in suggestions and recent searches.
+- Cleaner search rows without clipped second lines, plus refreshed Strem4Kodi artwork and documentation.
 
 ## What Strem4Kodi includes
 
@@ -29,7 +29,7 @@ Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface,
 | Auto Play | Separate profiles for movies, series and animated series; closest-match selection and attempts on alternative sources after failure. |
 | Trailers | Manual trailers and previews after a configurable focus delay. Continue Watching items do not autoplay trailers. |
 | IntroDB | Community intro, recap, outro and post-credits skip buttons when timestamps are available. |
-| Up Next | A floating next-episode card using credits markers, a series override, learned timing or a fallback. |
+| Up Next | A Home row opens resolved next-episode details; a floating playback card uses credits markers, a series override, learned timing or a fallback. |
 | Account sync | Shared library and playback progress through your Stremio account, with queued retries. |
 | Smart credits sync | Optional sharing of learned credits timings and series overrides through the private GitHub sync repository. |
 | Artwork and ratings | Per-catalogue posters/wide thumbnails, provider visibility and optional TMDB/MDbList enrichment. |
@@ -42,7 +42,7 @@ Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface,
 3. Open **Install from repository → Strem4Kodi Repository → Program add-ons → Strem4Kodi** and install it.
 4. Launch Strem4Kodi and connect your Stremio account using the sign-in screen.
 
-For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.3**) and app version (**1.8.10**) are different numbers.
+For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.3**) and app version (**1.8.11**) are different numbers.
 
 The repository page also provides a direct app ZIP. Installing it manually is an alternative; you do not need a script for routine updates.
 
@@ -56,11 +56,19 @@ Connect the same Stremio account on each device. Your installed Stremio addons p
 
 **Catalog manifest** selects the main catalogue/metadata provider; it does not replace your installed stream providers. Artwork enhancements such as BetterPosters are applied to matching titles rather than treated as separate browsing categories where wrappers can be identified.
 
+### Startup and the player Back button
+
+**General → Launch when Kodi starts** opens the app after Kodi starts its service. Set **Startup delay → Immediately** to add no intentional wait; the other options add 1, 2, 3 or 5 seconds. Kodi still loads its own skin and services first. Cached Home appears before catalogue refresh work.
+
+Strem4Kodi caches the generated layout and records `startup.layout` and `startup.visible` timings in the local performance profile and Kodi log. These measure the app's own startup, not power-on to Kodi ready.
+
+**Playback → Back during fullscreen playback** offers Kodi default, one press to stop, or two presses to stop. Double Back is the new default unless a previous installation explicitly disabled our Back override. First Back shows a reminder; another Back within three seconds stops playback. This keymap applies to Kodi fullscreen video. Player menus and dialogs retain their normal Back actions. Settings changed inside Strem4Kodi apply immediately; native Kodi add-on settings apply when Strem4Kodi next opens.
+
 ### Search providers and episode descriptions
 
-The typing suggestions use IMDb title autocomplete, with a Cinemeta fallback. Full Search queries Cinemeta and installed movie/series catalogue providers that declare search support, including AIOMetadata when configured. AIOStreams supplies stream sources rather than the title suggestion list.
+The typing suggestions use IMDb title autocomplete, with a Cinemeta fallback. Selecting a suggested title opens its details directly. Choose **Search** at the bottom of the keyboard to request the broader provider results; a unique exact suggestion can still open directly instead of showing a results page. Full Search queries Cinemeta and installed movie/series catalogue providers that declare search support, including AIOMetadata when configured. AIOStreams supplies stream sources rather than the title suggestion list.
 
-Series details merge installed metadata providers with the default metadata source. Episode descriptions depend on the returned episode metadata; an overall series synopsis is not an episode synopsis. The development changes above add a cached TMDB fallback for missing descriptions using your configured TMDB key.
+Series details merge installed metadata providers with the default metadata source. Episode descriptions depend on the returned episode metadata; an overall series synopsis is not an episode synopsis. Strem4Kodi adds a cached TMDB fallback for missing descriptions using your configured TMDB key.
 
 BetterPosters artwork wrappers are supported. Standard catalogues from other Stremio add-ons can be browsed, but companion features that depend on Stremio-specific detail links or playback events are not automatically implemented. More Like This and Content Deep Dive need dedicated contextual integration; they are excluded from generic title autocomplete.
 
