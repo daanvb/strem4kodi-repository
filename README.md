@@ -8,16 +8,15 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own interface without replacing your Kodi skin.
 
-**Latest published version: 1.8.11.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.12.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
-## What’s new in 1.8.11
+## What’s new in 1.8.12
 
-- Double Back to stop fullscreen playback, with one-press and Kodi-default alternatives in Playback settings.
-- Cached Home layouts and local startup timings to help measure launch speed.
-- A Home **Up Next** row that opens the next episode’s details before you choose to play.
-- Selected episode descriptions, with cached TMDB enrichment for missing synopses when your key is configured.
-- Better possessive title matching, including **bobs → Bob’s Burgers**, and clear selection highlights in suggestions and recent searches.
-- Cleaner search rows without clipped second lines, plus refreshed Strem4Kodi artwork and documentation.
+- New app and repository artwork paths so Kodi refreshes cached legacy branding; repository installer updated to **1.0.4**.
+- Bold, bright episode titles with space before the scrolling synopsis.
+- Search suggestions and recent searches highlight only when their list has focus.
+- A wider **Clear recent searches** button displays its full label.
+- BetterPosters and its poster ratings remain unchanged.
 
 ## What Strem4Kodi includes
 
@@ -37,12 +36,12 @@ Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface,
 
 ## Install or update
 
-1. Download **Strem4Kodi Repository 1.0.3** from the [repository page](https://daanvb.github.io/strem4kodi-repository/).
+1. Download **Strem4Kodi Repository 1.0.4** from the [repository page](https://daanvb.github.io/strem4kodi-repository/).
 2. In Kodi, open **Settings → Add-ons → Install from zip file** and select the repository ZIP. Enable unknown sources if Kodi asks.
 3. Open **Install from repository → Strem4Kodi Repository → Program add-ons → Strem4Kodi** and install it.
 4. Launch Strem4Kodi and connect your Stremio account using the sign-in screen.
 
-For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.3**) and app version (**1.8.11**) are different numbers.
+For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.4**) and app version (**1.8.12**) are different numbers.
 
 The repository page also provides a direct app ZIP. Installing it manually is an alternative; you do not need a script for routine updates.
 
@@ -171,7 +170,7 @@ Watched episodes use the original supplied image. Off cannot reconstruct an imag
 | No Rotten Tomatoes episode badge | Check both rating switches and whether the metadata contains an actual episode score. MDbList’s show-level score is not an episode score. |
 | No trailer | Check Allow trailers, automatic preview scope and delay; some titles have no available trailer. |
 | Smart credits not shared | Check the GitHub token, its access to the fixed private repository and the Smart credits sync status. |
-| New update not listed | Refresh the repository and confirm repository 1.0.3. Check the app version separately. |
+| New update not listed | Refresh the repository and confirm repository 1.0.4. Check the app version separately. |
 
 Watch-progress sync uses Stremio’s library state, watched flags and episode state. It is not an exhaustive timestamped viewing-event history. Concurrent playback of the same title follows newer remote activity; queued older progress is protected against overwriting newer server state.
 

@@ -1,4 +1,4 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.11" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.12" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
@@ -18,10 +18,10 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.11: configurable double Back to stop playback; cached startup layouts and launch timings; episode descriptions with TMDB fallback; Home Up Next row; improved title search and selection; refreshed Strem4Kodi artwork.</news>
+    <news>1.8.12: refreshed Kodi app and repository artwork paths; clearer episode titles; correct search focus highlighting; full Clear recent searches label. BetterPosters unchanged.</news>
     <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.png</fanart>
+      <icon>resources/branding/strem4kodi-icon-v2.png</icon>
+      <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
       <screenshot>resources/previews/home.jpg</screenshot>
       <screenshot>resources/previews/episodes.jpg</screenshot>
       <screenshot>resources/previews/streams.jpg</screenshot>

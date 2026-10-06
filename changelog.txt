@@ -1,3 +1,8 @@
+1.8.12
+- Replace metadata artwork paths for the app and repository to refresh Kodi's cached legacy branding. Release repository 1.0.4.
+- Make the selected episode title bold and bright, with separation from the scrolling synopsis.
+- Highlight search suggestions and history only while their list has focus; display the complete Clear recent searches label.
+
 1.8.11
 - Add configurable double Back to stop fullscreen video within three seconds, preserving explicitly disabled Back overrides and other user keymaps.
 - Cache generated Home layouts and record app startup timings; invalidate the cache when layout sources, appearance or row counts change.

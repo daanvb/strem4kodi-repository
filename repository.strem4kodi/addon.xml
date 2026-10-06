@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addon id="repository.strem4kodi" name="Strem4Kodi Repository" version="1.0.3" provider-name="daanvb">
+<addon id="repository.strem4kodi" name="Strem4Kodi Repository" version="1.0.4" provider-name="daanvb">
   <extension point="xbmc.addon.repository" name="Strem4Kodi Repository">
     <dir>
       <info compressed="false">https://raw.githubusercontent.com/daanvb/strem4kodi-repository/main/addons.xml</info>
@@ -16,13 +16,13 @@
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
     <assets>
-      <icon>icon.png</icon>
-      <fanart>fanart.png</fanart>
+      <icon>resources/branding/strem4kodi-icon-v2.png</icon>
+      <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
       <screenshot>resources/previews/home.jpg</screenshot>
       <screenshot>resources/previews/episodes.jpg</screenshot>
       <screenshot>resources/previews/streams.jpg</screenshot>
       <screenshot>resources/previews/addons.jpg</screenshot>
     </assets>
-    <news>1.0.3: Strem4Kodi artwork, public configuration guide and independent repository description.</news>
+    <news>1.0.4: fresh Strem4Kodi artwork paths replace cached legacy branding.</news>
   </extension>
 </addon>
