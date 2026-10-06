@@ -8,17 +8,17 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.14.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.15.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
-## What’s new in 1.8.14
+## What’s new in 1.8.15
 
-- New Strem4Kodi Player companion skin: four clear controls, a slim seek bar, audio languages/formats and matching subtitle/settings menus.
-- Stable finish estimates and configurable playback-control auto-hide.
-- Embedded chapter navigation, with an optional ChaptersDB fallback and edition selection when embedded chapters are missing.
-- Full subtitles start off by default. Matching English forced tracks can be enabled automatically, with exact-release forced subtitle downloads from enabled Stremio addons when available.
-- The companion skin installs automatically with the app; activating it remains your choice. Requires **Kodi 21 or later**.
+- Fixed Audio, Subtitles and Settings menus and replaced the oversized scrub arrows with a compact handle.
+- Matching pause, seek and information overlays replace inherited graphics during Strem4Kodi playback.
+- Back closes playback menus safely. Native adjustments also have a visible Back to playback button.
+- Watched episodes use a separate full-size artwork cache entry, including older watched history. Spoiler-setting changes refresh visible cards.
+- Better Posters now respects disabling. Standard posters replace stale decorated Continue Watching artwork; refreshed configured styles take precedence and no default rating-bearing style is invented.
 
-To use the new player graphics, open **Strem4Kodi Settings → Appearance → Player appearance** and select **Strem4Kodi Player** in Kodi’s skin list. Restart Kodi after updating so its playback service reloads. [Player configuration and limitations](docs/player-skin.md).
+Update both the app and companion skin through **Strem4Kodi Repository**, then **restart Kodi**. The skin dependency updates automatically; select **Strem4Kodi Settings → Appearance → Player appearance → Strem4Kodi Player** if you have not already activated it. Requires **Kodi 21 or later**. [Player configuration and limitations](docs/player-skin.md).
 
 ## What Strem4Kodi includes
 
@@ -43,7 +43,7 @@ To use the new player graphics, open **Strem4Kodi Settings → Appearance → Pl
 3. Open **Install from repository → Strem4Kodi Repository → Program add-ons → Strem4Kodi** and install it.
 4. Launch Strem4Kodi and connect your Stremio account using the sign-in screen.
 
-For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.4**) and app version (**1.8.14**) are different numbers.
+For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.4**) and app version (**1.8.15**) are different numbers.
 
 The repository page also provides a direct app ZIP. Installing it manually is an alternative; you do not need a script for routine updates.
 

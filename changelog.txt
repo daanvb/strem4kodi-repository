@@ -1,3 +1,11 @@
+1.8.15
+- Respect disabled Better Posters in Home and details, restore standard artwork from old CW snapshots, and prefer refreshed configured poster styles over stale CW artwork. Stop inventing a default rating-bearing poster style.
+- Restore watched episode thumbnails through a separate full-size Kodi cache entry, including previously watched history and legacy blur wrappers. Refresh artwork after spoiler-setting changes without moving selection.
+- Add a clear Back to playback button to native playback adjustments and explicit menu Back bindings; never treat Back in a modal menu as a double-Back stop request.
+- Fix Audio, Subtitles and Settings menus locating their matching layout.
+- Replace the oversized seek arrows with a compact 24-pixel thumb.
+- Replace inherited pause, seek and information graphics during Strem4Kodi playback with matching title, time and progress feedback. Preserve native overlays for other video and live TV.
+
 1.8.14
 - Add an optional anonymous ChaptersDB fallback for missing embedded chapters, with exact episode matching, edition selection, validated start times and a bounded 24-hour cache.
 - Start Strem4Kodi videos with full subtitles off by default. Automatically enable matching English forced tracks, or download explicitly forced subtitles from enabled Stremio addons when the release filename matches exactly. Preserve manual choices and explicit AI subtitle mode; guard against episode changes during downloads.
