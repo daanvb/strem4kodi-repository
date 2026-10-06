@@ -8,15 +8,14 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own interface without replacing your Kodi skin.
 
-**Latest published version: 1.8.12.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.13.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
-## What’s new in 1.8.12
+## What’s new in 1.8.13
 
-- New app and repository artwork paths so Kodi refreshes cached legacy branding; repository installer updated to **1.0.4**.
-- Bold, bright episode titles with space before the scrolling synopsis.
-- Search suggestions and recent searches highlight only when their list has focus.
-- A wider **Clear recent searches** button displays its full label.
-- BetterPosters and its poster ratings remain unchanged.
+- Dismiss the loading screen directly when Kodi reports playback has started.
+- Independently check playback every 200 ms if that notification is missed, so video does not remain hidden behind the loading screen.
+- Keep loading-screen cleanup tied to its source attempt; an old retry cannot dismiss a newer attempt’s screen.
+- Avoid false startup failures when video is already running. Cleanup never stops the running video.
 
 ## What Strem4Kodi includes
 
@@ -41,7 +40,7 @@ Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface,
 3. Open **Install from repository → Strem4Kodi Repository → Program add-ons → Strem4Kodi** and install it.
 4. Launch Strem4Kodi and connect your Stremio account using the sign-in screen.
 
-For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.4**) and app version (**1.8.12**) are different numbers.
+For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.4**) and app version (**1.8.13**) are different numbers.
 
 The repository page also provides a direct app ZIP. Installing it manually is an alternative; you do not need a script for routine updates.
 

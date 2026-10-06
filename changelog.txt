@@ -1,3 +1,8 @@
+1.8.13
+- Dismiss the playback loading overlay directly on Kodi AV start, independently of media-details refresh.
+- Add an attempt-bound background check for missed playback callbacks and a 50-second overlay cleanup limit; never stop a running video during cleanup.
+- Confirm already-running playback before checking the source startup timeout, avoiding a false failure when AV start was missed.
+
 1.8.12
 - Replace metadata artwork paths for the app and repository to refresh Kodi's cached legacy branding. Release repository 1.0.4.
 - Make the selected episode title bold and bright, with separation from the scrolling synopsis.
