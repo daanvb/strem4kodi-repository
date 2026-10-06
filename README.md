@@ -8,26 +8,23 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own interface without replacing your Kodi skin.
 
-**Latest published version: 1.8.9.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](https://github.com/daanvb/Stremio-for-Kodi-private/blob/strem4kodi/changelog.txt)
+**Latest published version: 1.8.10.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](https://github.com/daanvb/Stremio-for-Kodi-private/blob/strem4kodi/changelog.txt)
 
-## What’s new in 1.8.9
+## What’s new in 1.8.10
 
-- Clearer descriptions throughout Settings; highlighted categories open automatically and API keys live together at the top.
-- Paired **Show Movie Rating** and **Show Episode Rating** controls, with decimal scores such as **7.0**.
-- Optional spoiler protection: **Off**, **Blur unwatched episodes**, or **Blur unless provider artwork**.
-- Catalogue position and filters retained after visiting Settings, including appearance changes.
-- One primary **Play/Resume** or **Choose source** action, depending on your autoplay profile. Manual selection remains available under **More** during autoplay.
-- Taller source rows with room for wrapped technical details; longer selected details scroll.
-- Fixed catalogue-thumbnail selection and removed the limited HLS **Inspect selected** action. FEL/Profile 7 filters remain available.
-
-The next update also removes unused weather code, bundled weather data/icons, old product labels and obsolete donation links/assets. The source branch also includes tighter punctuation-insensitive title search, clearer history and direct opening of selected titles/exact matches. These unreleased changes do not alter the published 1.8.9 ZIP.
+- Faster, more accurate title search with punctuation-insensitive matching, year qualifiers and direct opening of selected titles or unique exact matches.
+- Cleaner search history and wrapped title text; filter out incomplete entries, non-title records and results without artwork.
+- Refresh watched episode artwork when history changes and restore originals from retained Strem4Kodi spoiler transforms.
+- Optional MDBList episode scores for Supporter API keys, exact season/episode matching and six compact rating slots. Enable both MDBList rating switches under Ratings.
+- Support streams embedded in episode metadata while preserving AV/FEL details, and recover Kodi add-on context during updates.
+- Personalised documentation and removal of unused weather, donation assets and old branding. Keep licence credits and independent upstream comparison.
 
 ## What Strem4Kodi includes
 
 | Feature | What it does |
 | --- | --- |
 | Browsing and details | Title artwork, scrolling descriptions, compact metadata, UK age-rating badges when supplied, cast photos and recommendations. |
-| Search | Ranked movie/series suggestions, punctuation-insensitive matching, recent searches and direct title opening, with a native Kodi keyboard option for phone input. Search improvements in the source branch are currently unreleased. |
+| Search | Ranked movie/series suggestions, punctuation-insensitive matching, recent searches and direct title opening, with a native Kodi keyboard option for phone input. |
 | Sources | Resolution, reported size, provider, video format, audio, language and other supplied technical information. Filter by source, quality, audio or video format. |
 | Auto Play | Separate profiles for movies, series and animated series; closest-match selection and attempts on alternative sources after failure. |
 | Trailers | Manual trailers and previews after a configurable focus delay. Continue Watching items do not autoplay trailers. |
@@ -66,7 +63,7 @@ All optional credentials are under **Settings → API keys**. API-key fields use
 | Key | Used for |
 | --- | --- |
 | TMDB | Cast photos, recommendations and exact-season TMDB episode scores. |
-| MDbList | Additional movie/overall-series ratings, including Rotten Tomatoes and Metacritic when returned. It does not supply missing episode scores for these cards. |
+| MDBList | Additional movie/overall-series ratings, including Rotten Tomatoes and Metacritic when returned. Supporter API keys can also provide the MDBList episode-rating matrix. |
 | GitHub credits sync token | Access to the private `daanvb/strem4kodi-sync` repository for learned credits and series overrides. |
 | Gemini | Optional subtitle translation; enable it separately under Subtitles & AI. |
 
@@ -109,6 +106,8 @@ CoreELEC on a suitable Ugoos setup, Shield, Fire TV and smart-TV Kodi installati
 Each **Show Movie Rating - [provider]** switch controls movies and the overall series score, and enables that provider for episodes. The immediately following **Show Episode Rating - [provider]** switch controls episode cards only. **Both switches must be on to show that provider on episodes.**
 
 Missing episode scores stay blank. Strem4Kodi never substitutes a show’s overall score for an episode score. TMDB episode scores need your TMDB key; Rotten Tomatoes, Trakt and Metacritic episode scores appear only when the episode metadata actually supplies them. Enabling a switch cannot create a score that the provider does not return.
+
+For MDBList episode scores, enter your key under **API keys**, then enable **Show Movie Rating - MDBList score** and **Show Episode Rating - MDBList** under **Ratings**. The [documented episode matrix](https://api.mdblist.com/docs/) requires an MDBList Supporter account. Free accounts return an aggregate summary, which is not displayed on episode cards. A single cached response supplies all seasons; scores are matched by season and episode number and labelled MDBList, not IMDb or Rotten Tomatoes.
 
 Scores out of ten show one decimal place. Percentage ratings remain percentages. **Appearance → Ratings** controls hero/details badges; use the episode switches for episode cards.
 
