@@ -1,5 +1,184 @@
-# Strem4Kodi Kodi repository
+<p align="center">
+  <img src="https://raw.githubusercontent.com/daanvb/strem4kodi-repository/main/script.strem4kodi/icon.png" width="160" alt="Strem4Kodi blue play logo">
+</p>
 
-Download feed: https://daanvb.github.io/strem4kodi-repository/
+# Strem4Kodi
 
-Independent addon based on https://github.com/0eroiQ/Stremio-for-Kodi at commit 390855b2dbec081f603349f8d3fe09174dd3e21f. GPL-2.0-or-later; original license and credits are included. ZIP packages contain the complete addon source.
+**Your Stremio library, built for the Kodi remote.**
+
+Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own interface without replacing your Kodi skin.
+
+**Latest published version: 1.8.9.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](https://github.com/daanvb/Stremio-for-Kodi-private/blob/strem4kodi/changelog.txt)
+
+## What’s new in 1.8.9
+
+- Clearer descriptions throughout Settings; highlighted categories open automatically and API keys live together at the top.
+- Paired **Show Movie Rating** and **Show Episode Rating** controls, with decimal scores such as **7.0**.
+- Optional spoiler protection: **Off**, **Blur unwatched episodes**, or **Blur unless provider artwork**.
+- Catalogue position and filters retained after visiting Settings, including appearance changes.
+- One primary **Play/Resume** or **Choose source** action, depending on your autoplay profile. Manual selection remains available under **More** during autoplay.
+- Taller source rows with room for wrapped technical details; longer selected details scroll.
+- Fixed catalogue-thumbnail selection and removed the limited HLS **Inspect selected** action. FEL/Profile 7 filters remain available.
+
+The next update also removes unused weather code, bundled weather data/icons, old product labels and obsolete donation links/assets. These cleanup changes are in the source branch; they do not alter the published 1.8.9 ZIP.
+
+## What Strem4Kodi includes
+
+| Feature | What it does |
+| --- | --- |
+| Browsing and details | Title artwork, scrolling descriptions, compact metadata, UK age-rating badges when supplied, cast photos and recommendations. |
+| Search | Movie/series suggestions, recent searches and an addon keyboard, with a native Kodi keyboard option for phone input. |
+| Sources | Resolution, reported size, provider, video format, audio, language and other supplied technical information. Filter by source, quality, audio or video format. |
+| Auto Play | Separate profiles for movies, series and animated series; closest-match selection and attempts on alternative sources after failure. |
+| Trailers | Manual trailers and previews after a configurable focus delay. Continue Watching items do not autoplay trailers. |
+| IntroDB | Community intro, recap, outro and post-credits skip buttons when timestamps are available. |
+| Up Next | A floating next-episode card using credits markers, a series override, learned timing or a fallback. |
+| Account sync | Shared library and playback progress through your Stremio account, with queued retries. |
+| Smart credits sync | Optional sharing of learned credits timings and series overrides through the private GitHub sync repository. |
+| Artwork and ratings | Per-catalogue posters/wide thumbnails, provider visibility and optional TMDB/MDbList enrichment. |
+| Subtitles | Kodi subtitle controls and optional translation using your own Gemini API key. |
+
+## Install or update
+
+1. Download **Strem4Kodi Repository 1.0.2** from the [repository page](https://daanvb.github.io/strem4kodi-repository/).
+2. In Kodi, open **Settings → Add-ons → Install from zip file** and select the repository ZIP. Enable unknown sources if Kodi asks.
+3. Open **Install from repository → Strem4Kodi Repository → Program add-ons → Strem4Kodi** and install it.
+4. Launch Strem4Kodi and connect your Stremio account using the sign-in screen.
+
+For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.2**) and app version (**1.8.9**) are different numbers.
+
+The repository page also provides a direct app ZIP. Installing it manually is an alternative; you do not need a script for routine updates.
+
+## First-time configuration
+
+Open **Settings** inside Strem4Kodi. Changes save immediately; appearance changes apply when you return to browsing.
+
+### Account & Stremio
+
+Connect the same Stremio account on each device. Your installed Stremio addons provide the catalogues, streams and subtitles they support. Manage them through **Stremio addons**.
+
+**Catalog manifest** selects the main catalogue/metadata provider; it does not replace your installed stream providers. Artwork enhancements such as BetterPosters are applied to matching titles rather than treated as separate browsing categories where wrappers can be identified.
+
+### API keys
+
+All optional credentials are under **Settings → API keys**. API-key fields use Kodi’s native keyboard without search suggestions. Open the field, then use the keyboard/text function in your Kodi phone remote to type or paste.
+
+| Key | Used for |
+| --- | --- |
+| TMDB | Cast photos, recommendations and exact-season TMDB episode scores. |
+| MDbList | Additional movie/overall-series ratings, including Rotten Tomatoes and Metacritic when returned. It does not supply missing episode scores for these cards. |
+| GitHub credits sync token | Access to the private `daanvb/strem4kodi-sync` repository for learned credits and series overrides. |
+| Gemini | Optional subtitle translation; enable it separately under Subtitles & AI. |
+
+Keys are saved on the device that you configure. Stremio progress sync does not copy these keys to other devices.
+
+### Sources and Auto Play
+
+Under **Sources**, set your preferred quality, video format, audio, language and provider. These preferences rank results; **Maximum stream quality** is the separate ceiling that hides known higher resolutions on this device. Unknown resolution stays available.
+
+For a Full HD screen, choose **Maximum stream quality → 1080p**. For a 4K device, set its own limit and preferences. Source preferences and remembered picker filters are local to each installation.
+
+Under **Auto Play**, configure each content profile:
+
+| Profile | Applies to |
+| --- | --- |
+| Movies | All movies, including animated movies. |
+| Series | Non-animated series episodes. |
+| Animated series | Animated series episodes only. |
+
+Choose **Off — choose manually**, **Highlight best match**, or **Auto play best match**. Each preference can inherit from **Sources** or override it for that profile. Autoplay uses the closest eligible match if no exact match exists, respects the maximum quality, and tries different sources up to **Maximum automatic attempts**. If automatic attempts are exhausted, the source picker offers manual selection.
+
+**Play/Resume** appears for autoplay; **Choose source** appears for manual selection. **More → Choose source manually** is available while autoplay is enabled.
+
+### Video formats and FEL
+
+The picker’s **Video** filter includes Dolby Vision, HDR and reported **Profile 7/FEL** options. **Show FEL source hints** controls the extra labels; disabling it does not remove the filters.
+
+These labels distinguish:
+
+- **P7 FEL reported**: the provider or filename explicitly claims Profile 7 with FEL.
+- **Profile 7 reported**: Profile 7 is reported, but the enhancement layer may be unknown or MEL.
+- **FEL disc available; stream unverified**: the community catalogue lists a FEL disc for this movie; the selected stream/edition has not been verified.
+
+A Dolby Vision or REMUX label alone does not prove FEL. The addon currently does not inspect the actual video bitstream before playback. A companion file analyser is a future project, not part of this release.
+
+CoreELEC on a suitable Ugoos setup, Shield, Fire TV and smart-TV Kodi installations use Kodi’s native playback capabilities. Supported formats depend on the device, operating system, Kodi build, stream and audio/video equipment. Full interface quality is the default; **Reduce interface load** is optional and does not change video decoding.
+
+### Ratings
+
+Each **Show Movie Rating - [provider]** switch controls movies and the overall series score, and enables that provider for episodes. The immediately following **Show Episode Rating - [provider]** switch controls episode cards only. **Both switches must be on to show that provider on episodes.**
+
+Missing episode scores stay blank. Strem4Kodi never substitutes a show’s overall score for an episode score. TMDB episode scores need your TMDB key; Rotten Tomatoes, Trakt and Metacritic episode scores appear only when the episode metadata actually supplies them. Enabling a switch cannot create a score that the provider does not return.
+
+Scores out of ten show one decimal place. Percentage ratings remain percentages. **Appearance → Ratings** controls hero/details badges; use the episode switches for episode cards.
+
+### Trailers
+
+Enable **Allow trailers** and **Play trailers automatically**, choose where previews may play, then set **Wait before playing a trailer**. Keep the same title highlighted for that delay; moving focus resets the wait. Previews use available direct IMDb trailers and your selected trailer quality. Continue Watching items are excluded from automatic previews.
+
+A title without a resolvable trailer will not preview. The configured delay does not guarantee immediate playback if the trailer request is still loading.
+
+### IntroDB and Up Next
+
+Under **Skip & Up Next**, enable IntroDB and the skip-button types you want. No IntroDB API key is required. Buttons appear only during a matching community marker; coverage varies by episode.
+
+Up Next offers the next regular aired episode, including across season boundaries. Its timing uses the episode’s credits marker first, followed by a series override, reliable learned timing, or **Up Next fallback timing**. **Learn credits timing per series** needs at least three played episodes with usable IntroDB markers; it does not guess credits by analysing video. Set a series-specific override through the episode menu when needed.
+
+To share learned credits and overrides:
+
+1. Create a fine-grained GitHub token restricted to the private **`daanvb/strem4kodi-sync`** repository, with **Contents: read/write** access.
+2. Enter it under **API keys → GitHub credits sync token** on each device.
+3. Enable **Account & Stremio → Sync smart credits between devices** and check **Smart credits sync** for the result.
+
+The sync repository is currently fixed in the code. A token for another repository will not work. GitHub sync carries credits timings and overrides, not watch progress or API keys.
+
+### Appearance and spoiler protection
+
+Choose your theme, focus colour, title logos and visible metadata under **Appearance**. **Catalogue thumbnails** sets Posters or Wide thumbnails separately for each installed catalogue.
+
+**Episode spoiler protection** offers:
+
+- **Off**: use supplied artwork, including any blur already added by the provider.
+- **Blur unwatched episodes**: soften artwork for unwatched episodes locally using Kodi’s texture handling.
+- **Blur unless provider artwork**: keep provider episode thumbnails untouched; soften fallback artwork when no episode thumbnail is supplied.
+
+Watched episodes use the original supplied image. Off cannot reconstruct an image the provider already blurred.
+
+## Sync and troubleshooting
+
+| What you see | What to check |
+| --- | --- |
+| Updates pending on Account sync | These are queued watch-progress changes, not app updates. Use Sync account now and read Progress upload status. |
+| Progress differs between devices | Use the same Stremio account; allow time for upload and idle refresh. Progress uploads during playback about every 30 seconds, with pause/stop checkpoints; idle devices refresh about every minute. |
+| No sources match | Clear picker filters, check Maximum stream quality, and confirm the account’s stream addons. A FEL filter requires an explicit layer report. |
+| Size/audio/video unreported | The provider may not supply that information. The addon parses available fields and release text; it does not download the full file to fill gaps. |
+| A source fails | Autoplay can try alternatives. Manual selection remains available; a source that plays an error video may need manual rejection because Kodi can treat it as successful playback. |
+| No Rotten Tomatoes episode badge | Check both rating switches and whether the metadata contains an actual episode score. MDbList’s show-level score is not an episode score. |
+| No trailer | Check Allow trailers, automatic preview scope and delay; some titles have no available trailer. |
+| Smart credits not shared | Check the GitHub token, its access to the fixed private repository and the Smart credits sync status. |
+| New update not listed | Refresh the repository and confirm repository 1.0.2. Check the app version separately. |
+
+Watch-progress sync uses Stremio’s library state, watched flags and episode state. It is not an exhaustive timestamped viewing-event history. Concurrent playback of the same title follows newer remote activity; queued older progress is protected against overwriting newer server state.
+
+## Data and privacy
+
+- Account credentials, API keys, caches, recent searches and queued progress are stored in Kodi’s Strem4Kodi addon profile on each device.
+- Account/library progress is shared with Stremio. Metadata, streams and subtitles are requested from the services/addons you configure.
+- IntroDB receives episode lookups. Optional Gemini translation sends subtitle content to Google.
+- Smart credits sync is opt-in and uses the private GitHub repository. The public FEL hints catalogue downloads without sending your viewing history.
+- Diagnostics remain local; no remote reporting endpoint is enabled in this project.
+
+## Source, builds and credits
+
+Development source: **`daanvb/Stremio-for-Kodi-private`**, branch **`strem4kodi`**. Public Kodi feed: **`daanvb/strem4kodi-repository`**, branch **`main`**. The source repository requires access; installable ZIPs contain the addon source.
+
+```sh
+python -m unittest discover -s tests
+python tools/build-stremio-addon.py --output dist
+```
+
+The addon ID is **`script.strem4kodi`**; repository ID is **`repository.strem4kodi`**. The repository builder requires an explicit HTTPS `--feed-url`. Use a new version for a new published build rather than replacing an existing release ZIP.
+
+Based on [Stremio-for-Kodi](https://github.com/0eroiQ/Stremio-for-Kodi), with Nimbus layouts/artwork credited to Ivar Brandt. Original contributor credits, Git history, bundled third-party notices and the **GPL-2.0-or-later** license are retained. [IntroDB](https://introdb.app/), TMDB, IMDb and MDbList supply the respective external metadata; the [community FEL disc catalogue](https://github.com/Appz4Fun/fel-dolby-vision-movies) supplies disc hints.
+
+Strem4Kodi uses the TMDB API but is not endorsed or certified by TMDB. It is an unofficial community project, not endorsed by Kodi or Stremio. Strem4Kodi’s cyan wordmark and blue play branding belong to this project.
