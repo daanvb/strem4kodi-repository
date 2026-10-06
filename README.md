@@ -20,14 +20,14 @@ Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface,
 - Taller source rows with room for wrapped technical details; longer selected details scroll.
 - Fixed catalogue-thumbnail selection and removed the limited HLS **Inspect selected** action. FEL/Profile 7 filters remain available.
 
-The next update also removes unused weather code, bundled weather data/icons, old product labels and obsolete donation links/assets. These cleanup changes are in the source branch; they do not alter the published 1.8.9 ZIP.
+The next update also removes unused weather code, bundled weather data/icons, old product labels and obsolete donation links/assets. The source branch also includes tighter punctuation-insensitive title search, clearer history and direct opening of selected titles/exact matches. These unreleased changes do not alter the published 1.8.9 ZIP.
 
 ## What Strem4Kodi includes
 
 | Feature | What it does |
 | --- | --- |
 | Browsing and details | Title artwork, scrolling descriptions, compact metadata, UK age-rating badges when supplied, cast photos and recommendations. |
-| Search | Movie/series suggestions, recent searches and an addon keyboard, with a native Kodi keyboard option for phone input. |
+| Search | Ranked movie/series suggestions, punctuation-insensitive matching, recent searches and direct title opening, with a native Kodi keyboard option for phone input. Search improvements in the source branch are currently unreleased. |
 | Sources | Resolution, reported size, provider, video format, audio, language and other supplied technical information. Filter by source, quality, audio or video format. |
 | Auto Play | Separate profiles for movies, series and animated series; closest-match selection and attempts on alternative sources after failure. |
 | Trailers | Manual trailers and previews after a configurable focus delay. Continue Watching items do not autoplay trailers. |
