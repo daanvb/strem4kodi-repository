@@ -1,7 +1,7 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.15" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.16" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="skin.strem4kodi" version="0.1.4" />
+    <import addon="skin.strem4kodi" version="0.1.5" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
   </requires>
   <extension point="xbmc.python.script" library="default.py">
@@ -19,7 +19,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.15: fix playback menus, compact seek handle, matching pause/seek/info overlays, safe Back from native menus, restored watched thumbnails and Better Posters disabled/configured-style handling. Requires Kodi 21+. Restart Kodi after updating.</news>
+    <news>1.8.16: preserve AIOMetadata customised posters, restore watched thumbnails from its blur proxy, retain provider episode artwork when merging metadata, and correct scrubber sizing and alignment. Requires Kodi 21+. Restart Kodi after updating.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>

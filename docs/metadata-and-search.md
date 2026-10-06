@@ -1,0 +1,25 @@
+# Photos, recommendations and search
+
+Strem4Kodi uses your installed Stremio metadata providers first for cast and crew. To supplement their names with portraits, open Settings → API keys and add your own TMDB API key. The same key enables recommendations for the exact title and remains on this device. IMDb identities are resolved through TMDB's external-ID lookup; names are never guessed. TV credits cover the entire series, rather than only its newest season.
+
+Without a key, or when TMDB cannot supply recommendations, the Similar section uses matching-genre catalogue entries. Animated shows require an Animation match. Results without genre information are omitted. The source is displayed in the section's status text. This conservative fallback is not a personalised recommendation engine.
+
+Photos may still be unavailable for individual people. Provider portraits take precedence; initials remain when there is no image. Credits are attributed in Settings → Ratings. This product uses the TMDB API but is not endorsed or certified by TMDB.
+
+AIOMetadata can apply Better Posters itself. Those images remain part of AIOMetadata's configuration and are independent of the separate Better Posters add-on switch in Strem4Kodi. Provider-supplied poster styles are preserved. Matching refreshed AIOMetadata catalogue artwork also updates old Continue Watching snapshots.
+
+Episode artwork follows the primary metadata provider, with other providers filling missing fields and episodes. AIOMetadata's “Blur episode thumbnails” option supplies already blurred images even for watched episodes. Strem4Kodi restores the original URL carried by its explicit blur endpoint once the episode is watched. Unwatched provider thumbnails stay unchanged in “Blur unless provider artwork” mode. An image that is permanently blurred without a recoverable original URL cannot be reconstructed; turn off provider blur and use Strem4Kodi's “Blur unwatched” option to let the app control spoiler protection.
+
+Search suggests only movies and series after a short typing pause. Fast IMDb title suggestions use Cinemeta as a fallback; installed search providers are queried when a full search is needed. Suggestions and results share punctuation/accent-insensitive matching: “bobs burgers”, “Bob’s Burgers” and “bobs, burgers” match the same title. Exact titles rank first; a trailing year can distinguish editions, while numbers belonging to a title (such as Blade Runner 2049) are preserved. Unrelated provider results and partial-word matches are rejected.
+
+Selecting a suggested movie or series opens its details directly using its ID. Search also opens one exact match directly, but shows choices when several titles share the name. Suggestions retain the year/type so films and remakes can be distinguished. History remains local, keeps the latest twenty queries and deduplicates punctuation variants; rows do not repeat a Recent search subtitle.
+
+Equivalent queries share a bounded suggestion cache. Prefix results appear while a fresh lookup runs, stale replies cannot replace a different query, and duplicate inflight lookups are suppressed. Full search uses at most four concurrent catalogue requests and preserves provider order for equal-ranked matches. A punctuation retry occurs only for an empty successful response, never for a provider error or unrelated response.
+
+The search screen has room for two-line titles; longer focused text scrolls. Choose Kodi keyboard to enter/paste using a paired Kodi remote app. API-key settings retain the native Kodi keyboard without title autocomplete.
+
+Preferred stream providers are selectable installed stream addons. Preferred audio language is a list, defaulting to English. Any provider and Any language are available. Explicitly saved language choices are retained. English is also the default AI subtitle translation target; the enum order remains stable for existing selections.
+
+Trailer previews use the selected start delay for both While browsing and On details pages. Navigation cancels the pending preview. The timer is an earliest start time, because resolving a trailer may take longer. Startup failures show a brief status rather than silently hiding the issue. A live IMDb trailer lookup was verified during development; Android, CoreELEC and other Kodi players still require device validation.
+
+In 1.7.0 the Support and Weather menus and weather display were removed. Select a catalogue under Settings → Appearance → Catalogue thumbnails to choose Posters or Wide thumbnails. Discover also offers Thumbnail layout in its catalogue menu. Choices are local to the device and shared between that catalogue’s Home row and Discover. Images keep their proportions when only a tall poster is available.

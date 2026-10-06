@@ -1,3 +1,9 @@
+1.8.16
+- Match seek track and handle canvas heights to Kodi slider scaling, keeping the visible scrub handle compact and centred on the progress line.
+- Preserve AIOMetadata's configured posters independently of the standalone Better Posters toggle; refresh matching Continue Watching artwork from current AIOMetadata catalogue entries.
+- Restore the original image behind AIOMetadata's explicit blur proxy for watched episodes, including old locally blurred thumbnails. Keep unwatched provider artwork protected.
+- Merge fallback episode metadata by episode instead of replacing the primary provider's artwork with whichever provider returns the longest episode list.
+
 1.8.15
 - Respect disabled Better Posters in Home and details, restore standard artwork from old CW snapshots, and prefer refreshed configured poster styles over stale CW artwork. Stop inventing a default rating-bearing poster style.
 - Restore watched episode thumbnails through a separate full-size Kodi cache entry, including previously watched history and legacy blur wrappers. Refresh artwork after spoiler-setting changes without moving selection.

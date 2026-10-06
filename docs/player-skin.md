@@ -7,13 +7,13 @@ screens and native audio, subtitle, video, PVR and accessibility settings.
 
 ## Install and activate
 
-1. Update Strem4Kodi to **1.8.15** through **Strem4Kodi Repository** on Kodi 21 or later. Kodi installs the companion skin automatically.
+1. Update Strem4Kodi to **1.8.16** through **Strem4Kodi Repository** on Kodi 21 or later. Kodi installs the companion skin automatically.
 2. Restart Kodi so the updated playback service reloads.
 3. Open **Strem4Kodi Settings > Appearance > Player appearance**, then select **Strem4Kodi Player** under Kodi **Interface > Skin**.
 4. Play a title through Strem4Kodi. Open playback controls with your remote.
 
-For direct ZIP installation, install `skin.strem4kodi-0.1.4.zip` first, then
-`script.strem4kodi-1.8.15.zip`, using Kodi’s **Install from zip file**.
+For direct ZIP installation, install `skin.strem4kodi-0.1.5.zip` first, then
+`script.strem4kodi-1.8.16.zip`, using Kodi’s **Install from zip file**.
 
 You can return to your previous skin through the same Kodi setting. Installing
 the ZIP does not silently change your skin. Normal Kodi playback uses the
