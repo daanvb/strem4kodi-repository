@@ -58,3 +58,7 @@ No release or public repository changes have been made for this pass.
 ## 1.8.19 corrections
 
 Movie/series metadata choices respect resource-specific content types; sports-only metadata is excluded. Rating priority selects a metadata supplier, not a guarantee of rating coverage. First and repeat launch timings now occupy separate rows and display seconds. Catalogue artwork is a placeholder until the configured metadata endpoint is checked; resolved artwork is cached for 15 minutes and retains exact provider URLs.
+
+## 1.8.20 poster update safeguards
+
+Incremental poster updates accept preferred provider artwork only; ordinary catalogue placeholders cannot replace it. Ownership is preserved when the image URL is unchanged. Background poster requests use the normal 15-second metadata timeout and still run in bounded batches off the interface thread. Cross-row tests cover three reported titles, but do not reproduce the user's configured provider responses or verify live artwork delivery.

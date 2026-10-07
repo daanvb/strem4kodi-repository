@@ -1,3 +1,9 @@
+1.8.20
+- Prevent ordinary catalogue artwork from overwriting preferred provider posters during incremental updates, regardless of catalogue row order.
+- Preserve preferred artwork ownership even when the resolved image URL is unchanged.
+- Allow background configured-poster requests 15 seconds instead of 4, matching normal metadata requests without blocking the interface.
+- Add cross-row regression checks using Boardwalk Empire, Project Hail Mary and Bob's Burgers. These are test fixtures, not title-specific app rules; live configured-provider verification remains pending.
+
 1.8.19
 - Exclude sports/channel-only metadata from movie and series details, artwork and rating choices, including resource-specific type restrictions.
 - Clarify metadata rating priority and available suppliers; explain empty provider choices rather than opening a one-option selector.
