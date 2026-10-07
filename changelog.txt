@@ -1,3 +1,9 @@
+1.8.19
+- Exclude sports/channel-only metadata from movie and series details, artwork and rating choices, including resource-specific type restrictions.
+- Clarify metadata rating priority and available suppliers; explain empty provider choices rather than opening a one-option selector.
+- Verify catalogue artwork against the configured metadata endpoint in background batches. Prefer fresh resolved posters over catalogue placeholders, preserving exact AIOMetadata customisation URLs and watch progress.
+- Separate first and repeat launch measurements into readable rows and display startup/background refresh durations in seconds.
+
 1.8.18
 - Add a Providers settings page for metadata, artwork, supplied ratings, search, streams and subtitles. Explain overlapping capabilities and fall back when a chosen add-on is disabled or removed.
 - Apply disabled catalogue choices consistently in Discover, cached Home and stale selections; refresh Home after add-on changes and cancel outdated background work.

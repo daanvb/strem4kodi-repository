@@ -8,7 +8,13 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.18.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.19.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.19
+
+- Sports-only metadata is excluded from movie/series provider choices, and supplier descriptions explain what metadata support does and does not guarantee.
+- Configured AIOMetadata posters are checked in the background and take priority over older catalogue images, preserving integrated poster customisations.
+- First and repeat startup measurements have separate rows, with durations displayed in seconds.
 
 ## What's new in 1.8.18
 
@@ -48,7 +54,7 @@ Update both the app and companion skin through **Strem4Kodi Repository**, then *
 3. Open **Install from repository → Strem4Kodi Repository → Program add-ons → Strem4Kodi** and install it.
 4. Launch Strem4Kodi and connect your Stremio account using the sign-in screen.
 
-For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.4**) and published app version (**1.8.18**) are different numbers.
+For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.4**) and published app version (**1.8.19**) are different numbers.
 
 The repository page also provides a direct app ZIP. Installing it manually is an alternative; you do not need a script for routine updates.
 

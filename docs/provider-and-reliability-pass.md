@@ -54,3 +54,7 @@ On a reachable Kodi device, verify:
 5. Verify native adjustment dialogs, chapter controls, loading-screen dismissal and subtitle defaults, then confirm foreign playback/live TV keeps its native controls.
 
 No release or public repository changes have been made for this pass.
+
+## 1.8.19 corrections
+
+Movie/series metadata choices respect resource-specific content types; sports-only metadata is excluded. Rating priority selects a metadata supplier, not a guarantee of rating coverage. First and repeat launch timings now occupy separate rows and display seconds. Catalogue artwork is a placeholder until the configured metadata endpoint is checked; resolved artwork is cached for 15 minutes and retains exact provider URLs.
