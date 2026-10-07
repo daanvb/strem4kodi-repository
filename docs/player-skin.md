@@ -51,8 +51,7 @@ Selections are discarded if playback moves to another file while a menu is open.
 ## Chapters
 
 During playback, open **Settings > Chapters** to see the file's chapter names and
-start times and jump to a chapter. The matching chapter/bookmark dialog uses Kodi's
-native chapter handling, including its current-position selection, on Kodi 21.
+start times and jump to a chapter. The Strem4Kodi chapter picker uses the same positions as the timeline and selects the current chapter on opening. It does not open Kodi's bookmarks menu.
 Saved Kodi bookmarks may also appear in the list; its bookmark buttons retain
 their normal Kodi behavior and local storage.
 
@@ -202,3 +201,15 @@ feedback visible indefinitely. New remote input, a pause, buffering or a new
 video clears the suppression. Recent actual seeks extend the timeout; open
 Audio, Subtitles, Settings, chapter selection and other modal menus are left
 alone. Kodi default retains Kodi's own hiding behaviour.
+
+Trailer previews and the Trailer button use the same cancellable hero playback route. If Kodi opens fullscreen during an owned preview, the app returns it to the original browsing window while leaving unrelated video, navigation and open player dialogs alone. This needs a device check on Kodi.
+
+With Strem4Kodi video playing in the companion skin, Up does nothing while the playback controls are closed. Press OK to open controls, then Up for scrubbing and Up again for chapter selection. The fullscreen chapter/large-forward-jump shortcut is suppressed only for owned custom-player video; live TV and other playback retain Kodi behaviour. Left, Right and Down retain their existing bindings. The navigation keymap is installed when opening Strem4Kodi, independently of the Back preference.
+
+The second Up press is handled explicitly while the scrub bar has focus. Settings > Chapters provides a separate chapter list. Controls also time out when Kodi reports them as modeless; open options and chapter menus remain visible until dismissed.
+
+## Resume source memory
+
+With automatic source selection, Resume first tries the last successful source for that exact movie or episode. Success requires five seconds of real advancing playback, not just opening a source or seeking to the saved position. The matching source must still appear in current results and pass active filters and the maximum quality limit. Manual selection remains manual; recommended selection highlights the remembered source. Play from Beginning and a different episode keep normal ranking.
+
+Memory stores hashed source/release fingerprints on this device, never reusable playback URLs. A changed URL can match an unambiguous filename from the same provider. Missing, ambiguous or failed matches fall back to normal ranking and the existing bounded retry flow. Records expire after 30 days and are limited to 500 titles/episodes.

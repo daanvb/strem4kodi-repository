@@ -1,3 +1,12 @@
+1.8.24
+- Resume prefers the last successful source for the same movie or episode, with refreshed release matching, existing filters/quality limits and normal failure fallback. Record success only after five seconds of real playback; manual selection remains manual.
+- Automatically use wide sports thumbnails across catalogue pages and saved sports rows, regardless of older poster-layout preferences.
+- Route Up from scrub directly to chapter timeline selection and provide a separate Settings > Chapters picker with start times. Suppress the fullscreen Up large-seek shortcut for owned custom-player video.
+- Apply player idle hiding to modeless controls while preserving pause, buffering and open menus.
+- Keep owned trailers in the hero, including the manual Trailer action, without moving unrelated playback or open dialogs.
+- Hide clipped Discover poster captions and always offer both single-episode watched and unwatched actions.
+- Retain companion player skin 0.1.6. Restart Kodi after updating; remote navigation and rendering require actual-device checks.
+
 1.8.23
 - Dim browsing content while the main sidebar is active, give the menu more clearance and only draw poster/wide-card focus borders on the focused row.
 - Clarify single-episode and all-episodes-through-here watched/unwatched actions; verify unwatched cards reapply the configured spoiler protection.
