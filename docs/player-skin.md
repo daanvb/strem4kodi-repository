@@ -12,7 +12,7 @@ screens and native audio, subtitle, video, PVR and accessibility settings.
 3. Open **Strem4Kodi Settings > Appearance > Player appearance**, then select **Strem4Kodi Player** under Kodi **Interface > Skin**.
 4. Play a title through Strem4Kodi. Open playback controls with your remote.
 
-For direct ZIP installation, install `skin.strem4kodi-0.1.5.zip` first, then
+For direct ZIP installation, install `skin.strem4kodi-0.1.6.zip` first, then
 `script.strem4kodi-1.8.17.zip`, using Kodi’s **Install from zip file**.
 
 You can return to your previous skin through the same Kodi setting. Installing
@@ -39,8 +39,8 @@ Both packages are included in the published repository feed.
 ## Controls and audio
 
 The bar shows the title, series/episode information, active audio, elapsed time,
-duration and a smoothed finish estimate. Four labelled buttons keep the main
-bar simple: Play/Pause, Audio, Subtitles and Settings. The seek bar uses Kodi's
+duration and a smoothed finish estimate. Five labelled buttons keep the main
+bar simple: Play/Pause, Audio, Subtitles, Settings and Media info. The seek bar uses Kodi's
 seek action. Audio and Subtitles open matching two-line track pickers with the
 current choice marked. Subtitles includes Off, Download subtitles and access
 to Kodi's advanced subtitle settings, even if the file has no embedded tracks.
@@ -138,3 +138,67 @@ Build a complete feed with `tools/build-kodi-repository.py --package <app.zip>
 --skin-package <skin.zip> --output <feed-directory> --feed-url <https-base-url>`.
 The builder rejects stale skin versions and circular app/skin dependencies before
 writing the feed. If `--skin-package` is omitted, it builds the checked-in skin.
+
+## Media info
+
+Open **Media info** on the playback bar, or **Settings > Media info**. The
+two columns separate Kodi-detected video/audio details from unverified source
+claims. Use Up/Down to scroll, Left/Right to switch columns, and Back to close.
+The panel closes if playback stops or changes to another file.
+
+Resolution, codec, frame rate, dynamic range, pixel format, decoder, audio
+language/format, sample rate and subtitle status are shown when available.
+Kodi 22 adds `VideoPlayer.HdrDetail`, allowing Dolby Vision profiles and FEL/MEL
+to appear when Kodi reports them. Kodi 21 still shows the rest of the panel;
+unavailable fields say so. A FEL label does not prove enhancement-layer
+processing on the device. This reads playback metadata without downloading or
+probing the media file. Details are a snapshot when the panel opens.
+
+Small format logos accompany the detected metadata. Dolby Atmos is shown only
+when Kodi reports an Atmos codec extension for the current audio format; a
+track name or release title alone cannot enable it. Unsupported formats retain
+readable text. Asset provenance is recorded alongside the bundled logos.
+
+## Seek bar and chapter access
+
+The seek line is 14 pixels high, with taller contrasting chapter ticks for
+embedded chapters. The playback and temporary seek bars use the same styling;
+the seek thumb remains centred on the line. The current chapter number/title
+appears above the line when supplied by the file.
+
+From the player buttons, **Up** focuses the timeline in **Scrub** mode.
+**Up again** enters **Chapters** on the same timeline when embedded chapters
+are available. Left/Right highlights a chapter marker and previews its name and
+start time. Playback continues unchanged until **OK** jumps. **Down** returns
+to Scrub; another Down returns to the buttons. **Back** cancels and closes the
+controls. The white selection marker and explicit mode/help text distinguish
+chapter selection from normal seeking. No double-press timing is required.
+
+Kodi 22 supplies all chapter names through `Player.GetChapters`. Kodi 21 uses
+its native chapter positions and the current chapter name; other names appear
+as Chapter 1, Chapter 2, etc., with start times. Titles are never discovered by
+seeking through the file. Videos without embedded chapters stay in Scrub mode
+on the second Up. ChaptersDB lookup remains under **Settings > Chapters** and
+is a separate release-specific list; it does not create embedded timeline
+markers. The selector closes on stop or a different playing file, and checks
+that playback is still the same before jumping.
+
+
+ChaptersDB edition choices now show **Possible match**, **Unverified**, or
+**Low confidence**, with the supporting release clues. Edition notes are
+compared with the selected stream filename for explicit cut/source wording.
+An explicitly labelled runtime in the note can be compared with Kodi's actual
+playback duration. ChaptersDB does not advertise a dedicated edition-runtime
+field; absent notes remain unverified. A final chapter start is never treated
+as the runtime. All valid editions remain selectable and require a manual
+choice; matching does not rescale chapter times or verify the cut. Codec,
+Dolby Vision and audio format do not establish edition identity.
+
+
+Idle hiding covers both the main control menu and the separate seek-feedback bar.
+When the configured inactivity period expires, an idle scrub slider relinquishes
+focus before the menu closes. Retained seeking/show-time flags cannot keep our
+feedback visible indefinitely. New remote input, a pause, buffering or a new
+video clears the suppression. Recent actual seeks extend the timeout; open
+Audio, Subtitles, Settings, chapter selection and other modal menus are left
+alone. Kodi default retains Kodi's own hiding behaviour.

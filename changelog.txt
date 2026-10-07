@@ -1,3 +1,16 @@
+1.8.23
+- Dim browsing content while the main sidebar is active, give the menu more clearance and only draw poster/wide-card focus borders on the focused row.
+- Clarify single-episode and all-episodes-through-here watched/unwatched actions; verify unwatched cards reapply the configured spoiler protection.
+- Retain preferred artwork during progress refreshes and cache expiry; reject older or superseded configured artwork responses.
+- Add Kodi-detected media information, conditional Dolby Vision details and format icons; distinguish source claims from player-confirmed information.
+- Add taller scrubbing, clearer chapter markers and a timeline chapter-selection mode: Up from controls to scrub, Up to chapters, Left/Right to preview, OK to jump and Down to scrub.
+- Improve player idle hiding for stale seek overlays, preserving pause/buffer/menu controls and restoring feedback on input.
+- Improve manual chapter edition confidence using available runtime and source clues without auto-selecting uncertain editions.
+- Remember Discover lists, filters and positions separately for Movies and Series, with anticipated titles as the initial choice where available.
+- Add artwork diagnostics, clearer upcoming-episode labels and conditional settings visibility.
+- Classify safe provider failure reasons and count declared stream errors as failures without interrupting other suppliers.
+- Publish companion player skin 0.1.6; Kodi 21 remains supported and Kodi 22 exposes additional media/chapter details. Restart Kodi after updating; rendering and remote navigation require device checks.
+
 1.8.22
 - Search installed catalogue names alongside individual titles; open collections in their supplied order with mixed movie/series support.
 - Add watched markers, partial progress and Unwatched only filtering to searched catalogues. Series completion requires episode metadata and watched history rather than the last episode flag alone.

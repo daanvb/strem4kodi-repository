@@ -8,7 +8,24 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.22.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.23.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](https://github.com/daanvb/Stremio-for-Kodi-private/blob/strem4kodi/changelog.txt)
+
+## What's new in 1.8.23
+
+- The main sidebar has more clearance from posters, dims browsing content and only highlights a poster when its row has focus.
+- Episode actions clearly distinguish **Mark this episode watched/unwatched** from **Mark all up to here watched/unwatched**. Unwatched thumbnails follow your spoiler setting immediately.
+- Preferred posters survive progress refreshes and expired caches; older requests cannot overwrite newer artwork.
+- Player **Media info** shows detected video/audio details, with Dolby Vision details when Kodi exposes them. Provider claims are labelled separately.
+- A taller seek bar and clearer chapter markers support **Up** for scrubbing, then **Up** again for chapter selection; preview with Left/Right, jump with OK and return to scrubbing with Down.
+- Player controls hide after inactivity even when a stale seek overlay remains; pause, buffering and open adjustment menus retain controls.
+- Chapter edition matching uses available runtime and release clues without automatically selecting an uncertain edition.
+- Long-press a card for **Artwork details**, including provider/cache selection and episode blur explanations.
+- Movies and Series remember separate Discover lists, filters and positions, with anticipated titles as the initial list where available.
+- Upcoming episodes show **Airs today**, **Airs tomorrow** or an expected date; release dates do not guarantee stream availability.
+- Settings reveal dependent options only when relevant and omit unsupported Kodi subtitle controls.
+- Provider diagnostics distinguish timeouts, connection failures, invalid responses and HTTP errors. Add-on error responses count as failures while other providers continue.
+
+[Browsing and settings guide](docs/discovery.md) · [Player and chapter controls](docs/player-skin.md). Update the companion skin to **0.1.6** and restart Kodi. Player rendering and remote navigation still need checking on your device.
 
 ## What's new in 1.8.22
 
@@ -78,7 +95,7 @@ Update both the app and companion skin through **Strem4Kodi Repository**, then *
 3. Open **Install from repository → Strem4Kodi Repository → Program add-ons → Strem4Kodi** and install it.
 4. Launch Strem4Kodi and connect your Stremio account using the sign-in screen.
 
-For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.4**) and published app version (**1.8.22**) are different numbers.
+For existing installations, use Kodi’s normal addon update process. If the update is not listed, open the context menu on **Strem4Kodi Repository** under **My add-ons → Add-on repository**, choose **Check for updates**, then check Strem4Kodi again. The repository version (**1.0.4**) and published app version (**1.8.23**) are different numbers.
 
 The repository page also provides a direct app ZIP. Installing it manually is an alternative; you do not need a script for routine updates.
 

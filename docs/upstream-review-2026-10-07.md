@@ -13,3 +13,6 @@ Reviewed original-project main through `9ee6613705a3e2faddc4679de85b65050e998f18
 The previously deferred account-concurrency adaptation remains excluded. The user clarified that the earlier issue concerned sports streams and has stayed resolved; this review does not attribute it to storage concurrency or reopen that issue.
 
 Tests cover provider attribution, FPS validation, duplicate URL/language priority, forced flags and filename preservation, isolated provider failure, retained font definitions and final ZIP font/notice contents. Existing forced-subtitle and playback-default regressions also run. Kodi visual verification of the replacement display fonts remains device-dependent. Changes join the pending Strem4Kodi 1.8.17 package; no publication is implied by this adaptation.
+
+
+Follow-up check on 7 October 2026: fetched upstream main again for the browsing improvements. Its head remains `9ee6613705a3e2faddc4679de85b65050e998f18`; no additional commits since this review were available to adapt.

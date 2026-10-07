@@ -1,7 +1,7 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.22" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.23" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="skin.strem4kodi" version="0.1.5" />
+    <import addon="skin.strem4kodi" version="0.1.6" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
   </requires>
   <extension point="xbmc.python.script" library="default.py">
@@ -19,7 +19,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.22: catalogue search with supplied-order collections and watched progress; clearer Discover groups, My Favourites and single genre selection; multiple rows with All lists and More lists. Requires Kodi 21+. Restart Kodi after updating.</news>
+    <news>1.8.23: clearer dimmed sidebar, episode watched actions, reliable poster refresh, media information, chapter timeline selection, player auto-hide fixes, per-type Discover memory and safer provider diagnostics. Requires Kodi 21+. Update the companion player skin and restart Kodi.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>

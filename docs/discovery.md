@@ -47,11 +47,25 @@ The catalogue view offers All titles, Unwatched only, List sources and paging wh
 
 Discover uses Type → Browse group → List. Groups are Highlights, My lists, By genre, Collections, Streaming services and Other lists. Favourites is now My Favourites. For example, choose Series → By genre → Comedy, or Movies → Highlights → Trending.
 
-Genre catalogues that advertise genre choices are expanded into named lists and merged by genre across suppliers. The original genre spelling is preserved in each supplier request. This is a single genre selection: the third header does not apply a second genre filter. Other provider filters remain available through the remote context menu under Discover options. Changing a list clears its previous filters and paging; changing type keeps the same list when it exists for the other type.
+Genre catalogues that advertise genre choices are expanded into named lists and merged by genre across suppliers. The original genre spelling is preserved in each supplier request. This is a single genre selection: the third header does not apply a second genre filter. Other provider filters remain available through the remote context menu under Discover options. Changing a list clears its previous filters and paging. Movies and Series remember independent lists, filters and card positions. Switching type restores its loaded page during the current app session. After reopening the app, cursor-based lists start at their first page, with saved filters and positions clamped to the available cards. Removed lists or filter options fall back safely.
 
 
 ## Multiple rows
 
-Discover defaults to All lists in the selected browse group, with a separate row for each list. For example, Series → Highlights → All lists shows Popular, Trending and other enabled highlight lists as separate rows. Select a named list in the third control to focus on one row.
+Discover initially opens Most Anticipated when available, otherwise All lists in the first available group. A saved preference takes priority on later visits. All lists in a selected browse group shows a separate row for each list. For example, Series → Highlights → All lists shows Popular, Trending and other enabled highlight lists as separate rows. Select a named list in the third control to focus on one row.
 
 Six list rows load per batch with two concurrent list requests. A More lists row opens the next batch; Discover options → First lists returns to the start. No configured lists are omitted from the list selector. Duplicate titles are removed within each merged list, while titles shared by different categories remain in both rows. Row-specific paging and thumbnail settings are available through Discover options → Options for this row. Catalogue search continues to open its own supplied-order view. Returning from settings restores the overview, row artwork choices and position.
+
+
+## Artwork details and upcoming releases
+
+Long-press a movie or series card and choose **Artwork details** to see the supplying poster provider, preferred/fallback selection and whether the response was fresh or cached. On episode cards the report also explains the actual thumbnail supplier, watched state, app blur and recognised provider blur routes. It does not inspect image pixels or claim to know Kodi's texture-cache contents. Image/configuration links stay private. **Browse options** remains available in the same menu on Discover, Sports and Library.
+
+Long-press an episode for **Mark this episode watched** or **Mark this episode unwatched**, depending on its current state. This changes only the selected episode and syncs with your Stremio account. **Mark all up to here watched/unwatched** changes every regular episode from the start of the series through that episode, including earlier seasons; specials are excluded. Marking an episode unwatched refreshes its thumbnail immediately: **Blur unwatched episodes** blurs it again, **Off** leaves it clear, and **Blur unless provider artwork** keeps provider thumbnails untouched while blurring fallback artwork.
+
+Upcoming Episodes labels the next dated unwatched episode **Airs today**, **Airs tomorrow** or **Expected [date]**. Midnight provider dates remain visible throughout their release day; this is an air-date estimate, not confirmation that a stream is available. Unknown dates remain omitted, and watched episodes are skipped. Open the card for the episode description and sources.
+
+Settings reveal dependent options when their parent feature is enabled, retaining all saved choices while hidden. Automatic attempts appear only when a profile uses Auto play; manual profiles hide ranking preferences. Trailer, skip, Up Next, AI subtitle and episode-rating options follow their parent switches. Subtitle appearance controls unavailable in the current Kodi build are omitted with an explanation. API keys retain their single home at the top of the menu.
+
+
+Preferred posters remain visible during progress updates even when their response cache has expired. Only artwork fields are retained: watched markers, descriptions and progress still update from the new data. Home progress refreshes recheck configured posters in the background. Newer successful artwork replaces older artwork; provider/configuration changes and **Refresh artwork** invalidate the previous selection. A temporary network failure keeps the currently displayed valid poster rather than replacing it with an older rated snapshot. This does not strip provider overlays or change BetterPosters settings.
