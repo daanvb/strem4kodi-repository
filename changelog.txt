@@ -1,3 +1,13 @@
+1.8.18
+- Add a Providers settings page for metadata, artwork, supplied ratings, search, streams and subtitles. Explain overlapping capabilities and fall back when a chosen add-on is disabled or removed.
+- Apply disabled catalogue choices consistently in Discover, cached Home and stale selections; refresh Home after add-on changes and cancel outdated background work.
+- Apply preferred posters to Library, search and lazy-loaded catalogue pages. Add Refresh artwork without clearing login, lists or watch progress.
+- Share preferred search priority between autocomplete and full search; collapse matching IMDb aliases and retain punctuation-insensitive matching and valid-artwork checks.
+- Add local Troubleshooting status for suppliers, cached/network results, last refreshes, fixed request failures, player state and startup timings. Never store configured URLs or query text in diagnostics.
+- Record first app launch in a Kodi session separately from repeat launches; show background refresh duration and provide local cached browsing measurements.
+- Batch poster cache reads and deduplicate repeated title lookups. A local 160-item synthetic benchmark improved from 2230 ms to 18 ms; actual Kodi launch measurements remain device-dependent.
+- Close player pickers when playback stops or changes file, retaining Back and auto-hide behaviour. Live Kodi rendering/focus checks are pending; the supplied device is on another network.
+
 1.8.17
 - Add subtitle provider names and supplied FPS to download choices, preserving forced flags, release filenames, language filters and multi-provider access.
 - Remove four older font files, replace remaining display references with bundled Inter weights and include matching Inter/Noto/Remix font notices.

@@ -1,4 +1,4 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.17" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.18" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.5" />
@@ -19,7 +19,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.17: configured AIOMetadata posters across Continue Watching, Up Next and Trakt, progressive cached artwork refresh, subtitle provider/FPS labels and Inter font cleanup with matching notices. Requires Kodi 21+. Restart Kodi after updating.</news>
+    <news>1.8.18: provider roles and search priority, consistent disabled catalogues, Library and paginated artwork refresh, local troubleshooting and startup measurements, faster poster cache reads and playback menu lifecycle fixes. Requires Kodi 21+. Restart Kodi after updating.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
