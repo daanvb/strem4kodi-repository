@@ -65,7 +65,7 @@ Long-press an episode for **Mark this episode watched** and **Mark this episode 
 
 Upcoming Episodes labels the next dated unwatched episode **Airs today**, **Airs tomorrow** or **Expected [date]**. Midnight provider dates remain visible throughout their release day; this is an air-date estimate, not confirmation that a stream is available. Unknown dates remain omitted, and watched episodes are skipped. Open the card for the episode description and sources.
 
-Settings reveal dependent options when their parent feature is enabled, retaining all saved choices while hidden. Automatic attempts appear only when a profile uses Auto play; manual profiles hide ranking preferences. Trailer, skip, Up Next, AI subtitle and episode-rating options follow their parent switches. Subtitle appearance controls unavailable in the current Kodi build are omitted with an explanation. API keys retain their single home at the top of the menu.
+Settings reveal dependent options when their parent feature is enabled, retaining all saved choices while hidden. Automatic attempts appear only when a profile uses Auto play; manual profiles hide ranking preferences. Trailer, skip, Up Next and episode-rating options follow their parent switches. Subtitle appearance controls unavailable in the current Kodi build are omitted with an explanation. API keys retain their single home at the top of the menu.
 
 
 Preferred posters remain visible during progress updates even when their response cache has expired. Only artwork fields are retained: watched markers, descriptions and progress still update from the new data. Home progress refreshes recheck configured posters in the background. Newer successful artwork replaces older artwork; provider/configuration changes and **Refresh artwork** invalidate the previous selection. A temporary network failure keeps the currently displayed valid poster rather than replacing it with an older rated snapshot. This does not strip provider overlays or change BetterPosters settings.
@@ -92,14 +92,15 @@ Single-episode watched/unwatched changes use the same canonical episode ordering
 
 ### Compact catalogue browsing
 
-Individual Discover lists use the same 206 × 309 artwork as Home, in rows of
-twelve titles. Each row scrolls horizontally; the row stack scrolls vertically.
-The hero area is unchanged. Select **Load more titles** at the end to append
-the next batch. Existing titles, provider order, deduplication and focus are kept.
-Changing the list or its filters starts a new grid. Sports remain automatically
-wide. Discover options now contain only applicable filters and **List sources**;
-Type, Browse group and List remain in the top bar. Manual thumbnail selection and
-Next page/First page commands have been removed.
+Every Discover list, including All lists in My lists, uses an eight-column grid
+with the same 206 × 309 artwork as Home. The grid scrolls vertically only; Left
+and Right select titles within the visible columns. The hero area is unchanged.
+Load more titles appends the next batch in individual lists; More lists appends
+the next overview batch. Duplicate titles are removed. Sports retain wide cards.
+Home and Discover hide the clipped captions beneath posters, using the hero to
+show the selected title. Up at the top goes to Discover filters, which do not
+lead upward into the sidebar. Home stays on its top row. Use Left from the
+leftmost item to enter the sidebar.
 
 ### Franchise catalogues
 

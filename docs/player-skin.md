@@ -71,7 +71,7 @@ credits, inspect the stream externally or download the full video.
 
 ## Forced subtitles
 
-Under **Subtitles & AI**, **Start with subtitles off** defaults to on for videos
+Under **Subtitles**, **Start with subtitles off** defaults to on for videos
 started through Strem4Kodi. The service disables inherited full-subtitle defaults
 when it first observes playback. Manually opening the subtitle picker takes
 priority, and full subtitles can be enabled there. Other Kodi videos are unaffected.
@@ -89,7 +89,7 @@ no automatic download; use manual subtitle search instead.
 
 This identifies metadata marked as forced, not foreign dialogue by analysing the
 audio. It cannot reliably detect a need for subtitles when no such metadata exists.
-Explicit AI subtitle mode takes priority over forced-only automation. The manual
+The manual
 Download subtitles entry opens Kodi's subtitle-service search; automatic forced
 downloads use Stremio subtitle addons, whose metadata supports the checks above.
 
@@ -228,3 +228,90 @@ jump and returns to the buttons. Up cancels the preview and enters chapter
 selection. Scrub controls obey the configured auto-hide timeout and remain visible
 while paused or buffering. Other skins and live TV keep Kodi's native shortcuts.
 Stream buffering and keyframe accuracy still depend on the source and Kodi.
+
+### Mark missing credits
+
+The episode player has a small round Credits start button with a three-line animated crawl icon at the far right of the
+control row. One press saves the current position without a menu. Holding
+OK/Enter during episode playback opens a menu to mark or manage smart credits.
+For that menu, the position is captured when it opens, so time spent choosing
+the option does not move the marker. This is
+an explicit episode marker, not video analysis. A valid IntroDB marker takes
+priority. Otherwise the saved marker is used for the same episode when its
+runtime matches within five seconds; it also contributes to the series estimate
+for other episodes after three consistent samples. Automatic observations do
+not overwrite manual markers. Marking again corrects the saved position.
+
+Markers use the existing private smart-credits sync when enabled. Each series
+retains the latest 24 samples, including manual markers. The action requires
+Strem4Kodi episode context matching the currently playing file, and a sensible
+closing-credits position (in the latter half, 20 seconds to ten minutes before
+the end, no more than 35% of runtime). It does not skip or stop the video.
+
+### Scrub confirmation and audio badges
+
+Settings > Playback > Scrub seek confirmation chooses Seek on release (the
+existing default) or Press OK to seek. In OK mode, releasing Left/Right leaves
+the preview in place so it can be adjusted before confirming. Back cancels it.
+Holding Left/Right is throttled to one move per 150 ms; steps start at ten seconds,
+increase to twenty after three seconds, then forty after six seconds.
+
+The preview shows Jump to followed by the destination time, with Forward/Back
+and the total change underneath. Preview only means playback has not moved.
+Separate button-style hints explain tap/hold movement, the selected confirmation
+mode, chapters, returning to controls and cancelling the pending jump.
+
+Media Info refreshes detected audio while open. Known aliases and combined
+Dolby Digital Plus/Atmos labels resolve to the selected track's base-format
+badge plus Atmos when Kodi reports it. Missing RPC codec data can use Kodi's
+active audio codec label. A track title or filename claiming Atmos does not
+count as detected Atmos, and conflicting codec families do not enrich one
+another during track changes.
+
+### Correcting smart credits
+
+Open player Settings > Smart credits, or an episode's More > Manage Smart Credits
+for This Series. Ignore that episode's timing, review and remove individual
+IntroDB/manual samples, or clear every known sample for the series. Clearing
+samples keeps the series timing override. Ignored episodes are not automatically
+relearned, and their IntroDB credits timing is ignored for Up Next. Mark Credits
+start here again to supply a replacement. IntroDB skip buttons are separate.
+
+Removals sync as timestamped deletion records, preventing an offline device on
+this version from restoring an older sample. The latest 24 live samples are
+retained separately from deletion records. Estimates measure credits length
+backwards from the end, rather than copying an absolute start position. They
+prefer the same season and comparable runtimes, require three agreeing samples
+and at least 75% agreement within 20 seconds or 25% of the typical credits length.
+Otherwise the configured fallback is used; actual episode markers are preferred.
+
+The hold-OK shortcut applies only to Strem4Kodi episodes in its companion skin.
+Short OK presses retain their normal controls/selection behavior, and nested
+audio, subtitle and chapter dialogs retain their own navigation. Kodi normally
+uses keyboard hold-Enter/OK for Play/Pause in fullscreen playback; other media
+and skins keep that fallback. Remote support depends on whether the device sends
+an input Kodi recognizes as a long press. The visible button remains available
+when a remote has its own hold action or does not report long presses.
+
+### Episode watched threshold
+
+Episodes count as watched after 85% of their runtime has actually played across
+resumes. Seeking past sections does not add viewing time. They also count as
+watched when a Skip Outro card is shown, when any credits-time Up Next card is
+shown (including estimates, series overrides and fallback timing), or when a
+valid Credits start marker is saved. Skip Intro and recap cards do not count.
+The credits event is bound to the active episode and stream, queued immediately
+through the existing progress retry queue, and retained through playback stop.
+While playing, the resume position is kept; stopping after that event clears
+the current episode's resume and points to its next available episode. Movie
+viewing thresholds remain unchanged. Removing a credits sample changes timing
+and learning; use Mark as unwatched separately to reverse its watched status.
+
+### Choose online chapters explicitly
+
+Player Settings > Use ChaptersDB instead opens the online edition picker even
+when embedded chapters are available. Choose an edition, then select a named
+chapter to jump. This explicit lookup is also available when automatic ChaptersDB
+fallback is off. Names and timings come from the submitted list; English names
+are not guaranteed. Normal chapter navigation continues to prefer embedded
+chapters, and a changed playback session cancels the online selection.

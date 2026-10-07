@@ -20,7 +20,7 @@ Equivalent queries share a bounded suggestion cache. Prefix results appear while
 
 The search screen has room for two-line titles; longer focused text scrolls. Choose Kodi keyboard to enter/paste using a paired Kodi remote app. API-key settings retain the native Kodi keyboard without title autocomplete.
 
-Preferred stream providers are selectable installed stream addons. Preferred audio language is a list, defaulting to English. Any provider and Any language are available. Explicitly saved language choices are retained. English is also the default AI subtitle translation target; the enum order remains stable for existing selections.
+Preferred stream providers are selectable installed stream addons. Preferred audio language is a list, defaulting to English. Any provider and Any language are available. Explicitly saved language choices are retained.
 
 Downloaded subtitle choices show language, supplying add-on, reported FPS when available and the release label. Inline subtitles identify the selected stream unless it supplies a provider name. FPS is informational: no frame rate is guessed, and subtitles are not automatically retimed or guaranteed to match from that number alone. Full subtitles remain off by default; forced-track detection and exact-release forced-subtitle selection are unchanged.
 

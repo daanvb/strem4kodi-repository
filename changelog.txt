@@ -1,3 +1,14 @@
+1.8.27
+- Use vertical Discover grids across lists with Home-sized posters and the existing hero. Hide clipped captions on Home and Discover; enter the sidebar from the left edge rather than Up.
+- Slow held scrubbing acceleration, clarify preview time and skipped amount, and choose seek-on-release or press-OK confirmation under Playback settings.
+- Add a small round animated Credits start button. One press records the current episode's credits start; supported remotes also offer credits actions through holding OK.
+- Learn credits lengths from comparable episodes with outlier rejection, preserve exact manual markers, and sync corrected/deleted samples through private GitHub sync. Manage incorrect timings from player settings or episode actions.
+- Mark episodes watched after 85% actual viewing or when either credits card appears, including estimated/fallback timing, or Credits start is pressed. Preserve movie rules and sync episode progress through Stremio.
+- Add Player Settings > Use ChaptersDB instead to choose an online edition and chapter list even when embedded chapters exist. Online names and timings depend on the submitted edition.
+- Refresh media info for the selected audio track and show detected Dolby Digital Plus/Atmos formats consistently.
+- Use transparent app branding and matching bold Loading Video / Bear With... text. Remove AI subtitle translation and its settings; retain normal and forced subtitles.
+- Include companion player skin 0.1.8. Restart Kodi after updating. Remote navigation and rendering still require actual-device verification.
+
 1.8.26
 - Smooth scrubbing previews the target time and total skipped amount, coalesces held/repeated presses into one seek, and keeps slow seeks off the input thread. Back cancels; Up enters chapters and Down returns to controls.
 - Discover retains Home-sized posters and the existing hero area, with horizontal scrolling within rows and vertical scrolling between rows. Load more titles appends results and preserves position instead of switching pages.
