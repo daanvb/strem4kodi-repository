@@ -1,7 +1,7 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.24" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.26" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="skin.strem4kodi" version="0.1.6" />
+    <import addon="skin.strem4kodi" version="0.1.7" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
   </requires>
   <extension point="xbmc.python.script" library="default.py">

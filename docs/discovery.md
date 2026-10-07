@@ -89,3 +89,28 @@ Stremio syncs the underlying saved titles and watch progress. To share the class
 Tags use a separate saved-lists.json file containing title IDs, Favourite/Watchlist flags and per-tag update times. Changes merge independently, including removals, so editing a different title or classification on another device does not overwrite unrelated changes. Account credentials, stream links and progress are not stored in that file. Without a connection, local tags are retained and syncing retries.
 
 Single-episode watched/unwatched changes use the same canonical episode ordering as playback and watched markers, including numeric strings and the alternate number field from providers. Single actions also support specials. Manual changes verify the returned watched bits before replacing local account state; an unconfirmed update reports an error rather than success.
+
+### Compact catalogue browsing
+
+Individual Discover lists use the same 206 × 309 artwork as Home, in rows of
+twelve titles. Each row scrolls horizontally; the row stack scrolls vertically.
+The hero area is unchanged. Select **Load more titles** at the end to append
+the next batch. Existing titles, provider order, deduplication and focus are kept.
+Changing the list or its filters starts a new grid. Sports remain automatically
+wide. Discover options now contain only applicable filters and **List sources**;
+Type, Browse group and List remain in the top bar. Manual thumbnail selection and
+Next page/First page commands have been removed.
+
+### Franchise catalogues
+
+Collections recognises franchise names and advertised custom content types,
+including Marvel, StarWars and DC from AIOStreams. Generic names become descriptive
+choices such as **Marvel Movies**, **DC Animations**, and **Star Wars Movies & Series
+Chronological**. Chronological, release-order, era and character lists stay
+separate. Movies and series are requested using the original provider type, then
+placed in their respective Discover sections using the returned item types.
+Collection-name search also includes the franchise in generic catalogue names.
+
+Collections now group franchise lists beneath their parent, such as Star Wars
+Universe. The list selector first chooses the collection, then its chronological,
+release-order, era or character list. All lists shows only rows from that parent.

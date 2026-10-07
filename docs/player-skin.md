@@ -12,7 +12,7 @@ screens and native audio, subtitle, video, PVR and accessibility settings.
 3. Open **Strem4Kodi Settings > Appearance > Player appearance**, then select **Strem4Kodi Player** under Kodi **Interface > Skin**.
 4. Play a title through Strem4Kodi. Open playback controls with your remote.
 
-For direct ZIP installation, install `skin.strem4kodi-0.1.6.zip` first, then
+For direct ZIP installation, install `skin.strem4kodi-0.1.7.zip` first, then
 `script.strem4kodi-1.8.17.zip`, using Kodi’s **Install from zip file**.
 
 You can return to your previous skin through the same Kodi setting. Installing
@@ -213,3 +213,18 @@ The second Up press is handled explicitly while the scrub bar has focus. Setting
 With automatic source selection, Resume first tries the last successful source for that exact movie or episode. Success requires five seconds of real advancing playback, not just opening a source or seeking to the saved position. The matching source must still appear in current results and pass active filters and the maximum quality limit. Manual selection remains manual; recommended selection highlights the remembered source. Play from Beginning and a different episode keep normal ranking.
 
 Memory stores hashed source/release fingerprints on this device, never reusable playback URLs. A changed URL can match an unambiguous filename from the same provider. Missing, ambiguous or failed matches fall back to normal ranking and the existing bounded retry flow. Records expire after 30 days and are limited to 500 titles/episodes.
+
+### Remote scrubbing (player skin 0.1.7)
+
+Left/Right during playback or Up from the player buttons opens a preview on the
+timeline. Each tap moves ten seconds. Repeated presses accumulate a single skip;
+holding accelerates to thirty, then sixty seconds per repeat. The marker and label
+show the destination and total offset. Playback seeks once after 400 ms without
+directional input, or immediately on OK. A single worker handles seeks away from
+the input handler, keeping the controls responsive while a source catches up.
+
+Back cancels any pending jump and closes the controls. Down cancels any pending
+jump and returns to the buttons. Up cancels the preview and enters chapter
+selection. Scrub controls obey the configured auto-hide timeout and remain visible
+while paused or buffering. Other skins and live TV keep Kodi's native shortcuts.
+Stream buffering and keyframe accuracy still depend on the source and Kodi.
