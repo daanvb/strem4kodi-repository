@@ -8,15 +8,14 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.16.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.17.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
-## What’s new in 1.8.16
+## What's new in 1.8.17
 
-- Corrected the scrubber’s texture scaling so its handle stays compact and centred on the progress line.
-- AIOMetadata’s customised posters are preserved independently of the standalone Better Posters toggle.
-- Watched episodes recover the original thumbnail from AIOMetadata’s explicit blur proxy, including previously watched episodes.
-- Fallback episode metadata fills missing fields and episodes without replacing the primary provider’s artwork.
-- Matching refreshed AIOMetadata catalogue posters update stale Continue Watching artwork.
+- AIOMetadata's configured posters now apply to Continue Watching, Up Next and other catalogue rows, including Trakt, even when titles are absent from AIOMetadata's own catalogue rows.
+- Missing posters load in small background batches and share a configuration-aware cache. Artwork updates preserve selection, progress and loaded pages.
+- Subtitle download choices show the supplying add-on and reported FPS. Forced-subtitle matching, language filters and subtitles-off defaults are preserved.
+- Removed four older font files, replaced remaining display references with bundled Inter weights and added matching font licence notices.
 
 Update both the app and companion skin through **Strem4Kodi Repository**, then **restart Kodi**. The skin dependency updates automatically; select **Strem4Kodi Settings → Appearance → Player appearance → Strem4Kodi Player** if you have not already activated it. Requires **Kodi 21 or later**. [Player configuration and limitations](docs/player-skin.md).
 
