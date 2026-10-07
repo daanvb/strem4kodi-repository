@@ -1,3 +1,11 @@
+1.8.22
+- Search installed catalogue names alongside individual titles; open collections in their supplied order with mixed movie/series support.
+- Add watched markers, partial progress and Unwatched only filtering to searched catalogues. Series completion requires episode metadata and watched history rather than the last episode flag alone.
+- Simplify Discover to Type, Browse group and List. Rename Favourites to My Favourites.
+- Group genre lists together, remove duplicate genre selection, and preserve each supplier's original genre values.
+- Show multiple rows through All lists, with six lists per batch and a More lists row; retain a single-list option and row-specific controls.
+- Preserve overview mode and row position when returning from settings. Catalogue layout still requires checks on actual Kodi.
+
 1.8.21
 - Keep Home focused on Continue Watching, Up Next and confirmed upcoming episodes from saved series.
 - Move sports catalogues into a dedicated Sports section.

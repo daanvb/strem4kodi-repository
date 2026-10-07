@@ -1,4 +1,4 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.21" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.22" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.5" />
@@ -19,7 +19,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.21: focused Home with Continue Watching, Up Next and Upcoming Episodes; separate Sports; merged Discover categories, collections and streaming services with duplicate removal and quieter provider details. Requires Kodi 21+. Restart Kodi after updating.</news>
+    <news>1.8.22: catalogue search with supplied-order collections and watched progress; clearer Discover groups, My Favourites and single genre selection; multiple rows with All lists and More lists. Requires Kodi 21+. Restart Kodi after updating.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
