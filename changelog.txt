@@ -1,3 +1,11 @@
+1.8.21
+- Keep Home focused on Continue Watching, Up Next and confirmed upcoming episodes from saved series.
+- Move sports catalogues into a dedicated Sports section.
+- Merge movie and series lists across providers into Discover categories, removing duplicate titles with a shared identity.
+- Organise named franchises under Collections and network lists under Streaming services; preserve custom lists and mixed-content catalogue requests.
+- Move provider attribution into List sources and retain independent provider paging and failure handling.
+- Add regression checks for grouping, duplicate removal, pagination, upcoming episodes and sidebar navigation. Actual Kodi layout checks remain required.
+
 1.8.20
 - Prevent ordinary catalogue artwork from overwriting preferred provider posters during incremental updates, regardless of catalogue row order.
 - Preserve preferred artwork ownership even when the resolved image URL is unchanged.
