@@ -1,3 +1,13 @@
+1.8.25
+- Add My Lists with separate My Watchlist and My Favourites tags over the shared Stremio saved-title library. Add, move and remove titles from details or long-press list cards without losing playback progress.
+- Optionally sync list classifications through the existing private GitHub repository/token, independently of smart credits. Merge per-tag timestamps and removal records; underlying saves and watch progress remain in Stremio.
+- Choose the Discover opening list under General: a specific movie/series list, Most Anticipated or Last visited list.
+- Fix single-episode watched/unwatched ordering for provider numeric strings and alternate episode numbers. Support specials and verify saved watched bits before reporting success.
+- Add “Bear With” beneath “Loading Video”.
+- Add Kodi-detected 720p HD, 1080p Full HD, 4K UHD and 8K UHD media badges, including common cropped widescreen sizes. Show the underlying Dolby format alongside detected Atmos.
+- Fall back to ChaptersDB when embedded chapter start times are unreadable; explain disabled fallback without misleading retry advice. Keep manual edition selection before seeking.
+- Retain companion player skin 0.1.6. Restart Kodi after updating. Enable list tag sync and use the private GitHub sync token on each device to share classifications.
+
 1.8.24
 - Resume prefers the last successful source for the same movie or episode, with refreshed release matching, existing filters/quality limits and normal failure fallback. Record success only after five seconds of real playback; manual selection remains manual.
 - Automatically use wide sports thumbnails across catalogue pages and saved sports rows, regardless of older poster-layout preferences.

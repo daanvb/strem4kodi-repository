@@ -73,3 +73,19 @@ Preferred posters remain visible during progress updates even when their respons
 Discover hides captions underneath portrait posters to avoid clipped text; the selected title and description remain in the hero, and provider artwork and its integrated overlays are unchanged.
 
 Sports always uses wide thumbnails, including every catalogue page and saved sports rows elsewhere in browsing. Older per-catalogue poster preferences cannot override this. Landscape artwork is preferred, followed by thumbnails, backgrounds and the supplied poster as a fallback. Movie and series catalogue layout preferences still apply.
+
+## Choose the Discover opening list
+
+Open Settings > General > Discover opening list. Choose a specific movie or series list, Most Anticipated, or Last visited list. A fixed list opens from its beginning when entering Discover from another sidebar page; returning from title details keeps your browsing position. If a selected list is removed, Discover safely falls back to an available list. This preference stays on this device.
+
+## My Lists: Favourites and Watchlist
+
+Open a movie or series, choose More, then Add to My Watchlist or Add to My Favourites. A title can belong to both. Long-press a card in My Lists for direct move/remove options. More also offers moving between the lists, removing from either list, and removing from both. Moving preserves playback progress. Removing one classification keeps the Stremio save while the other classification remains; removing both removes the save, preserving playback history.
+
+Open My Lists in the sidebar and use the List control to switch between My Watchlist and My Favourites. Existing Stremio saves start in My Watchlist. Titles remain in their lists after being watched until you remove them. Trakt/Simkl favourites remain separate provider catalogues.
+
+Stremio syncs the underlying saved titles and watch progress. To share the classifications, enable Settings > Account & Stremio > Sync favourites and watchlist tags on each device signed into the same Stremio account. Under API keys, use the existing Private GitHub sync token for the private strem4kodi-sync repository (Contents read/write). This option is independent of smart credits sync. Check Saved lists sync for the result; tags normally refresh within a minute while Kodi is running. Devices without tag sync enabled retain local classifications.
+
+Tags use a separate saved-lists.json file containing title IDs, Favourite/Watchlist flags and per-tag update times. Changes merge independently, including removals, so editing a different title or classification on another device does not overwrite unrelated changes. Account credentials, stream links and progress are not stored in that file. Without a connection, local tags are retained and syncing retries.
+
+Single-episode watched/unwatched changes use the same canonical episode ordering as playback and watched markers, including numeric strings and the alternate number field from providers. Single actions also support specials. Manual changes verify the returned watched bits before replacing local account state; an unconfirmed update reports an error rather than success.
