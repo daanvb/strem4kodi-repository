@@ -1,3 +1,10 @@
+1.8.38
+- Reserve public AIOStreams searches for deliberate title opening, source selection and playback. Skip background logo searches against its public and development instances.
+- Keep cached format badges while browsing; opening details checks the movie or relevant episode and reuses fresh source results.
+- Avoid repeating a detail-page prefetch for an episode already checked during that visit.
+- Validation: 853 tests passed; app package built.
+- Player skin remains at 0.1.14. Restart Kodi after updating.
+
 1.8.37
 - Faster background logo checks use independent addon queues so slow providers do not block every row. Retain known logos during refresh and add local loading diagnostics.
 - Optional movie audio pre-rolls match the selected source, with configurable Dolby Digital fallback or no pre-roll for DTS. Press OK to reveal Skip pre-roll, then OK to continue.
