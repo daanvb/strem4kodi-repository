@@ -1,3 +1,12 @@
+1.8.35
+- Keep background availability scans alive across Home, Discover, searches, collections and saved lists, including late-added rows. Pause during full playback and continue afterwards; owned trailers do not block scanning.
+- Use four title workers with exact per-target locks. Display initial format badges from fast addons before slower addons finish, preserving final source order and retained cached badges.
+- Retry failed availability checks after 30 seconds, two minutes and five minutes. Only loaded titles and each series' relevant episode are queried.
+- Estimate finish time for movies and episodes using remaining runtime. Subtract saved progress only for the matching video; use measured playback duration when available.
+- Narrow the action menu while retaining full labels without text scrolling.
+- Validation: 813 tests passed; app and companion packages built. TV behaviour remains to be checked on device.
+- Player skin remains at 0.1.14. Restart Kodi after updating.
+
 1.8.34
 - Prepare format badges across all loaded browsing rows with bounded background workers. Retain known badges during refresh and provider changes; refresh after one hour and expire after seven days.
 - Keep playback URLs on their existing short-lived, provider-aware cache.
