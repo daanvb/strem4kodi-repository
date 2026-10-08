@@ -1,3 +1,11 @@
+1.8.34
+- Prepare format badges across all loaded browsing rows with bounded background workers. Retain known badges during refresh and provider changes; refresh after one hour and expire after seven days.
+- Keep playback URLs on their existing short-lived, provider-aware cache.
+- Follow playback in scrub and chapter selection until you choose a position. Keep manual selections steady and show a live chapter playback clock.
+- Use a refined, antialiased clock icon beside movie finish times.
+- Compact the media action menu and highlight Resume only when focused.
+- Player skin remains at 0.1.14. Restart Kodi after updating.
+
 1.8.33
 - Pre-filter format logos at display sizes, preserving HDR10+ and DTS colours on transparent backgrounds.
 - Warm source availability for the first eight browsing titles on page load and shorten the focused-title delay. Share cached source checks and discard obsolete page requests.
