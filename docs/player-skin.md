@@ -367,3 +367,7 @@ Public AIOStreams protection: background format/logo searches skip aiostreams.el
 Opening a title detail page is an on-demand source check for the movie or relevant episode. Fresh source cache is reused; missing or stale sources are checked once per target during that detail-page visit. The result supplies both format badges and the source picker. Simply highlighting posters does not query public AIOStreams.
 
 As of 1.8.39, automatic background stream searches are disabled for every addon, including private instances. Catalogue metadata, artwork and cache display continue normally. Source searches run on explicit title opening or source selection; no whole-page quality scan runs.
+
+Explicit catalogue technical fields (quality/resolution/HDR/audio and format lists) are displayed locally on hero focus, without additional stream searches. Names, descriptions and poster art are never treated as quality evidence. Retained source-format summaries take precedence. Catalogue format claims are not saved as verified source availability.
+
+Automatic title-opening checks use a persistent shared budget: one minute per selected stream addon plus one additional minute between checks. Fresh cached sources and catalogue badges spend no budget. Failed checks pause automatic checks for at least 15 minutes. Manual source opening/refresh remains deliberate and uses provider allowance normally; other apps/devices can also consume that allowance.

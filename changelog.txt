@@ -1,3 +1,11 @@
+1.8.40
+- Show explicit catalogue quality/audio fields immediately on hero focus, with cached source formats taking precedence and no stream searches while browsing.
+- Add a persistent shared request budget for automatic title-opening checks: one minute per stream addon plus an extra minute between checks.
+- Pause automatic title checks for at least 15 minutes after failures. Manual source selection and refresh remain available.
+- Keep automatic whole-page stream searching disabled for all addons.
+- Validation: 862 tests passed; app package built.
+- Player skin remains at 0.1.14. Restart Kodi after updating.
+
 1.8.39
 - Disable automatic background stream searches for every addon, reserving requests for explicit title opening, source selection and playback.
 - Stop whole-page format scanning while retaining cached logos and normal catalogue/artwork loading.

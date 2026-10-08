@@ -8,7 +8,16 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.39.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.40.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.40
+
+- Show explicit catalogue quality/audio fields immediately on hero focus, with cached source formats taking precedence and no stream searches while browsing.
+- Add a persistent shared request budget for automatic title-opening checks: one minute per stream addon plus an extra minute between checks.
+- Pause automatic title checks for at least 15 minutes after failures. Manual source selection and refresh remain available.
+- Keep automatic whole-page stream searching disabled for all addons.
+
+Player skin remains at **0.1.14**. Restart Kodi after updating.
 
 ## What's new in 1.8.39
 
