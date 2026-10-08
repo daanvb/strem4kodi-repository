@@ -365,3 +365,5 @@ Pending FEL7 diagnostic: Troubleshooting > Play FEL7 test video plays a diagnost
 Public AIOStreams protection: background format/logo searches skip aiostreams.elfhosted.com and its public development instance. Existing availability badges remain cached; opening sources or starting playback can populate them normally. Public search allowance is reserved for deliberate requests. Private instances remain eligible for background checks.
 
 Opening a title detail page is an on-demand source check for the movie or relevant episode. Fresh source cache is reused; missing or stale sources are checked once per target during that detail-page visit. The result supplies both format badges and the source picker. Simply highlighting posters does not query public AIOStreams.
+
+As of 1.8.39, automatic background stream searches are disabled for every addon, including private instances. Catalogue metadata, artwork and cache display continue normally. Source searches run on explicit title opening or source selection; no whole-page quality scan runs.

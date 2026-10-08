@@ -1,3 +1,10 @@
+1.8.39
+- Disable automatic background stream searches for every addon, reserving requests for explicit title opening, source selection and playback.
+- Stop whole-page format scanning while retaining cached logos and normal catalogue/artwork loading.
+- Opening details still checks the movie or relevant episode and reuses fresh cached sources.
+- Validation: 854 tests passed; app package built.
+- Player skin remains at 0.1.14. Restart Kodi after updating.
+
 1.8.38
 - Reserve public AIOStreams searches for deliberate title opening, source selection and playback. Skip background logo searches against its public and development instances.
 - Keep cached format badges while browsing; opening details checks the movie or relevant episode and reuses fresh source results.
