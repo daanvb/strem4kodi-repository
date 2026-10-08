@@ -27,3 +27,15 @@ Settings tests cover focus retention, list capacity, overflow indicators, inform
 - Shortened the slow-discovery description and completed parent-switch guidance for Popcornmeter, pre-rolls and format sharing.
 
 Validation: 66 settings-focused tests and the full 963-test suite pass. No connected Kodi device was available; actual TV rendering, font substitution and remote navigation remain unverified. Included in release 1.8.48. Popup font validation was subsequently added; the full suite now has 965 passing tests.
+
+
+## TV feedback follow-up
+
+- Removed the up/down font glyphs that render as empty boxes on the TV. The native scrollbar remains; there are no item counts.
+- Expanded the list to ten complete rows and placed a smaller help panel 20 pixels below it, reclaiming the former empty area.
+- Replaced row-value textboxes with single-line labels. Long values ellipsize horizontally rather than spilling a clipped second line. The selected value is repeated in help when long; Info opens the complete value and description. Picker help is compact too; the existing paged diagnostic reader retains its full height.
+- Shortened the forced-subtitle mode caption without changing its stored enum index or behaviour.
+- Catalogue merging now fills missing display fields from later duplicates, including across pages and explicit IMDb/TMDB/TVDB aliases. It retains the first card's ranking, identity and playback state, never merges by title name, and guards conflicting IMDb IDs.
+- Blank posters now populate the image art with the independent fallback, so the layout does not hide the image before Kodi can use it.
+
+These fixes do not increase stream searches or change rate-limit budgets. TV rendering still needs device confirmation.

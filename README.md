@@ -8,7 +8,16 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.48.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.49.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.49
+
+- Tighter settings with ten visible rows, a smaller help panel and the native scrollbar.
+- Readable subtitle and provider values; press Info for the full value and description.
+- Improved duplicate-title merging and sharing of missing artwork/details across catalogue lists and pages.
+- Blank posters display an independent fallback. No extra stream searches or provider tokens are used by these fixes.
+
+Player skin remains **0.1.14**. Restart Kodi after updating.
 
 ## What's new in 1.8.48
 

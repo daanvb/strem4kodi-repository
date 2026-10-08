@@ -1,3 +1,12 @@
+1.8.49
+- Remove unsupported settings arrow glyphs, retain the native scrollbar and use ten complete rows with a smaller help panel.
+- Keep setting values on one line; show long values in help and offer full descriptions through Info. Shorten the forced-subtitle caption without changing stored preferences.
+- Merge duplicate catalogue entries using explicit IMDb, TMDB and TVDB aliases, filling missing artwork and details while preserving supplier order and playback state.
+- Share missing details across lists and pages, guard conflicting IMDb IDs, and retain original provider request syntax.
+- Populate blank poster art with an independent fallback so the image layout can display it.
+- No additional stream searches or changes to provider request budgets.
+- Validation: 974 tests passed; app and repository packages validated. Player skin remains 0.1.14. Restart Kodi after updating.
+
 1.8.48
 - Tidy settings into a consistent eight-row layout with compact help, scrollbar and arrows; retain focus after changes and use paged diagnostic details.
 - Correct custom cache values, chooser navigation, nested trailer/discovery options and invalid saved enum indices; reuse subtitle capability checks.
