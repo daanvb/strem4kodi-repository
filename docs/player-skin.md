@@ -12,7 +12,7 @@ screens and native audio, subtitle, video, PVR and accessibility settings.
 3. Open **Strem4Kodi Settings > Appearance > Player appearance**, then select **Strem4Kodi Player** under Kodi **Interface > Skin**.
 4. Play a title through Strem4Kodi. Open playback controls with your remote.
 
-For direct ZIP installation, install `skin.strem4kodi-0.1.13.zip` first, then
+For direct ZIP installation, install `skin.strem4kodi-0.1.14.zip` first, then
 `script.strem4kodi-1.8.30.zip`, using Kodi’s **Install from zip file**.
 
 You can return to your previous skin through the same Kodi setting. Installing
@@ -341,3 +341,5 @@ In 1.8.31 / Player skin 0.1.12: normal and feedback timelines explicitly overrid
 Common numbered chapter labels and opening/credits labels translate to English locally, including Russian, Ukrainian, French, German, Spanish, Portuguese, Italian, Dutch, Polish, Greek, Chinese, Japanese and Korean numbered labels. This is a small offline dictionary, not full scene-title translation: unknown titles remain unchanged. Display translation does not alter chapter times. The player, chapter picker and timeline use the same translations.
 
 Player overlays now blend into the picture with a transparent upper gradient; scrub and chapter panels fade in and out. Format artwork uses smaller display slots and newly bundled renderings. Browsing availability badges appear at the lower right above the title rows, including unwatched focused titles after a background source check.
+
+In 1.8.33 / Player skin 0.1.14: Offline Lanczos-filtered, display-sized transparent format logos preserve HDR10+ and DTS colour artwork. The owned fullscreen Left/Right shortcuts enter custom scrub; Down opens player controls. Native seek feedback is hidden during owned playback and underlying video OSD closes before custom scrub/chapter panels, avoiding menu flashes during mode changes. Other skins and live TV retain their native shortcuts. Movie heroes show a clock and full-runtime finish estimate, refreshed each minute. The first eight titles on a browsing page warm source availability serially, alongside a faster debounced focused-title check; checks share source-cache locks and stop when the page changes. Provider response time still determines when new badges appear.

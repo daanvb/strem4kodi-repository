@@ -1,3 +1,12 @@
+1.8.33
+- Pre-filter format logos at display sizes, preserving HDR10+ and DTS colours on transparent backgrounds.
+- Warm source availability for the first eight browsing titles on page load and shorten the focused-title delay. Share cached source checks and discard obsolete page requests.
+- Close the underlying player menu before opening scrub or chapters, preventing menu flashes during transitions.
+- Hide the separate seek-feedback bar during Strem4Kodi playback. Left/Right enter custom scrub and Down opens player controls; other skins and live TV keep native shortcuts.
+- Show a clock and estimated finish time beside movie genres, using the full runtime from now and refreshing each minute. No Ends at text.
+- Include Player skin 0.1.14. Restart Kodi after updating.
+- Validation: 794 tests passed; app and companion packages built. Device rendering remains to be checked on your TV.
+
 1.8.32
 - Move smaller browsing format logos to the bottom right of the hero above the title rows.
 - Bundle sharper transparent logo renderings for browsing and Media info.

@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.32" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.33" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="skin.strem4kodi" version="0.1.13" />
+    <import addon="skin.strem4kodi" version="0.1.14" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
   </requires>
   <extension point="xbmc.python.script" library="default.py">
@@ -20,7 +20,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.32: Smaller transparent format logos at the lower right above title rows, availability checks before playback, softer player overlays and offline English chapter labels. Includes Player skin 0.1.13. Restart Kodi after updating.</news>
+    <news>1.8.33: Display-sized format logos, page-load availability checks, cleaner remote controls and seamless scrub/chapter transitions. Movie heroes show a clock and finish time. Includes Player skin 0.1.14. Restart Kodi after updating.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
@@ -56,7 +56,7 @@
     </assets>
     <news>1.0.4: fresh Strem4Kodi artwork paths replace cached legacy branding.</news>
   </extension>
-</addon><addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.13" provider-name="daanvb">
+</addon><addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.14" provider-name="daanvb">
   <requires>
     <import addon="xbmc.gui" version="5.17.0" />
   </requires>
