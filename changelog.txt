@@ -1,3 +1,10 @@
+1.8.36
+- Speed up series format/logo searches by reusing the relevant episode ID from retained availability summaries, active resume history and next-episode pointers.
+- For unknown episodes, stop at the first configured metadata provider supplying regular episodes, with Cinemeta fallback for IMDb titles. Full detail pages retain their normal metadata merge.
+- Preserve provider episode IDs and validate the returned series identity.
+- Validation: 818 tests passed; app package built. First-load timing still depends on source addon response times.
+- Player skin remains at 0.1.14. Restart Kodi after updating.
+
 1.8.35
 - Keep background availability scans alive across Home, Discover, searches, collections and saved lists, including late-added rows. Pause during full playback and continue afterwards; owned trailers do not block scanning.
 - Use four title workers with exact per-target locks. Display initial format badges from fast addons before slower addons finish, preserving final source order and retained cached badges.
