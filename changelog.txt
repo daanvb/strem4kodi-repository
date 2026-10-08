@@ -1,3 +1,11 @@
+1.8.46
+- Clear deferred format-refresh messages when usable logos arrive while the title stays open.
+- Preserve genuine provider rate-limit warnings and existing request safeguards.
+- Add Certified Fresh and Verified Hot badges for explicit provider award metadata.
+- Keep regular rating badges when certification is unknown; no extra rating requests.
+- Shorten the format database sync status to fit the settings row.
+- Validation: 905 tests passed. Player skin remains at 0.1.14.
+
 1.8.45
 - Fix private format database sync accepting GitHub line-wrapped base64 responses.
 - Preserve strict validation of corrupt data and all existing local/shared records.
