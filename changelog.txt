@@ -1,3 +1,9 @@
+1.8.45
+- Fix private format database sync accepting GitHub line-wrapped base64 responses.
+- Preserve strict validation of corrupt data and all existing local/shared records.
+- Validate two-device upload/readback using realistic GitHub response encoding.
+- Validation: 897 tests passed. Player skin remains at 0.1.14.
+
 1.8.44
 - Add a local format catalogue with optional private GitHub sharing across devices.
 - Include 48 verified series and reuse explicit disc-release format facts.
