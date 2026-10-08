@@ -1,3 +1,13 @@
+1.8.43
+- Recognise current and legacy MDBList Popcornmeter fields for movies and series.
+- Add a separate episode Popcornmeter switch and icons for genuine episode audience scores.
+- Retain cached A/V badges independently of expiring playback links; reuse fresh badge summaries before searching sources.
+- Retry deferred detail checks while the selected title stays open and update logos as providers reply.
+- Show a small checking, waiting, unavailable or confirmed rate-limit status.
+- Ordinary partial provider failures no longer trigger a global failure cooldown; actual rate limits still do.
+- Background stream scanning remains disabled and the shared request budget remains active.
+- Validation: 874 tests passed. Player skin remains at 0.1.14.
+
 1.8.42
 - Move Apple TV catalogue variants into Streaming services in Movies and Series Discover, keeping their individual list names.
 - Includes the configurable Popcornmeter option and all automatic request safeguards.
