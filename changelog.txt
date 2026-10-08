@@ -1,3 +1,8 @@
+1.8.42
+- Move Apple TV catalogue variants into Streaming services in Movies and Series Discover, keeping their individual list names.
+- Includes the configurable Popcornmeter option and all automatic request safeguards.
+- Validation: 864 tests passed. Player skin remains at 0.1.14.
+
 1.8.41
 - Add a separate Popcornmeter audience rating option under Settings > Ratings, using the existing MDbList feed and popcorn badges.
 - Preserve independent critics and audience switches and existing saved preferences.
