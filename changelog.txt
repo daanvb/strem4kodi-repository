@@ -1,3 +1,13 @@
+1.8.30
+- Fill UK age certificates on Upcoming while preserving the upcoming episode description and release date; keep cached parent-series metadata separate.
+- Tighten runtime-to-genre spacing and remove Languages from the details section menu.
+- Link cast and crew to playable filmographies, sorted newest first, with duplicate titles removed. Requires the existing TMDB API key.
+- Show compact source-reported format logos from fresh results for the exact movie or episode; details reuse the existing background source lookup. Unknown availability stays hidden. Player Media info continues to show detected selected-track formats.
+- Refresh Dolby Vision, HDR10/HDR10+, Dolby Digital and DTS artwork with matching sizing and spacing; retain original logo proportions and HDR10+/DTS colours.
+- Align the normal player timeline with scrub/chapter visuals, show episode descriptions instead of series plots, and fit a static synopsis preview beside the title.
+- Widen episode action menus, disable automatic text scrolling, and improve episode progress contrast with a percentage label.
+- Include companion Player skin 0.1.11. Restart Kodi after updating. TV rendering and remote navigation still need device verification.
+
 1.8.29
 - Unify scrub and chapter timeline panels with aligned typography, proper arrow graphics, clear preview times and spaced remote guidance. Hide underlying controls in both modes.
 - Move the episode synopsis into a compact two-line block beside the lower player title, removing the intrusive top-right card.
