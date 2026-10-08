@@ -1,3 +1,11 @@
+1.8.37
+- Faster background logo checks use independent addon queues so slow providers do not block every row. Retain known logos during refresh and add local loading diagnostics.
+- Optional movie audio pre-rolls match the selected source, with configurable Dolby Digital fallback or no pre-roll for DTS. Press OK to reveal Skip pre-roll, then OK to continue.
+- Refresh the public GitHub pre-roll catalogue hourly, retaining the last successful catalogue offline and respecting additions and removals.
+- Add Troubleshooting > Play FEL7 test video using the original Kodi-linked V4 test pattern, with GitHub test assets preferred when available.
+- Validation: 848 tests passed; app package built. Playback and FEL decoding require on-device checks.
+- Player skin remains at 0.1.14. Restart Kodi after updating.
+
 1.8.36
 - Speed up series format/logo searches by reusing the relevant episode ID from retained availability summaries, active resume history and next-episode pointers.
 - For unknown episodes, stop at the first configured metadata provider supplying regular episodes, with Cinemeta fallback for IMDb titles. Full detail pages retain their normal metadata merge.
