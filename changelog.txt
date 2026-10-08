@@ -1,3 +1,12 @@
+1.8.32
+- Move smaller browsing format logos to the bottom right of the hero above the title rows.
+- Bundle sharper transparent logo renderings for browsing and Media info.
+- Allow focused unwatched titles to check source availability during app-owned hero previews, before playback.
+- Blend player overlays into the picture and fade scrub and chapter panels.
+- Translate common numbered chapter, opening and credits labels into English offline. Preserve unknown scene titles and all chapter timings.
+- Include Player skin 0.1.13. Restart Kodi after updating.
+- Validation: 791 tests passed; app and companion packages built. TV appearance still needs device verification.
+
 1.8.31
 - Show locally bundled transparent format logos beside genres and in Media info, without white backing tiles or a source heading.
 - Preload availability for the focused movie or exact episode in the background, reusing fresh source results and discarding obsolete focus requests.

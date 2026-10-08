@@ -12,7 +12,7 @@ screens and native audio, subtitle, video, PVR and accessibility settings.
 3. Open **Strem4Kodi Settings > Appearance > Player appearance**, then select **Strem4Kodi Player** under Kodi **Interface > Skin**.
 4. Play a title through Strem4Kodi. Open playback controls with your remote.
 
-For direct ZIP installation, install `skin.strem4kodi-0.1.12.zip` first, then
+For direct ZIP installation, install `skin.strem4kodi-0.1.13.zip` first, then
 `script.strem4kodi-1.8.30.zip`, using Kodi’s **Install from zip file**.
 
 You can return to your previous skin through the same Kodi setting. Installing
@@ -335,3 +335,9 @@ track; a source filename alone cannot enable Dolby Vision or Atmos.
 In 1.8.30 / Player skin 0.1.11, the normal timeline matches scrub and chapter selection. Synopsis previews use episode text when supplied, remain static, and end at a word boundary. Format badges share aligned sizing and preserve original logo proportions and colour artwork.
 
 In 1.8.31 / Player skin 0.1.12: normal and feedback timelines explicitly override native progress borders and disabled-slider artwork. Both use the same filled cyan track and slim white position marker as scrub mode. Feedback without buttons has a compact panel and an OK hint for opening player controls. Media info and browsing use locally bundled transparent logo variants, with no light backing tiles.
+
+### Local chapter labels and softer overlays
+
+Common numbered chapter labels and opening/credits labels translate to English locally, including Russian, Ukrainian, French, German, Spanish, Portuguese, Italian, Dutch, Polish, Greek, Chinese, Japanese and Korean numbered labels. This is a small offline dictionary, not full scene-title translation: unknown titles remain unchanged. Display translation does not alter chapter times. The player, chapter picker and timeline use the same translations.
+
+Player overlays now blend into the picture with a transparent upper gradient; scrub and chapter panels fade in and out. Format artwork uses smaller display slots and newly bundled renderings. Browsing availability badges appear at the lower right above the title rows, including unwatched focused titles after a background source check.
