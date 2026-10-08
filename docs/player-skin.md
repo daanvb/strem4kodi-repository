@@ -235,7 +235,12 @@ control row. One press saves the current position without a menu. Holding
 OK/Enter during episode playback opens a menu to mark or manage smart credits.
 For that menu, the position is captured when it opens, so time spent choosing
 the option does not move the marker. This is
-an explicit episode marker, not video analysis. A valid IntroDB marker takes
+an explicit episode marker, not video analysis. The confirmation notification
+shows “Smart credits” and “Credits start saved at mm:ss” using the captured
+position. Its text is assigned directly to its own controls so another player
+window cannot change its property context. Shared popups use fonts defined in
+both the app and companion skin, including both fontsets.
+A valid IntroDB marker takes
 priority. Otherwise the saved marker is used for the same episode when its
 runtime matches within five seconds; it also contributes to the series estimate
 for other episodes after three consistent samples. Automatic observations do
@@ -294,6 +299,21 @@ uses keyboard hold-Enter/OK for Play/Pause in fullscreen playback; other media
 and skins keep that fallback. Remote support depends on whether the device sends
 an input Kodi recognizes as a long press. The visible button remains available
 when a remote has its own hold action or does not report long presses.
+
+### Up Next loading and selection
+
+Up Next sits at the bottom right with a small screen-edge margin. Selecting its
+primary action keeps the card visible with **Loading…** through source lookup,
+source validation and playback hand-off. Repeated OK presses cannot start duplicate
+requests. Dismiss/Back cancels pending selection; errors and startup timeouts restore
+the action. The card closes when the next video begins advancing, rather than as
+soon as the playback command is issued. Skip Outro yields while Up Next is visible.
+
+Next-episode selection uses the configured stream add-ons, current remembered
+source filters, device quality ceiling, and the series/animation Auto Play profile.
+Automatic source attempts follow the configured limit. Ranking preferences retain
+their existing closest-match fallback; hard filters and the quality ceiling remain
+enforced. Fresh cached source results are reused; expired results are refreshed.
 
 ### Episode watched threshold
 

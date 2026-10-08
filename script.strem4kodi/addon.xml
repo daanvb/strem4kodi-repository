@@ -1,4 +1,4 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.47" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.48" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.14" />
@@ -19,7 +19,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.47: Faster format database updates, consistent series logos and poster fallbacks, 88 verified series, readable troubleshooting help and optional quota-conscious slow discovery. Restart Kodi after updating.</news>
+    <news>1.8.48: Clearer settings navigation, reliable credits confirmations, lower Up Next card with loading feedback, 249 reviewed movies and 172 series, and optional playback-time format discovery after three minutes. Restart Kodi after updating.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>

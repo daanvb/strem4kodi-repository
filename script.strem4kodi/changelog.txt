@@ -1,3 +1,15 @@
+1.8.48
+- Tidy settings into a consistent eight-row layout with compact help, scrollbar and arrows; retain focus after changes and use paged diagnostic details.
+- Correct custom cache values, chooser navigation, nested trailer/discovery options and invalid saved enum indices; reuse subtitle capability checks.
+- Fix blank Credits start confirmations and other popup font references; show the saved playback time directly in the notification.
+- Move Up Next lower/right, retain Loading feedback until playback advances, cancel dismissed requests and restore the action after errors or timeouts.
+- Hide Skip Outro while Up Next is visible; retain source preferences, quality limits, content profiles and fresh source-cache reuse.
+- Add 249 reviewed movie records and expand the offline series catalogue to 172, with public evidence and no stream searches for research.
+- Optional slow discovery runs after three minutes of stable movie/episode playback, then at most one title every three minutes across linked devices. Remains off by default.
+- Prioritise Watchlist / Up Next, recently browsed titles and Popular / Trending; skip known/current/future titles, suppress shared daily duplicates and pause for foreground requests, buffering, trailers and episode endings.
+- Use one AIOStreams add-on with shared reservations and 30-minute error backoff. Other apps can still consume the provider allowance.
+- Validation: 965 tests passed; app and repository packages validated. Player skin remains 0.1.14. Restart Kodi after updating.
+
 1.8.47
 - Optimise database learning to update only affected facts; unchanged syncs no longer rewrite the catalogue. Use indexed series lookups.
 - Reuse the same series overview on Home, Upcoming, Discover and details; canonicalise IMDb aliases and learn from metadata-supplied streams.

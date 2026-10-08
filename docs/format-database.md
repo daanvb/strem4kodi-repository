@@ -16,20 +16,30 @@ membership alone is not used to guess audio or HDR. The live catalogue import
 was checked on 8 October 2026: 1,177 release rows supplied 1,163 distinct movie
 format records. Coverage is limited and is not a general TV format database.
 
-A small offline series seed is shipped in `resources/series-formats.json`. The
-88 reviewed entries include 81 Apple TV series with hero badges verified from
-UK title pages (4K, Dolby Vision and Atmos), plus seven series with formats
-explicitly confirmed by Dolby. Only confirmed fields are included: an Atmos
-article is not evidence for HDR or resolution. Every entry has a source and
-review date. The expanded entries use TVmaze only to match series identities,
-with per-entry identity links for attribution (https://www.tvmaze.com/api);
-technical formats come from the linked Apple or Dolby pages. This is a starter
-catalogue, not coverage of all streaming TV.
-It is available immediately on every device, even before playback or GitHub
-sync. Addon updates distribute reviewed seed changes. The developer tool
-`tools/refresh-series-formats.py` can refresh the Apple entries; it reads only
-hero badges before episode links and never runs inside Kodi.
-No bulk copy of the upstream dataset is bundled or republished by this addon.
+Reviewed offline catalogues are shipped in `resources/series-formats.json`
+and `resources/movie-formats.json`. Technical formats come from explicit UK
+Apple product-header badges, Stan title listings, and Dolby home-entertainment
+case studies. Only confirmed fields are included: an Atmos article is not
+evidence for HDR or resolution, and 5.1 does not identify an audio codec.
+Every record has a source and check date; combined records retain evidence for
+each added format. Public TVmaze and Cinemeta metadata match exact title/year
+identities, rather than guessing from similar names. TVmaze identity links
+provide attribution (https://www.tvmaze.com/api; CC BY-SA). No plots or artwork
+are copied into these datasets.
+
+These reviewed hints are immediately available on every device after an addon
+update, even before playback or GitHub sync. Movie hints combine with the disc
+catalogue, while actual source observations take priority, including an empty
+or lower-quality result. Catalogue hints never assert that a specific source,
+episode, language, region or subscription provides the listed formats.
+
+The developer tools `tools/research-title-formats.py` and
+`tools/research-stan-formats.py` cache public responses outside the addon,
+extract only title-scoped badges, and reject uncertain identities. The Apple
+parser excludes badges belonging to recommendations and trailers. These tools
+are excluded from the installed package and never run inside Kodi. This
+research makes no stream-addon requests. No bulk copy of the community disc
+dataset is bundled or republished by this addon.
 
 The device keeps a local SQLite database in its Kodi profile. Reading logos
 does not search stream add-ons. The existing catalogue download populates the
@@ -128,23 +138,42 @@ in one stream. Source cards and playback use their own stream information.
 
 Account & Stremio has **Slow background format discovery**, off by default.
 It requires format sharing and the existing private GitHub sync token. It checks
-loaded movie/series cards with no known technical formats. One installed, enabled
+movie/series titles with no known technical formats. One installed, enabled
 AIOStreams addon is used per request, even if normal playback uses all addons.
-The shared repository reserves one timestamp slot every five minutes using an
+The shared repository reserves one timestamp slot every three minutes using an
 optimistic SHA write. Conflicts, malformed state, missing token or network failure
-stop scanning. Multiple synced clients therefore compete for the same 12 hourly
-slots rather than each spending 12. No titles, URLs or credentials go in this slot
-file. Actual facts continue to use the existing `formats.json` database.
+stop scanning. Multiple synced clients therefore compete for the same 20 hourly
+slots rather than each spending 20. The slot file holds timestamps and bounded
+hashed title keys to avoid duplicate attempts for 24 hours across devices. No raw
+titles, URLs or credentials go in this file. Actual facts continue to use the
+existing `formats.json` database and its five-minute sync.
 
-Scanning begins after five minutes, only while the browsing window is active.
-All video playback (including trailers) pauses it. It rechecks the local database
+Scanning now runs in the persistent service after three minutes of settled,
+owned movie/episode playback. Browsing alone does not run source scans. Trailers,
+pre-rolls, pauses, buffering, fast-forward and the final two minutes are excluded;
+changing episodes restarts the settling period. It rechecks the local database
 and foreground request budget immediately before a source request, records
 complete successful observations, and retries unknown titles at most daily.
 Provider errors/rate warnings impose a 30-minute shared backoff. A series uses
-one representative next episode and contributes to the high-level overview.
+one representative episode, filters explicitly future-dated episodes, and
+contributes to the high-level overview. Normal source searches defer local scans
+according to their addon count and preserve any longer cooldown.
 The scanner never sweeps every episode or restores the former parallel workers.
 
-This consumes at most 20% of a one-search-per-minute refill. It cannot measure
+The local queue survives window closure/restart and holds up to 600 identities
+for 30 days. Priority groups have separate bounds so a large watchlist cannot
+evict all chart entries: Watchlist / Up Next (200), recently focused titles (150),
+Popular / Trending (200), other loaded cards (50). Aliases and repeated lists
+deduplicate by canonical identity. Known formats and explicit future releases
+are skipped; the currently playing title is excluded.
+
+One page from each configured movie/series Popular and Trending catalogue is
+refreshed at most daily, using one supplier per chart/type and one page per tick.
+These are catalogue requests, not stream searches, and still use their provider's
+normal catalogue limits. A catalogue failure cannot block locally queued titles.
+No complete catalogue or episode-library sweep is performed.
+
+This consumes at most one third of a one-search-per-minute refill. It cannot measure
 remaining server tokens, reserve tokens for other applications, or guarantee
 against limits caused by other clients outside this sync repository.
 Provider reference: https://docs.elfhosted.com/guides/media/hosted-jellyfin-frontends-and-rate-limits/
