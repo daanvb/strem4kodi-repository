@@ -8,7 +8,16 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.28.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.29.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.29
+
+- Scrub and chapter timelines share one clean panel, proper arrow graphics and aligned remote guidance.
+- The episode synopsis blends into the lower player controls in a compact two-line block.
+- Stop playback is removed from Settings. The episode range action now reads **Mark all episodes watched to here**.
+- Resolution, HDR and detected audio use matching badge tiles. HDR10+ is supported; video codec badges are removed.
+
+Includes **Player skin 0.1.10**. Restart Kodi after updating. Actual Shield rendering remains to be checked on your device.
 
 ## What's new in 1.8.28
 
@@ -285,7 +294,7 @@ python -m unittest discover -s tests
 python tools/build-stremio-addon.py --output dist
 ```
 
-Strem4Kodi develops independently from the original project. Useful upstream fixes can be reviewed on demand with `python tools/review-upstream.py --output dist/upstream-review.md`, then adapted individually. Nothing is merged automatically. See the [upstream review guide](https://github.com/daanvb/Stremio-for-Kodi-private/blob/strem4kodi/docs/upstream-review.md).
+Strem4Kodi develops independently from the original project. Useful upstream fixes can be reviewed on demand with `python tools/review-upstream.py --output dist/upstream-review.md`, then adapted individually. Nothing is merged automatically. See the [upstream review guide](docs/upstream-review.md).
 
 The addon ID is **`script.strem4kodi`**; repository ID is **`repository.strem4kodi`**. The repository builder requires an explicit HTTPS `--feed-url`. Use a new version for a new published build rather than replacing an existing release ZIP.
 

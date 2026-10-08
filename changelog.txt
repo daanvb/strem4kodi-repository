@@ -1,3 +1,10 @@
+1.8.29
+- Unify scrub and chapter timeline panels with aligned typography, proper arrow graphics, clear preview times and spaced remote guidance. Hide underlying controls in both modes.
+- Move the episode synopsis into a compact two-line block beside the lower player title, removing the intrusive top-right card.
+- Remove Stop playback from the settings menu and rename the episode range action to Mark all episodes watched to here, with matching unwatched wording.
+- Use consistently sized media badge tiles with original Dolby artwork and matching resolution/HDR labels. Add HDR10+ coverage and remove video codec badges; retain technical codec details in the information column.
+- Include companion Player skin 0.1.10. Restart Kodi after updating. Actual Shield rendering still requires device verification.
+
 1.8.28
 - Prioritise Chapters, Use ChaptersDB instead and Smart credits in player settings. Remove duplicate Audio, Subtitles and Media Info entries; retain their dedicated player buttons.
 - Replace scrub instruction boxes with a solid bottom panel, clear target time and total skipped amount, and two concise help lines. Hide underlying player controls while scrubbing and preserve chapter markers.

@@ -7,13 +7,13 @@ screens and native audio, subtitle, video, PVR and accessibility settings.
 
 ## Install and activate
 
-1. Update Strem4Kodi to **1.8.17** through **Strem4Kodi Repository** on Kodi 21 or later. Kodi installs the companion skin automatically.
+1. Update Strem4Kodi to **1.8.29** through **Strem4Kodi Repository** on Kodi 21 or later. Kodi installs the companion skin automatically.
 2. Restart Kodi so the updated playback service reloads.
 3. Open **Strem4Kodi Settings > Appearance > Player appearance**, then select **Strem4Kodi Player** under Kodi **Interface > Skin**.
 4. Play a title through Strem4Kodi. Open playback controls with your remote.
 
-For direct ZIP installation, install `skin.strem4kodi-0.1.7.zip` first, then
-`script.strem4kodi-1.8.17.zip`, using Kodi’s **Install from zip file**.
+For direct ZIP installation, install `skin.strem4kodi-0.1.10.zip` first, then
+`script.strem4kodi-1.8.29.zip`, using Kodi’s **Install from zip file**.
 
 You can return to your previous skin through the same Kodi setting. Installing
 the ZIP does not silently change your skin. Normal Kodi playback uses the
@@ -44,8 +44,7 @@ bar simple: Play/Pause, Audio, Subtitles, Settings and Media info. The seek bar 
 seek action. Audio and Subtitles open matching two-line track pickers with the
 current choice marked. Subtitles includes Off, Download subtitles and access
 to Kodi's advanced subtitle settings, even if the file has no embedded tracks.
-Settings groups audio adjustments, subtitle settings, picture settings and
-Stop playback into one menu. Back cancels each picker without changing tracks.
+Settings contains Chapters, ChaptersDB edition selection, Smart credits and picture settings. Back cancels each picker without changing tracks.
 Selections are discarded if playback moves to another file while a menu is open.
 
 ## Chapters
