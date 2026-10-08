@@ -1,3 +1,13 @@
+1.8.31
+- Show locally bundled transparent format logos beside genres and in Media info, without white backing tiles or a source heading.
+- Preload availability for the focused movie or exact episode in the background, reusing fresh source results and discarding obsolete focus requests.
+- Compile the full poster-grid layout before opening cast filmographies.
+- Fit section dropdown height to its remaining options after removing Languages, and increase the gap above episode progress bars.
+- Override inherited Kodi progress borders and disabled slider artwork so normal, scrub and chapter timelines share filled tracks and clear position markers.
+- Compact feedback when player buttons are hidden, with an OK hint for opening controls.
+- Include Player skin 0.1.12. Restart Kodi after updating.
+- Validation: 787 tests passed; app and companion packages built. Actual TV rendering remains to be checked on your device.
+
 1.8.30
 - Fill UK age certificates on Upcoming while preserving the upcoming episode description and release date; keep cached parent-series metadata separate.
 - Tighten runtime-to-genre spacing and remove Languages from the details section menu.

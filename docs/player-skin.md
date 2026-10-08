@@ -12,7 +12,7 @@ screens and native audio, subtitle, video, PVR and accessibility settings.
 3. Open **Strem4Kodi Settings > Appearance > Player appearance**, then select **Strem4Kodi Player** under Kodi **Interface > Skin**.
 4. Play a title through Strem4Kodi. Open playback controls with your remote.
 
-For direct ZIP installation, install `skin.strem4kodi-0.1.11.zip` first, then
+For direct ZIP installation, install `skin.strem4kodi-0.1.12.zip` first, then
 `script.strem4kodi-1.8.30.zip`, using Kodi’s **Install from zip file**.
 
 You can return to your previous skin through the same Kodi setting. Installing
@@ -333,3 +333,5 @@ flags. All logo choices still follow Kodi's detected format and active audio
 track; a source filename alone cannot enable Dolby Vision or Atmos.
 
 In 1.8.30 / Player skin 0.1.11, the normal timeline matches scrub and chapter selection. Synopsis previews use episode text when supplied, remain static, and end at a word boundary. Format badges share aligned sizing and preserve original logo proportions and colour artwork.
+
+In 1.8.31 / Player skin 0.1.12: normal and feedback timelines explicitly override native progress borders and disabled-slider artwork. Both use the same filled cyan track and slim white position marker as scrub mode. Feedback without buttons has a compact panel and an OK hint for opening player controls. Media info and browsing use locally bundled transparent logo variants, with no light backing tiles.
