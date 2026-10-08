@@ -1,3 +1,11 @@
+1.8.28
+- Prioritise Chapters, Use ChaptersDB instead and Smart credits in player settings. Remove duplicate Audio, Subtitles and Media Info entries; retain their dedicated player buttons.
+- Replace scrub instruction boxes with a solid bottom panel, clear target time and total skipped amount, and two concise help lines. Hide underlying player controls while scrubbing and preserve chapter markers.
+- Show a compact floating episode title and synopsis card while custom player controls are open, following their visibility and idle behaviour.
+- Reduce the details hero gap between the selected episode title and synopsis to eight pixels.
+- Use original Dolby Vision Horizontal artwork and sharper TrueHD and Digital Plus logos, preserving proportions and adding light tiles for black artwork. Atmos retains the original Dolby logo and format badges still follow detected playback information.
+- Include companion Player skin 0.1.9. Restart Kodi after updating. Scene preview thumbnails are not included; remote layout still requires checking on your device.
+
 1.8.27
 - Use vertical Discover grids across lists with Home-sized posters and the existing hero. Hide clipped captions on Home and Discover; enter the sidebar from the left edge rather than Up.
 - Slow held scrubbing acceleration, clarify preview time and skipped amount, and choose seek-on-release or press-OK confirmation under Playback settings.

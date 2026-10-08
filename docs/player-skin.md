@@ -258,8 +258,11 @@ increase to twenty after three seconds, then forty after six seconds.
 
 The preview shows Jump to followed by the destination time, with Forward/Back
 and the total change underneath. Preview only means playback has not moved.
-Separate button-style hints explain tap/hold movement, the selected confirmation
-mode, chapters, returning to controls and cancelling the pending jump.
+A solid bottom panel replaces the underlying controls while scrubbing. Two short
+help lines explain movement, confirmation, chapters and cancelling the preview.
+Player Settings lists Chapters, Use ChaptersDB instead and Smart credits first,
+when available, followed by Picture settings and Stop playback. Audio, Subtitles
+and Media Info remain on their dedicated player buttons without duplicate entries.
 
 Media Info refreshes detected audio while open. Known aliases and combined
 Dolby Digital Plus/Atmos labels resolve to the selected track's base-format
@@ -315,3 +318,17 @@ chapter to jump. This explicit lookup is also available when automatic ChaptersD
 fallback is off. Names and timings come from the submitted list; English names
 are not guaranteed. Normal chapter navigation continues to prefer embedded
 chapters, and a changed playback session cancels the online selection.
+
+### Episode presentation and format artwork
+
+The custom player shows an episode title and synopsis card at the upper right
+while its controls are open. It follows the same visibility and idle behaviour
+as the controls and is hidden during scrubbing or another player menu. Movies
+and episodes without a synopsis do not show an empty card. The details hero
+uses a separate episode-title line with an eight-pixel gap before the synopsis.
+
+Media Info uses the Dolby Vision Horizontal logo and sharper original TrueHD
+and Digital Plus artwork, with light tiles for black logos and preserved aspect
+ratios. Atmos retains the original Dolby logo. Other formats retain Estuary
+flags. All logo choices still follow Kodi's detected format and active audio
+track; a source filename alone cannot enable Dolby Vision or Atmos.
