@@ -1,3 +1,13 @@
+1.8.47
+- Optimise database learning to update only affected facts; unchanged syncs no longer rewrite the catalogue. Use indexed series lookups.
+- Reuse the same series overview on Home, Upcoming, Discover and details; canonicalise IMDb aliases and learn from metadata-supplied streams.
+- Reuse artwork for blank duplicate titles and add independent poster-image fallbacks.
+- Expand the offline catalogue to 88 verified series, with recorded evidence.
+- Add optional slow AIOStreams discovery: off by default, one five-minute slot across synced devices, paused during video/trailers and 30-minute backoff after errors.
+- Fix first-run creation of the shared scan slot; preserve request safeguards and existing facts.
+- Enlarge the static troubleshooting help area without scrolling; give other settings descriptions more room.
+- Validation: 920 tests passed. A 10,000-record local benchmark reduced median observation update from 219.80 ms to 10.33 ms; device/network speed varies. Player skin remains 0.1.14.
+
 1.8.46
 - Clear deferred format-refresh messages when usable logos arrive while the title stays open.
 - Preserve genuine provider rate-limit warnings and existing request safeguards.

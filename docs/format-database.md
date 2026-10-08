@@ -17,8 +17,8 @@ was checked on 8 October 2026: 1,177 release rows supplied 1,163 distinct movie
 format records. Coverage is limited and is not a general TV format database.
 
 A small offline series seed is shipped in `resources/series-formats.json`. The
-48 reviewed entries include 42 Apple TV series with hero badges verified from
-UK title pages (4K, Dolby Vision and Atmos), plus six series with formats
+88 reviewed entries include 81 Apple TV series with hero badges verified from
+UK title pages (4K, Dolby Vision and Atmos), plus seven series with formats
 explicitly confirmed by Dolby. Only confirmed fields are included: an Atmos
 article is not evidence for HDR or resolution. Every entry has a source and
 review date. The expanded entries use TVmaze only to match series identities,
@@ -80,8 +80,8 @@ once when sync runs, with their original dates.
 Disc catalogue facts are downloaded separately and are not reuploaded.
 
 See **Format database sync** in Account & Stremio for the current sharing status.
-Browsing background stream scans, including the old account-maintenance source
-prefetch, are disabled. Opening a source picker still performs its normal source
+The old parallel browsing/account-maintenance stream scans remain disabled.
+Opening a source picker still performs its normal source
 lookup; the database does not replace playable stream discovery.
 
 Unknown titles remain without logos until technical information is available.
@@ -123,3 +123,46 @@ on subsequent normal source lookups. Verified series facts ship with the addon;
 disc facts use the separate public download and are not republished to private sync.
 The hero summarises known capabilities; it does not claim every combination exists
 in one stream. Source cards and playback use their own stream information.
+
+## Optional slow discovery
+
+Account & Stremio has **Slow background format discovery**, off by default.
+It requires format sharing and the existing private GitHub sync token. It checks
+loaded movie/series cards with no known technical formats. One installed, enabled
+AIOStreams addon is used per request, even if normal playback uses all addons.
+The shared repository reserves one timestamp slot every five minutes using an
+optimistic SHA write. Conflicts, malformed state, missing token or network failure
+stop scanning. Multiple synced clients therefore compete for the same 12 hourly
+slots rather than each spending 12. No titles, URLs or credentials go in this slot
+file. Actual facts continue to use the existing `formats.json` database.
+
+Scanning begins after five minutes, only while the browsing window is active.
+All video playback (including trailers) pauses it. It rechecks the local database
+and foreground request budget immediately before a source request, records
+complete successful observations, and retries unknown titles at most daily.
+Provider errors/rate warnings impose a 30-minute shared backoff. A series uses
+one representative next episode and contributes to the high-level overview.
+The scanner never sweeps every episode or restores the former parallel workers.
+
+This consumes at most 20% of a one-search-per-minute refill. It cannot measure
+remaining server tokens, reserve tokens for other applications, or guarantee
+against limits caused by other clients outside this sync repository.
+Provider reference: https://docs.elfhosted.com/guides/media/hosted-jellyfin-frontends-and-rate-limits/
+
+## Consistent presentation
+
+Foreground learning reads/writes only affected facts; periodic shared merges
+write only records that changed. Series overview queries use indexed ID ranges.
+An unchanged sync does not rewrite the whole local catalogue. Streams supplied
+directly in title metadata also contribute facts without extra addon searches.
+
+Upcoming, Home, Discover and details heroes use the same high-level series
+overview, including retained observations and the offline seed. Exact episode
+source checks retain their original identity. IMDb-prefixed and explicit IMDb-ID
+aliases read/write the same canonical facts. No name-only matching is used.
+
+Blank duplicate posters reuse available artwork for the same type and canonical
+ID. Poster image controls fall back to the original image or an independent
+IMDb-based image endpoint if the configured server cannot load the image.
+Provider-embedded quality badges are artwork, not evidence imported into the
+technical database.

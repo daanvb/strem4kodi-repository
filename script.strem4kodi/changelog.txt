@@ -1,3 +1,176 @@
+1.8.47
+- Optimise database learning to update only affected facts; unchanged syncs no longer rewrite the catalogue. Use indexed series lookups.
+- Reuse the same series overview on Home, Upcoming, Discover and details; canonicalise IMDb aliases and learn from metadata-supplied streams.
+- Reuse artwork for blank duplicate titles and add independent poster-image fallbacks.
+- Expand the offline catalogue to 88 verified series, with recorded evidence.
+- Add optional slow AIOStreams discovery: off by default, one five-minute slot across synced devices, paused during video/trailers and 30-minute backoff after errors.
+- Fix first-run creation of the shared scan slot; preserve request safeguards and existing facts.
+- Enlarge the static troubleshooting help area without scrolling; give other settings descriptions more room.
+- Validation: 920 tests passed. A 10,000-record local benchmark reduced median observation update from 219.80 ms to 10.33 ms; device/network speed varies. Player skin remains 0.1.14.
+
+1.8.46
+- Clear deferred format-refresh messages when usable logos arrive while the title stays open.
+- Preserve genuine provider rate-limit warnings and existing request safeguards.
+- Add Certified Fresh and Verified Hot badges for explicit provider award metadata.
+- Keep regular rating badges when certification is unknown; no extra rating requests.
+- Shorten the format database sync status to fit the settings row.
+- Validation: 905 tests passed. Player skin remains at 0.1.14.
+
+1.8.45
+- Fix private format database sync accepting GitHub line-wrapped base64 responses.
+- Preserve strict validation of corrupt data and all existing local/shared records.
+- Validate two-device upload/readback using realistic GitHub response encoding.
+- Validation: 897 tests passed. Player skin remains at 0.1.14.
+
+1.8.44
+- Add a local format catalogue with optional private GitHub sharing across devices.
+- Include 48 verified series and reuse explicit disc-release format facts.
+- Retain learned formats indefinitely; preserve per-source capability combinations with stable IDs.
+- Migrate existing cached format summaries without additional provider searches.
+- Merge shared observations at startup and every five minutes; write only when data changes.
+- Preserve newer source updates, series overviews and local data during sync failures.
+- Remove remaining account-maintenance background source scans; request safeguards stay active.
+- Validation: 895 tests passed. Player skin remains at 0.1.14.
+
+1.8.43
+- Recognise current and legacy MDBList Popcornmeter fields for movies and series.
+- Add a separate episode Popcornmeter switch and icons for genuine episode audience scores.
+- Retain cached A/V badges independently of expiring playback links; reuse fresh badge summaries before searching sources.
+- Retry deferred detail checks while the selected title stays open and update logos as providers reply.
+- Show a small checking, waiting, unavailable or confirmed rate-limit status.
+- Ordinary partial provider failures no longer trigger a global failure cooldown; actual rate limits still do.
+- Background stream scanning remains disabled and the shared request budget remains active.
+- Validation: 874 tests passed. Player skin remains at 0.1.14.
+
+1.8.42
+- Move Apple TV catalogue variants into Streaming services in Movies and Series Discover, keeping their individual list names.
+- Includes the configurable Popcornmeter option and all automatic request safeguards.
+- Validation: 864 tests passed. Player skin remains at 0.1.14.
+
+1.8.41
+- Add a separate Popcornmeter audience rating option under Settings > Ratings, using the existing MDbList feed and popcorn badges.
+- Preserve independent critics and audience switches and existing saved preferences.
+- Includes all 1.8.40 catalogue-logo and automatic request safeguards.
+- Validation: 863 tests passed. Player skin remains at 0.1.14.
+
+1.8.40
+- Show explicit catalogue quality/audio fields immediately on hero focus, with cached source formats taking precedence and no stream searches while browsing.
+- Add a persistent shared request budget for automatic title-opening checks: one minute per stream addon plus an extra minute between checks.
+- Pause automatic title checks for at least 15 minutes after failures. Manual source selection and refresh remain available.
+- Keep automatic whole-page stream searching disabled for all addons.
+- Validation: 862 tests passed; app package built.
+- Player skin remains at 0.1.14. Restart Kodi after updating.
+
+1.8.39
+- Disable automatic background stream searches for every addon, reserving requests for explicit title opening, source selection and playback.
+- Stop whole-page format scanning while retaining cached logos and normal catalogue/artwork loading.
+- Opening details still checks the movie or relevant episode and reuses fresh cached sources.
+- Validation: 854 tests passed; app package built.
+- Player skin remains at 0.1.14. Restart Kodi after updating.
+
+1.8.38
+- Reserve public AIOStreams searches for deliberate title opening, source selection and playback. Skip background logo searches against its public and development instances.
+- Keep cached format badges while browsing; opening details checks the movie or relevant episode and reuses fresh source results.
+- Avoid repeating a detail-page prefetch for an episode already checked during that visit.
+- Validation: 853 tests passed; app package built.
+- Player skin remains at 0.1.14. Restart Kodi after updating.
+
+1.8.37
+- Faster background logo checks use independent addon queues so slow providers do not block every row. Retain known logos during refresh and add local loading diagnostics.
+- Optional movie audio pre-rolls match the selected source, with configurable Dolby Digital fallback or no pre-roll for DTS. Press OK to reveal Skip pre-roll, then OK to continue.
+- Refresh the public GitHub pre-roll catalogue hourly, retaining the last successful catalogue offline and respecting additions and removals.
+- Add Troubleshooting > Play FEL7 test video using the original Kodi-linked V4 test pattern, with GitHub test assets preferred when available.
+- Validation: 848 tests passed; app package built. Playback and FEL decoding require on-device checks.
+- Player skin remains at 0.1.14. Restart Kodi after updating.
+
+1.8.36
+- Speed up series format/logo searches by reusing the relevant episode ID from retained availability summaries, active resume history and next-episode pointers.
+- For unknown episodes, stop at the first configured metadata provider supplying regular episodes, with Cinemeta fallback for IMDb titles. Full detail pages retain their normal metadata merge.
+- Preserve provider episode IDs and validate the returned series identity.
+- Validation: 818 tests passed; app package built. First-load timing still depends on source addon response times.
+- Player skin remains at 0.1.14. Restart Kodi after updating.
+
+1.8.35
+- Keep background availability scans alive across Home, Discover, searches, collections and saved lists, including late-added rows. Pause during full playback and continue afterwards; owned trailers do not block scanning.
+- Use four title workers with exact per-target locks. Display initial format badges from fast addons before slower addons finish, preserving final source order and retained cached badges.
+- Retry failed availability checks after 30 seconds, two minutes and five minutes. Only loaded titles and each series' relevant episode are queried.
+- Estimate finish time for movies and episodes using remaining runtime. Subtract saved progress only for the matching video; use measured playback duration when available.
+- Narrow the action menu while retaining full labels without text scrolling.
+- Validation: 813 tests passed; app and companion packages built. TV behaviour remains to be checked on device.
+- Player skin remains at 0.1.14. Restart Kodi after updating.
+
+1.8.34
+- Prepare format badges across all loaded browsing rows with bounded background workers. Retain known badges during refresh and provider changes; refresh after one hour and expire after seven days.
+- Keep playback URLs on their existing short-lived, provider-aware cache.
+- Follow playback in scrub and chapter selection until you choose a position. Keep manual selections steady and show a live chapter playback clock.
+- Use a refined, antialiased clock icon beside movie finish times.
+- Compact the media action menu and highlight Resume only when focused.
+- Player skin remains at 0.1.14. Restart Kodi after updating.
+
+1.8.33
+- Pre-filter format logos at display sizes, preserving HDR10+ and DTS colours on transparent backgrounds.
+- Warm source availability for the first eight browsing titles on page load and shorten the focused-title delay. Share cached source checks and discard obsolete page requests.
+- Close the underlying player menu before opening scrub or chapters, preventing menu flashes during transitions.
+- Hide the separate seek-feedback bar during Strem4Kodi playback. Left/Right enter custom scrub and Down opens player controls; other skins and live TV keep native shortcuts.
+- Show a clock and estimated finish time beside movie genres, using the full runtime from now and refreshing each minute. No Ends at text.
+- Include Player skin 0.1.14. Restart Kodi after updating.
+- Validation: 794 tests passed; app and companion packages built. Device rendering remains to be checked on your TV.
+
+1.8.32
+- Move smaller browsing format logos to the bottom right of the hero above the title rows.
+- Bundle sharper transparent logo renderings for browsing and Media info.
+- Allow focused unwatched titles to check source availability during app-owned hero previews, before playback.
+- Blend player overlays into the picture and fade scrub and chapter panels.
+- Translate common numbered chapter, opening and credits labels into English offline. Preserve unknown scene titles and all chapter timings.
+- Include Player skin 0.1.13. Restart Kodi after updating.
+- Validation: 791 tests passed; app and companion packages built. TV appearance still needs device verification.
+
+1.8.31
+- Show locally bundled transparent format logos beside genres and in Media info, without white backing tiles or a source heading.
+- Preload availability for the focused movie or exact episode in the background, reusing fresh source results and discarding obsolete focus requests.
+- Compile the full poster-grid layout before opening cast filmographies.
+- Fit section dropdown height to its remaining options after removing Languages, and increase the gap above episode progress bars.
+- Override inherited Kodi progress borders and disabled slider artwork so normal, scrub and chapter timelines share filled tracks and clear position markers.
+- Compact feedback when player buttons are hidden, with an OK hint for opening controls.
+- Include Player skin 0.1.12. Restart Kodi after updating.
+- Validation: 787 tests passed; app and companion packages built. Actual TV rendering remains to be checked on your device.
+
+1.8.30
+- Fill UK age certificates on Upcoming while preserving the upcoming episode description and release date; keep cached parent-series metadata separate.
+- Tighten runtime-to-genre spacing and remove Languages from the details section menu.
+- Link cast and crew to playable filmographies, sorted newest first, with duplicate titles removed. Requires the existing TMDB API key.
+- Show compact source-reported format logos from fresh results for the exact movie or episode; details reuse the existing background source lookup. Unknown availability stays hidden. Player Media info continues to show detected selected-track formats.
+- Refresh Dolby Vision, HDR10/HDR10+, Dolby Digital and DTS artwork with matching sizing and spacing; retain original logo proportions and HDR10+/DTS colours.
+- Align the normal player timeline with scrub/chapter visuals, show episode descriptions instead of series plots, and fit a static synopsis preview beside the title.
+- Widen episode action menus, disable automatic text scrolling, and improve episode progress contrast with a percentage label.
+- Include companion Player skin 0.1.11. Restart Kodi after updating. TV rendering and remote navigation still need device verification.
+
+1.8.29
+- Unify scrub and chapter timeline panels with aligned typography, proper arrow graphics, clear preview times and spaced remote guidance. Hide underlying controls in both modes.
+- Move the episode synopsis into a compact two-line block beside the lower player title, removing the intrusive top-right card.
+- Remove Stop playback from the settings menu and rename the episode range action to Mark all episodes watched to here, with matching unwatched wording.
+- Use consistently sized media badge tiles with original Dolby artwork and matching resolution/HDR labels. Add HDR10+ coverage and remove video codec badges; retain technical codec details in the information column.
+- Include companion Player skin 0.1.10. Restart Kodi after updating. Actual Shield rendering still requires device verification.
+
+1.8.28
+- Prioritise Chapters, Use ChaptersDB instead and Smart credits in player settings. Remove duplicate Audio, Subtitles and Media Info entries; retain their dedicated player buttons.
+- Replace scrub instruction boxes with a solid bottom panel, clear target time and total skipped amount, and two concise help lines. Hide underlying player controls while scrubbing and preserve chapter markers.
+- Show a compact floating episode title and synopsis card while custom player controls are open, following their visibility and idle behaviour.
+- Reduce the details hero gap between the selected episode title and synopsis to eight pixels.
+- Use original Dolby Vision Horizontal artwork and sharper TrueHD and Digital Plus logos, preserving proportions and adding light tiles for black artwork. Atmos retains the original Dolby logo and format badges still follow detected playback information.
+- Include companion Player skin 0.1.9. Restart Kodi after updating. Scene preview thumbnails are not included; remote layout still requires checking on your device.
+
+1.8.27
+- Use vertical Discover grids across lists with Home-sized posters and the existing hero. Hide clipped captions on Home and Discover; enter the sidebar from the left edge rather than Up.
+- Slow held scrubbing acceleration, clarify preview time and skipped amount, and choose seek-on-release or press-OK confirmation under Playback settings.
+- Add a small round animated Credits start button. One press records the current episode's credits start; supported remotes also offer credits actions through holding OK.
+- Learn credits lengths from comparable episodes with outlier rejection, preserve exact manual markers, and sync corrected/deleted samples through private GitHub sync. Manage incorrect timings from player settings or episode actions.
+- Mark episodes watched after 85% actual viewing or when either credits card appears, including estimated/fallback timing, or Credits start is pressed. Preserve movie rules and sync episode progress through Stremio.
+- Add Player Settings > Use ChaptersDB instead to choose an online edition and chapter list even when embedded chapters exist. Online names and timings depend on the submitted edition.
+- Refresh media info for the selected audio track and show detected Dolby Digital Plus/Atmos formats consistently.
+- Use transparent app branding and matching bold Loading Video / Bear With... text. Remove AI subtitle translation and its settings; retain normal and forced subtitles.
+- Include companion player skin 0.1.8. Restart Kodi after updating. Remote navigation and rendering still require actual-device verification.
+
 1.8.26
 - Smooth scrubbing previews the target time and total skipped amount, coalesces held/repeated presses into one seek, and keeps slow seeks off the input thread. Back cancels; Up enters chapters and Down returns to controls.
 - Discover retains Home-sized posters and the existing hero area, with horizontal scrolling within rows and vertical scrolling between rows. Load more titles appends results and preserves position instead of switching pages.

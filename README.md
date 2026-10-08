@@ -8,7 +8,17 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.40.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.47.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.47
+
+- Faster learned-format database updates and consistent series logos across browsing screens.
+- Poster fallbacks and shared artwork for blank duplicate titles.
+- An offline catalogue of 88 verified series, plus retained source and disc observations.
+- Optional **Account & Stremio > Slow background format discovery**. Off by default; AIOStreams only, one request every five minutes across devices using the same private sync repository. Pauses during trailers/playback and backs off on errors.
+- More room for troubleshooting descriptions, without scrolling.
+
+Includes the Popcornmeter and rating-award improvements from recent updates. Player skin remains **0.1.14**. Restart Kodi after updating.
 
 ## What's new in 1.8.40
 
@@ -389,7 +399,7 @@ python -m unittest discover -s tests
 python tools/build-stremio-addon.py --output dist
 ```
 
-Strem4Kodi develops independently from the original project. Useful upstream fixes can be reviewed on demand with `python tools/review-upstream.py --output dist/upstream-review.md`, then adapted individually. Nothing is merged automatically. See the [upstream review guide](docs/upstream-review.md).
+Strem4Kodi develops independently from the original project. Useful upstream fixes can be reviewed on demand with `python tools/review-upstream.py --output dist/upstream-review.md`, then adapted individually. Nothing is merged automatically. See the [upstream review guide](https://github.com/daanvb/Stremio-for-Kodi-private/blob/strem4kodi/docs/upstream-review.md).
 
 The addon ID is **`script.strem4kodi`**; repository ID is **`repository.strem4kodi`**. The repository builder requires an explicit HTTPS `--feed-url`. Use a new version for a new published build rather than replacing an existing release ZIP.
 
