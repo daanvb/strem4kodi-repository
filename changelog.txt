@@ -1,3 +1,9 @@
+1.8.41
+- Add a separate Popcornmeter audience rating option under Settings > Ratings, using the existing MDbList feed and popcorn badges.
+- Preserve independent critics and audience switches and existing saved preferences.
+- Includes all 1.8.40 catalogue-logo and automatic request safeguards.
+- Validation: 863 tests passed. Player skin remains at 0.1.14.
+
 1.8.40
 - Show explicit catalogue quality/audio fields immediately on hero focus, with cached source formats taking precedence and no stream searches while browsing.
 - Add a persistent shared request budget for automatic title-opening checks: one minute per stream addon plus an extra minute between checks.

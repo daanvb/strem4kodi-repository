@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.40" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.41" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.14" />
@@ -20,7 +20,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.40: Immediate catalogue format logos, persistent limits on automatic title checks and failure cooldowns. No background stream scans.</news>
+    <news>1.8.41: Configurable Rotten Tomatoes Popcornmeter audience ratings. Includes catalogue logos and automatic request safeguards.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
