@@ -115,3 +115,22 @@ Collection-name search also includes the franchise in generic catalogue names.
 Collections now group franchise lists beneath their parent, such as Star Wars
 Universe. The list selector first chooses the collection, then its chronological,
 release-order, era or character list. All lists shows only rows from that parent.
+
+
+## Adding a new provider list
+
+Add the list in your catalogue provider, such as AIOMetadata, and save its configuration. Make sure the updated add-on is installed in your Stremio account: if the provider supplies a new installation link, install/update that link. Then use Strem4Kodi **Settings → Account & Stremio → Sync account now** and reopen Discover. A browser save alone does not guarantee that Stremio's stored add-on manifest has the new list.
+
+The app reads the installed provider's catalogue names and types:
+
+| Supplied list | Where it appears |
+| --- | --- |
+| Popular or Trending | The matching **Highlights** list, merged with other suppliers of that category and deduplicated. |
+| A recognised streaming service | **Streaming services**, with Apple TV variants kept as their own named lists. |
+| A recognised genre | **By genre**, merged with suppliers for the same genre. |
+| A franchise / collection list | **Collections**, retaining distinct curated order variants. |
+| A custom list, such as Dolby Vision Profile 7 FEL | **Other lists**, retaining its name unless it also matches a recognised category or collection label. |
+
+Grouping uses the displayed name after removing provider prefixes, not an inspection of the list's contents. A custom name containing “Popular” or “Trending” can therefore match that category. A movie list appears under Movies; a series list under Series. Supported mixed lists appear in both, with results filtered by type.
+
+**All lists** shows separate rows for the lists in the selected group, loading six rows per batch. It is different from merging the suppliers inside one category. **Discover options → List sources** shows which catalogues supply a merged list. New catalogue lists do not add a new main sidebar menu item or become a Home row; Home remains focused on watch progress and upcoming episodes.
