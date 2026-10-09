@@ -6,20 +6,18 @@
 
 **Your Stremio library, built for the Kodi remote.**
 
-Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
+Strem4Kodi is daanvbâ€™s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.53.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.54.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) Â· [Full changelog](changelog.txt)
 
-## What's new in 1.8.53
+## What's new in 1.8.54
 
-- Repair loading-card input ownership and first-frame text/artwork; search and playback use the same card with available local trivia.
-- Cancel closes promptly, late replies cannot start cancelled playback, and repeated Back presses during Stop are guarded.
-- Remove the companion skin's duplicate busy spinner/dimming and reduce redundant work before playback.
-- Preserve provider diagnostic history and keep all enabled stream suppliers visible, including PenguPlay and Usenet Ultimate. Viewing Troubleshooting sends no test searches.
-- A local **Last playback loading** report separates search, preparation and Kodi buffering. Actual device speed and remote responsiveness still need verification.
-- All **1,113 automated tests passed**.
+- Loading trivia and title facts rotate every ten seconds, with no extra provider searches.
+- Add breathing room after taglines and remove the white decoration from poster progress bars.
+- Skip unused forced-only subtitle queries and add a more detailed, scrollable playback preparation report.
+- All **1,119 automated tests passed**. Device loading speed and rendering still need verification.
 
-Includes **player skin 0.1.16**. Restart Kodi after updating both packages. Existing source preferences and the two-second resume grace are retained.
+Player skin remains **0.1.16**. Restart Kodi after updating. Existing source preferences and the two-second resume grace are retained.
 
 ## Install and configure
 

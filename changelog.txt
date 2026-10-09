@@ -1,3 +1,11 @@
+1.8.54
+- Rotate sourced local trivia and title facts every ten seconds on the continuous loading card, preserving cadence across handover and stopping on cancellation. No extra searches are made.
+- Add a small gap between italic quoted taglines and the synopsis.
+- Remove inherited white progress caps and overlays from poster and episode bars; keep the track and fill aligned.
+- Skip unused external subtitle collection in forced-only mode and redundant preference reads when automatic subtitles are disabled. Full subtitle downloads retain their configured behavior.
+- Expand Last playback loading with preparation-stage timings and display it in a scrollable text viewer. No title names, source links or loading-card timer are added.
+- Validation: 1,119 automated tests passed; package integrity, source-byte agreement, Python/XML parsing and credential signatures checked. Actual device speed and rendering still need verification. Player skin remains 0.1.16. Restart Kodi after updating.
+
 1.8.53
 - Repair the initial loading frame and input ownership by constructing and pumping the dialog on one lasting thread; keep the same card, artwork and local facts through search and playback.
 - Close Cancel immediately before parent cleanup, bind cancellation across handover, and block late replies from starting a cancelled source.
