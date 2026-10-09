@@ -1,3 +1,10 @@
+1.8.55
+- Pass each selected source to the resolver through its own atomic, private, short-lived request file. Avoid loading, deep-copying and rewriting the shared stream cache or waiting on the account writer mutex before dispatch.
+- Retain existing source links, expiry checks, cancellation, resume offsets, progress tracking, successful-source learning, pre-rolls and Up Next. Clean up expired request files off the startup path.
+- Render dark progress tracks separately from the aligned fill, use control-level theme colouring, and give the background/overlay explicit transparent assets. This replaces the earlier ineffective white-line fix in every poster and episode layout.
+- Add handoff timings for loading-card handover, adapter setup, request saving and pre-roll selection. The supplied report measured 13.74 seconds in handoff; its exact slow operation and the device improvement still need verification.
+- Validation: 1,128 automated tests passed, including a deliberately blocked account writer, concurrent requests, cancellation and all five progress themes. Package integrity, Python/XML parsing and credential signatures checked. Player skin remains 0.1.16. Restart Kodi after updating.
+
 1.8.54
 - Rotate sourced local trivia and title facts every ten seconds on the continuous loading card, preserving cadence across handover and stopping on cancellation. No extra searches are made.
 - Add a small gap between italic quoted taglines and the synopsis.

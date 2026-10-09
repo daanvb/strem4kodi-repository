@@ -6,18 +6,18 @@
 
 **Your Stremio library, built for the Kodi remote.**
 
-Strem4Kodi is daanvbâ€™s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
+Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.54.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) Â· [Full changelog](changelog.txt)
+**Latest published version: 1.8.55.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
-## What's new in 1.8.54
+## What's new in 1.8.55
 
-- Loading trivia and title facts rotate every ten seconds, with no extra provider searches.
-- Add breathing room after taglines and remove the white decoration from poster progress bars.
-- Skip unused forced-only subtitle queries and add a more detailed, scrollable playback preparation report.
-- All **1,119 automated tests passed**. Device loading speed and rendering still need verification.
+- Give each playback request a small independent handoff file, avoiding shared-cache rewrites and account-writer waits before Kodi starts.
+- Separate poster progress tracks from their fill and use transparent background/overlay assets to address the persistent white line.
+- Add a finer handoff breakdown to the local loading report. Actual device speed and rendering still need verification.
+- All **1,128 automated tests passed**. Existing resume, cancellation, progress, pre-rolls and Up Next behavior is retained.
 
-Player skin remains **0.1.16**. Restart Kodi after updating. Existing source preferences and the two-second resume grace are retained.
+Player skin remains **0.1.16**. Restart Kodi after updating. Ten-second loading trivia and the two-second resume grace are retained.
 
 ## Install and configure
 
