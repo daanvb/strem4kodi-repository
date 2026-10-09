@@ -1,4 +1,4 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.55" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.56" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.16" />
@@ -19,7 +19,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.55: Use independent small resolver requests instead of rewriting the shared stream cache before playback. Keep legacy playback links, progress, Up Next and pre-roll support. Separate dark poster progress tracks from their themed fill and remove opaque background/overlay textures. Add a handoff timing breakdown. Restart Kodi after updating.</news>
+    <news>1.8.56: Fix the remaining white progress line in runtime-generated poster and wide cards, including Home, Discover, Favourites and Watch Later. Use aligned dark tracks and themed fills, and regenerate cached layouts automatically. Retain the faster playback handoff. Restart Kodi after updating.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>

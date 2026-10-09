@@ -1,3 +1,9 @@
+1.8.56
+- Fix the actual runtime-generated poster and wide-card progress bars. Home and Discover regenerate their cards and previously discarded the source-template fixes; their builders still used an opaque white track.
+- Share one renderer for aligned dark tracks and themed fills, with explicit transparent progress backgrounds and overlays. Include the renderer in the Home layout cache key so existing installations regenerate the corrected cards.
+- Check the final generated Home rows and Discover grid in both focus states across all five themes, compact poster alignment and cache invalidation. Earlier tests covered only source XML and missed the generated controls.
+- Validation: 1,131 automated tests passed; package integrity, source-byte agreement, Python/XML parsing and credential signatures checked. The latest supplied device report measured 0.90 seconds preparing and 7.69 seconds total; playback code is unchanged in this release. Player skin remains 0.1.16. Restart Kodi after updating.
+
 1.8.55
 - Pass each selected source to the resolver through its own atomic, private, short-lived request file. Avoid loading, deep-copying and rewriting the shared stream cache or waiting on the account writer mutex before dispatch.
 - Retain existing source links, expiry checks, cancellation, resume offsets, progress tracking, successful-source learning, pre-rolls and Up Next. Clean up expired request files off the startup path.
