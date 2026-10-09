@@ -8,16 +8,16 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.56.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.57.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
-## What's new in 1.8.56
+## What's new in 1.8.57
 
-- Fix the persistent white progress line in the runtime-generated poster and wide cards used by Home, Discover, Favourites and Watch Later.
-- Share aligned dark tracks and themed fills between card builders, and automatically regenerate cached layouts after updates.
-- Check the final generated layouts in both focus states across all five themes. Previous checks inspected the templates that the builders replaced.
-- All **1,131 automated tests passed**. The faster playback handoff from 1.8.55 is retained; the latest supplied device report measured **7.69 seconds total**, including **0.90 seconds preparation**.
+- Restore automatic scrolling for long synopses on Home, Discover, saved lists and title/episode detail pages.
+- Keep a 4.5-second reading pause before gentle scrolling, along with the spacing after italic taglines. Short descriptions remain stationary.
+- Retain the corrected generated poster progress bars and faster playback handoff.
+- All **1,131 automated tests passed**. Generated browsing and themed detail layouts were checked across all five themes; native device appearance still needs confirmation.
 
-Player skin remains **0.1.16**. Restart Kodi after updating. Ten-second loading trivia and the two-second resume grace are retained. Poster rendering still needs confirmation on the user's device.
+Player skin remains **0.1.16**. Restart Kodi after updating. Ten-second loading trivia and the two-second resume grace are retained.
 
 ## Install and configure
 

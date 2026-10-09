@@ -1,3 +1,9 @@
+1.8.57
+- Restore automatic scrolling in the browsing hero synopsis and both film/series and episode detail synopsis boxes. These controls explicitly disabled scrolling, leaving long descriptions cut off after the tagline.
+- Preserve the existing 4.5-second reading pause, 2.5-second per-line scroll, six-second repeat pause, layout dimensions and tagline spacing. Kodi scrolls only overflowing text; short descriptions remain stationary.
+- Verify the final generated browsing layout across all five themes with animations enabled and disabled, plus both themed detail variants. Validation: 1,131 automated tests passed; package integrity, source-byte agreement, Python/XML parsing and credential signatures checked. Native device rendering still needs confirmation.
+- Retain the 1.8.56 generated progress-bar fix and 1.8.55 faster playback handoff. Player skin remains 0.1.16. Restart Kodi after updating.
+
 1.8.56
 - Fix the actual runtime-generated poster and wide-card progress bars. Home and Discover regenerate their cards and previously discarded the source-template fixes; their builders still used an opaque white track.
 - Share one renderer for aligned dark tracks and themed fills, with explicit transparent progress backgrounds and overlays. Include the renderer in the Home layout cache key so existing installations regenerate the corrected cards.
