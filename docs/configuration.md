@@ -164,6 +164,7 @@ Watch-progress sync uses Stremio’s library state, watched flags and episode st
 - Account credentials, API keys, caches, recent searches and queued progress are stored in Kodi’s Strem4Kodi addon profile on each device.
 - Account/library progress is shared with Stremio. Metadata, streams and subtitles are requested from the services/addons you configure.
 - IntroDB receives episode lookups.
+- Loading trivia uses public Wikimedia APIs in the background. Wikidata receives the exact IMDb identity and English Wikipedia receives the confirmed article title. Requests contain no stream links, account data or viewing progress. Cited production facts are cached, attributed to Wikipedia contributors under CC BY-SA 4.0, and rotate every ten seconds while loading. Bundled title-specific facts provide an offline fallback; unavailable trivia stays hidden. This lookup never holds playback until it finishes.
 - Smart credits sync is opt-in and uses the private GitHub repository. The public FEL hints catalogue downloads without sending your viewing history.
 - Diagnostics remain local; no remote reporting endpoint is enabled in this project.
 
