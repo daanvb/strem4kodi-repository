@@ -1,7 +1,7 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.58" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.60" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="skin.strem4kodi" version="0.1.16" />
+    <import addon="skin.strem4kodi" version="0.1.17" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
   </requires>
   <extension point="xbmc.python.script" library="default.py">
@@ -19,7 +19,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.58: Keep the loading card visible through initial fullscreen buffering. Improve playback identity across redirected sources. Randomise movie audio pre-rolls within each compatible audio category and improve Dolby detection on sources that also report DTS. Replace cast filler with more sourced, title-specific loading trivia. Restart Kodi after updating.</news>
+    <news>1.8.60: Earlier loading-card dismissal and a neutral pre-roll handover cover; skip intros without an extra Stop. Correct watched progress, static taglines with fading synopsis edges, fitted refresh controls and movie watched actions. Cleaner trivia with source details on Info; readable Add-ons descriptions and persistent enabled status. Uses player skin 0.1.17. Restart Kodi after updating.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>

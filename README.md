@@ -8,16 +8,28 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.59.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.60.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
-## What's new in 1.8.59
+## What's new in 1.8.60
 
-- Close the loading card when the current video starts, with a fallback for missed callbacks.
-- Prevent dismissed loading cards and duplicate busy artwork from covering playback.
-- Fetch cited title-specific production trivia in the background from Wikimedia, with source attribution, caching and an offline fallback.
-- All **1,173 automated tests passed**. Native device transitions still need confirmation.
+- Earlier loading-card dismissal and a plain cover between pre-roll and movie; skip intros without an extra Stop-to-GUI step.
+- Accurate watched-progress fills, fixed taglines with fading synopsis edges, fitted refresh buttons and movie watched/unwatched actions.
+- Cleaner title trivia: press Info for source attribution and links. Add-ons cards keep status visible and fit their descriptions.
+- All **1,189 automated tests passed**. Native device transitions still need confirmation.
 
 Includes player skin **0.1.17**. Restart Kodi after updating both packages. Ten-second trivia rotation and the two-second resume grace are retained.
+
+## Development
+
+```sh
+python -m unittest discover -s tests
+python tools/build-stremio-addon.py --output dist
+python tools/build-player-skin.py --output dist
+```
+
+Build the update feed using an explicit HTTPS `--feed-url` with `tools/build-kodi-repository.py`. The landing page is generated from the same package versions as the feed, so its download links stay current. App and skin versions must satisfy the declared dependency. Never replace an already published version's package.
+
+[Final release audit](docs/release-audit-2026-10-09.md) · [Upstream review](docs/upstream-review.md)
 
 ## Install and configure
 
@@ -34,6 +46,7 @@ Requires **Kodi 21 or later**. Install the repository ZIP, then install Strem4Ko
 
 | Repository | Purpose |
 | --- | --- |
+| [Private development source](https://github.com/daanvb/Stremio-for-Kodi-private/tree/strem4kodi) | Active code, tests and build tools on `strem4kodi`. Access required. |
 | [Public installation feed](https://github.com/daanvb/strem4kodi-repository) | Kodi update packages, installation guide and public pre-roll release assets. |
 
 The live feed retains the current release and one previous version for rollback. Earlier packages remain in Git history. See [repository layout and maintenance](docs/repository-layout.md).

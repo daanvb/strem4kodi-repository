@@ -1,3 +1,11 @@
+1.8.60
+- Dismiss the loading card at the current movie's native opening callback. Keep an attempt-owned plain cover between pre-roll and movie, hide it during fullscreen video, and prevent skipped intros from falsely completing movie startup. Skipping replaces the intro without an explicit Stop-to-GUI step; cancellation still stops owned playback. Kodi retains control of refresh-rate/HDR changes.
+- Correct poster and episode progress fills to use the same watched percentage as their labels. Separate static taglines from scrolling synopsis text with soft edge fades, independent control IDs and dynamic heading space.
+- Fit filter and Refresh buttons to text, refresh saved lists in the background with a small rotating icon, and expose movie watched/unwatched actions in the detail menu.
+- Move Wikipedia attribution and revision links from the trivia card into its Info source-details view. Preserve source attribution and ten-second title-specific trivia rotation for films and series. Increase the trivia text area.
+- Fit Add-ons descriptions inside the cards and keep enabled/disabled status visible when focus moves to the action buttons.
+- Validation: 1,189 automated tests passed. Player skin remains 0.1.17. Native Android Shield rendering and HDMI mode changes need device confirmation. Restart Kodi after updating.
+
 1.8.59
 - Dismiss the current loading card immediately on AVStarted, before other native GUI updates. Do not wait for fullscreen or cleared caching while a video is already playing; independently detect progressing current video when the callback is missed.
 - Bind every loading layer to its dialog lifetime, hide it before native close, and reject late show work. Use isolated temporary layouts and refresh readiness ownership for each playback attempt. Preserve the continuous search-to-playback card, cancellation, source recovery, pre-rolls and resume behaviour.
