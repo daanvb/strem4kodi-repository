@@ -1,3 +1,12 @@
+1.8.52
+- Keep one loading dialog open from automatic source search through player startup, with the same artwork and available local trivia.
+- Capture loading-screen input and fill the dialog's own controls so Cancel, Back, title text and trivia work during the initial search.
+- Prefer the previously working release on resume; allow two extra seconds once an exact suitable alternative arrives, without extending the grace on later replies. Preserve playback position and current filters.
+- Deliver source arrivals before availability database writes and skip hidden poster badge refreshes during automatic search.
+- Shorten the best-effort error-video preflight network timeout from eight to three seconds; inconclusive checks still defer to Kodi and playback buffering limits are unchanged.
+- Guard live cancellation across the single-dialog handover, stale callbacks, dismissed windows and cancelled resume timers.
+- Validation: 1,095 tests passed; app package integrity, source agreement, Python/XML parsing and credential signatures checked. Player skin remains 0.1.15. Restart Kodi after updating.
+
 1.8.51
 - Any quality prefers 1080p, then 720p/lower resolutions, with 4K as a last resort. Explicit 4K preferences and maximum quality limits still apply.
 - Automatic episode searches open the loading card immediately and keep the source picker in the background. Suitable exact matches start without the extra one-second pause; fallbacks wait for search completion.

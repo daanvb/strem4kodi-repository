@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.51" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.52" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.15" />
@@ -20,7 +20,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.51: Any quality prefers 1080p, with 720p fallback and 4K as a last resort. Automatic searches stay behind the loading card and suitable sources start without the extra pause. Persistent status colours, clearer action buttons, readable ratings and restored action-menu icons. Restart Kodi after updating.</news>
+    <news>1.8.52: One continuous autoplay loading card with artwork and local trivia. Cancel and Back work during search and playback startup. Resume prefers the previous working source with a two-second grace period once a suitable alternative arrives. Less startup UI/database work and a shorter preliminary source check. Restart Kodi after updating.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
