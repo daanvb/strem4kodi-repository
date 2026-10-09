@@ -1,3 +1,8 @@
+1.8.63
+- Add 3, 7 and 12 second player-control hide delays alongside 5, 10 and 15 seconds. Preserve existing saved choices and the five-second default.
+- Match native playback notifications to the player with a rounded dark-purple panel, lavender heading, matching fonts and compact icon. Keep native toast control IDs and Back-button behavior.
+- Player skin 0.1.19. Restart Kodi after updating both packages. Wrong-episode autoplay and provider error-video recovery are under investigation and are not fixed by this release.
+
 1.8.62
 - Feather the synopsis scrolling fade horizontally towards the artwork to remove the abrupt right-hand edge.
 - Offer Mark as Unwatched for partially played movies in the More menu and Continue Watching context menu. Clear resume position and current watched progress without marking the movie completed.

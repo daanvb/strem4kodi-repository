@@ -8,13 +8,12 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.62.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.63.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
-## What's new in 1.8.62
+## What's new in 1.8.63
 
-- Feather the synopsis scrolling fade horizontally towards the artwork to remove the abrupt right-hand edge.
-- Offer Mark as Unwatched for partially played movies in the More menu and Continue Watching context menu. Clear resume position and current watched progress without marking the movie completed.
-- Player skin 0.1.18 slides the controls panel up on opening and down on dismissal, including its background shade. Native remote rendering needs Shield confirmation.
+- Choose 3, 5, 7, 10, 12 or 15 seconds for hiding inactive player controls. Existing choices are preserved.
+- Player skin 0.1.19 matches playback notifications to the rounded purple player style.
 - Restart Kodi after updating both the app and player skin.
 
 
