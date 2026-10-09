@@ -1,7 +1,7 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.52" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.53" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="skin.strem4kodi" version="0.1.15" />
+    <import addon="skin.strem4kodi" version="0.1.16" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
   </requires>
   <extension point="xbmc.python.script" library="default.py">
@@ -19,7 +19,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.52: One continuous autoplay loading card with artwork and local trivia. Cancel and Back work during search and playback startup. Resume prefers the previous working source with a two-second grace period once a suitable alternative arrives. Less startup UI/database work and a shorter preliminary source check. Restart Kodi after updating.</news>
+    <news>1.8.53: Repair loading-card input ownership, first-frame content and cancellation. Keep search and playback on the same card, remove redundant startup work, and guard repeated Back presses. Preserve provider diagnostics and keep enabled stream suppliers visible. Includes player skin 0.1.16 to prevent duplicate busy artwork. Restart Kodi after updating.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>

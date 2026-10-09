@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.7" provider-name="daanvb">
+<addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.16" provider-name="daanvb">
   <requires>
     <import addon="xbmc.gui" version="5.17.0" />
   </requires>

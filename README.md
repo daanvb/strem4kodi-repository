@@ -8,17 +8,18 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.52.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.53.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
-## What's new in 1.8.52
+## What's new in 1.8.53
 
-- **One continuous autoplay loading card**, with artwork and available local trivia from source search through playback startup.
-- Cancel and Back work throughout loading; the initial card fills its own text and captures input.
-- Resume prefers the previous working release, with a **two-second grace period** once a suitable alternative arrives. Playback position and source filters are kept.
-- Less UI/database work before playback and a shorter preliminary source check. Provider searches and Kodi buffering limits remain unchanged.
-- All **1,095 tests passed**, including loading handover, cancellation and resume grace regressions.
+- Repair loading-card input ownership and first-frame text/artwork; search and playback use the same card with available local trivia.
+- Cancel closes promptly, late replies cannot start cancelled playback, and repeated Back presses during Stop are guarded.
+- Remove the companion skin's duplicate busy spinner/dimming and reduce redundant work before playback.
+- Preserve provider diagnostic history and keep all enabled stream suppliers visible, including PenguPlay and Usenet Ultimate. Viewing Troubleshooting sends no test searches.
+- A local **Last playback loading** report separates search, preparation and Kodi buffering. Actual device speed and remote responsiveness still need verification.
+- All **1,113 automated tests passed**.
 
-Includes **player skin 0.1.15**. Restart Kodi after updating. Collection sharing requires saved-list sync on each device.
+Includes **player skin 0.1.16**. Restart Kodi after updating both packages. Existing source preferences and the two-second resume grace are retained.
 
 ## Install and configure
 

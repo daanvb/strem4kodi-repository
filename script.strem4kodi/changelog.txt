@@ -1,3 +1,15 @@
+1.8.53
+- Repair the initial loading frame and input ownership by constructing and pumping the dialog on one lasting thread; keep the same card, artwork and local facts through search and playback.
+- Close Cancel immediately before parent cleanup, bind cancellation across handover, and block late replies from starting a cancelled source.
+- Include companion skin 0.1.16 to suppress its duplicate busy spinner/dimming while the app loading card is active.
+- Keep the player callback listener alive, defer hidden detail-page updates during playback, remove synchronous resume refreshes from Back, and guard repeated presses during Stop.
+- Move the playback-cancelled message clear of episode posters.
+- Skip the duplicate media preflight connection for app-owned playback; retain direct provider error-video detection, legacy preflight and automatic failure recovery.
+- Add a local Last playback loading report separating source search, preparation and Kodi opening/buffering. No startup timer or extra network lookup is added to the loading card.
+- Preserve provider request history across restart and concurrent saves. Keep every enabled stream supplier, including PenguPlay and Usenet Ultimate, visible even with no recorded request; viewing diagnostics uses no search credits.
+- Retain quality/filter rules, early exact-match playback and the two-second previous-source resume grace.
+- Validation: 1,113 automated tests passed; package integrity, source-byte agreement, Python/XML parsing and credential signatures checked. Actual Kodi remote responsiveness and device loading speed still need verification. Restart Kodi after updating both packages.
+
 1.8.52
 - Keep one loading dialog open from automatic source search through player startup, with the same artwork and available local trivia.
 - Capture loading-screen input and fill the dialog's own controls so Cancel, Back, title text and trivia work during the initial search.
