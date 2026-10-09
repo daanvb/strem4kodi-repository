@@ -1,3 +1,9 @@
+1.8.65
+- Defer autoplay and Play Next retries while Kodi's native busy dialog is active, including startup before isPlayingVideo becomes true. Request Stop once for an owned failed video and wait for shutdown before retrying another source for the same episode.
+- Serialize loading dialogs across sessions. Wait for the previous modal loop and native close to finish, and avoid showing a replacement during Kodi's startup wait. Cancellation prevents a queued loading card from opening.
+- Stop automatic retries with a clear message if Kodi remains busy for 15 seconds or an owned Stop has not completed after five seconds.
+- Validation: 1,219 automated tests passed. The Shield log confirms a fatal overlapping native busy-dialog exit; these safeguards still require device confirmation. Player skin remains 0.1.19. Restart Kodi after updating.
+
 1.8.64
 - Check explicit show, season and episode information before automatic source ranking. Prefer confirmed episode matches and prevent remembered sources from overriding a conflicting release. Unlabelled sources still depend on the provider's requested-episode response.
 - Use the displayed episode card's ID for playback instead of relying on a parallel list position.
