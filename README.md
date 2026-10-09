@@ -8,17 +8,15 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.50.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.51.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
-## What's new in 1.8.50
+## What's new in 1.8.51
 
-- Separate **Favourites** and **Watch Later** menus, matching context actions, a wider shaded side menu and a football icon for Sports. Add-ons are managed through Settings.
-- Movie collection search and saved collection cards, using your existing TMDB key. Shared saved collections require this update on every device.
-- Stream results appear as each add-on responds. Autoplay can start an exact preference match early; duplicate counts do not trigger playback. Quality limits and source filters still apply.
-- Refreshed loading cards with optional local trivia, italic title taglines, consistent fonts/colours and a purple player with tidier chapter markers.
-- Clearer settings statuses, full help through Info, better request-failure explanations and a clean Back route from add-on management.
-- Stronger trailer containment, no previews for upcoming episodes, consistent cached formats and protection against concurrent account updates.
-- Final audit keeps cached sources available if optional logo-data storage fails. Provider budgets and cautious background discovery are retained.
+- **Any quality now prefers 1080p**, with 720p/lower fallbacks and 4K as a last resort. Explicit 4K preferences and quality ceilings still apply.
+- Automatic searches stay behind the title loading card. Matching sources start without the extra one-second pause; Up Next uses the same selection rule.
+- Settings statuses stay visible without hovering, direct actions have clearer buttons, and ratings have room for **100%**.
+- Tidier Favourites/Watch Later poster text, restored action-menu icons and a solid rounded Cancel button.
+- Stronger cancellation during search/playback handover. All **1,088 tests passed**; provider budgets, source filters and retry limits remain intact.
 
 Includes **player skin 0.1.15**. Restart Kodi after updating. Collection sharing requires saved-list sync on each device.
 
