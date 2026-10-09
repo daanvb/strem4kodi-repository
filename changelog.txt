@@ -1,3 +1,9 @@
+1.8.62
+- Feather the synopsis scrolling fade horizontally towards the artwork to remove the abrupt right-hand edge.
+- Offer Mark as Unwatched for partially played movies in the More menu and Continue Watching context menu. Clear resume position and current watched progress without marking the movie completed.
+- Player skin 0.1.18 slides the controls panel up on opening and down on dismissal, including its background shade. Native remote rendering needs Shield confirmation.
+- Restart Kodi after updating both the app and player skin.
+
 1.8.61
 - Populate notification XML before showing it so text does not depend on delayed onInit callbacks. Construct, show and close notifications on one bounded worker, coalesce duplicate messages and isolate temporary layouts. Popup construction errors cannot escape into Settings; late callbacks do not update a dismissed toast.
 - Manual account sync keeps the current settings rows and focus. The status watcher rejects results for replaced rows, subpages or a closed window, and repeated initialisation no longer creates duplicate watchers.

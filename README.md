@@ -8,17 +8,15 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.61.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.62.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
-## What's new in 1.8.61
+## What's new in 1.8.62
 
-- Earlier loading-card dismissal and a plain cover between pre-roll and movie; skip intros without an extra Stop-to-GUI step.
-- Accurate watched-progress fills, fixed taglines with fading synopsis edges, fitted refresh buttons and movie watched/unwatched actions.
-- Cleaner title trivia: press Info for source attribution and links. Add-ons cards keep status visible and fit their descriptions.
-- Account-sync popups have text from the first frame, repeated messages coalesce, and stale settings updates are rejected.
-- All **1,194 automated tests passed**, covering notification failure, sync races and playback handover. Native device transitions still need confirmation.
+- Feather the synopsis scrolling fade horizontally towards the artwork to remove the abrupt right-hand edge.
+- Offer Mark as Unwatched for partially played movies in the More menu and Continue Watching context menu. Clear resume position and current watched progress without marking the movie completed.
+- Player skin 0.1.18 slides the controls panel up on opening and down on dismissal, including its background shade. Native remote rendering needs Shield confirmation.
+- Restart Kodi after updating both the app and player skin.
 
-Includes player skin **0.1.17**. Restart Kodi after updating both packages. Ten-second trivia rotation and the two-second resume grace are retained.
 
 ## Development
 

@@ -1,7 +1,7 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.61" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.62" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="skin.strem4kodi" version="0.1.17" />
+    <import addon="skin.strem4kodi" version="0.1.18" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
   </requires>
   <extension point="xbmc.python.script" library="default.py">
@@ -19,7 +19,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.61: Fix blank account-sync popups with text present from the first frame. Queue notifications on one worker, coalesce repeat presses and contain popup failures. Avoid settings row rebuild races during manual sync and recover from progress-worker startup failure. Includes the 1.8.60 playback and UI fixes. Player skin remains 0.1.17. Restart Kodi after updating.</news>
+    <news>1.8.62: Feather the synopsis fade into artwork. Offer Mark as Unwatched for partially played movies in More and Continue Watching, clearing resume progress. Player skin 0.1.18 slides controls up and down. Restart Kodi after updating both packages.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
