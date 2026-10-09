@@ -8,14 +8,15 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.60.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.61.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
-## What's new in 1.8.60
+## What's new in 1.8.61
 
 - Earlier loading-card dismissal and a plain cover between pre-roll and movie; skip intros without an extra Stop-to-GUI step.
 - Accurate watched-progress fills, fixed taglines with fading synopsis edges, fitted refresh buttons and movie watched/unwatched actions.
 - Cleaner title trivia: press Info for source attribution and links. Add-ons cards keep status visible and fit their descriptions.
-- All **1,189 automated tests passed**. Native device transitions still need confirmation.
+- Account-sync popups have text from the first frame, repeated messages coalesce, and stale settings updates are rejected.
+- All **1,194 automated tests passed**, covering notification failure, sync races and playback handover. Native device transitions still need confirmation.
 
 Includes player skin **0.1.17**. Restart Kodi after updating both packages. Ten-second trivia rotation and the two-second resume grace are retained.
 
