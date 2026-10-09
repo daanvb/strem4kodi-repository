@@ -1,3 +1,11 @@
+1.8.58
+- Keep the owned loading card through AVStarted until fullscreen video is running and initial buffering has cleared. Draw above later native busy artwork, preserve cancellation and guard delayed watcher callbacks across handover.
+- Carry the resolver attempt on Kodi's playing item so redirected URLs retain the current loading and recovery state. Pre-rolls still reveal as soon as their AV starts.
+- Randomise movie pre-rolls independently within Atmos, TrueHD, Dolby Digital Plus and Dolby Digital categories. Use every distinct compatible clip before repeating and avoid repeating the last clip when refilling a category with multiple choices. Dispatch eligibility checks do not consume the rotation.
+- Detect common Dolby aliases and structured multiple audio tracks alongside DTS, without treating dual audio alone as Dolby. Preserve all detected source formats and favour an available Dolby format in the single artwork badge. Keep configured DTS fallback, SDR/DoVi compatibility and resume/episode skips.
+- Replace cast/director filler with sourced trivia for the current title only. Expand the local catalogue to 37 facts across 15 films and shows, with production effects, music, filming locations and origins; keep the ten-second rotation and hide the strip when facts are unavailable. No additional network calls or startup waits.
+- Validation: 1,145 automated tests passed, including loading readiness, redirected playback, watcher handover, per-category rotation and mixed Dolby/DTS metadata. Native device transitions need confirmation. Player skin remains 0.1.16. Restart Kodi after updating.
+
 1.8.57
 - Restore automatic scrolling in the browsing hero synopsis and both film/series and episode detail synopsis boxes. These controls explicitly disabled scrolling, leaving long descriptions cut off after the tagline.
 - Preserve the existing 4.5-second reading pause, 2.5-second per-line scroll, six-second repeat pause, layout dimensions and tagline spacing. Kodi scrolls only overflowing text; short descriptions remain stationary.
