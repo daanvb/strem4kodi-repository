@@ -1,3 +1,10 @@
+1.8.64
+- Check explicit show, season and episode information before automatic source ranking. Prefer confirmed episode matches and prevent remembered sources from overriding a conflicting release. Unlabelled sources still depend on the provider's requested-episode response.
+- Use the displayed episode card's ID for playback instead of relying on a parallel list position.
+- Keep Play Next recovery active through Kodi startup; retry another source for the same episode within the automatic-attempt limit. Check provider error-video redirects in the background during automatic playback and stop only the failed owned attempt.
+- Exclude recognised provider-error attempts from watched-progress completion. Avoid file queries when Kodi is not playing and filter-control lookups on screens without filters.
+- Validation: 1,211 automated tests passed. Android Shield confirmation is still needed. Player skin remains 0.1.19. Restart Kodi after updating.
+
 1.8.63
 - Add 3, 7 and 12 second player-control hide delays alongside 5, 10 and 15 seconds. Preserve existing saved choices and the five-second default.
 - Match native playback notifications to the player with a rounded dark-purple panel, lavender heading, matching fonts and compact icon. Keep native toast control IDs and Back-button behavior.
