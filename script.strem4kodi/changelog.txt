@@ -1,3 +1,10 @@
+1.8.66
+- Preserve and compare independent provider filenames, AIOStreams parsed filenames, descriptions and structured show/episode IDs. Reject explicit conflicts during autoplay and Play Next. Refresh old source caches that dropped this evidence.
+- Exclude explicitly identified ISO/disc-image sources from automatic selection and reject them at resolution, including recognised redirected URLs and disc-image response types.
+- Check automatic sources behind the loading card before Kodi opens them, with a three-second network timeout and no live-stream probe. Recognised provider error screens are skipped before playback; unknown responses remain Kodi's responsibility.
+- Reuse the loading card through failed automatic checks and retry search. Preserve the same episode and resume position; cancellation prevents a delayed check from dispatching playback. Play Next checks retry candidates before opening them and avoids a duplicate background probe.
+- Validation: 1,233 automated tests passed. Player skin remains 0.1.19. Native Shield confirmation is still needed. Restart Kodi after updating.
+
 1.8.65
 - Defer autoplay and Play Next retries while Kodi's native busy dialog is active, including startup before isPlayingVideo becomes true. Request Stop once for an owned failed video and wait for shutdown before retrying another source for the same episode.
 - Serialize loading dialogs across sessions. Wait for the previous modal loop and native close to finish, and avoid showing a replacement during Kodi's startup wait. Cancellation prevents a queued loading card from opening.
