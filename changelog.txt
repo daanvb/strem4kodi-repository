@@ -1,3 +1,19 @@
+1.8.50
+- Split Favourites and Watch Later into dedicated sidebar destinations and matching context actions; add a football Sports icon and move add-on management into Settings.
+- Widen and soften the main sidebar, dim browsing behind it, and unify owned app/player typography and colours.
+- Search TMDB movie collections alongside titles, open their movies in release order, and save/share collection cards through private saved-list sync.
+- Show stream results progressively; share overlapping title/source requests, reuse fresh caches and start qualifying exact autoplay matches after a short settling period.
+- Preserve quality ceilings, all source filters, content profiles, remembered resume releases, alternate links, cancellation and provider budgets. Duplicates never trigger early playback.
+- Keep Up Next loading feedback during source checks; use the same early-match rule and bounded automatic retries.
+- Add a compact playback loading card with title artwork and optional rotating local trivia/title facts. Playback does not wait for facts and no startup timer is shown.
+- Show optional italic, quoted movie/series taglines above the main synopsis. Fetch TMDB taglines alongside existing classifications without additional stream-provider requests.
+- Strengthen delayed trailer ownership and fullscreen containment; disable previews for Upcoming Episodes.
+- Restore a clean Back route from add-on management to Settings, improve its layout, and clarify read-only statuses, help, player checks and request failures.
+- Repair cached-source format learning, retain explicit series formats, and keep usable cached streams when optional format storage fails.
+- Protect local account updates against concurrent writers, disconnects and account switches; keep saved collection data in the existing private sync database.
+- Fix inherited corrupted UI separators. No upstream main-branch changes were available at the final audit.
+- Validation: 1,081 tests passed. Includes companion player skin 0.1.15 with purple controls, neat chapter markers and owned font assets. Restart Kodi after updating.
+
 1.8.49
 - Remove unsupported settings arrow glyphs, retain the native scrollbar and use ten complete rows with a smaller help panel.
 - Keep setting values on one line; show long values in help and offer full descriptions through Info. Shorten the forced-subtitle caption without changing stored preferences.
