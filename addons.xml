@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.68" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.69" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="skin.strem4kodi" version="0.1.20" />
+    <import addon="skin.strem4kodi" version="0.1.21" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
   </requires>
   <extension point="xbmc.python.script" library="default.py">
@@ -56,7 +56,7 @@
     </assets>
     <news>1.0.4: fresh Strem4Kodi artwork paths replace cached legacy branding.</news>
   </extension>
-</addon><addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.20" provider-name="daanvb">
+</addon><addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.21" provider-name="daanvb">
   <requires>
     <import addon="xbmc.gui" version="5.17.0" />
   </requires>
@@ -74,7 +74,7 @@
     <platform>all</platform>
     <license>GPL-2.0-only, CC-BY-SA-4.0</license>
     <summary lang="en_GB">Strem4Kodi playback controls with Kodi settings available</summary>
-    <description lang="en_GB">Companion skin installed alongside Strem4Kodi, with a clean playback bar and readable active audio tracks. Choose this skin in Kodi’s interface settings to activate it. Other screens retain Kodi’s Estuary layout; normal Kodi controls remain available without the app.</description>
+    <description lang="en_GB">Companion skin installed alongside Strem4Kodi, with a clean playback bar and readable active audio tracks. Choose this skin in Kodiâ€™s interface settings to activate it. Other screens retain Kodiâ€™s Estuary layout; normal Kodi controls remain available without the app.</description>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
     <assets>
       <icon>resources/strem4kodi-icon.png</icon>
