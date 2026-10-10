@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.67" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.68" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="skin.strem4kodi" version="0.1.19" />
+    <import addon="skin.strem4kodi" version="0.1.20" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
   </requires>
   <extension point="xbmc.python.script" library="default.py">
@@ -56,7 +56,7 @@
     </assets>
     <news>1.0.4: fresh Strem4Kodi artwork paths replace cached legacy branding.</news>
   </extension>
-</addon><addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.19" provider-name="daanvb">
+</addon><addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.20" provider-name="daanvb">
   <requires>
     <import addon="xbmc.gui" version="5.17.0" />
   </requires>

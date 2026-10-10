@@ -1,3 +1,6 @@
+1.8.68
+Settings Details button; simpler Sports lists and direct source picker; companion player for owned live streams, track controls and buffering settings. Player skin 0.1.20.
+
 1.8.67
 - Expand search and Discover with genre and public MDBList lists; preserve paging, selection, and Back navigation across refreshed grids and collections.
 - Add player chapter/media information controls, remembered track preferences, forced-subtitle precedence, unpause rewind, and more resilient Up Next and automatic playback cancellation/retry handling.
