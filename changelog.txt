@@ -1,3 +1,9 @@
+1.8.72
+- Retry a recognized provider error video after Kodi redirects playback and drops the selected-source tag. Keep recovery tied to the outstanding Strem4Kodi attempt.
+- Require positive episode evidence before automatic series playback and Play Next. Conflicting episodes are excluded; results without episode evidence remain available in the manual source picker.
+- Keep matched catalogues during query refinement when providers are merely reordered, and let the native search panel scroll through its full result list.
+- Player skin remains 0.1.23. Windows automated validation and exact-commit CI required before publication. Kodi device playback and remote scrolling still require confirmation. Restart Kodi after updating.
+
 1.8.71
 - Improve search, collection and playback recovery reliability. Private diagnostic exports can include bounded retry outcomes, attempt counts and allowlisted failure reasons without media URLs.
 - Player skin 0.1.23. Windows automated validation and exact-commit CI required before publication. Real Kodi device playback remains unverified. Restart Kodi after updating.

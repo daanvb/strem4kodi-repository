@@ -1,4 +1,4 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.71" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.72" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.23" />
@@ -19,7 +19,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.71: Improve search, collection and playback recovery reliability. Private diagnostics can report bounded retry outcomes, attempt counts and allowlisted failure reasons without media URLs. Player skin 0.1.23. Restart Kodi after updating.</news>
+    <news>1.8.72: Recover autoplay when Kodi loses provider error-slate ownership, require episode evidence for automatic series playback, and improve search result scrolling and catalogue retention. Player skin 0.1.23. Restart Kodi after updating.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>

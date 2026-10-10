@@ -8,14 +8,13 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest published version: 1.8.70.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest published version: 1.8.72.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
-## What's new in 1.8.70
+## What's new in 1.8.72
 
-- Improve native Left/Back navigation, search scrolling, result ordering and stale search-state cleanup.
-- Strengthen playback and pre-roll callback ownership, provider error handling, account progress isolation and optional storage fallback.
-- Buffering settings open Kodi cache settings; live player controls hide subtitles.
-- Player skin updates to 0.1.22. Restart Kodi after updating. Automated validation covers Windows and Linux CI; real device UI/decoder and cross-platform playback remain unverified.
+- Recover autoplay from provider error videos even when Kodi loses source ownership during a redirect, and require episode evidence before automatically playing a series result.
+- Preserve catalogues during search refinement and remove the panel navigation trap that prevented scrolling through results.
+- Player skin remains 0.1.23. Restart Kodi after updating. Automated checks cover source behavior; Kodi device playback and remote scrolling remain unverified.
 
 ## Development
 

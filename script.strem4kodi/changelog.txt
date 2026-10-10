@@ -1,3 +1,23 @@
+1.8.72
+- Retry a recognized provider error video after Kodi redirects playback and drops the selected-source tag. Keep recovery tied to the outstanding Strem4Kodi attempt.
+- Require positive episode evidence before automatic series playback and Play Next. Conflicting episodes are excluded; results without episode evidence remain available in the manual source picker.
+- Keep matched catalogues during query refinement when providers are merely reordered, and let the native search panel scroll through its full result list.
+- Player skin remains 0.1.23. Windows automated validation and exact-commit CI required before publication. Kodi device playback and remote scrolling still require confirmation. Restart Kodi after updating.
+
+1.8.71
+- Improve search, collection and playback recovery reliability. Private diagnostic exports can include bounded retry outcomes, attempt counts and allowlisted failure reasons without media URLs.
+- Player skin 0.1.23. Windows automated validation and exact-commit CI required before publication. Real Kodi device playback remains unverified. Restart Kodi after updating.
+
+1.8.70
+- Improve native navigation, search scrolling/order and Back state. Link buffering settings to Kodi cache settings and hide live subtitles.
+- Strengthen playback/pre-roll callback ownership, recognise AIOStreams static error videos, isolate account progress outboxes and tolerate optional storage failure.
+- Player skin 0.1.22. Windows automated validation and exact-commit Linux CI; Kodi device UI/decoder and cross-platform playback remain unverified. Restart Kodi after updating.
+
+1.8.69
+- Keep preroll loading cover visible; improve search/catalogue navigation and scrolling, list artwork, double-Left sidebar access, live-player focus, and provider host display.
+- Defer inconclusive private-provider HTTP probes to Kodi while skipping recognised provider error responses.
+- Player skin 0.1.21. Restart Kodi after updating; native Shield confirmation remains required.
+
 1.8.67
 - Expand search and Discover with genre and public MDBList lists; preserve paging, selection, and Back navigation across refreshed grids and collections.
 - Add player chapter/media information controls, remembered track preferences, forced-subtitle precedence, unpause rewind, and more resilient Up Next and automatic playback cancellation/retry handling.
