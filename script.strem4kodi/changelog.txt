@@ -1,3 +1,21 @@
+1.8.75
+- Improve Search and collection return paths, including previous searches and saved collections.
+- Warm logos for visible titles and on sustained focus or trailer start; avoid unnecessary checks for complete artwork.
+- Correct a repeated next-episode title when another metadata provider confirms both adjacent episodes.
+- Keep refreshed sources focused at the top through partial results, show full stream details on Right or Context, and preserve the playback cover during pre-roll handoff.
+- Player skin remains 0.1.23. Automated validation covers these paths; native Kodi device behavior still needs confirmation. Restart Kodi after updating.
+
+1.8.74
+- Return from a suggestion title or catalogue to the original Search dialog, preserving the query, results, selection and keyboard state.
+- Discover uncached movie collections while typing without delaying title suggestions. Retain matching catalogues when later prefix responses arrive.
+- Keep the loading cover over automatic playback until startup validation accepts the source; short Comet failure videos remain covered while retrying.
+- Player skin remains 0.1.23. Automated regression checks cover these paths; native device rendering and remote navigation still require confirmation. Restart Kodi after updating.
+
+1.8.73
+- Carry matching catalogue results from typing suggestions into the submitted full Search results, even when the provider omits them for the longer query.
+- Retry Comet's short status MP4s during automatic episode playback. Manual sources and normal-length episode streams keep their existing behavior.
+- Player skin remains 0.1.23. Windows validation: 1,339 of 1,340 tests passed; the remaining migration test requires a hard link denied by the sandbox. Kodi device playback remains unverified. Restart Kodi after updating.
+
 1.8.72
 - Retry a recognized provider error video after Kodi redirects playback and drops the selected-source tag. Keep recovery tied to the outstanding Strem4Kodi attempt.
 - Require positive episode evidence before automatic series playback and Play Next. Conflicting episodes are excluded; results without episode evidence remain available in the manual source picker.
