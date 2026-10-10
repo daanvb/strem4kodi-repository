@@ -1,3 +1,10 @@
+1.8.67
+- Expand search and Discover with genre and public MDBList lists; preserve paging, selection, and Back navigation across refreshed grids and collections.
+- Add player chapter/media information controls, remembered track preferences, forced-subtitle precedence, unpause rewind, and more resilient Up Next and automatic playback cancellation/retry handling.
+- Add bounded, opt-in diagnostic summaries for private GitHub upload with token and opt-out rechecks; keep sensitive source and search data out of summaries.
+- Keep Home available when the optional Continue Watching index fails. Support older Android SQLite and serialize Home row updates so stale background work cannot overwrite a newer view.
+- Validation: 1,288 automated tests passed before release metadata changes. Player skin remains 0.1.19. Native Shield playback, UI, and display switching require device confirmation. Restart Kodi after updating.
+
 1.8.66
 - Preserve and compare independent provider filenames, AIOStreams parsed filenames, descriptions and structured show/episode IDs. Reject explicit conflicts during autoplay and Play Next. Refresh old source caches that dropped this evidence.
 - Exclude explicitly identified ISO/disc-image sources from automatic selection and reject them at resolution, including recognised redirected URLs and disc-image response types.

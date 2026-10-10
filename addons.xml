@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.66" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.67" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.19" />
@@ -20,7 +20,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.66: Preserve and compare provider episode evidence, including AIOStreams parsed filenames. Reject explicit disc-image sources and check automatic sources behind one continuous retry loading card. Play Next checks retry candidates before playback. Player skin remains 0.1.19; restart Kodi after updating.</news>
+    <news>1.8.67: Improve search and Discover navigation, genre and public MDBList browsing, private opt-in diagnostics, playback controls and Up Next reliability. Continue Watching tolerates SQLite failure and older Android SQLite; Home updates reject stale background work. Player skin remains 0.1.19. Restart Kodi after updating.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
