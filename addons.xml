@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.69" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.70" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="skin.strem4kodi" version="0.1.21" />
+    <import addon="skin.strem4kodi" version="0.1.22" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
   </requires>
   <extension point="xbmc.python.script" library="default.py">
@@ -20,7 +20,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.67: Improve search and Discover navigation, genre and public MDBList browsing, private opt-in diagnostics, playback controls and Up Next reliability. Continue Watching tolerates SQLite failure and older Android SQLite; Home updates reject stale background work. Player skin remains 0.1.19. Restart Kodi after updating.</news>
+    <news>1.8.70: Improve search navigation and result ordering, playback callback ownership and provider error handling, account progress isolation, and optional storage fallback. Buffering settings open Kodi cache settings; live controls hide subtitles. Player skin 0.1.22. Restart Kodi after updating.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
@@ -56,7 +56,7 @@
     </assets>
     <news>1.0.4: fresh Strem4Kodi artwork paths replace cached legacy branding.</news>
   </extension>
-</addon><addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.21" provider-name="daanvb">
+</addon><addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.22" provider-name="daanvb">
   <requires>
     <import addon="xbmc.gui" version="5.17.0" />
   </requires>
