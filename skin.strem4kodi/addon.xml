@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.19" provider-name="daanvb">
+<addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.23" provider-name="daanvb">
   <requires>
     <import addon="xbmc.gui" version="5.17.0" />
   </requires>
@@ -17,7 +17,7 @@
     <platform>all</platform>
     <license>GPL-2.0-only, CC-BY-SA-4.0</license>
     <summary lang="en_GB">Strem4Kodi playback controls with Kodi settings available</summary>
-    <description lang="en_GB">Companion skin installed alongside Strem4Kodi, with a clean playback bar and readable active audio tracks. Choose this skin in Kodi’s interface settings to activate it. Other screens retain Kodi’s Estuary layout; normal Kodi controls remain available without the app.</description>
+    <description lang="en_GB">Companion skin installed alongside Strem4Kodi, with a clean playback bar and readable active audio tracks. Choose this skin in Kodiâ€™s interface settings to activate it. Other screens retain Kodiâ€™s Estuary layout; normal Kodi controls remain available without the app.</description>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
     <assets>
       <icon>resources/strem4kodi-icon.png</icon>

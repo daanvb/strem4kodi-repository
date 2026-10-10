@@ -1,3 +1,7 @@
+1.8.71
+- Improve search, collection and playback recovery reliability. Private diagnostic exports can include bounded retry outcomes, attempt counts and allowlisted failure reasons without media URLs.
+- Player skin 0.1.23. Windows automated validation and exact-commit CI required before publication. Real Kodi device playback remains unverified. Restart Kodi after updating.
+
 1.8.70
 - Improve native navigation, search scrolling/order and Back state. Link buffering settings to Kodi cache settings and hide live subtitles.
 - Strengthen playback/pre-roll callback ownership, recognise AIOStreams static error videos, isolate account progress outboxes and tolerate optional storage failure.
