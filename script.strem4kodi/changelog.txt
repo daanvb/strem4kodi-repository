@@ -1,3 +1,9 @@
+1.8.79
+- Prefer a source whose media filename names the requested episode over a source labelled only with the matching season and episode number, even when the title-confirmed source reports lower quality.
+- Wait for the full source search before starting number-only files when a comparable episode title is available. If no title-confirmed file is found, continue autoplay with number-only sources; files naming another known episode remain excluded.
+- Keep fast early autoplay when episode metadata lacks a title precise enough to compare. Checked mixed Simpsons S09E04 and S09E05 results and Up Next recovery.
+- Player skin remains 0.1.23. Automated checks passed; native Kodi playback still needs device confirmation. Restart Kodi after updating.
+
 1.8.78
 - On a title screen, press Back once to stop a playing or starting trailer and remain on the title. Press Back again to return to the previous screen.
 - A trailer that has already finished does not consume the first Back press.
