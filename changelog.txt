@@ -1,3 +1,8 @@
+1.8.78
+- On a title screen, press Back once to stop a playing or starting trailer and remain on the title. Press Back again to return to the previous screen.
+- A trailer that has already finished does not consume the first Back press.
+- Player skin remains 0.1.23. Automated checks passed; native Kodi remote behavior still needs device confirmation. Restart Kodi after updating.
+
 1.8.77
 - Check complete media filenames shown inside provider source titles and details, as well as separate filename fields, against the selected episode's title.
 - Reject conflicting files individually; the number of incorrectly named files cannot outweigh a correctly named file during autoplay. When no file can be verified, use manual source selection.
