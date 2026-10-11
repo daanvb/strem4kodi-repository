@@ -1,3 +1,9 @@
+1.8.82
+
+- Show individual live broadcaster or channel names when the source itself reports them. Catalogue-level source names are listed separately and never assigned to a specific feed without evidence. Number indistinguishable feeds.
+- Keep the selected sports event's source picker underneath fullscreen playback, so Stop or Back returns to the same source list.
+- Show changing live cache, bitrate and queue statistics in a fixed Media info line without resetting the scrolling Kodi details.
+- Player skin remains 0.1.23. Automated reliability and package checks passed; native remote behaviour still needs device confirmation. Restart Kodi after updating.
 1.8.81
 
 - Reconnect app-owned live sports streams after 12 seconds of continuous Kodi buffering or a playback error. Limit retries to three, keep the loading card cancellable, and cancel a pending reconnect when a different source opens.
