@@ -1,3 +1,10 @@
+1.8.84
+
+- Sync Continue Watching removals and You May Also Like cards between devices using the existing private GitHub saved-lists sync. Use the same Stremio account and private sync repository on each device.
+- Retain pending watch progress until Stremio confirms the update. Keep newer local progress during a stale background refresh and let genuinely newer progress from another device win.
+- Prevent equal-timestamp progress events from being mistaken for one update, and keep legacy removal markers tied to their Stremio account.
+- Player skin remains 0.1.23. Automated tests passed; device playback and cross-device sync still need confirmation. Restart Kodi after updating.
+
 1.8.83
 
 - Keep a recently watched series in Continue Watching for 30 days after an episode finishes, focusing the next available episode. Removing it from the row persists until later playback.
