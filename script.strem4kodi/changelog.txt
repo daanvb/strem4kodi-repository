@@ -1,3 +1,9 @@
+1.8.76
+- Keep the loading cover over the pre-roll to movie transition until fullscreen returns, including when the intro is skipped. A short fallback prevents a stuck cover on skins that need modal closure first.
+- Make Back from a title with a windowed trailer preview return to the previous screen in one press.
+- Reject automatic episode sources whose independent filename title identifies a different episode, including mixed-up Simpsons S09E04/S09E05 names. Exact title-only filenames can also confirm a source; ambiguous names remain manual.
+- Player skin remains 0.1.23. Automated checks passed; native Kodi handoff and any complete-process exit still need device evidence. Restart Kodi after updating.
+
 1.8.75
 - Improve Search and collection return paths, including previous searches and saved collections.
 - Warm logos for visible titles and on sustained focus or trailer start; avoid unnecessary checks for complete artwork.
