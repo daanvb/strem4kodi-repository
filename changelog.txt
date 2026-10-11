@@ -1,3 +1,10 @@
+1.8.81
+
+- Reconnect app-owned live sports streams after 12 seconds of continuous Kodi buffering or a playback error. Limit retries to three, keep the loading card cancellable, and cancel a pending reconnect when a different source opens.
+- Show Kodi's available live bitrate, cache and video queue values in the player More Info panel. Unsupported values are omitted.
+- Add Send diagnostic report to player More Info. The report contains allowlisted playback statistics and bounded app events, uses the existing private GitHub sync token, and requires diagnostic reporting to be enabled.
+- Player skin remains 0.1.23. Automated reliability and package checks passed; native live playback and report upload still need device confirmation. Restart Kodi after updating.
+
 1.8.80
 
 - Report the current playing episode source as incorrect from Settings > Troubleshooting, with confirmation and Undo. Autoplay avoids only the reported release for that episode on this device; manual source selection remains available.
