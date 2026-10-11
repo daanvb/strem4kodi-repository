@@ -1,3 +1,11 @@
+1.8.80
+
+- Report the current playing episode source as incorrect from Settings > Troubleshooting, with confirmation and Undo. Autoplay avoids only the reported release for that episode on this device; manual source selection remains available.
+- Make loading Cancel hide the card immediately, revoke the attempt, and prevent delayed playback, retries or pre-roll handoff.
+- Count automatic source success only after sustained, advancing playback. Temporarily demote unhealthy providers and recover their ranking after a cooldown.
+- Improve Up Next recovery across playback sessions and delayed error-video metadata. Error slates no longer count as watched progress.
+- Player skin remains 0.1.23. Automated reliability and package checks passed; native Kodi playback still needs device confirmation. Restart Kodi after updating.
+
 1.8.79
 - Prefer a source whose media filename names the requested episode over a source labelled only with the matching season and episode number, even when the title-confirmed source reports lower quality.
 - Wait for the full source search before starting number-only files when a comparable episode title is available. If no title-confirmed file is found, continue autoplay with number-only sources; files naming another known episode remain excluded.
