@@ -1,4 +1,4 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.76" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.77" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.23" />
@@ -19,7 +19,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.76: Keep the pre-roll loading cover until the movie reaches fullscreen, return from title previews with one Back, and reject conflicting episode filenames during automatic selection. Player skin 0.1.23. Restart Kodi after updating.</news>
+    <news>1.8.77: Check complete media filenames embedded in provider source text against the expected episode title before autoplay. Correct files can win even when more returned files name a different episode. Player skin 0.1.23. Restart Kodi after updating.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>

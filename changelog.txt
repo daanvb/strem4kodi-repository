@@ -1,3 +1,8 @@
+1.8.77
+- Check complete media filenames shown inside provider source titles and details, as well as separate filename fields, against the selected episode's title.
+- Reject conflicting files individually; the number of incorrectly named files cannot outweigh a correctly named file during autoplay. When no file can be verified, use manual source selection.
+- Player skin remains 0.1.23. Automated checks passed; native Kodi playback still needs device confirmation. Restart Kodi after updating.
+
 1.8.76
 - Keep the loading cover over the pre-roll to movie transition until fullscreen returns, including when the intro is skipped. A short fallback prevents a stuck cover on skins that need modal closure first.
 - Make Back from a title with a windowed trailer preview return to the previous screen in one press.
