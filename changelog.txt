@@ -1,3 +1,10 @@
+1.8.85
+
+- Improve You May Also Like ranking with genre fit, support multiple recommendation seeds, and invalidate older cached results.
+- Refine navigation: Back from Home or Discover opens the sidebar, with a third Back press exiting the app. Improve Settings Right focus and add a compact Exit app sidebar item.
+- Widen Dolby logo badges and inset them from the right edge.
+- Player skin remains 0.1.23. Restart Kodi after updating.
+
 1.8.84
 
 - Sync Continue Watching removals and You May Also Like cards between devices using the existing private GitHub saved-lists sync. Use the same Stremio account and private sync repository on each device.

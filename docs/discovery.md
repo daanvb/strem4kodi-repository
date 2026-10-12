@@ -1,6 +1,6 @@
 # Home and discovery
 
-Home is dedicated to Continue Watching, Up Next and Upcoming Episodes. Installed
+Home is dedicated to Continue Watching, You May Also Like and Upcoming Episodes. Installed
 provider catalogues appear in Discover or Sports, regardless of their former Home
 placement. Provider configurations are not changed.
 
