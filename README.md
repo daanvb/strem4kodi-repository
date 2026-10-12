@@ -8,7 +8,15 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.88.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.89.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.89
+
+- Harden Search title opening and reduce background work while browsing, while retaining focused logo/source checks.
+- Correct repeated Up Next titles and add optional, bounded next-episode autoplay after a confirmed natural ending.
+- Add session-scoped Play random episode across aired regular episodes from every season, continuing through Up Next and autoplay.
+- Keep automatic source discovery alive through Kodi's normal no-video handoff gap after an episode ends.
+- Player skin remains 0.1.23. Restart Kodi after updating.
 
 ## What's new in 1.8.88
 

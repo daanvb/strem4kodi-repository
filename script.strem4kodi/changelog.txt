@@ -1,3 +1,13 @@
+1.8.89
+
+- Harden Search title opening and metadata handling to avoid native-window crashes; keep startup on cached Home.
+- Reduce background source/logo work while browsing. Retain focused-title checks after 1.5 seconds and immediate checks when a trailer starts.
+- Correct repeated Up Next episode titles when provider metadata cannot verify the next title.
+- Add optional next-episode autoplay after a confirmed natural ending, capped at three automatically started episodes per continuous session.
+- Add Play random episode for series. Random mode chooses aired regular episodes across all seasons and continues through Up Next and autoplay for the current session.
+- Keep a confirmed natural-end autoplay source search alive across service ticks instead of cancelling it during Kodi's no-video handoff gap.
+- Player skin remains 0.1.23. Restart Kodi after updating.
+
 1.8.88
 
 - Keep technical quality indicators in the hero, including focused and trailer preloading; remove poster quality badges and their Appearance setting.
