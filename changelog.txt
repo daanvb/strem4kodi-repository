@@ -1,3 +1,12 @@
+1.8.86
+
+- Add Upcoming Episodes for relevant series in Continue Watching, Favourites and Watch Later. Show episodes up to two weeks ahead, keep the row through seven days after the dated season finale, and show Don't Forget About Me for the following 23 days.
+- Place Upcoming Episodes before You May Also Like, and allow trailers for You May Also Like cards. Stop a cancelled preview if Kodi starts its queued trailer late.
+- Add native Trending/New and 4K/Dolby Vision/Atmos poster badges, controlled by two Appearance switches. Existing provider-baked badges are not duplicated.
+- Prefer measured duration for the exact currently watched episode when showing its runtime. Move Exit app to the bottom of Settings and make Back open the sidebar without repeat presses closing the app.
+- Support held OK context menus on keyboard/HID remotes that send a distinct long-press signal. Preserve ordinary OK on IR remotes.
+- Player skin remains 0.1.23. Restart Kodi after updating; real-device remote and playback behavior still needs confirmation.
+
 1.8.85
 
 - Improve You May Also Like ranking with genre fit, support multiple recommendation seeds, and invalidate older cached results.

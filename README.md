@@ -8,7 +8,14 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.85.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.86.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.86
+
+- Show upcoming episodes for series in Continue Watching, Favourites or Watch Later, then retain a short post-finale reminder in Don't Forget About Me.
+- Add native Trending/New and 4K/Dolby Vision/Atmos poster badges, each group controlled by a switch under Appearance.
+- Keep a cancelled trailer from starting late, improve displayed episode runtimes, and put Exit app at the bottom of Settings. Held OK opens context menus on compatible keyboard/HID remotes; ordinary OK is preserved on IR remotes.
+- Player skin remains 0.1.23. Restart Kodi after updating; live device behavior still needs confirmation.
 
 ## What's new in 1.8.85
 
