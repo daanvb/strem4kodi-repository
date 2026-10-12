@@ -1,3 +1,10 @@
+1.8.88
+
+- Keep technical quality indicators in the hero, including focused and trailer preloading; remove poster quality badges and their Appearance setting.
+- Place contextual and Trending poster sashes at the very top in natural title case.
+- Put Exit app in a smaller separated main-menu footer with a clear power icon; preserve its focus during background refresh.
+- Player skin remains 0.1.23. Restart Kodi after updating.
+
 1.8.87
 
 - Keep poster artwork durable in the cache and make native trend and format tags clearer.
