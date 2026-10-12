@@ -1,3 +1,10 @@
+1.8.87
+
+- Keep poster artwork durable in the cache and make native trend and format tags clearer.
+- Improve player menu restoration, wrong-episode reporting, and sidebar Exit behavior.
+- Make the Windows test runner and profile migration more reliable.
+- Player skin remains 0.1.23. Restart Kodi after updating.
+
 1.8.86
 
 - Add Upcoming Episodes for relevant series in Continue Watching, Favourites and Watch Later. Show episodes up to two weeks ahead, keep the row through seven days after the dated season finale, and show Don't Forget About Me for the following 23 days.

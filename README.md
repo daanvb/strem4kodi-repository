@@ -8,7 +8,14 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.86.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.87.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.87
+
+- Keep poster artwork durable in the cache and make native trend and format tags clearer.
+- Improve player menu restoration, wrong-episode reporting, and sidebar Exit behavior.
+- Make the Windows test runner and profile migration more reliable.
+- Player skin remains 0.1.23. Restart Kodi after updating.
 
 ## What's new in 1.8.86
 
@@ -59,10 +66,13 @@ Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface,
 ## Development
 
 ```sh
-python -m unittest discover -s tests
+python -m pip install -r requirements-test.txt
+python tools/run-tests.py
 python tools/build-stremio-addon.py --output dist
 python tools/build-player-skin.py --output dist
 ```
+
+Use the same Python interpreter for dependency installation and testing. The runner reports its interpreter and Pillow version, and uses the ignored `.test-run-tmp` directory inside the checkout for temporary files. On Windows, it uses Codex's bundled Python if the selected interpreter lacks Pillow and the bundled interpreter is available. Pass unittest discovery options such as `-p test_disk_cache.py` or `-v` to the runner.
 
 Build the update feed using an explicit HTTPS `--feed-url` with `tools/build-kodi-repository.py`. The landing page is generated from the same package versions as the feed, so its download links stay current. App and skin versions must satisfy the declared dependency. Never replace an already published version's package.
 
