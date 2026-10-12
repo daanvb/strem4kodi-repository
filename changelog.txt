@@ -1,3 +1,12 @@
+1.8.90
+
+- Open titles from the full Search results page only after destroying its poster-grid window, avoiding overlapping full Kodi windows on constrained devices.
+- Restore the exact Search results and selected poster after returning from title details.
+- Invalidate stale cached award verification so old Emmy Winner labels are recalculated under the current rules.
+- Do not assign one arbitrary award to every title in a combined awards list.
+- Centre contextual tags horizontally at the absolute top of normal and compact posters.
+- Player skin remains 0.1.23. Restart Kodi after updating.
+
 1.8.89
 
 - Harden Search title opening and metadata handling to avoid native-window crashes; keep startup on cached Home.
