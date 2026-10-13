@@ -1,3 +1,12 @@
+1.8.93
+
+- Remove Strem4Kodi's native poster-tag overlays and background tag discovery; poster artwork and badges will come from the configured art provider.
+- Stop collecting poster-tag-only diagnostics and remove the Trending tags setting.
+- Use verified PostersPlus quality data for browsing hero badges, with cached source formats as a fallback. Selected-source and Kodi playback details remain authoritative.
+- Remove the retired native tag modules, rounded-tag asset and optional slow format scanner, queue and setting.
+- Retire legacy poster wrapper overrides and cached tag facts; migrate artwork caches and stale generated layouts. Refresh landscape artwork and title logos with the configured poster provider.
+- Player skin remains 0.1.23.
+
 1.8.92
 
 - Include bounded technical excerpts from kodi.log and kodi.old.log in automatic and manual private diagnostic reports.
