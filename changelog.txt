@@ -1,3 +1,14 @@
+1.8.91
+
+- Guard Search selection, redraws and window closure; hand both suggestions and full-result titles to the app shell and restore the original search screen.
+- Stop callbacks and background rendering from using retired Search controls; wait for Kodi's closing transition before opening title details.
+- Restore the parent series identity and name before preparing Up Next, so the current episode title is not displayed beside the next episode number.
+- Keep chart membership cached independently of Home, allow native tags on AIOMetadata artwork, and prioritise ranks, status and director facts ahead of lifetime awards.
+- Centre rounded tag boxes at the top of posters and refresh older cached title facts.
+- Add interrupted-session markers, installed-code fingerprints, UI stages, focused error counts and poster-tag counts to private diagnostics.
+- Add Troubleshooting > Send diagnostic report now using the existing opt-in and private sync token.
+- Player skin remains 0.1.23. Restart Kodi after updating. The Fire TV crash outcome requires a device retest.
+
 1.8.90
 
 - Open titles from the full Search results page only after destroying its poster-grid window, avoiding overlapping full Kodi windows on constrained devices.
