@@ -1,3 +1,10 @@
+1.8.95
+
+- Avoid Kodi Omega's XML edit-control Python wrapper in Search. Keep query text in Python and use the existing remote keyboard or Kodi keyboard/phone paste.
+- Wait for the search poller and native dialog to retire before returning a selected title to Home or the app shell; block a handoff that cannot safely complete.
+- Add bounded search close/return/retirement checkpoints and process bitness to private diagnostics, without exporting query text or credentials.
+- Fire TV crash confirmation still requires a device retest. Player skin remains 0.1.23.
+
 1.8.94
 
 - Preserve the selected title/episode when an owned trailer returns from Kodi fullscreen playback; prevent window reactivation from resetting focus to the main menu.
