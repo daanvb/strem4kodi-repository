@@ -1,3 +1,21 @@
+1.8.94
+
+- Preserve the selected title/episode when an owned trailer returns from Kodi fullscreen playback; prevent window reactivation from resetting focus to the main menu.
+- Try AIOmetadata before other metadata providers; keep unverified catalogue artwork neutral until the configured provider has answered, including backgrounds and title logos.
+- Clear Strem4Kodi response and artwork caches together, invalidate startup snapshots and in-flight cache writes, and remove matching Kodi textures while preserving accounts, progress and source-format facts. Server-side artwork caches remain separately managed.
+- Move poster focus borders into the surrounding gutter so they do not cover PostersPlus chips at the top edge, including compact and similar-title cards.
+- Refresh TMDB similar-title cards through the configured poster provider, keeping PostersPlus artwork consistent without moving the selection.
+- Base You May Also Like on watched, in-progress and saved titles using TMDB recommendations and genre-matched weekly trends. Exclude saved, continuing and completed titles, prefer well-rated results, and retire older recommendation caches.
+- Reduce saved-progress reads during fast navigation and remove browsing requests for retired director/poster-tag enrichment.
+- Guard repeated OK presses across slow media loading transitions while keeping Back, Cancel and directional navigation immediate.
+- Use Kodi's native progress values for episode and poster bars; refresh partial episode progress and measured duration after playback.
+- Prefer valid TMDB per-episode runtimes and consistently parse numeric/string minutes, seconds and ISO durations.
+- Restore source-derived and shared database formats as the primary hero quality logos. PostersPlus only fills missing technical families, without upgrading a known source resolution, HDR format or audio codec.
+- Restore focused source checks while using PostersPlus artwork; complete fresh format records avoid both source and PostersPlus requests.
+- Keep title-level PostersPlus facts out of selected-episode details and out of the source-format database.
+- Clear completed media/episode loading messages while retaining real errors, and remove background format-check status text from the media page.
+- Poster artwork and its tags remain with PostersPlus. Player skin remains 0.1.23.
+
 1.8.93
 
 - Remove Strem4Kodi's native poster-tag overlays and background tag discovery; poster artwork and badges will come from the configured art provider.

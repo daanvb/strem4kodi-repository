@@ -8,7 +8,16 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.93.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.94.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.94
+
+- Prefer source-derived and shared database quality logos in the hero; PostersPlus fills missing format families and continues to supply poster artwork.
+- Try AIOmetadata first and keep other artwork neutral until checked, including Favourites and Watch Later. Clear responses and matching Kodi artwork together while retaining progress and saved lists.
+- Preserve poster/episode focus when trailers return from fullscreen; keep poster focus borders clear of the top artwork chip.
+- Use native episode progress bars and valid per-episode/measured runtimes; guard repeated OK presses across loading transitions.
+- Tighten You May Also Like with recommendations and matching weekly trends, excluding saved, continuing and completed titles. Use configured PostersPlus artwork on similar-title cards.
+- Clear completed media loading messages and remove background format-check text. Player skin remains 0.1.23. Restart Kodi after updating; device rendering and crash confirmation still need a device retest.
 
 ## What's new in 1.8.93
 
