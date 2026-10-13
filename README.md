@@ -8,14 +8,21 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.95.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.96.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.96
+
+- Keep titles in the search suggestions while their artwork refreshes, fixing omissions such as The Jinx and This Country.
+- Reduce work during rapid browsing: enrich the latest settled title, show cached details immediately and skip redundant hero redraws.
+- Show ready posters without waiting for the slowest lookup in each batch, while retaining row order and cancellation safeguards.
+- Player skin remains 0.1.23. Restart Kodi after updating. Automated checks passed; scrolling smoothness needs testing on your device.
 
 ## What's new in 1.8.95
 
 - Avoid Kodi Omega's unsafe XML edit-control wrapper in Search. Remote typing remains available; selecting the query field opens Kodi's keyboard for keyboard/phone input.
 - Wait for the search worker and native dialog to close before opening a selected title, and safely stop an incomplete handoff.
 - Add private search-retirement checkpoints and Python process bitness to help investigate native crashes without exporting search text or credentials.
-- Player skin remains 0.1.23. Restart Kodi after updating. This is a targeted workaround for the reported Fire TV crash; device confirmation still requires a retest.
+- Player skin remains 0.1.23. Restart Kodi after updating. The user subsequently confirmed that search selection works on their tested Fire TV; other devices remain unverified.
 
 ## What's new in 1.8.94
 

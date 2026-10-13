@@ -1,3 +1,11 @@
+1.8.96
+
+- Keep valid search suggestions visible while their configured artwork is being refreshed, including The Jinx and This Country. Preserve title validation and AIOmetadata-first artwork ordering.
+- Coalesce optional hero enrichment during rapid browsing: keep previews and cached details immediate, and enrich only the latest title after focus settles. Reuse the existing browse worker instead of starting a timer per navigation press.
+- Avoid duplicate cached-hero renders, unchanged next-row label writes and focused-hero redraws when poster batches have no visible artwork change.
+- Release ready poster responses without waiting for a slow lookup in the same batch; preserve title order, cancellation and the existing request limits.
+- The user confirmed that the previous search-selection crash fix works on their tested Fire TV. Device scrolling smoothness still requires retesting. Player skin remains 0.1.23.
+
 1.8.95
 
 - Avoid Kodi Omega's XML edit-control Python wrapper in Search. Keep query text in Python and use the existing remote keyboard or Kodi keyboard/phone paste.
