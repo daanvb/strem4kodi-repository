@@ -1,3 +1,12 @@
+1.8.92
+
+- Include bounded technical excerpts from kodi.log and kodi.old.log in automatic and manual private diagnostic reports.
+- Preserve timestamps, severity, control/window IDs, known app navigation events and addon traceback file/line locations. Omit URLs, credentials, local paths and unrecognised message text.
+- Keep earlier recognised failures alongside the final log context, with at most 64 entries and a 256 KiB scan per log.
+- Continue using the existing diagnostic opt-in, private repository check, sync token and verified upload workflow.
+- This update improves evidence collection; the remaining Search crash is still under investigation.
+- Player skin remains 0.1.23. Restart Kodi after updating, reproduce the issue once, reopen Kodi and send a diagnostic report.
+
 1.8.91
 
 - Guard Search selection, redraws and window closure; hand both suggestions and full-result titles to the app shell and restore the original search screen.
