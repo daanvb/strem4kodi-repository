@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.100" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.101" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.25" />
@@ -20,7 +20,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.100: Include Auto Play profiles and portable playback, subtitle and skip preferences in Shield setup copies. Player skin 0.1.25 installs Aerial from Kodi's official repository; profile setup selects it with backup and Undo. Update the Shield and receiving devices, then capture a fresh master profile to include the extra preferences.</news>
+    <news>1.8.101: Move inactive Continue Watching movies and series to Don't Forget About Me after 30 days and remove their Home cards after another 30 days, preserving progress. New playback resets the clock. Deduplicate explicit media IDs across both rows; keep exact resume/next-episode targets. Reduce repeated index reads and unchanged refresh writes; guard malformed watch state and timezone ordering. Skin remains 0.1.25. Restart Kodi after updating.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>

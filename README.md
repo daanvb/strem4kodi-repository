@@ -8,7 +8,14 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.100.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.101.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.101
+
+- Move inactive movies and series from Continue Watching to Don't Forget About Me after 30 days; remove their Home cards after another 30 days while keeping progress.
+- Watching again resets the clock. Explicit IDs prevent duplicate cards, and moved titles retain their resume/next-episode target and removal action.
+- Speed up unchanged Home refreshes and keep cached row order, timezone handling and malformed-state recovery consistent.
+- All 1,678 automated tests passed. Skin remains 0.1.25; restart Kodi after updating. [Retention guide](docs/continue-watching-retention.md) · [Audit details](docs/home-retention-audit-2026-10-14.md).
 
 ## What's new in 1.8.100
 

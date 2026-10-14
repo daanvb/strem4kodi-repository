@@ -1,3 +1,11 @@
+1.8.101
+
+- Move inactive Continue Watching movies and series to Don't Forget About Me at 30 days, then remove the Home card at 60 days. Keep saved progress and watch history; new playback returns the title to Continue Watching and resets the clock.
+- Prevent duplicate cards across both rows using explicit media IDs. Preserve exact resume/next-episode targets and allow contextual removal of moved reminder cards. Completed movies stay excluded; unplayed saved shows retain their seasonal reminders.
+- Keep live and cached Home row ordering consistent. Guard malformed watch data, use actual timezone-aware playback times, and preserve older index data during the alias upgrade.
+- Read small date/ID records before loading displayed card details, reuse one retention partition per Home refresh, and skip rewriting unchanged rows. In a synthetic 4,000-title desktop benchmark, unchanged refresh time fell from 383 ms to 179 ms; TV performance still needs device verification.
+- All 1,678 automated tests passed, including focused retention, sync, cache, migration and context checks. Python 3.8 compatibility and credential/package checks passed. Player skin remains 0.1.25. Restart Kodi after updating.
+
 1.8.100
 
 - Copy Auto Play profiles and portable playback, subtitle, skip, chapters and pre-roll preferences from the Shield. Update receiving devices before importing a newly captured master; older profiles remain valid.

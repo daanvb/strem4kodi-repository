@@ -4,6 +4,13 @@ Home is dedicated to Continue Watching, You May Also Like and Upcoming Episodes.
 provider catalogues appear in Discover or Sports, regardless of their former Home
 placement. Provider configurations are not changed.
 
+Continue Watching uses a 30-day inactivity window for movies and series. Its
+titles then move to Don't Forget About Me for another 30 days and leave Home at
+day 60, keeping saved progress and history. New playback returns the title to
+Continue Watching and resets the clock. The two rows deduplicate explicit media
+IDs; playback history takes priority over season-finale reminders. See
+[Home playback retention](continue-watching-retention.md) for details.
+
 Discover offers Type, Browse group and List controls. Popular,
 Trending, All-time Greats, New Releases, Hidden Gems and Most Watched lists are
 combined when their names identify the same category. Marvel, DC and Star Wars
