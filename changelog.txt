@@ -1,3 +1,12 @@
+1.8.98
+
+- Show the next episode title with thumbnail spoiler protection, carry corrected names into playback and keep slow credits/optional quality requests from delaying the card.
+- Prepare next-episode sources during the closing minutes. Reuse recent session/provider-scoped preflight checks while retaining cancellation, exact-episode recovery and natural-end autoplay.
+- Preserve the last owned playback position when Kodi clears its clock on normal stop. Make Play/Resume follow the selected episode and retain unfinished rewatch progress.
+- Isolate background watcher failures so progress/recovery continue; repair shutdown cleanup and block details allocation when the preceding native Home window has not retired.
+- Reduce cache copying while typing and bound full hero metadata to 64 recent titles for long browsing sessions.
+- All 1,632 automated tests passed; package integrity, Python compatibility and credential checks passed. Fire TV rendering/handoff still require device retesting. Player skin remains 0.1.23.
+
 1.8.97
 
 - Add private device setup with a QR code and phone approval. Copy an approved master profile from the Shield, then apply preferred S4K settings, API keys and provider selections to another device.
