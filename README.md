@@ -174,6 +174,8 @@ Build the update feed using an explicit HTTPS `--feed-url` with `tools/build-kod
 Requires **Kodi 21 or later**. Install the repository ZIP, then install Strem4Kodi from **Program add-ons**. The required player skin installs automatically. Restart Kodi after updating both packages.
 
 - [Install / update and current downloads](https://daanvb.github.io/strem4kodi-repository/)
+- TV installation: add `https://daanvb.github.io/strem4kodi-repository/` in Kodi's
+  File manager, then Install from zip file → that source → `repository.strem4kodi.zip`.
 - [Configuration guide](docs/configuration.md)
 - [New lists, categories and Discover](docs/discovery.md)
 - [Shared format / logo database](docs/format-database.md)
