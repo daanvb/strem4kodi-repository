@@ -1,3 +1,11 @@
+1.8.97
+
+- Add private device setup with a QR code and phone approval. Copy an approved master profile from the Shield, then apply preferred S4K settings, API keys and provider selections to another device.
+- Keep Stremio sign-in on its official device-linking page. Private profiles and credentials stay outside the public repository and release packages.
+- Back up settings before applying the profile; support retry, Cancel and Undo while preserving later user changes. Apply companion-skin changes at a safe app startup boundary.
+- Existing signed-in devices keep their normal startup. Audio/display hardware and custom remote keymaps remain device-specific.
+- All 1,612 automated tests passed on Windows. Private setup HTTPS and Docker health verified; first Shield export and native second-device enrollment still need testing. Player skin remains 0.1.23.
+
 1.8.96
 
 - Keep valid search suggestions visible while their configured artwork is being refreshed, including The Jinx and This Country. Preserve title validation and AIOmetadata-first artwork ordering.

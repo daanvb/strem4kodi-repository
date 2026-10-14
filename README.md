@@ -8,7 +8,15 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.96.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.97.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.97
+
+- Copy preferred S4K settings from your master device through private setup, with a QR code and owner approval on your phone.
+- Apply API keys and provider selections with backup, retry and Undo. Stremio account sign-in stays on its official page.
+- Existing signed-in devices keep their normal startup; audio/display hardware and custom remote keymaps remain device-specific.
+- Start on the Shield: Settings → Account & Stremio → Copy setup profile from this device. Then approve new devices through the setup dashboard. [Setup guide](docs/device-setup.md).
+- Player skin remains 0.1.23. Restart Kodi after updating. Automated checks and private HTTPS passed; native device enrollment still needs testing.
 
 ## What's new in 1.8.96
 
