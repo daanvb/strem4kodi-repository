@@ -8,7 +8,14 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.99.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.100.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.100
+
+- Include Auto Play profiles and portable playback, subtitle and skip preferences in Shield setup copies.
+- Player skin 0.1.25 installs Aerial from Kodi's official repository. Approved profile setup selects it, with backup and Undo; its settings open from Skin Settings / General.
+- Give the private setup dashboard Strem4Kodi branding, clearer phone approvals and a manual TV-code entry.
+- All 1,661 automated tests passed. Update the Shield and receiving devices, capture a fresh master, then import it on each device including the Shield and restart Kodi. Native Aerial activation still needs a device check. [Setup details](docs/device-setup.md).
 
 ## What's new in 1.8.99
 

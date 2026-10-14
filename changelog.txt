@@ -1,3 +1,11 @@
+1.8.100
+
+- Copy Auto Play profiles and portable playback, subtitle, skip, chapters and pre-roll preferences from the Shield. Update receiving devices before importing a newly captured master; older profiles remain valid.
+- Player skin 0.1.25 requires Aerial from Kodi's official repository. Approved companion-skin profile imports select it as the screensaver, with backup, readback, retry and Undo. Preserve the inactivity timeout and device power/display settings.
+- Open Aerial's configuration from Skin Settings / General. Disabled or unavailable Aerial remains pending rather than falsely marked configured.
+- Redesign the private setup dashboard with Strem4Kodi branding, responsive phone/desktop layouts, clearer approval states and a manual TV-code entry. Private values remain hidden and owner/CSRF protection stays intact.
+- All 1,661 automated tests passed; browser layouts, private service deployment, archive integrity and credential checks passed. Native Aerial playback still requires a device check. Update all clients, capture a fresh Shield profile, then import on each device including the Shield and restart Kodi.
+
 1.8.99
 
 - Approved setup-profile imports configure Kodi Home to show Add-ons and Favourites only, with category widgets enabled. Player skin 0.1.24 adds reversible Disc visibility.

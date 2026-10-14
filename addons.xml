@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.99" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.100" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="skin.strem4kodi" version="0.1.24" />
+    <import addon="skin.strem4kodi" version="0.1.25" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
   </requires>
   <extension point="xbmc.python.script" library="default.py">
@@ -20,7 +20,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.99: Approved private profile imports configure Kodi Home with Add-ons and Favourites, enable category widgets and requested Kodi control/logging settings, with backup, readback and Undo. Setup dashboard sign-in accepts bounded streamed forms and retains same-origin browser provenance. Player skin 0.1.24. Restart Kodi after updating.</news>
+    <news>1.8.100: Include Auto Play profiles and portable playback, subtitle and skip preferences in Shield setup copies. Player skin 0.1.25 installs Aerial from Kodi's official repository; profile setup selects it with backup and Undo. Update the Shield and receiving devices, then capture a fresh master profile to include the extra preferences.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
@@ -56,9 +56,10 @@
     </assets>
     <news>1.0.4: fresh Strem4Kodi artwork paths replace cached legacy branding.</news>
   </extension>
-</addon><addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.24" provider-name="daanvb">
+</addon><addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.25" provider-name="daanvb">
   <requires>
     <import addon="xbmc.gui" version="5.17.0" />
+    <import addon="screensaver.atv4" version="3.0.3" />
   </requires>
   <extension point="xbmc.gui.skin" debugging="false">
     <res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
