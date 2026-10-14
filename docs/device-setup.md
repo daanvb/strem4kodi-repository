@@ -25,6 +25,20 @@ normal skin confirmation. Audio, display, remote keymaps and OS permissions
 remain device-specific. This does not install Kodi itself or bypass Kodi's
 repository/install confirmations.
 
+Approved profile imports also configure Kodi to enable event logging, HTTP
+control with username `kodi` and no password/authentication, remote control from
+applications on this system, and unknown sources. The existing HTTP port is
+retained (Kodi's default is 8080). Remote access from other systems is not enabled
+by this profile. Kodi's own confirmation dialogs still apply. Unsupported or
+declined settings remain pending and are reported instead of marked successful.
+
+When the profile selects the Strem4Kodi skin, Kodi's Home categories are reduced
+to Add-ons and Favourites, with category widgets enabled. Skin changes wait for
+that skin to be active; these do not alter the S4K app's navigation menu. Undo
+device setup includes these native Kodi and skin settings, preserving subsequent
+user edits. The private local backup can contain the previous HTTP password and
+must not be included in diagnostic exports.
+
 Client changes are backed up before mutation and retries retain that backup.
 Undo device setup restores values still matching the applied profile and keeps
 subsequent user changes. Skin undo is queued for the next safe shell entry. Network

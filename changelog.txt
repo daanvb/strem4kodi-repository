@@ -1,3 +1,11 @@
+1.8.99
+
+- Approved setup-profile imports configure Kodi Home to show Add-ons and Favourites only, with category widgets enabled. Player skin 0.1.24 adds reversible Disc visibility.
+- Enable event logging, HTTP control (username kodi, no password/authentication), remote application control on this system and unknown sources. Keep the existing HTTP port and hardware settings.
+- Back up before writing, confirm each setting by readback, retain declined/unsupported writes for retry and preserve later user edits when undoing setup.
+- Fix private setup dashboard sign-in behind Caddy: accept bounded streamed form bodies and retain same-origin browser provenance while preserving Origin/CSRF checks.
+- All 1,644 automated tests passed; app/skin integrity, XML/Python compatibility and credential checks passed. Native Kodi prompts still require device testing. Restart Kodi after updating, then import the setup profile to apply these defaults.
+
 1.8.98
 
 - Show the next episode title with thumbnail spoiler protection, carry corrected names into playback and keep slow credits/optional quality requests from delaying the card.
