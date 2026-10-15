@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.106" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.107" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.25" />
@@ -20,7 +20,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.106: Prepare recap rewind while paused so Play has no added settling delay or later seek. Improve pre-roll loading handoff, Atmos matching and stalled-intro recovery. Restore native CEC OK playback controls and add safe hold/audio diagnostics. Increase portrait card size, fix first-poster clipping and sharpen menu icons/borders. Refresh artwork through configured metadata. Skin remains 0.1.25. Restart Kodi. Physical Shield audio and TV-remote behaviour still need verification.</news>
+    <news>1.8.107: Stronger private diagnostics with larger redacted Kodi technical logs, restart preservation and verified compressed attachments. Add Kodi-only Android crash-buffer status, Play Next/source/progress checkpoints and safe worker failure locations. Measure startup through Home, catalogue and artwork readiness. Existing diagnostic opt-in/token required. Fire TV Play Next crash still needs device evidence. Skin remains 0.1.25. Restart Kodi.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>

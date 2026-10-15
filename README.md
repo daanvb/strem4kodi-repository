@@ -8,7 +8,14 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.106.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.107.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.107
+
+- Preserve larger redacted Kodi technical logs across restarts and upload verified compressed attachments to your private diagnostic repository.
+- Add Play Next/source/progress checkpoints, safe worker/service failure locations and explicit Android crash-buffer access status.
+- Measure first/repeat startup through initial Home, catalogue refresh and artwork completion. No per-frame tracing or automatic uploads during playback.
+- Update the app and restart Kodi. Skin remains 0.1.25. The Fire TV Play Next crash still requires fresh device evidence. [Release details](docs/release-1.8.107.md).
 
 ## What's new in 1.8.106
 

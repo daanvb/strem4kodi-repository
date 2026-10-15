@@ -1,3 +1,12 @@
+1.8.107
+
+- Preserve larger redacted Kodi technical logs, including unfamiliar warning/error details, across restarts. Condense repeated errors while retaining the first fault and final context.
+- Retain up to six compressed log snapshots per client and upload verified attachments to the existing private GitHub repository. Capture locally on restart/every minute, skip unchanged files, and keep automatic network uploads idle-only. Existing diagnostic opt-in and token are required.
+- Attempt Kodi-only Android crash-buffer capture on service startup and manual reports. Report unavailable, restricted or missing evidence explicitly; no root access, other-app logs or binary crash dumps are collected.
+- Add persistent Play Next, source selection, resolver, cancellation and progress-queue checkpoints, plus safe app/service/worker error classes and code locations. This instrumentation does not claim the reported Fire TV Play Next crash is fixed.
+- Record the last twelve first/repeat startups, from splash/settings/account and cached Home through first visible Home, catalogue refresh and artwork completion. Buffer stage timings and avoid per-frame logging.
+- Player skin remains 0.1.25 and repository installer remains 1.0.4. Update the app and restart Kodi. After another crash, reopen Kodi promptly so surviving evidence can be captured and uploaded.
+
 1.8.106
 
 - Prepare unpause rewind once while video remains paused, after the configured pause duration. Press Play normally without a delayed second seek. Manual seeking, changed playback and resuming before preparation cancel the recap. The paused frame moves back once; native buffering may still take time.
