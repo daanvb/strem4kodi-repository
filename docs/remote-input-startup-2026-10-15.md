@@ -1,0 +1,11 @@
+# Remote input and startup protection
+
+Unpublished changes for all Kodi devices, including Fire TV, Android and Shield.
+
+- At the far-left edge of a content row (or the first filter), hold Left to open the main menu. Two Left presses no longer open it. Kodi's native long-press flag is accepted immediately; remotes that supply only repeated directional events use a sustained-repeat fallback (at least three events across 650 ms). Normal Left movement remains immediate and lists do not wrap at the left edge. Python actions do not expose key-up, so the fallback cannot perfectly distinguish a sustained hold from sufficiently continuous multiple taps.
+- Exit app retains its smaller footer position, with a solid rounded accent highlight and contrasting icon/text when focused.
+- Home and media activation handlers reject concurrent actions and input during initial construction. An action taking 120 ms or longer is followed by a 500 ms settling interval for activations; this prevents rapid queued OK presses from launching another action. Existing short duplicate-selection protection remains. Back and directional actions are not debounced by this guard. Intentional internal navigation is allowed within the current handler.
+- Home first displays its cached rows, then schedules its provider refresh after 750 ms and 650 ms of input inactivity. Fetched rows wait for that same input inactivity before changing native controls. Focus and selection survive the update; results for an outdated page, generation or Home revision are discarded.
+- A compact, nonfocusable startup/action message indicates that Home is refreshing or an activation is still working. Failed refreshes leave cached content usable and clear the message. There is no fixed 15–20 second input lock and no keymap change.
+
+Validation includes the production controller against replaced Kodi/API boundaries: startup deferral, activity during refresh, selection retention, stale-result rejection, unavailable providers, repeat activation, concurrent callbacks, exceptions, and native/repeat-based hold detection. Generated XML and theme checks cover the footer. Physical remotes and Fire TV startup latency require on-device verification; unit tests cannot certify remote firmware or measure device performance.
