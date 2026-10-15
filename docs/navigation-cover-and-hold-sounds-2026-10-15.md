@@ -1,0 +1,13 @@
+# Remaining transition gap and held-Left sounds
+
+Pending after app 1.8.102; not published.
+
+The supplied photo sequence shows a collection preview with a trailer, Kodi's Videos window, then the selected film's details. The shell already retired the old full browse window to avoid Fire TV native crashes, but that intentional gap had no opaque owner. The selected trailer was also stopped before the replacement could paint.
+
+The Search/collection handoff now shows a lightweight opaque WindowXMLDialog. Its onInit callback retires the old browse window, which stops the trailer; full details allocation still waits for native retirement. The cover stays through details initialization, and shell cleanup also closes it on failed initialization or retirement. It has no remote artwork, poster grid, player or source token. Callback ownership is released before native Home destruction, avoiding retention of the old grid. Pending handoffs reject duplicate selection and stop the collection's post-selection refresh. Back before retirement cancels the pending handoff; a cancellation recorded during retirement prevents title initialization. The cover does not change video quality or decoder selection.
+
+Held-Left repeat sounds are suppressed through Kodi's temporary navigation-sound API, starting at the left edge and continuing across the sidebar-opening repeats. One watchdog per hold extends its deadline on repeats and restores sounds after 850 ms without another repeat, on another action or when Home closes. Thread-start failure restores sounds immediately, and an old watchdog cannot restore during a newer hold. Media volume and saved sound settings are never changed. Kodi may play the initial ordinary key sound before delivering its Python callback; the change targets repeated clicks during the hold.
+
+Primary Kodi references: [input sound dispatch](https://github.com/xbmc/xbmc/blob/21.3-Omega/xbmc/input/InputManager.cpp), [enableNavSounds binding](https://github.com/xbmc/xbmc/blob/21.3-Omega/xbmc/interfaces/legacy/ModuleXbmc.cpp), and [GUIAudioManager Enable](https://github.com/xbmc/xbmc/blob/21.3-Omega/xbmc/guilib/GUIAudioManager.cpp). Enable(true) continues to respect an empty/disabled configured sound skin.
+
+Tests cover deferred cover initialization, no early trailer cancellation, exact Search/collection return state, duplicate handoffs, parent-reference release, cancelled/failed/late initialization, receiver-ready ordering, bounded sound worker creation, timeout restoration and stale watchdogs. Native rendering and remote audio still require an on-device retest; Python tests cannot certify that a physical TV never exposes another Kodi frame.
