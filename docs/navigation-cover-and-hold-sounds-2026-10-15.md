@@ -1,6 +1,6 @@
 # Remaining transition gap and held-Left sounds
 
-Pending after app 1.8.102; not published.
+Historical design shipped in app 1.8.103. Its WindowXMLDialog cover blocked native title activation and was replaced by the modeless carrier in [1.8.104](release-1.8.104.md). The held-Left sound handling remains in place. The paragraphs below record the original design; they do not describe the current cover.
 
 The supplied photo sequence shows a collection preview with a trailer, Kodi's Videos window, then the selected film's details. The shell already retired the old full browse window to avoid Fire TV native crashes, but that intentional gap had no opaque owner. The selected trailer was also stopped before the replacement could paint.
 

@@ -1,3 +1,11 @@
+1.8.104
+
+- Fix the stuck Opening title screen when selecting a Search or collection result. Replace the blocking transition dialog with a modeless branded cover while retaining native-window retirement and Search return state.
+- Verify that Kodi has opened Home or title details before entering the modal wait. Allow brief notifications to finish; recover refused or disappearing-window activation without waiting indefinitely or closing another addon's dialog.
+- Show a local branded startup splash while importing the browsing interface and loading Home. Remove it when Home is ready, on failed initialization, and on exit.
+- Add safe diagnostic evidence for blocked window activation. Remove the obsolete modal cover layout and verify cleanup, cancellation, notification timing and failed-loading recovery.
+- Player skin remains 0.1.25 and repository installer remains 1.0.4. Restart Kodi after updating. Automated checks do not replace a physical Fire TV transition/startup test.
+
 1.8.103
 
 - Cover the Search/collection-to-movie handoff before stopping the trailer or retiring the old full window. Keep the opaque cover through details initialization and clean it up on cancellation or failed loading.
