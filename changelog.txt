@@ -1,3 +1,14 @@
+1.8.106
+
+- Prepare unpause rewind once while video remains paused, after the configured pause duration. Press Play normally without a delayed second seek. Manual seeking, changed playback and resuming before preparation cancel the recap. The paused frame moves back once; native buffering may still take time.
+- Correct pre-roll readiness and loading-card handoff. Never treat the intro as the feature starting, retain cover during skip/end, and handle late callbacks or feature errors without losing recovery.
+- Prefer compatible Atmos transport and smaller variants of the same intro. Skip failed or stalled pre-roll startup/playback after about ten seconds, preserving user cancellation and playback ownership.
+- Restore ordinary HDMI-CEC OK to native playback controls. Retain supported keyboard/HID held-OK actions and capture safe CEC OK duration/action evidence for TV-remote investigation; held OK over HDMI-CEC is not claimed fixed.
+- Enlarge portrait cards from 206x309 to 224x336 with seven Search/Discover columns. Align first posters inside the screen, preserve badge/focus clearance and progress bars, and rebuild menu/action/refresh icons and poster edges at higher resolution.
+- Refresh older preferred artwork through the configured metadata provider while preserving signed URLs and provider order. The private PostersPlus instance separately supplies verified 780x1170 portrait artwork.
+- Add fixed pause/rewind and native audio-error diagnostics without exporting raw device names, typed keys or media URLs. All 1,781 automated tests passed. Shield Atmos audio, physical remote holds and TV rendering still need device verification.
+- Player skin remains 0.1.25 and repository installer remains 1.0.4. Update the app and restart Kodi. No profile recapture or global display/audio settings change is required.
+
 1.8.105
 
 - Keep the branded cover visible when returning from title details to Search or a collection, until the original results and selection are restored.

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.105" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.106" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.25" />
@@ -20,7 +20,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.105: Cover the return from title details to Search/collections until results are ready. Start the branded splash earlier with a lightweight launcher. Move optional ratings, secondary quality data and movie recommendations after title readiness, preserving selection and dropping late results. Keep episode identity/runtime readiness and source-first quality. Skin remains 0.1.25. Restart Kodi after updating.</news>
+    <news>1.8.106: Prepare recap rewind while paused so Play has no added settling delay or later seek. Improve pre-roll loading handoff, Atmos matching and stalled-intro recovery. Restore native CEC OK playback controls and add safe hold/audio diagnostics. Increase portrait card size, fix first-poster clipping and sharpen menu icons/borders. Refresh artwork through configured metadata. Skin remains 0.1.25. Restart Kodi. Physical Shield audio and TV-remote behaviour still need verification.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>

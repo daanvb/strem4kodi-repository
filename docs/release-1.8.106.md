@@ -1,0 +1,16 @@
+# Strem4Kodi 1.8.106
+
+- Prepare unpause rewind once while video remains paused, after the configured pause duration. Press Play normally without a delayed second seek. Manual seeking, changed playback and resuming before preparation cancel the recap. The paused frame moves back once; native buffering may still take time.
+- Correct pre-roll readiness and loading-card handoff. Never treat the intro as the feature starting, retain cover during skip/end, and handle late callbacks or feature errors without losing recovery.
+- Prefer compatible Atmos transport and smaller variants of the same intro. Skip failed or stalled pre-roll startup/playback after about ten seconds, preserving user cancellation and playback ownership.
+- Restore ordinary HDMI-CEC OK to native playback controls. Retain supported keyboard/HID held-OK actions and capture safe CEC OK duration/action evidence for TV-remote investigation; held OK over HDMI-CEC is not claimed fixed.
+- Enlarge portrait cards from 206x309 to 224x336 with seven Search/Discover columns. Align first posters inside the screen, preserve badge/focus clearance and progress bars, and rebuild menu/action/refresh icons and poster edges at higher resolution.
+- Refresh older preferred artwork through the configured metadata provider while preserving signed URLs and provider order. The private PostersPlus instance separately supplies verified 780x1170 portrait artwork.
+- Add fixed pause/rewind and native audio-error diagnostics without exporting raw device names, typed keys or media URLs. All 1,781 automated tests passed. Shield Atmos audio, physical remote holds and TV rendering still need device verification.
+- Player skin remains 0.1.25 and repository installer remains 1.0.4. Update the app and restart Kodi. No profile recapture or global display/audio settings change is required.
+
+Validation: the final integrated local suite passed all 1,781 tests. Real observer callback/tick tests cover preparation while paused, normal immediate resume, manual seeks, source changes, synchronous callbacks and progress accounting. Pre-roll polling regressions reject the published intro-as-feature classifier. Layout checks cover all generated rows, Search/Discover focus/caption/progress bounds and seven-column navigation. Asset previews and actual private-service output were inspected. App/skin source-byte equality, ZIP CRC, Python 3.8 parsing, XML and credential scans passed. Exact-commit GitHub validation and public source safety gate publication.
+
+No physical Kodi device is attached. This release does not claim the reported Shield audio dropout or HDMI-CEC held OK is verified fixed. Native decoder seeking/buffering can still take time. The previous half-second post-resume waiting implementation was removed before publication. Kodi's native paused seek is used without remapping normal Play or changing passthrough/display settings.
+
+The private server resolution adjustment was already applied separately; no hostnames, keys or private configuration are included in the addon. Standard configured metadata/provider precedence remains intact. The companion skin and repository installer retain their already published bytes, and app 1.8.105 is retained for rollback.
