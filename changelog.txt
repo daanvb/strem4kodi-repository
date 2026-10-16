@@ -1,3 +1,10 @@
+1.8.113
+
+- Add Highest bitrate first to source ordering and Movie, Series and Animated series Auto Play profiles. Compare reported Mbps, Mbit/s, kbps and structured bitrates; keep unreported rates behind known ones. Wait for the completed provider search before choosing by bitrate, and do not let a weaker remembered source override the new order.
+- Add a preferred source type: Any, Remux, Blu-ray, WEB-DL or WEBRip. Set a shared preference under Sources or override it for each Auto Play profile. Other release types remain available as fallbacks. Episode identity, language checks, video/audio preferences and maximum quality limits still apply.
+- Show reported release type and bitrate in automatic-selection details. Source labels and bitrates describe provider claims; no file download or live bitrate probe is added.
+- App 1.8.113; player skin remains 0.1.25 and installer remains 1.0.4. Existing settings retain their defaults. Update the app and restart Kodi.
+
 1.8.112
 
 - Keep Up Next source lookup and direct playback covered until the next episode's playback session and fullscreen video are confirmed. Retain accepted requests when the old episode ends naturally during lookup. Scroll long next-episode titles.
