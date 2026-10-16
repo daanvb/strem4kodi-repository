@@ -1,0 +1,21 @@
+# Strem4Kodi 1.8.112
+
+- Keep Up Next source lookup and direct playback covered until the next episode's playback session and fullscreen video are confirmed. Retain accepted requests when the old episode ends naturally during lookup. Scroll long next-episode titles.
+- Select English dialogue audio when labelled tracks are available, including movies. Preserve an explicit manual choice during playback and retain current English audio without an unnecessary switch. Leave audio alone when English is unavailable.
+- Prioritise current autoplay quality, video and audio format preferences over a weaker remembered release. Missing source-language labels no longer outweigh a complete format match; avoid known foreign-only sources when English or unconfirmed alternatives exist. Preserve episode checks, manual filters and quality ceilings.
+- Expire Skip Intro and other skip buttons at their supplied marker end, on seek or source change, independently of a slow service tick. Playback pause does not consume the button lifetime.
+- Keep a pause-rewind intent briefly when Kodi reports Resume before its Paused flag clears. Send one native rewind when ready, with a two-second bound and session, source, manual-seek and stop guards. The normal path remains immediate.
+- Verify saved-progress resume rewind against Kodi's native bookmark and correct an ignored recap within bounded retries. Protect saved progress until the corrected playback position is verified, including a recap to the beginning.
+- Align the final Home row page without several empty poster slots. Simplify Continue Watching context actions, remove redundant Go to Episode/Series entries, and provide an explicit series Mark as Unwatched reset.
+- Automated Windows regression, exact-source Linux CI, package/source equality, Python 3.8/XML, credential, feed and live-download checks gate publication. Native Ugoos/Fire TV fullscreen, audio sync and row rendering still require device confirmation; source/track labels and intro markers depend on provider accuracy.
+- App 1.8.112; player skin remains 0.1.25 and installer remains 1.0.4. Update the app and restart Kodi. No new API keys or setup profile capture are required.
+
+Validation covers the direct Up Next loading lifetime, cancellation and failed-source cleanup, confirmed fullscreen ownership, natural episode end during lookup, English track aliases/commentary/manual choice, missing-language source ranking and remembered release tiers. Pause-rewind cases include a five-minute pause, an early Resume callback, exactly one native seek, expiry and manual seeking. Saved-progress cases include native bookmark overrides, short recaps, a zero target, delayed native changes, slow polling and progress preservation. Row and context tests cover final-page layout and explicit unwatched actions.
+
+The 1,928-case Windows regression suite, package/source equality, Python 3.8 parsing, XML, ZIP CRC, credential scanning, feed metadata and live downloads are checked during release. Exact-source Linux and source-safety CI must pass before the public feed is pushed. The integrated pre-release run found an obsolete test requiring a remembered 720p source to override a current 1080p preference; it now checks that current preferences win and remembered releases remain preferred within the matching tier.
+
+There was no attached physical TV for this validation. Test Up Next from rolling credits, English audio on the affected Stuart episodes, Haunting of Hill House source formats and pause-rewind, saved-progress rewind on Ugoos, skip-button expiry and the final Home row page. The changes do not infer spoken language or actual codecs from the video itself, repair inaccurate upstream markers, or guarantee native passthrough decoder synchronisation.
+
+The normal pause-rewind path sends its native scrub immediately. Only an early Resume callback waits for readiness, for at most two seconds; no scrub is performed while Kodi remains paused. Saved-progress rewind verifies the adjusted position before accepting progress, with bounded correction attempts if Kodi applies an old bookmark.
+
+Skin 0.1.25 and installer 1.0.4 retain their published bytes. App 1.8.111 remains available for rollback. Viewer profiles remain design-only. No new credentials, profile capture or global Kodi audio/display changes are required.
