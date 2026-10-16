@@ -1,3 +1,13 @@
+1.8.110
+
+- Allow delayed first repeats from HDMI-CEC/IR OK holds, retaining one action after release. Require three events spanning 650 ms or a native long-press flag for context; a double tap remains a normal selection. Raw CEC short taps may wait up to 750 ms. Android/keyboard and fullscreen controls retain their existing path.
+- Add one bounded numeric OK-gesture summary to existing private diagnostics so device repeat timing can be verified without global debug logging or recording typed keys.
+- Remove the fading mask from Up Next artwork and the idle "Play Next when you are ready" text. Keep useful source search/retry/error status messages.
+- Replace Watch from Beginning with a clearer skip-to-start icon and a new asset filename to avoid stale Kodi textures.
+- Restore recent-search dialogs on Back during the previous selection's input cooldown. Trusted internal navigation bypasses the cooldown while retaining busy-owner, startup and closed-window guards.
+- All 1,883 Windows automated tests passed. Package integrity, source equality, Python 3.8 syntax, XML and credential checks passed; exact-source Linux and safety CI gate publication. Physical CEC holds still need a Ugoos retest. Pause-rewind is unchanged and the reported native seek black flash may remain.
+- Player skin remains 0.1.25 and repository installer remains 1.0.4. Update the app and restart Kodi.
+
 1.8.109
 
 - Read missing chapter names directly from supported MKV/WebM and MP4 files in the background. Prefer Kodi's full chapter API, retain native jump times, validate the exact source/runtime/markers, bound range reads and cache results locally. No extra client software is required; unsupported containers and servers retain native/numbered chapters.

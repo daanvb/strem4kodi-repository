@@ -8,7 +8,15 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.109.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.110.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.110
+
+- Allow delayed first CEC OK repeats and retain safe release-only context dispatch. Raw CEC short taps may wait up to 750 ms; physical Ugoos holds still need verification.
+- Remove the Up Next artwork fade and idle prompt, retaining useful source-search status.
+- Use a clearer Watch from Beginning icon with a fresh texture filename.
+- Restore recent-search dialogs on Back even during the input cooldown after opening a collection.
+- All 1,883 Windows automated tests passed. Update the app and restart Kodi; skin remains 0.1.25. [Release and validation](docs/release-1.8.110.md).
 
 ## What's new in 1.8.109
 
