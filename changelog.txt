@@ -1,3 +1,12 @@
+1.8.108
+
+- Prevent repeated OK presses stacking identical title screens on slower devices. Load episode cards before optional rating lookups, with bounded background updates that preserve the selected season and focus.
+- Confirm real playback position before accepting Resume, retry ignored native seeks within limits, and protect saved progress during failed starts. Preserve resume targets when Kodi briefly reports the previous clip's short duration.
+- Strengthen Play Next handover ownership: require the selected playback attempt and a new observed session, handle same-URL episodes and redirects, discard old card data, and ignore late AV-start callbacks from the previous video.
+- Automatically capture a diagnostic report after owned playback finishes, stops or errors. Keep the latest ten reports per device, each with its own available redacted Kodi logs. Upload to the existing private GitHub repository while idle; retain offline reports and verify uploads. Existing diagnostic setting and token are reused.
+- Reduce diagnostic work during alternating decoder-error floods, keep previous Kodi logs during capture rotation, and remove invalid keyboard keymap aliases. No global decoder/display changes are applied.
+- Player skin remains 0.1.25 and repository installer remains 1.0.4. Update the app and restart Kodi. Native Toshiba playback and decoder-error recovery still require device verification.
+
 1.8.107
 
 - Preserve larger redacted Kodi technical logs, including unfamiliar warning/error details, across restarts. Condense repeated errors while retaining the first fault and final context.

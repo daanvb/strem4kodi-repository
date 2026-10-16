@@ -77,3 +77,36 @@ Kodi promptly after a crash so its surviving evidence can be captured and sent.
 
 The Fire TV Play Next exit reported before this change remains unconfirmed.
 The old filtered reports cannot restore messages that were already omitted.
+
+## Completed playback history
+
+Owned movies, episodes and live playback now enqueue an automatic report when
+they end, stop or raise a playback error. Native callbacks enqueue only fixed
+event fields in a bounded in-memory queue; they do no disk or network work.
+Trailers, pre-rolls and playback outside S4K do not create owned progress
+sessions and do not trigger this history. Repeated end/error callbacks for the
+same session are deduplicated.
+
+The existing private-report setting and GitHub token control this feature.
+Each client retains ten self-contained compressed reports locally under
+`diagnostic-export/playback`, and remotely under
+`diagnostic-playback/<client>/<0..9>.json.gz`. `index.json` lists their order and
+checksums. Each bundle includes the diagnostic summary and the latest available
+redacted technical captures from `kodi.log`, `kodi.old.log`, and the accessible
+Kodi Android crash buffer. The captures remain bounded excerpts, not complete
+raw logs. Missing sources and input truncation remain explicit. Later rotation
+of the six periodic log slots cannot remove a playback bundle's embedded logs.
+
+End-triggered reports bypass the regular fifteen-minute upload interval. If
+autoplay or another video starts, capture remains local and network writes
+defer until idle; consent, token and playback state are rechecked before writes.
+Offline reports survive restart, upload verification is required, and retries
+use backoff without delaying capture of another playback end. Slots replace the
+oldest report after ten, including old unsent reports during a long offline
+period. Current files are bounded; Git commit history retains earlier versions.
+
+A native crash or force-close cannot send a final callback/report at the moment
+the process is killed. The existing restart capture/upload path preserves
+available `kodi.old.log` evidence. Abrupt termination before the worker captures
+an enqueued end can also lose that event; it cannot erase the already saved
+playback bundles.
