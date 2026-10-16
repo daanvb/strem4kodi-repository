@@ -1,3 +1,13 @@
+1.8.111
+
+- Add Playback > Rewind when resuming saved progress: Off (default), 3, 5, 10, 15, 20, 30 seconds or 1 minute. Start movies/episodes before their saved position, including Continue Watching, without a delayed extra seek or cumulative rewind during startup retries. Short positions clamp to the beginning; fresh plays, new episodes, live streams and pre-rolls are unaffected. Include the preference in setup profile copies.
+- Put Settings time choices in ascending order, including trailer delay, control-bar timeout and custom cache lifetimes. Keep existing saved selections, defaults and profile values unchanged.
+- Scroll Home rows before the focused poster reaches a clipped right-edge slot, for both portrait and wide layouts.
+- Restore saved artwork and title/collection identity in Recent Searches without background metadata requests. Existing text-only history gains artwork when a title is selected again.
+- Use clear eye/crossed-eye context icons for watched/unwatched actions, with versioned artwork to avoid stale Kodi textures.
+- Automated Windows regression checks, exact-source Linux CI, package/source consistency, syntax/XML, archive integrity, credential checks, feed checksums and live downloads gate publication. No physical TV was attached for this audit.
+- App 1.8.111; player skin remains 0.1.25 and repository installer remains 1.0.4. Update the app and restart Kodi. Viewer profiles remain design-only.
+
 1.8.110
 
 - Allow delayed first repeats from HDMI-CEC/IR OK holds, retaining one action after release. Require three events spanning 650 ms or a native long-press flag for context; a double tap remains a normal selection. Raw CEC short taps may wait up to 750 ms. Android/keyboard and fullscreen controls retain their existing path.

@@ -8,7 +8,14 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.110.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.111.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.111
+
+- Add optional saved-progress resume rewind beside Unpause rewind, from 3 seconds to 1 minute. Off by default; included in device setup copies.
+- Sort time choices while preserving existing settings and profile values.
+- Improve right-edge focus scrolling, Recent Searches artwork and watched/unwatched eye icons.
+- All 1,899 Windows tests passed. Update the app and restart Kodi; skin remains 0.1.25. Physical TV verification remains necessary. [Release and validation](docs/release-1.8.111.md).
 
 ## What's new in 1.8.110
 
