@@ -1,3 +1,13 @@
+1.8.109
+
+- Read missing chapter names directly from supported MKV/WebM and MP4 files in the background. Prefer Kodi's full chapter API, retain native jump times, validate the exact source/runtime/markers, bound range reads and cache results locally. No extra client software is required; unsupported containers and servers retain native/numbered chapters.
+- Keep the pre-roll handover covered until fullscreen video becomes active, requesting fullscreen once instead of dismissing the cover on a two-second timer.
+- Handle raw HDMI-CEC/IR OK repeats within S4K browsing windows: one normal selection after release, or one context menu after a hold. Preserve ordinary keyboard/Android and fullscreen playback controls.
+- Prepare pause-rewind without seeking the paused decoder. Dispatch one native relative scrub immediately on resume, with source/session/manual-seek guards and no delayed retries.
+- Restore progress overlays for temporary Continue Watching entries in collections, and refresh both search and TMDB collections on return. Use the next episode name as the Up Next card's main title and replace the Watch from Beginning icon.
+- All 1,878 automated tests passed on Windows. Exact-source CI, package/source consistency, Python 3.8 syntax, XML, ZIP integrity, credentials, feed and live downloads are separately checked before publication. Physical CEC timing, pre-roll transitions and passthrough audio sync still require device verification.
+- Player skin remains 0.1.25 and repository installer remains 1.0.4. Update the app and restart Kodi.
+
 1.8.108
 
 - Prevent repeated OK presses stacking identical title screens on slower devices. Load episode cards before optional rating lookups, with bounded background updates that preserve the selected season and focus.

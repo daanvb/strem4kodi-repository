@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.108" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.109" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.25" />
@@ -20,7 +20,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.108: Improve slower-device title and episode loading; prevent stacked title screens. Protect and verify Resume. Strengthen Play Next ownership, same-URL sessions, redirected metadata and late callbacks. Automatically retain ten completed-playback diagnostic reports with redacted Kodi logs and private idle-only upload. Reduce decoder-log overhead. Skin remains 0.1.25. Restart Kodi; Toshiba playback still needs a device retest.</news>
+    <news>1.8.109: Read missing chapter names from supported files with bounded background range reads and source-specific caching. Improve pre-roll fullscreen coverage, CEC held-OK handling, immediate native pause-rewind, collection progress and the Up Next episode heading. Replace Watch from Beginning icon. All 1,878 automated tests passed; native CEC/audio still need device verification. Skin remains 0.1.25. Restart Kodi.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
