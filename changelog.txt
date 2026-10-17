@@ -1,3 +1,12 @@
+1.8.117
+
+- Add viewer profiles under Settings > Account & Stremio > Viewer profiles. Create, switch, rename and delete viewers while sharing the Stremio login, providers and device settings. The current viewer is saved separately on each device.
+- Keep Continue Watching, watch history, favourites, Watch Later, collection saves, recommendations and upcoming/reminder rows separate. Playback payloads retain their viewer identity; delayed saves and inactive progress queues cannot be assigned to the newly selected viewer.
+- Start with existing data as Main, which can be renamed. Copy its small local stores using SQLite backup where needed, retain the originals, and start additional viewers empty. Profile deletion retains local recovery files and syncs a permanent ID tombstone so offline clients cannot recreate a deleted viewer.
+- Sync viewer names and watch/list state through the existing private GitHub saved-list sync option. Use bounded compressed data, conflict merging, upload verification and retry; never export login/provider credentials or playable/artwork URLs in viewer libraries. Metadata and artwork reload through configured providers.
+- With viewer profiles enabled, S4K watch/list writes use isolated local storage and private viewer sync rather than the shared Stremio library. Devices can be updated separately; older clients keep shared Stremio behaviour and their changes may not appear in viewer profiles. Existing behaviour remains until profiles are enabled or an existing private viewer roster is received.
+- App 1.8.117; player skin remains 0.1.25 and installer remains 1.0.4. Device testing is still required for profile switching and cross-device playback; no PINs, avatars or child restrictions are included.
+
 1.8.116
 
 - Cancel loading requests independently of closing Kodi's native loading dialog. A blocked dialog close no longer delays the underlying cancellation callback; revoke the attempt immediately and retain cleanup guards against late results and retries.
