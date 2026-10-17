@@ -1,3 +1,10 @@
+1.8.116
+
+- Cancel loading requests independently of closing Kodi's native loading dialog. A blocked dialog close no longer delays the underlying cancellation callback; revoke the attempt immediately and retain cleanup guards against late results and retries.
+- Avoid a second native Stop after a pre-roll has already stopped. Handle an owned pre-roll stop before AV startup, ignore late AV callbacks after an outcome, and stop focusing the Skip button after cancellation. Back still cancels the movie; Skip and natural completion retain their movie handoff.
+- Add threaded blocked-close cancellation and pre-roll Back/Stop regressions. These safeguards address confirmed app lifecycle issues; they do not establish or claim a fix for the reported CoreELEC HDMI signal-loss lockup.
+- App 1.8.116; player skin remains 0.1.25 and installer remains 1.0.4. Update the app and restart Kodi. No device display, audio or CoreELEC settings are changed.
+
 1.8.115
 
 - Recognise provider English language flags and country labels (GB/UK/US and GBR/USA) alongside English, eng, en and regional language codes. Apply the same matching to both autoplay priorities and manual source ranking, so a multilingual English release is not excluded before quality comparison.
