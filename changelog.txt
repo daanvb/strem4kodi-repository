@@ -1,3 +1,10 @@
+1.8.115
+
+- Recognise provider English language flags and country labels (GB/UK/US and GBR/USA) alongside English, eng, en and regional language codes. Apply the same matching to both autoplay priorities and manual source ranking, so a multilingual English release is not excluded before quality comparison.
+- Read these aliases only from the dedicated language field. File sizes such as 2.96 GB and release filenames cannot supply English-language evidence. Preserve episode validation, foreign-language fallback and actual playback-track selection.
+- Add a regression for the reported Stuart S01E09 sources: Best available quality keeps the eligible 2.96 GB / 22.2 Mbps release ahead of the 2.31 GB / 18.4 Mbps release when their higher-priority technical attributes match.
+- App 1.8.115; player skin remains 0.1.25 and installer remains 1.0.4. Update the app and restart Kodi.
+
 1.8.114
 
 - Add Best available quality (default) and Fastest start priorities to Movie, Series and Animated Series Auto Play. Quality waits for the completed search; Fastest start can use a safe partial result and prefer a source confirmed successful within 36 hours when it appears in fresh cached or returned results.
