@@ -1,3 +1,11 @@
+1.8.114
+
+- Add Best available quality (default) and Fastest start priorities to Movie, Series and Animated Series Auto Play. Quality waits for the completed search; Fastest start can use a safe partial result and prefer a source confirmed successful within 36 hours when it appears in fresh cached or returned results.
+- Apply episode and filename checks before reuse or ranking. Reject conflicting titles, independent filename disagreements, ambiguous episode identities and known wrong-episode reports; prefer verified title matches over number-only releases. Keep unidentified files available for manual selection.
+- Rank quality by reported video format, resolution, release type, audio, bitrate, file size and provider. P7/FEL reports share the top video tier; providers prefer AIOStreams, Usenet then Pengu. Any resolution now prefers the highest available within the device ceiling. Manual source sorting remains independent.
+- At playback startup select the best labelled English dialogue track: Atmos, TrueHD, DD+, DD, DTS, then other formats, with channel count breaking ties. Preserve a manual audio choice during playback and leave existing audio available when English is absent. Track labels do not verify actual object audio or device passthrough capability.
+- App 1.8.114; player skin remains 0.1.25 and installer remains 1.0.4. Update the app and restart Kodi. Existing maximum quality limits, language checks, filters and playback failure safeguards remain active.
+
 1.8.113
 
 - Add Highest bitrate first to source ordering and Movie, Series and Animated series Auto Play profiles. Compare reported Mbps, Mbit/s, kbps and structured bitrates; keep unreported rates behind known ones. Wait for the completed provider search before choosing by bitrate, and do not let a weaker remembered source override the new order.
