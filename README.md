@@ -8,7 +8,13 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.112.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.117.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.117
+
+- Add optional viewer profiles, each with separate Continue Watching, watch history, favourites, Watch Later and saved lists, while sharing Stremio login, providers and device settings.
+- Support private viewer-list sync between devices and preserve the previous shared behaviour until viewer profiles are enabled. Devices may be updated individually; older clients do not understand viewer-specific changes.
+- Player skin remains 0.1.25. Updating and restarting Kodi is recommended; profile switching and cross-device playback still need physical-device verification. See the [full changelog](changelog.txt) for releases 1.8.113–1.8.116.
 
 ## What's new in 1.8.112
 
