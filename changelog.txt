@@ -1,3 +1,9 @@
+1.8.120
+
+- Keep the sports-list picker over the active EPG, anchored beneath the sport selector, and load the selected catalogue in place without showing the card catalogue. Preserve the timeline; cancelled selections, unchanged selections and failed loads retain the existing listings.
+- Tighten header buttons to a consistent 48px height with 12px gaps. Group Close beside the other actions and close the gap when More listings is hidden. Preserve the source-picker handoff for the newly selected catalogue.
+- App 1.8.120; player skin remains 0.1.25 and installer remains 1.0.4. Native Kodi/CoreELEC rendering and physical remote navigation still require device validation.
+
 1.8.119
 
 - Open Sports directly into the EPG with a sport/list selector at the top. Select an event to open its source picker without title details or automatic playback; returning restores the selected guide row.

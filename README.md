@@ -8,7 +8,12 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.119.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.120.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.120
+
+- Change the sports list without leaving the EPG. The selector opens over the guide and refreshes the chosen list in place, keeping the timeline position.
+- Use smaller, evenly spaced header buttons, with Close beside the other actions. Cancelled selections and failed loads preserve the current guide. Skin remains 0.1.25.
 
 ## What's new in 1.8.119
 
