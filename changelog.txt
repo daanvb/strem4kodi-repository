@@ -1,3 +1,10 @@
+1.8.119
+
+- Open Sports directly into the EPG with a sport/list selector at the top. Select an event to open its source picker without title details or automatic playback; returning restores the selected guide row.
+- Read dated Sports Streams kick-off labels using their provider timezone and display all times in UK GMT/BST, independent of the device timezone. Show gold start markers and treat a known start without an end as live for 2.5 hours after kick-off. Supplied end times take priority.
+- Remove repeated missing-time notices and Earlier/Later buttons; retain Left/Right remote timeline navigation and Now. Use consistent pill buttons, put the card-view TV guide button beside the sport selector, and give descriptions a larger scrolling area separate from the navigation hints.
+- App 1.8.119; player skin remains 0.1.25 and installer remains 1.0.4. No external EPG feed or configuration change is needed. Physical Kodi/CoreELEC rendering, remote input and playback still require device validation.
+
 1.8.118
 
 - Add Sports > TV guide with channel/event rows, live status, provider descriptions, a local-time ruler and a Now marker. Use the currently selected sports catalogue and preserve its provider ordering and stream identities.

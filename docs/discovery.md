@@ -36,20 +36,26 @@ one genre selection under By genre.
 Sports has its own sidebar section for sport catalogues. The source provider still
 controls live/upcoming event availability.
 
-**TV guide** beside the Sports list selector opens an EPG-style view of the
-selected catalogue. Channel/event names appear down the left, with seven rows per
-page, a three-hour time ruler in the device timezone, a Now marker and provider
-descriptions below. Up/Down selects listings, Left/Right moves the ruler by
-30 minutes, Page Up/Down moves seven listings, and Now returns to the current
-time. More listings uses the catalogue's existing supplier pagination when
-available. OK opens the existing sports source picker; Back closes the guide.
+Sports opens directly into the EPG-style guide, with its sport/list selector at
+the top. Channel/event names appear down the left, with seven rows per page,
+a three-hour UK-time ruler, a Now marker and a separate scrolling description
+panel. All displayed times use UK civil time, including GMT/BST, independently
+of the device timezone. The card view also retains **TV guide** immediately
+beside its Sports list selector.
 
-Sports Streams currently supplies live availability and descriptions without
-programme start/end times. These entries explicitly say **Programme times
-unavailable**; their full-width lanes indicate availability only. The guide
-does not infer programme durations, invent channel schedules or require another
-feed. Confirmed timestamp pairs, when supplied in catalogue metadata, are drawn
-at their actual positions. Provider ordering, identities and playback stay intact.
+Gold markers identify supplied kick-off times, including Sports Streams' dated
+`releaseInfo` labels. Provider timezone settings are interpreted before converting
+to UK time. Entries with a known start and no end are treated as live for
+2.5 hours after kick-off; a supplied end time takes priority. Shading shows that
+live window, not a confirmed match duration. Undated live channels retain their
+provider status without repeated missing-time warnings or invented starts.
+
+Up/Down selects listings, Left/Right moves the ruler by 30 minutes, Page Up/Down
+moves seven listings, and Now returns to the current time. More listings uses
+existing supplier pagination. OK opens sources directly without title details or
+automatic playback; returning from sources restores the guide selection. Back
+closes the guide to the catalogue. No external feed is required; provider ordering,
+identities and playback configuration remain intact.
 
 Upcoming Episodes uses confirmed future release dates from metadata for series
 saved in the Stremio library, including series with playback history. The existing
