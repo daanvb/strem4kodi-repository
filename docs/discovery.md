@@ -43,19 +43,35 @@ panel. All displayed times use UK civil time, including GMT/BST, independently
 of the device timezone. The card view also retains **TV guide** immediately
 beside its Sports list selector.
 
+Sports lists start with **Live Now**, then **Football**, followed by other sports
+alphabetically. Changing the list stays inside the guide. Remote scrolling keeps
+the same native row focus targets rather than recreating them on every redraw.
+
 Gold markers identify supplied kick-off times, including Sports Streams' dated
-`releaseInfo` labels. Provider timezone settings are interpreted before converting
-to UK time. Entries with a known start and no end are treated as live for
-2.5 hours after kick-off; a supplied end time takes priority. Shading shows that
-live window, not a confirmed match duration. Undated live channels retain their
+`releaseInfo` labels, which are already UK wall-clock times: a provider setting
+labelled GMT must not add another BST hour. Structured timestamps with explicit
+offsets, and explicit timezone suffixes in labels, are still converted to UK time.
+Entries with a known start and no end use the existing 2.5-hour live window;
+a supplied end time takes priority. Start/end labels and duration remain visible
+while live, with **~** marking estimated ends/durations. Green bars and a LIVE
+badge distinguish current games; green end caps show the visible endpoint.
+Undated live channels retain their
 provider status without repeated missing-time warnings or invented starts.
+
+A highlighted **NOW HH:MM** badge is attached to the time ruler and current-time
+line. When browsing a window away from now, it remains at the relevant edge with
+an arrow instead of drawing a false current-time line through another hour.
+The clock marker refreshes on scrolling/input, including minute changes.
 
 Up/Down selects listings, Left/Right moves the ruler by 30 minutes, Page Up/Down
 moves seven listings, and Now returns to the current time. More listings uses
 existing supplier pagination. OK opens sources directly without title details or
 automatic playback; returning from sources restores the guide selection. Back
 closes the guide to the catalogue. No external feed is required; provider ordering,
-identities and playback configuration remain intact.
+identities and playback configuration remain intact. Sports source selection
+defaults to highest **reported** bitrate, with missing rates after known rates
+and failed sources demoted. Duplicate alternatives retain that ranking. Manual
+sort changes in a sports picker stay local and do not change movie/series sorting.
 
 Upcoming Episodes uses confirmed future release dates from metadata for series
 saved in the Stremio library, including series with playback history. The existing

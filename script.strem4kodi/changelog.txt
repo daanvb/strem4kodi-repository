@@ -1,3 +1,12 @@
+1.8.122
+
+- Treat dated sports kick-off labels as already-UK wall time instead of adding another BST hour from a GMT provider setting. Preserve normal conversion for explicitly zoned timestamps/suffixes.
+- Retain seven native row focus targets across timeline/page redraws, ignore stale/intermediate focus callbacks and clamp Page Up at the first listing. Order sports lists Live Now, Football, then alphabetically.
+- Highlight live games with green bars/badges and end caps; retain start/end/duration text while live. Missing ends use the existing ~150-minute estimate; undated streams do not gain invented starts or ends. Attach a highlighted NOW clock to the ruler/line, or the relevant edge when offscreen; refresh on input/minute changes.
+- Default sports sources to highest reported bitrate while preserving filters, grouped alternatives, failure demotion and selected source on refresh. Manual sports sort overrides remain local rather than changing movie/series sorting.
+- Fix source sorting during details-window construction before full metadata exists. Use preview metadata until loaded metadata is available, with a real-constructor regression covering movie, series, sport/sports and direct-source windows.
+- App 1.8.122; player skin remains 0.1.25 and repository installer remains 1.0.4. Physical Ugoos/CoreELEC remote behaviour and rendering remain unverified.
+
 1.8.121
 
 - Centre the EPG toolbar text horizontally and vertically with explicit zero text offsets. Centre both sport-selector labels on the button axis and retain the dropdown-arrow lane.
