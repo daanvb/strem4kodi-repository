@@ -1,3 +1,10 @@
+1.8.121
+
+- Centre the EPG toolbar text horizontally and vertically with explicit zero text offsets. Centre both sport-selector labels on the button axis and retain the dropdown-arrow lane.
+- Accept Kodi's no-modal-dialog ID 9999 in the player controls/seek shortcut, credits shortcut, Up/visible-OSD routing and idle OSD cleanup. Previously the controls shortcut did nothing in this native state. Keep real modal dialogs protected and preserve native fallback, VOD scrubbing, double-Back stopping and sports recovery.
+- New regressions reproduced the shortcut failure before the fix. This does not establish a complete fix for the reported Ugoos/CoreELEC LG TV-remote incident; physical-device input/focus testing remains necessary.
+- App 1.8.121; player skin remains 0.1.25 and repository installer remains 1.0.4. No Back keymap, retry policy, TV/CEC setting or native skin change.
+
 1.8.120
 
 - Keep the sports-list picker over the active EPG, anchored beneath the sport selector, and load the selected catalogue in place without showing the card catalogue. Preserve the timeline; cancelled selections, unchanged selections and failed loads retain the existing listings.

@@ -1,4 +1,4 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.120" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.121" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.25" />
@@ -19,7 +19,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.120: Keep the sports-list selector over the EPG and refresh the chosen list in place. Retain the timeline and preserve listings on failed loads. Tighten header buttons and group Close beside the other actions. Skin remains 0.1.25.</news>
+    <news>1.8.121: Centre EPG button labels and fix player shortcuts incorrectly blocked when Kodi reports no modal dialog. Preserve real modal menus, double-Back stopping and sports recovery. Skin remains 0.1.25.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
