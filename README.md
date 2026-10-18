@@ -15,6 +15,7 @@ Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface,
 - Handle malformed provider catalogue and library metadata without crashing Discover or library sections.
 - Complete playback cancellation if Kodi cannot start a close or cleanup worker thread.
 - Keep competing same-viewer progress for review in Viewer profiles when devices sync; different viewers continue to hold separate play times. Skin remains 0.1.25. Physical Kodi/CoreELEC validation is still needed.
+- Make first-time Viewer profile setup reliable on active devices, even while Kodi is rotating local stores. Preserve recovery copies, verify that activation is saved, and report a retryable error instead of returning to the setup prompt.
 
 ## What's new in 1.8.122
 
