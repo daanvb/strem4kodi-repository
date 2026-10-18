@@ -1,3 +1,10 @@
+1.8.123
+
+- Guard malformed provider catalogue requirements and non-string library item types so Discover and library sections do not crash.
+- Keep playback cancellation effective if a constrained device cannot start either worker thread; revoke playback and finish cleanup with a safe fallback.
+- Compare viewer title progress with the last synced snapshot instead of device timestamps. Preserve competing same-viewer changes for review in Viewer profiles, including queued playback checkpoints; keep different viewers' play times isolated.
+- App 1.8.123; player skin remains 0.1.25 and repository installer remains 1.0.4. Physical Kodi/CoreELEC playback, HDMI/CEC, HDR and Dolby Vision behaviour remain unverified.
+
 1.8.122
 
 - Treat dated sports kick-off labels as already-UK wall time instead of adding another BST hour from a GMT provider setting. Preserve normal conversion for explicitly zoned timestamps/suffixes.
