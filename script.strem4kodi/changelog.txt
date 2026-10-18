@@ -1,3 +1,256 @@
+1.8.118
+
+- Add Sports > TV guide with channel/event rows, live status, provider descriptions, a local-time ruler and a Now marker. Use the currently selected sports catalogue and preserve its provider ordering and stream identities.
+- Support remote Up/Down and page navigation, earlier/later time windows and existing catalogue pagination. Selecting a listing opens the existing sports source picker and retains Sports playback context.
+- Label entries without confirmed start/end timestamps as Programme times unavailable. Sports Streams currently provides live availability without programme timings; full-width lanes do not claim programme duration. No external guide feed or setup changes are required.
+- App 1.8.118; player skin remains 0.1.25 and installer remains 1.0.4. Automated tests do not establish native Kodi/CoreELEC rendering, physical remote behaviour or playback from the guide.
+
+1.8.117
+
+- Add viewer profiles under Settings > Account & Stremio > Viewer profiles. Create, switch, rename and delete viewers while sharing the Stremio login, providers and device settings. The current viewer is saved separately on each device.
+- Keep Continue Watching, watch history, favourites, Watch Later, collection saves, recommendations and upcoming/reminder rows separate. Playback payloads retain their viewer identity; delayed saves and inactive progress queues cannot be assigned to the newly selected viewer.
+- Start with existing data as Main, which can be renamed. Copy its small local stores using SQLite backup where needed, retain the originals, and start additional viewers empty. Profile deletion retains local recovery files and syncs a permanent ID tombstone so offline clients cannot recreate a deleted viewer.
+- Sync viewer names and watch/list state through the existing private GitHub saved-list sync option. Use bounded compressed data, conflict merging, upload verification and retry; never export login/provider credentials or playable/artwork URLs in viewer libraries. Metadata and artwork reload through configured providers.
+- With viewer profiles enabled, S4K watch/list writes use isolated local storage and private viewer sync rather than the shared Stremio library. Devices can be updated separately; older clients keep shared Stremio behaviour and their changes may not appear in viewer profiles. Existing behaviour remains until profiles are enabled or an existing private viewer roster is received.
+- App 1.8.117; player skin remains 0.1.25 and installer remains 1.0.4. Device testing is still required for profile switching and cross-device playback; no PINs, avatars or child restrictions are included.
+
+1.8.116
+
+- Cancel loading requests independently of closing Kodi's native loading dialog. A blocked dialog close no longer delays the underlying cancellation callback; revoke the attempt immediately and retain cleanup guards against late results and retries.
+- Avoid a second native Stop after a pre-roll has already stopped. Handle an owned pre-roll stop before AV startup, ignore late AV callbacks after an outcome, and stop focusing the Skip button after cancellation. Back still cancels the movie; Skip and natural completion retain their movie handoff.
+- Add threaded blocked-close cancellation and pre-roll Back/Stop regressions. These safeguards address confirmed app lifecycle issues; they do not establish or claim a fix for the reported CoreELEC HDMI signal-loss lockup.
+- App 1.8.116; player skin remains 0.1.25 and installer remains 1.0.4. Update the app and restart Kodi. No device display, audio or CoreELEC settings are changed.
+
+1.8.115
+
+- Recognise provider English language flags and country labels (GB/UK/US and GBR/USA) alongside English, eng, en and regional language codes. Apply the same matching to both autoplay priorities and manual source ranking, so a multilingual English release is not excluded before quality comparison.
+- Read these aliases only from the dedicated language field. File sizes such as 2.96 GB and release filenames cannot supply English-language evidence. Preserve episode validation, foreign-language fallback and actual playback-track selection.
+- Add a regression for the reported Stuart S01E09 sources: Best available quality keeps the eligible 2.96 GB / 22.2 Mbps release ahead of the 2.31 GB / 18.4 Mbps release when their higher-priority technical attributes match.
+- App 1.8.115; player skin remains 0.1.25 and installer remains 1.0.4. Update the app and restart Kodi.
+
+1.8.114
+
+- Add Best available quality (default) and Fastest start priorities to Movie, Series and Animated Series Auto Play. Quality waits for the completed search; Fastest start can use a safe partial result and prefer a source confirmed successful within 36 hours when it appears in fresh cached or returned results.
+- Apply episode and filename checks before reuse or ranking. Reject conflicting titles, independent filename disagreements, ambiguous episode identities and known wrong-episode reports; prefer verified title matches over number-only releases. Keep unidentified files available for manual selection.
+- Rank quality by reported video format, resolution, release type, audio, bitrate, file size and provider. P7/FEL reports share the top video tier; providers prefer AIOStreams, Usenet then Pengu. Any resolution now prefers the highest available within the device ceiling. Manual source sorting remains independent.
+- At playback startup select the best labelled English dialogue track: Atmos, TrueHD, DD+, DD, DTS, then other formats, with channel count breaking ties. Preserve a manual audio choice during playback and leave existing audio available when English is absent. Track labels do not verify actual object audio or device passthrough capability.
+- App 1.8.114; player skin remains 0.1.25 and installer remains 1.0.4. Update the app and restart Kodi. Existing maximum quality limits, language checks, filters and playback failure safeguards remain active.
+
+1.8.113
+
+- Add Highest bitrate first to source ordering and Movie, Series and Animated series Auto Play profiles. Compare reported Mbps, Mbit/s, kbps and structured bitrates; keep unreported rates behind known ones. Wait for the completed provider search before choosing by bitrate, and do not let a weaker remembered source override the new order.
+- Add a preferred source type: Any, Remux, Blu-ray, WEB-DL or WEBRip. Set a shared preference under Sources or override it for each Auto Play profile. Other release types remain available as fallbacks. Episode identity, language checks, video/audio preferences and maximum quality limits still apply.
+- Show reported release type and bitrate in automatic-selection details. Source labels and bitrates describe provider claims; no file download or live bitrate probe is added.
+- App 1.8.113; player skin remains 0.1.25 and installer remains 1.0.4. Existing settings retain their defaults. Update the app and restart Kodi.
+
+1.8.112
+
+- Keep Up Next source lookup and direct playback covered until the next episode's playback session and fullscreen video are confirmed. Retain accepted requests when the old episode ends naturally during lookup. Scroll long next-episode titles.
+- Select English dialogue audio when labelled tracks are available, including movies. Preserve an explicit manual choice during playback and retain current English audio without an unnecessary switch. Leave audio alone when English is unavailable.
+- Prioritise current autoplay quality, video and audio format preferences over a weaker remembered release. Missing source-language labels no longer outweigh a complete format match; avoid known foreign-only sources when English or unconfirmed alternatives exist. Preserve episode checks, manual filters and quality ceilings.
+- Expire Skip Intro and other skip buttons at their supplied marker end, on seek or source change, independently of a slow service tick. Playback pause does not consume the button lifetime.
+- Keep a pause-rewind intent briefly when Kodi reports Resume before its Paused flag clears. Send one native rewind when ready, with a two-second bound and session, source, manual-seek and stop guards. The normal path remains immediate.
+- Verify saved-progress resume rewind against Kodi's native bookmark and correct an ignored recap within bounded retries. Protect saved progress until the corrected playback position is verified, including a recap to the beginning.
+- Align the final Home row page without several empty poster slots. Simplify Continue Watching context actions, remove redundant Go to Episode/Series entries, and provide an explicit series Mark as Unwatched reset.
+- Automated Windows regression, exact-source Linux CI, package/source equality, Python 3.8/XML, credential, feed and live-download checks gate publication. Native Ugoos/Fire TV fullscreen, audio sync and row rendering still require device confirmation; source/track labels and intro markers depend on provider accuracy.
+- App 1.8.112; player skin remains 0.1.25 and installer remains 1.0.4. Update the app and restart Kodi. No new API keys or setup profile capture are required.
+
+1.8.111
+
+- Add Playback > Rewind when resuming saved progress: Off (default), 3, 5, 10, 15, 20, 30 seconds or 1 minute. Start movies/episodes before their saved position, including Continue Watching, without a delayed extra seek or cumulative rewind during startup retries. Short positions clamp to the beginning; fresh plays, new episodes, live streams and pre-rolls are unaffected. Include the preference in setup profile copies.
+- Put Settings time choices in ascending order, including trailer delay, control-bar timeout and custom cache lifetimes. Keep existing saved selections, defaults and profile values unchanged.
+- Scroll Home rows before the focused poster reaches a clipped right-edge slot, for both portrait and wide layouts.
+- Restore saved artwork and title/collection identity in Recent Searches without background metadata requests. Existing text-only history gains artwork when a title is selected again.
+- Use clear eye/crossed-eye context icons for watched/unwatched actions, with versioned artwork to avoid stale Kodi textures.
+- Automated Windows regression checks, exact-source Linux CI, package/source consistency, syntax/XML, archive integrity, credential checks, feed checksums and live downloads gate publication. No physical TV was attached for this audit.
+- App 1.8.111; player skin remains 0.1.25 and repository installer remains 1.0.4. Update the app and restart Kodi. Viewer profiles remain design-only.
+
+1.8.110
+
+- Allow delayed first repeats from HDMI-CEC/IR OK holds, retaining one action after release. Require three events spanning 650 ms or a native long-press flag for context; a double tap remains a normal selection. Raw CEC short taps may wait up to 750 ms. Android/keyboard and fullscreen controls retain their existing path.
+- Add one bounded numeric OK-gesture summary to existing private diagnostics so device repeat timing can be verified without global debug logging or recording typed keys.
+- Remove the fading mask from Up Next artwork and the idle "Play Next when you are ready" text. Keep useful source search/retry/error status messages.
+- Replace Watch from Beginning with a clearer skip-to-start icon and a new asset filename to avoid stale Kodi textures.
+- Restore recent-search dialogs on Back during the previous selection's input cooldown. Trusted internal navigation bypasses the cooldown while retaining busy-owner, startup and closed-window guards.
+- All 1,883 Windows automated tests passed. Package integrity, source equality, Python 3.8 syntax, XML and credential checks passed; exact-source Linux and safety CI gate publication. Physical CEC holds still need a Ugoos retest. Pause-rewind is unchanged and the reported native seek black flash may remain.
+- Player skin remains 0.1.25 and repository installer remains 1.0.4. Update the app and restart Kodi.
+
+1.8.109
+
+- Read missing chapter names directly from supported MKV/WebM and MP4 files in the background. Prefer Kodi's full chapter API, retain native jump times, validate the exact source/runtime/markers, bound range reads and cache results locally. No extra client software is required; unsupported containers and servers retain native/numbered chapters.
+- Keep the pre-roll handover covered until fullscreen video becomes active, requesting fullscreen once instead of dismissing the cover on a two-second timer.
+- Handle raw HDMI-CEC/IR OK repeats within S4K browsing windows: one normal selection after release, or one context menu after a hold. Preserve ordinary keyboard/Android and fullscreen playback controls.
+- Prepare pause-rewind without seeking the paused decoder. Dispatch one native relative scrub immediately on resume, with source/session/manual-seek guards and no delayed retries.
+- Restore progress overlays for temporary Continue Watching entries in collections, and refresh both search and TMDB collections on return. Use the next episode name as the Up Next card's main title and replace the Watch from Beginning icon.
+- All 1,878 automated tests passed on Windows. Exact-source CI, package/source consistency, Python 3.8 syntax, XML, ZIP integrity, credentials, feed and live downloads are separately checked before publication. Physical CEC timing, pre-roll transitions and passthrough audio sync still require device verification.
+- Player skin remains 0.1.25 and repository installer remains 1.0.4. Update the app and restart Kodi.
+
+1.8.108
+
+- Prevent repeated OK presses stacking identical title screens on slower devices. Load episode cards before optional rating lookups, with bounded background updates that preserve the selected season and focus.
+- Confirm real playback position before accepting Resume, retry ignored native seeks within limits, and protect saved progress during failed starts. Preserve resume targets when Kodi briefly reports the previous clip's short duration.
+- Strengthen Play Next handover ownership: require the selected playback attempt and a new observed session, handle same-URL episodes and redirects, discard old card data, and ignore late AV-start callbacks from the previous video.
+- Automatically capture a diagnostic report after owned playback finishes, stops or errors. Keep the latest ten reports per device, each with its own available redacted Kodi logs. Upload to the existing private GitHub repository while idle; retain offline reports and verify uploads. Existing diagnostic setting and token are reused.
+- Reduce diagnostic work during alternating decoder-error floods, keep previous Kodi logs during capture rotation, and remove invalid keyboard keymap aliases. No global decoder/display changes are applied.
+- Player skin remains 0.1.25 and repository installer remains 1.0.4. Update the app and restart Kodi. Native Toshiba playback and decoder-error recovery still require device verification.
+
+1.8.107
+
+- Preserve larger redacted Kodi technical logs, including unfamiliar warning/error details, across restarts. Condense repeated errors while retaining the first fault and final context.
+- Retain up to six compressed log snapshots per client and upload verified attachments to the existing private GitHub repository. Capture locally on restart/every minute, skip unchanged files, and keep automatic network uploads idle-only. Existing diagnostic opt-in and token are required.
+- Attempt Kodi-only Android crash-buffer capture on service startup and manual reports. Report unavailable, restricted or missing evidence explicitly; no root access, other-app logs or binary crash dumps are collected.
+- Add persistent Play Next, source selection, resolver, cancellation and progress-queue checkpoints, plus safe app/service/worker error classes and code locations. This instrumentation does not claim the reported Fire TV Play Next crash is fixed.
+- Record the last twelve first/repeat startups, from splash/settings/account and cached Home through first visible Home, catalogue refresh and artwork completion. Buffer stage timings and avoid per-frame logging.
+- Player skin remains 0.1.25 and repository installer remains 1.0.4. Update the app and restart Kodi. After another crash, reopen Kodi promptly so surviving evidence can be captured and uploaded.
+
+1.8.106
+
+- Prepare unpause rewind once while video remains paused, after the configured pause duration. Press Play normally without a delayed second seek. Manual seeking, changed playback and resuming before preparation cancel the recap. The paused frame moves back once; native buffering may still take time.
+- Correct pre-roll readiness and loading-card handoff. Never treat the intro as the feature starting, retain cover during skip/end, and handle late callbacks or feature errors without losing recovery.
+- Prefer compatible Atmos transport and smaller variants of the same intro. Skip failed or stalled pre-roll startup/playback after about ten seconds, preserving user cancellation and playback ownership.
+- Restore ordinary HDMI-CEC OK to native playback controls. Retain supported keyboard/HID held-OK actions and capture safe CEC OK duration/action evidence for TV-remote investigation; held OK over HDMI-CEC is not claimed fixed.
+- Enlarge portrait cards from 206x309 to 224x336 with seven Search/Discover columns. Align first posters inside the screen, preserve badge/focus clearance and progress bars, and rebuild menu/action/refresh icons and poster edges at higher resolution.
+- Refresh older preferred artwork through the configured metadata provider while preserving signed URLs and provider order. The private PostersPlus instance separately supplies verified 780x1170 portrait artwork.
+- Add fixed pause/rewind and native audio-error diagnostics without exporting raw device names, typed keys or media URLs. All 1,781 automated tests passed. Shield Atmos audio, physical remote holds and TV rendering still need device verification.
+- Player skin remains 0.1.25 and repository installer remains 1.0.4. Update the app and restart Kodi. No profile recapture or global display/audio settings change is required.
+
+1.8.105
+
+- Keep the branded cover visible when returning from title details to Search or a collection, until the original results and selection are restored.
+- Start the splash before setup and provider imports. Use a lightweight ordinary launcher, retaining explicit playback and maintenance routes and safe cleanup around sign-in/skin changes.
+- Open title details without waiting for extra ratings, title enrichment, secondary quality lookups or movie recommendations. Fill these in afterward without moving focus; discard results after leaving the page.
+- Keep episode identity/runtime enrichment ready before showing series details. Retain source facts as the primary quality data and PostersPlus as a gap fallback.
+- Player skin remains 0.1.25 and repository installer remains 1.0.4. Restart Kodi after updating. Physical Fire TV rendering and the exact loading-time saving still require a device retest.
+
+1.8.104
+
+- Fix the stuck Opening title screen when selecting a Search or collection result. Replace the blocking transition dialog with a modeless branded cover while retaining native-window retirement and Search return state.
+- Verify that Kodi has opened Home or title details before entering the modal wait. Allow brief notifications to finish; recover refused or disappearing-window activation without waiting indefinitely or closing another addon's dialog.
+- Show a local branded startup splash while importing the browsing interface and loading Home. Remove it when Home is ready, on failed initialization, and on exit.
+- Add safe diagnostic evidence for blocked window activation. Remove the obsolete modal cover layout and verify cleanup, cancellation, notification timing and failed-loading recovery.
+- Player skin remains 0.1.25 and repository installer remains 1.0.4. Restart Kodi after updating. Automated checks do not replace a physical Fire TV transition/startup test.
+
+1.8.103
+
+- Cover the Search/collection-to-movie handoff before stopping the trailer or retiring the old full window. Keep the opaque cover through details initialization and clean it up on cancellation or failed loading.
+- Preserve native-window retirement protection and exact Search/collection return state. Prevent pending handoffs from rebuilding collection rows or accepting duplicate activations.
+- Suppress repeated navigation clicks while holding Left at a row edge and opening the sidebar. Restore navigation sounds after the hold, other input or window close; keep saved sound settings and media volume unchanged.
+- Display the installed Strem4Kodi app version beneath the Settings heading.
+- Automated regression, package/source, XML, Python 3.8 and credential checks passed. Physical Fire TV transition rendering and remote audio still need a device retest. Skin remains 0.1.25; restart Kodi after updating.
+
+1.8.102
+
+- Retire native browse windows before opening movie details from Search or collections, keeping the selected results and return route intact.
+- Paint the loading card before dispatching manual and automatic playback. Keep large/4K source startup covered until video is ready, with cancellation and stale-attempt protection.
+- Correct zero/low watch-progress fill on poster bars, including Continue Watching and episode cards.
+- Hold Left at the far-left edge to open the main menu on all devices; replace double-Left and strengthen the Exit app highlight.
+- Suppress queued OK activations after slow actions. Defer Home refreshes while navigating, preserve selection, and show compact startup feedback without a fixed startup input lock.
+- Prevent stale pagination/hero updates, duplicate provider posters and stuck worker flags. Reuse a bounded artwork worker pool across batches.
+- Regression, Python 3.8 compatibility, package/source, XML and credential checks passed. Native Fire TV rendering, remote timing and startup speed still require device retesting. Player skin remains 0.1.25; restart Kodi after updating.
+
+1.8.101
+
+- Move inactive Continue Watching movies and series to Don't Forget About Me at 30 days, then remove the Home card at 60 days. Keep saved progress and watch history; new playback returns the title to Continue Watching and resets the clock.
+- Prevent duplicate cards across both rows using explicit media IDs. Preserve exact resume/next-episode targets and allow contextual removal of moved reminder cards. Completed movies stay excluded; unplayed saved shows retain their seasonal reminders.
+- Keep live and cached Home row ordering consistent. Guard malformed watch data, use actual timezone-aware playback times, and preserve older index data during the alias upgrade.
+- Read small date/ID records before loading displayed card details, reuse one retention partition per Home refresh, and skip rewriting unchanged rows. In a synthetic 4,000-title desktop benchmark, unchanged refresh time fell from 383 ms to 179 ms; TV performance still needs device verification.
+- All 1,678 automated tests passed, including focused retention, sync, cache, migration and context checks. Python 3.8 compatibility and credential/package checks passed. Player skin remains 0.1.25. Restart Kodi after updating.
+
+1.8.100
+
+- Copy Auto Play profiles and portable playback, subtitle, skip, chapters and pre-roll preferences from the Shield. Update receiving devices before importing a newly captured master; older profiles remain valid.
+- Player skin 0.1.25 requires Aerial from Kodi's official repository. Approved companion-skin profile imports select it as the screensaver, with backup, readback, retry and Undo. Preserve the inactivity timeout and device power/display settings.
+- Open Aerial's configuration from Skin Settings / General. Disabled or unavailable Aerial remains pending rather than falsely marked configured.
+- Redesign the private setup dashboard with Strem4Kodi branding, responsive phone/desktop layouts, clearer approval states and a manual TV-code entry. Private values remain hidden and owner/CSRF protection stays intact.
+- All 1,661 automated tests passed; browser layouts, private service deployment, archive integrity and credential checks passed. Native Aerial playback still requires a device check. Update all clients, capture a fresh Shield profile, then import on each device including the Shield and restart Kodi.
+
+1.8.99
+
+- Approved setup-profile imports configure Kodi Home to show Add-ons and Favourites only, with category widgets enabled. Player skin 0.1.24 adds reversible Disc visibility.
+- Enable event logging, HTTP control (username kodi, no password/authentication), remote application control on this system and unknown sources. Keep the existing HTTP port and hardware settings.
+- Back up before writing, confirm each setting by readback, retain declined/unsupported writes for retry and preserve later user edits when undoing setup.
+- Fix private setup dashboard sign-in behind Caddy: accept bounded streamed form bodies and retain same-origin browser provenance while preserving Origin/CSRF checks.
+- All 1,644 automated tests passed; app/skin integrity, XML/Python compatibility and credential checks passed. Native Kodi prompts still require device testing. Restart Kodi after updating, then import the setup profile to apply these defaults.
+
+1.8.98
+
+- Show the next episode title with thumbnail spoiler protection, carry corrected names into playback and keep slow credits/optional quality requests from delaying the card.
+- Prepare next-episode sources during the closing minutes. Reuse recent session/provider-scoped preflight checks while retaining cancellation, exact-episode recovery and natural-end autoplay.
+- Preserve the last owned playback position when Kodi clears its clock on normal stop. Make Play/Resume follow the selected episode and retain unfinished rewatch progress.
+- Isolate background watcher failures so progress/recovery continue; repair shutdown cleanup and block details allocation when the preceding native Home window has not retired.
+- Reduce cache copying while typing and bound full hero metadata to 64 recent titles for long browsing sessions.
+- All 1,632 automated tests passed; package integrity, Python compatibility and credential checks passed. Fire TV rendering/handoff still require device retesting. Player skin remains 0.1.23.
+
+1.8.97
+
+- Add private device setup with a QR code and phone approval. Copy an approved master profile from the Shield, then apply preferred S4K settings, API keys and provider selections to another device.
+- Keep Stremio sign-in on its official device-linking page. Private profiles and credentials stay outside the public repository and release packages.
+- Back up settings before applying the profile; support retry, Cancel and Undo while preserving later user changes. Apply companion-skin changes at a safe app startup boundary.
+- Existing signed-in devices keep their normal startup. Audio/display hardware and custom remote keymaps remain device-specific.
+- All 1,612 automated tests passed on Windows. Private setup HTTPS and Docker health verified; first Shield export and native second-device enrollment still need testing. Player skin remains 0.1.23.
+
+1.8.96
+
+- Keep valid search suggestions visible while their configured artwork is being refreshed, including The Jinx and This Country. Preserve title validation and AIOmetadata-first artwork ordering.
+- Coalesce optional hero enrichment during rapid browsing: keep previews and cached details immediate, and enrich only the latest title after focus settles. Reuse the existing browse worker instead of starting a timer per navigation press.
+- Avoid duplicate cached-hero renders, unchanged next-row label writes and focused-hero redraws when poster batches have no visible artwork change.
+- Release ready poster responses without waiting for a slow lookup in the same batch; preserve title order, cancellation and the existing request limits.
+- The user confirmed that the previous search-selection crash fix works on their tested Fire TV. Device scrolling smoothness still requires retesting. Player skin remains 0.1.23.
+
+1.8.95
+
+- Avoid Kodi Omega's XML edit-control Python wrapper in Search. Keep query text in Python and use the existing remote keyboard or Kodi keyboard/phone paste.
+- Wait for the search poller and native dialog to retire before returning a selected title to Home or the app shell; block a handoff that cannot safely complete.
+- Add bounded search close/return/retirement checkpoints and process bitness to private diagnostics, without exporting query text or credentials.
+- Fire TV crash confirmation still requires a device retest. Player skin remains 0.1.23.
+
+1.8.94
+
+- Preserve the selected title/episode when an owned trailer returns from Kodi fullscreen playback; prevent window reactivation from resetting focus to the main menu.
+- Try AIOmetadata before other metadata providers; keep unverified catalogue artwork neutral until the configured provider has answered, including backgrounds and title logos.
+- Clear Strem4Kodi response and artwork caches together, invalidate startup snapshots and in-flight cache writes, and remove matching Kodi textures while preserving accounts, progress and source-format facts. Server-side artwork caches remain separately managed.
+- Move poster focus borders into the surrounding gutter so they do not cover PostersPlus chips at the top edge, including compact and similar-title cards.
+- Refresh TMDB similar-title cards through the configured poster provider, keeping PostersPlus artwork consistent without moving the selection.
+- Base You May Also Like on watched, in-progress and saved titles using TMDB recommendations and genre-matched weekly trends. Exclude saved, continuing and completed titles, prefer well-rated results, and retire older recommendation caches.
+- Reduce saved-progress reads during fast navigation and remove browsing requests for retired director/poster-tag enrichment.
+- Guard repeated OK presses across slow media loading transitions while keeping Back, Cancel and directional navigation immediate.
+- Use Kodi's native progress values for episode and poster bars; refresh partial episode progress and measured duration after playback.
+- Prefer valid TMDB per-episode runtimes and consistently parse numeric/string minutes, seconds and ISO durations.
+- Restore source-derived and shared database formats as the primary hero quality logos. PostersPlus only fills missing technical families, without upgrading a known source resolution, HDR format or audio codec.
+- Restore focused source checks while using PostersPlus artwork; complete fresh format records avoid both source and PostersPlus requests.
+- Keep title-level PostersPlus facts out of selected-episode details and out of the source-format database.
+- Clear completed media/episode loading messages while retaining real errors, and remove background format-check status text from the media page.
+- Poster artwork and its tags remain with PostersPlus. Player skin remains 0.1.23.
+
+1.8.93
+
+- Remove Strem4Kodi's native poster-tag overlays and background tag discovery; poster artwork and badges will come from the configured art provider.
+- Stop collecting poster-tag-only diagnostics and remove the Trending tags setting.
+- Use verified PostersPlus quality data for browsing hero badges, with cached source formats as a fallback. Selected-source and Kodi playback details remain authoritative.
+- Remove the retired native tag modules, rounded-tag asset and optional slow format scanner, queue and setting.
+- Retire legacy poster wrapper overrides and cached tag facts; migrate artwork caches and stale generated layouts. Refresh landscape artwork and title logos with the configured poster provider.
+- Player skin remains 0.1.23.
+
+1.8.92
+
+- Include bounded technical excerpts from kodi.log and kodi.old.log in automatic and manual private diagnostic reports.
+- Preserve timestamps, severity, control/window IDs, known app navigation events and addon traceback file/line locations. Omit URLs, credentials, local paths and unrecognised message text.
+- Keep earlier recognised failures alongside the final log context, with at most 64 entries and a 256 KiB scan per log.
+- Continue using the existing diagnostic opt-in, private repository check, sync token and verified upload workflow.
+- This update improves evidence collection; the remaining Search crash is still under investigation.
+- Player skin remains 0.1.23. Restart Kodi after updating, reproduce the issue once, reopen Kodi and send a diagnostic report.
+
+1.8.91
+
+- Guard Search selection, redraws and window closure; hand both suggestions and full-result titles to the app shell and restore the original search screen.
+- Stop callbacks and background rendering from using retired Search controls; wait for Kodi's closing transition before opening title details.
+- Restore the parent series identity and name before preparing Up Next, so the current episode title is not displayed beside the next episode number.
+- Keep chart membership cached independently of Home, allow native tags on AIOMetadata artwork, and prioritise ranks, status and director facts ahead of lifetime awards.
+- Centre rounded tag boxes at the top of posters and refresh older cached title facts.
+- Add interrupted-session markers, installed-code fingerprints, UI stages, focused error counts and poster-tag counts to private diagnostics.
+- Add Troubleshooting > Send diagnostic report now using the existing opt-in and private sync token.
+- Player skin remains 0.1.23. Restart Kodi after updating. The Fire TV crash outcome requires a device retest.
+
 1.8.90
 
 - Open titles from the full Search results page only after destroying its poster-grid window, avoiding overlapping full Kodi windows on constrained devices.

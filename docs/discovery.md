@@ -36,6 +36,21 @@ one genre selection under By genre.
 Sports has its own sidebar section for sport catalogues. The source provider still
 controls live/upcoming event availability.
 
+**TV guide** beside the Sports list selector opens an EPG-style view of the
+selected catalogue. Channel/event names appear down the left, with seven rows per
+page, a three-hour time ruler in the device timezone, a Now marker and provider
+descriptions below. Up/Down selects listings, Left/Right moves the ruler by
+30 minutes, Page Up/Down moves seven listings, and Now returns to the current
+time. More listings uses the catalogue's existing supplier pagination when
+available. OK opens the existing sports source picker; Back closes the guide.
+
+Sports Streams currently supplies live availability and descriptions without
+programme start/end times. These entries explicitly say **Programme times
+unavailable**; their full-width lanes indicate availability only. The guide
+does not infer programme durations, invent channel schedules or require another
+feed. Confirmed timestamp pairs, when supplied in catalogue metadata, are drawn
+at their actual positions. Provider ordering, identities and playback stay intact.
+
 Upcoming Episodes uses confirmed future release dates from metadata for series
 saved in the Stremio library, including series with playback history. The existing
 background account worker resolves series metadata in bounded batches; newly

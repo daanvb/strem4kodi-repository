@@ -1,3 +1,10 @@
+1.8.118
+
+- Add Sports > TV guide with channel/event rows, live status, provider descriptions, a local-time ruler and a Now marker. Use the currently selected sports catalogue and preserve its provider ordering and stream identities.
+- Support remote Up/Down and page navigation, earlier/later time windows and existing catalogue pagination. Selecting a listing opens the existing sports source picker and retains Sports playback context.
+- Label entries without confirmed start/end timestamps as Programme times unavailable. Sports Streams currently provides live availability without programme timings; full-width lanes do not claim programme duration. No external guide feed or setup changes are required.
+- App 1.8.118; player skin remains 0.1.25 and installer remains 1.0.4. Automated tests do not establish native Kodi/CoreELEC rendering, physical remote behaviour or playback from the guide.
+
 1.8.117
 
 - Add viewer profiles under Settings > Account & Stremio > Viewer profiles. Create, switch, rename and delete viewers while sharing the Stremio login, providers and device settings. The current viewer is saved separately on each device.
