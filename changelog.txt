@@ -1,3 +1,11 @@
+1.8.127
+
+- Move the active viewer to the top of the sidebar with a divider beneath it.
+- Open the sidebar over the visible Sports EPG; cancelling or choosing Sports returns to the same guide, while other destinations perform their normal handoff.
+- Match upcoming episodes to TVmaze broadcast listings by IMDb ID, season, episode and nearby date; show UK broadcast times and network attribution.
+- Restore explicit Mark as Watched and Mark as Unwatched actions in Continue Watching and clarify the share-forward arrow.
+- Skin remains 0.1.25 and installer remains 1.0.4. Physical Kodi/CoreELEC checks remain pending.
+
 1.8.126
 
 - Return from Sports guide Back/Close to the main sidebar while retaining source-selection return.
