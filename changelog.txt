@@ -1,3 +1,11 @@
+1.8.129
+
+- Add optional Live Football API enrichment for confidently matched football guide rows using a locally configured key and an hourly cached daily fixture list.
+- Preserve provider times, require both teams to identify one fixture, and convert UTC kick-off times to UK GMT/BST once.
+- Show already-live pre-match coverage before the separate kick-off marker; extend estimated coverage for live extra time or penalties without removing possible post-match coverage early.
+- Include the optional key in diagnostic redaction and explicitly approved private device setup. No credential is shipped.
+- Skin remains 0.1.25 and installer remains 1.0.4. Real API matching, credit usage and Kodi/CoreELEC rendering remain unverified.
+
 1.8.128
 
 - Cover transitions from the Sports guide until the chosen destination is ready, avoiding flashes of the underlying catalogue. Sports and Back return directly to the live guide.
