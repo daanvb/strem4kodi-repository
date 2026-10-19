@@ -1,3 +1,11 @@
+1.8.126
+
+- Return from Sports guide Back/Close to the main sidebar while retaining source-selection return.
+- Separate the viewer row, improve the default avatar and cover profile-switch transitions.
+- Show future episode air schedules on artwork and prevent early source searches.
+- Remove More Info and Artwork details from media menus; clarify Share Watch Progress with a share icon.
+- Skin remains 0.1.25; repository installer remains 1.0.4. Native Kodi/CoreELEC validation remains pending.
+
 1.8.125
 
 - Show the current viewer in the main sidebar with direct switching. Master remains available through Settings only; unchanged Main labels become Master.
