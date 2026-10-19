@@ -8,7 +8,11 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.123.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.124.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.124
+
+- Deliver the viewer profile activation fix through a new Kodi update version. Fire TV setup still needs a device retest.
 
 ## What's new in 1.8.123
 

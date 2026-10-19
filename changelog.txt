@@ -1,3 +1,9 @@
+1.8.124
+
+- Deliver the viewer profile activation fix under a distinct version so devices already on the original 1.8.123 receive it through normal Kodi updates.
+- Retain live-store migration safeguards, recovery copies and registry persistence verification. Fire TV activation still requires a device retest.
+- Player skin remains 0.1.25 and repository installer remains 1.0.4.
+
 1.8.123
 
 - Guard malformed provider catalogue requirements and non-string library item types so Discover and library sections do not crash.
