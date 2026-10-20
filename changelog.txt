@@ -1,3 +1,11 @@
+1.8.130
+
+- Retain matched football competition names and add a second sports-guide selector with alphabetically sorted competitions.
+- Filter locally without another API request. All competitions keeps every listing; unmatched events are never guessed into a league.
+- Hide the selector when no matched competitions exist and reset it when the sports list changes.
+- Preserve competition-selector focus across minute refreshes; a regression test reproduced the focus loss before correction.
+- Skin remains 0.1.25 and installer remains 1.0.4. Real-provider competition coverage and native Kodi/CoreELEC layout/focus remain unverified.
+
 1.8.129
 
 - Add optional Live Football API enrichment for confidently matched football guide rows using a locally configured key and an hourly cached daily fixture list.
