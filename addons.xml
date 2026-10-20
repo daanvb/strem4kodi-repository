@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.130" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.131" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.25" />
@@ -20,7 +20,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.130: Filter the sports guide by confidently matched football competitions with a second local selector. All competitions keeps every listing; selection resets when the sports list changes, and minute refresh preserves selector focus. Skin remains 0.1.25.</news>
+    <news>1.8.131: Keep untimed live events from implying a full guide interval, improve unique football fixture matching for reversed club order and common names, and refresh fixture metadata before opening the guide with a five-minute daily-list cache. Skin remains 0.1.25.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>

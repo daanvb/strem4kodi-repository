@@ -1,3 +1,11 @@
+1.8.131
+
+- Untimed live events keep their LIVE badge and Live stream label without a full-width interval; only continuous 24hr Feeds use an untimed full-width lane.
+- Accept reversed catalogue club order and a small set of common football aliases while requiring both clubs to identify one unique fixture.
+- Refresh fixture metadata before opening the guide so rows do not move after navigation begins. Cache the daily list for five minutes; failed refreshes preserve existing rows.
+- Update the Sports guide settings description to reflect the five-minute cache.
+- Skin remains 0.1.25 and installer remains 1.0.4. Real-provider latency/coverage and native Kodi/CoreELEC rendering remain unverified.
+
 1.8.130
 
 - Retain matched football competition names and add a second sports-guide selector with alphabetically sorted competitions.
