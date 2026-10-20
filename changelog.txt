@@ -1,3 +1,11 @@
+1.8.132
+
+- Explicit source-unavailable responses expire untimed live events and API-confirmed finished matches. Live Now removes them; other sports lists show Unavailable without a timeline block.
+- Preserve the in-progress 180-minute allowance and continuous 24hr Feeds. Network failures and ordinary empty results do not expire events.
+- Clear unavailable state when playable sources return.
+- Remove the redundant bottom remote-control hint strip and expand the event description.
+- Skin remains 0.1.25 and installer remains 1.0.4. Native provider/device behavior remains unverified.
+
 1.8.131
 
 - Untimed live events keep their LIVE badge and Live stream label without a full-width interval; only continuous 24hr Feeds use an untimed full-width lane.
