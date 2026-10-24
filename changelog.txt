@@ -1,3 +1,10 @@
+1.8.134
+
+- Preserve automatic startup attempts when native file queries fail during AV callbacks or ambiguous Stop/End callbacks arrive before an owned opening.
+- Keep the existing 45-second startup timeout and bounded alternate-source retry flow, retaining the episode identity and resume point.
+- Add fixed-field startup callback traces without native exception text. A simulated callback-to-source-picker regression verifies same-episode alternate-source recovery.
+- Skin remains 0.1.25 and installer remains 1.0.4. Native Kodi/provider playback behavior remains unverified.
+
 1.8.133
 
 - Treat an owned automatic source stopping before AV starts as a startup failure eligible for the existing bounded alternate-source retry flow. Preserve the selected episode identity.

@@ -8,7 +8,13 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.133.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.134.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.134
+
+- Keep automatic startup recovery armed when Kodi clears the native item during AV or ambiguous Stop/End callbacks.
+- Let the existing startup timeout retry another source for the same episode and resume point.
+- Trace this callback path without recording native exception messages.
 
 ## What's new in 1.8.133
 
