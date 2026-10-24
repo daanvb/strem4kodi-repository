@@ -1,3 +1,11 @@
+1.8.137
+
+- Show a visible streaming-service filter control in Discover when the selected Movies or Series catalogue supplies usable options, such as Genre: Horror.
+- Offer only filter choices shared by all contributing catalogue suppliers; changing a filter resets paging and optional filters can be cleared with All.
+- Remove personal favourites, watchlists, watch history and recommendations from Discover choices. Preserve Community Favourites, saved membership and Sports catalogues.
+- Filter availability depends on installed catalogue add-ons. No age-range filter is added.
+- Skin remains 0.1.25 and installer remains 1.0.4. Native Kodi layout and real catalogue filter coverage remain to be checked.
+
 1.8.136
 
 - Keep technical quality tiers ahead of provider-health penalties in quality mode, including resumed playback; health breaks technical ties while failed session sources stay excluded.

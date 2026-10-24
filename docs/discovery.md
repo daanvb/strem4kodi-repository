@@ -16,9 +16,11 @@ Trending, All-time Greats, New Releases, Hidden Gems and Most Watched lists are
 combined when their names identify the same category. Marvel, DC and Star Wars
 remain separate collections. Other custom lists retain their names.
 
-Binge-Worthy, Quick Watches, Box Office Hits, Recommendations, Most Anticipated,
-Community Favourites, My Favourites, Watchlist, Watch History and Genres are also
-recognised. Provider prefixes are removed from display names. Franchise lists
+Binge-Worthy, Quick Watches, Box Office Hits, Most Anticipated,
+Community Favourites and Genres are also recognised. Personal favourites,
+watchlists, watch history and recommendations are excluded from movie/series
+Discover choices; saved membership and other browsing destinations are unaffected.
+Provider prefixes are removed from display names. Franchise lists
 are available through Collections; streaming-service lists through Streaming
 services. Mixed (All) catalogues retain their provider request type, then filter
 their results into Movies or Series. Individual franchises remain distinct.
@@ -43,20 +45,26 @@ panel. All displayed times use UK civil time, including GMT/BST, independently
 of the device timezone. The card view also retains **TV guide** immediately
 beside its Sports list selector.
 
-Sports lists start with **Live Now**, then **Football**, followed by other sports
-alphabetically. Changing the list stays inside the guide. Remote scrolling keeps
-the same native row focus targets rather than recreating them on every redraw.
+The provider's **Live Channels** list is shown as **24hr Feeds** and comes first;
+those continuous channels are always live and do not receive invented programme
+times. **Live Now** follows, then **Football**, then other sports alphabetically.
+Changing the list stays inside the guide. Remote scrolling keeps the same native
+row focus targets rather than recreating them on every redraw.
 
 Gold markers identify supplied kick-off times, including Sports Streams' dated
 `releaseInfo` labels, which are already UK wall-clock times: a provider setting
 labelled GMT must not add another BST hour. Structured timestamps with explicit
 offsets, and explicit timezone suffixes in labels, are still converted to UK time.
-Entries with a known start and no end use the existing 2.5-hour live window;
-a supplied end time takes priority. Start/end labels and duration remain visible
-while live, with **~** marking estimated ends/durations. Green bars and a LIVE
-badge distinguish current games; green end caps show the visible endpoint.
-Undated live channels retain their
-provider status without repeated missing-time warnings or invented starts.
+Entries with a known start and no end use a three-hour live window; a supplied
+end time takes priority. A provider source label that explicitly says the stream
+starts in a number of minutes updates that event's kick-off on return to the
+guide. Generic duration text is ignored. Start/end labels and duration remain
+visible while live, with **~** marking estimated ends/durations. Green bars and
+a LIVE badge distinguish current games; green end caps show the visible endpoint.
+Live Now removes events once their supplied or three-hour estimated end passes.
+An explicit unavailable/offline source report also confirms removal after that
+window. Other undated live entries retain their provider status without repeated
+missing-time warnings or invented starts.
 
 A highlighted **NOW HH:MM** badge is attached to the time ruler and current-time
 line. When browsing a window away from now, it remains at the relevant edge with
@@ -89,9 +97,20 @@ The catalogue view offers All titles, Unwatched only, List sources and paging wh
 
 ## Simpler Discover controls
 
-Discover uses Type → Browse group → List. Groups are Highlights, My lists, By genre, Collections, Streaming services and Other lists. Favourites is now My Favourites. For example, choose Series → By genre → Comedy, or Movies → Highlights → Trending.
+Discover uses Type → Browse group → List. Groups are Highlights, By genre, Collections, Streaming services and Other lists. For example, choose Series → By genre → Comedy, or Movies → Highlights → Trending.
 
 Genre catalogues that advertise genre choices are expanded into named lists and merged by genre across suppliers. The original genre spelling is preserved in each supplier request. This is a single genre selection: the third header does not apply a second genre filter. Other provider filters remain available through the remote context menu under Discover options. Changing a list clears its previous filters and paging. Movies and Series remember independent lists, filters and card positions. Switching type restores its loaded page during the current app session. After reopening the app, cursor-based lists start at their first page, with saved filters and positions clamped to the available cards. Removed lists or filter options fall back safely.
+
+Selecting an individual list under Streaming services reveals a fourth header
+control when its suppliers advertise usable filters. A single filter shows its
+name and selected value, such as **Genre: All** or **Genre: Horror**; multiple
+filters open a **Service filters** chooser. Choices come from the selected
+movie/series catalogue and must be supported by every contributing supplier.
+Kids, Documentary and other categories appear only when supplied, rather than
+being inferred from a service name. Selecting All clears an optional filter;
+required filters retain explicit choices. Changes reset paging, and closing the
+chooser returns focus to the filter control. All-lists overviews and catalogue
+search keep their existing controls. Sports does not use this filter.
 
 
 ## Multiple rows

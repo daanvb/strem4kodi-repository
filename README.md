@@ -8,7 +8,13 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.136.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.137.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.137
+
+- Filter selected streaming-service catalogues directly in Discover using the choices supplied by installed add-ons.
+- Remove personal favourites, watchlists, watch history and recommendations from Discover; retain Community Favourites and Sports.
+- Available filters vary by catalogue. An older-kid/young-teen age filter is not included.
 
 ## What's new in 1.8.136
 
