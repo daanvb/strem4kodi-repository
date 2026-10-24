@@ -1,3 +1,10 @@
+1.8.135
+
+- Keep the details progress/recovery watcher alive when a polling pass encounters a transient recovery, native player/window or details-update exception.
+- Retry polling after the existing 250ms delay, preserving playback recovery, deferred artwork updates and post-playback focus refresh.
+- A regression verifies that recovery polling continues after recovery-tick, native-player and details-update failures; the previous implementation failed all three scenarios.
+- Skin remains 0.1.25 and installer remains 1.0.4. Native Kodi/provider transitions remain unverified.
+
 1.8.134
 
 - Preserve automatic startup attempts when native file queries fail during AV callbacks or ambiguous Stop/End callbacks arrive before an owned opening.
