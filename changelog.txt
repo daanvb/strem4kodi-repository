@@ -1,3 +1,10 @@
+1.8.133
+
+- Treat an owned automatic source stopping before AV starts as a startup failure eligible for the existing bounded alternate-source retry flow. Preserve the selected episode identity.
+- Keep explicit double-Back cancellation effective when Kodi clears the playing-file value or reports it unavailable before the Stop callback; stale or unrelated markers do not suppress recovery.
+- Pin the broadcast-card integration test clock so its fixed fixture dates remain deterministic.
+- Skin remains 0.1.25 and installer remains 1.0.4. Native Kodi/provider startup and cancellation behavior remain unverified.
+
 1.8.132
 
 - Explicit source-unavailable responses expire untimed live events and API-confirmed finished matches. Live Now removes them; other sports lists show Unavailable without a timeline block.
