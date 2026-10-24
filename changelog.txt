@@ -1,3 +1,12 @@
+1.8.136
+
+- Keep technical quality tiers ahead of provider-health penalties in quality mode, including resumed playback; health breaks technical ties while failed session sources stay excluded.
+- Retry another eligible source after 12 continuous seconds of explicit, owned, unpaused automatic VOD buffering. Preserve episode identity and latest position, including redirects, using the existing attempt budget.
+- Reset buffering observation on pause, missing observations or replacement playback. A stationary clock alone does not trigger retry; live sports retain their separate recovery owner.
+- Put Report wrong episode first in Settings.
+- Refresh viewer conflict choices if progress changes while the dialog is open, handle already-resolved conflicts and confirm successful choices.
+- Skin remains 0.1.25 and installer remains 1.0.4. Native Kodi/provider resume quality, buffering recovery and dialog behavior remain unverified.
+
 1.8.135
 
 - Keep the details progress/recovery watcher alive when a polling pass encounters a transient recovery, native player/window or details-update exception.
