@@ -97,7 +97,7 @@ The catalogue view offers All titles, Unwatched only, List sources and paging wh
 
 ## Simpler Discover controls
 
-Discover uses Type → Browse group → List. Groups are Highlights, By genre, Collections, Streaming services and Other lists. For example, choose Series → By genre → Comedy, or Movies → Highlights → Trending.
+Discover uses Type → Browse group → List. Groups are Highlights, Streaming services, By genre, Collections and Other lists, in that order. For example, choose Series → By genre → Comedy, or Movies → Highlights → Trending.
 
 Genre catalogues that advertise genre choices are expanded into named lists and merged by genre across suppliers. The original genre spelling is preserved in each supplier request. This is a single genre selection: the third header does not apply a second genre filter. Other provider filters remain available through the remote context menu under Discover options. Changing a list clears its previous filters and paging. Movies and Series remember independent lists, filters and card positions. Switching type restores its loaded page during the current app session. After reopening the app, cursor-based lists start at their first page, with saved filters and positions clamped to the available cards. Removed lists or filter options fall back safely.
 
@@ -120,6 +120,16 @@ original option value. Catalogues that cannot apply the selected genre are
 excluded, rather than returning unfiltered titles. Choosing All restores them.
 Changing the genre starts from the first batch; More lists retains the genre.
 The selection is remembered independently for Movies and Series.
+
+When a genre is selected under Streaming services, matching titles from the
+account's Popular and Trending charts are promoted ahead of other loaded titles.
+The charts are interleaved by their supplied positions, using genre-specific
+chart results when supported. Only titles already returned by the selected
+service/genre lists are moved; chart titles from other services are not added.
+Remaining titles keep their supplier order. Rankings are cached for five minutes
+and reused across services and loaded pages. If chart data is unavailable, the
+original service ordering remains. This changes result ordering, not the genre
+selector's choice order.
 
 
 ## Multiple rows

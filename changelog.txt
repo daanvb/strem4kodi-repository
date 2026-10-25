@@ -1,3 +1,10 @@
+1.8.139
+
+- Place Streaming services directly below Highlights in Discover.
+- Promote already-loaded Popular/Trending titles within streaming-service genre results, including All lists and loaded pages; preserve provider order when ranking is unavailable.
+- Fit Sports loading artwork in a larger landscape frame so both team logos remain visible; preserve portrait movie/series layouts.
+- Cache chart rankings for five minutes without inserting titles from other services. Skin remains 0.1.25 and installer remains 1.0.4. Native Kodi/provider validation remains pending.
+
 1.8.138
 
 - Filter Discover All lists by genre across supporting catalogues, preserving original provider options and restarting pagination.
