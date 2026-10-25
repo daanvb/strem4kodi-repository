@@ -1,3 +1,10 @@
+1.8.138
+
+- Filter Discover All lists by genre across supporting catalogues, preserving original provider options and restarting pagination.
+- Distinguish sports leagues by stable API identity and country so equal league names cannot mix competitions.
+- Allow Aerial after the configured idle interval while video is paused; active playback remains protected.
+- Skin remains 0.1.25 and installer remains 1.0.4. Native Kodi/provider validation remains pending.
+
 1.8.137
 
 - Show a visible streaming-service filter control in Discover when the selected Movies or Series catalogue supplies usable options, such as Genre: Horror.

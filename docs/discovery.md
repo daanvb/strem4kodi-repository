@@ -109,8 +109,17 @@ movie/series catalogue and must be supported by every contributing supplier.
 Kids, Documentary and other categories appear only when supplied, rather than
 being inferred from a service name. Selecting All clears an optional filter;
 required filters retain explicit choices. Changes reset paging, and closing the
-chooser returns focus to the filter control. All-lists overviews and catalogue
-search keep their existing controls. Sports does not use this filter.
+chooser returns focus to the filter control. Catalogue search keeps its existing
+controls. Sports does not use this filter.
+
+**All lists** also offers a Genre control when catalogues in the selected group
+advertise genres. For example, Streaming services → All lists → Horror combines
+the services supporting Horror. Genre choices cover the selected Movies or Series
+group; equivalent genre names are matched while each catalogue receives its
+original option value. Catalogues that cannot apply the selected genre are
+excluded, rather than returning unfiltered titles. Choosing All restores them.
+Changing the genre starts from the first batch; More lists retains the genre.
+The selection is remembered independently for Movies and Series.
 
 
 ## Multiple rows
