@@ -1,3 +1,12 @@
+1.8.140
+
+- Reconcile IMDb series episode titles and numbering against an independent cached reference while preserving preferred artwork and watched-history IDs. Reject explicit episode-identity conflicts; source labels still cannot prove actual video contents.
+- Preserve other-episode resume positions and durable offline progress, distinguish overlapping checkpoints from competing viewer edits, verify manual movie watched updates, and avoid counting the same viewing twice.
+- Guard details-window retirement, optional service setup, worker-start failures, malformed metadata/cache/preferences/progress values, and error presentation when diagnostic storage fails.
+- Consume custom unpause recap once, refresh owned playback filenames, retain player controls through legitimate transitions, and load skip segments for replacement episodes. The companion pause button filters repeated activations while retaining native pause/play behavior.
+- Reduce repeated cache I/O and local Home worker startup; load Discover catalogues and ranking away from input callbacks, preserving collection entry/return focus. Bound the add-on artwork URL ledger without deleting Kodi's global texture database.
+- Includes player skin 0.1.26; installer remains 1.0.4. Held-Back versus deliberate double-Back remains unresolved. Actual source contents, native crashes, physical remote/CEC behavior and playback/audio/HDR remain subject to device validation.
+
 1.8.139
 
 - Place Streaming services directly below Highlights in Discover.

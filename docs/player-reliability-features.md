@@ -1,5 +1,13 @@
 # Player reliability and convenience additions
 
+Release 1.8.140 preserves owned controls through confirmed redirects and brief
+native-player transitions, consumes configured unpause recap once, and requests
+skip segments for replacement episodes after an older lookup finishes. The
+companion skin 0.1.26 pause button filters repeated activations through Kodi's
+native explicit pause/play state, including returning fast-forward to normal
+play. Held-Back versus intentional double-Back remains unresolved. Physical
+remote timing, decoder/audio behavior and native rendering require device checks.
+
 Automatic VOD playback started from a title or episode page retries another
 eligible source after 12 continuous seconds of Kodi-reported buffering while
 the owned video is playing and unpaused. It retains the same episode and latest

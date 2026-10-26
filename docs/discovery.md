@@ -11,6 +11,11 @@ Continue Watching and resets the clock. The two rows deduplicate explicit media
 IDs; playback history takes priority over season-finale reminders. See
 [Home playback retention](continue-watching-retention.md) for details.
 
+Discover loads lists and rankings while you can continue navigating. A loading
+message identifies pending work; abandoned selections do not replace the current
+view. Opening a collection focuses its results once ready unless you moved focus
+during loading. Failed page loads keep existing results available for retry.
+
 Discover offers Type, Browse group and List controls. Popular,
 Trending, All-time Greats, New Releases, Hidden Gems and Most Watched lists are
 combined when their names identify the same category. Marvel, DC and Star Wars

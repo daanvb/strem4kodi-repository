@@ -44,6 +44,16 @@ partial batch does not establish that English is unavailable. Complete cached se
 use the existing direct selection path. Nothing downloads or probes the video
 to invent a bitrate.
 
+## Episode identity in 1.8.140
+
+IMDb series use a cached independent Cinemeta episode map to reconcile displayed
+numbering, available episode text and requested video IDs. Artwork preference
+does not choose episode identity. Explicit ID/number conflicts block playback
+with a clear message; missing reference information retains provider fallback.
+Watched-history IDs are not shifted when labels are corrected. The number-only
+fallback below remains available after a completed search; filenames and labels
+do not establish the actual story contained in a video.
+
 ## Episode checks come first
 
 Before ranking, automatic selection excludes local wrong-episode reports,
