@@ -71,16 +71,27 @@ An explicit unavailable/offline source report also confirms removal after that
 window. Other undated live entries retain their provider status without repeated
 missing-time warnings or invented starts.
 
+Fixtures explicitly reported as **Postponed** or **Cancelled** are hidden from
+Live Now. They remain labelled and selectable in other sports lists, because a
+broadcast may still be available. Those entries do not show an invented live bar,
+kick-off marker or estimated duration. Continuous 24hr Feeds keep their channel
+behavior.
+
 A highlighted **NOW HH:MM** badge is attached to the time ruler and current-time
 line. When browsing a window away from now, it remains at the relevant edge with
 an arrow instead of drawing a false current-time line through another hour.
-The clock marker refreshes on scrolling/input, including minute changes.
+The clock marker and time-dependent labels refresh once per minute while the
+guide is visible and idle, as well as on input. Nested dialogs and fullscreen
+playback suspend idle redraws. Focus, the browsed time window and competition
+filter are retained. These redraws use already-loaded data; they do not make
+additional catalogue or fixture requests.
 
 Up/Down selects listings, Left/Right moves the ruler by 30 minutes, Page Up/Down
 moves seven listings, and Now returns to the current time. More listings uses
 existing supplier pagination. OK opens sources directly without title details or
-automatic playback; returning from sources restores the guide selection. Back
-closes the guide to the catalogue. No external feed is required; provider ordering,
+automatic playback; returning from sources restores the guide selection, time
+window and competition. Back opens the sidebar over the guide; Back again or
+choosing Sports returns to that guide. No external feed is required; provider ordering,
 identities and playback configuration remain intact. Sports source selection
 defaults to highest **reported** bitrate, with missing rates after known rates
 and failed sources demoted. Duplicate alternatives retain that ranking. Manual

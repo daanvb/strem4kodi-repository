@@ -1,3 +1,12 @@
+1.8.141
+
+- Move Sports catalogue and fixture loading off input callbacks with cancellable loading and safe retirement; preserve existing pages and provider cursors after failures.
+- Preserve guide selection, timeline and competition filters across source selection and return; suppress stale source results and replacement-playback updates.
+- Match fixtures using explicit dates and senior/women/youth/reserve team identity, share bounded schedule lookups, and preserve the true age of observed live results.
+- Hide postponed/cancelled fixtures only from Live Now; show their status and retain selection elsewhere without inventing kickoff times or durations.
+- Refresh a visible idle guide once per minute through the existing UI cadence, with no extra provider requests, threads or timers; suspend redraw for dialogs, playback and retired windows.
+- Handle malformed provider metadata, timestamps and recovery markers while preserving healthy results. Player skin remains 0.1.26 and installer remains 1.0.4. Untimed midnight fixtures and native device/provider behavior remain unverified; the user will test normally and report bugs.
+
 1.8.140
 
 - Reconcile IMDb series episode titles and numbering against an independent cached reference while preserving preferred artwork and watched-history IDs. Reject explicit episode-identity conflicts; source labels still cannot prove actual video contents.
