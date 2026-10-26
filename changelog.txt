@@ -1,3 +1,10 @@
+1.8.142
+
+- Query up to eight distinct enabled source providers concurrently, retaining existing request counts, timeouts, provider order and failure handling. Avoid repeated source-label parsing while ranking and filtering results.
+- Select the top visible manual result once searching finishes, including Refresh and manual fallback from automatic loading. Preserve partial-result navigation, filter focus, subsequent selection and configured autoplay/Select best behavior.
+- Keep the EPG highlight, selected-event text and navigation aligned during delayed or out-of-order native focus updates. Ignore activations for a different row while focus is changing; preserve normal pointer/toolbar focus after acknowledgement.
+- Includes all 1.8.141 fixes. Player skin remains 0.1.26 and installer remains 1.0.4. Synthetic component measurements show improvements; actual provider speed and native Kodi behavior remain subject to normal use and bug reports.
+
 1.8.141
 
 - Move Sports catalogue and fixture loading off input callbacks with cancellable loading and safe retirement; preserve existing pages and provider cursors after failures.

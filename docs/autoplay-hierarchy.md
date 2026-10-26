@@ -34,6 +34,13 @@ Temporary provider health penalties break technical ties before provider prefere
 they do not promote a lower video, resolution, release, audio, bitrate or size tier.
 Per-session failed sources remain excluded from automatic playback.
 
+Source searches query up to eight distinct enabled providers concurrently, with
+the existing provider timeouts and no additional requests. The manual picker
+preserves selection while partial replies arrive, then selects the top visible
+result once the search completes, including Refresh. Subsequent navigation and
+filter focus are retained. Failed/abandoned searches do not reset a partial
+selection. Configured automatic playback and Select best behavior still apply.
+
 Best available quality does not start from an incomplete search: a later
 provider may return a better release or bitrate. Fastest start can select the
 first suitable arrival without waiting for visual, resolution, release or audio
