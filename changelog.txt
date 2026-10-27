@@ -1,3 +1,10 @@
+1.8.149
+
+- Reuse derived card, presentation and trait values within each source-list update across format availability, ranking, filtering, grouping and rendering. Rebuild the batch on later updates; keep derived values off source rows and preserve cached-card/structured precedence.
+- Publish source cards through the existing native bulk-list API, with a legacy individual-item fallback. Skip the FEL-only empty-result scan when its hint cannot be shown. Preserve service separation, alternatives, focus, selection, final top-result behavior, live labels, autoplay and cancellation.
+- Seven new regressions and alternating synthetic PC measurements verify reduced local work: recommended delivery sequences 349.495 to 133.096 ms, highest-bitrate 334.162 to 121.027 ms; six source parses per row become two, and 328 individual list publications become four bulk calls. These are component measurements, not certified native device/provider speed gains.
+- Includes all 1.8.148 fixes; player skin remains 0.1.26 and installer remains 1.0.4. After updating, compare a fresh source-search timing report during normal use.
+
 1.8.148
 
 - Fix first-time source-search report creation: accept an HTTP 404 GET only for the exact per-client diagnostics-source report path. The missing initial file was previously treated as a private token-access failure before the upload could create it.
