@@ -1,3 +1,185 @@
+1.8.150
+
+- Fix review of viewer progress conflicts when a queued playback checkpoint detects a competing Stremio update before that remote title has been imported into the local viewer library. An unchanged synced baseline can now be resolved; newer local progress still requires review.
+- Includes all 1.8.149 fixes; player skin remains 0.1.26 and installer remains 1.0.4. Viewer-conflict resolution still needs confirmation on the affected devices after updating.
+
+1.8.149
+
+- Reuse derived card, presentation and trait values within each source-list update across format availability, ranking, filtering, grouping and rendering. Rebuild the batch on later updates; keep derived values off source rows and preserve cached-card/structured precedence.
+- Publish source cards through the existing native bulk-list API, with a legacy individual-item fallback. Skip the FEL-only empty-result scan when its hint cannot be shown. Preserve service separation, alternatives, focus, selection, final top-result behavior, live labels, autoplay and cancellation.
+- Seven new regressions and alternating synthetic PC measurements verify reduced local work: recommended delivery sequences 349.495 to 133.096 ms, highest-bitrate 334.162 to 121.027 ms; six source parses per row become two, and 328 individual list publications become four bulk calls. These are component measurements, not certified native device/provider speed gains.
+- Includes all 1.8.148 fixes; player skin remains 0.1.26 and installer remains 1.0.4. After updating, compare a fresh source-search timing report during normal use.
+
+1.8.148
+
+- Fix first-time source-search report creation: accept an HTTP 404 GET only for the exact per-client diagnostics-source report path. The missing initial file was previously treated as a private token-access failure before the upload could create it.
+- Preserve rejection of malformed paths, repository-root errors, PUT failures, denied access and public repositories. Verify created and updated reports through the actual shared HTTP-response handling with synthetic responses, including SHA-preserving updates and corrupt-readback rejection.
+- Retry Send source-search report after updating; existing measurements are kept. Includes all 1.8.147 fixes; player skin remains 0.1.26 and installer remains 1.0.4. No actual private records or device uploads were used for verification.
+
+1.8.147
+
+- Put Last source search, Send source-search report and Source-search upload first in Troubleshooting. Display existing bounded provider snapshots without Home startup data or playback; explain empty, old and cached-search reports clearly.
+- Add an addon-owned Send/Cancel review and use the existing service for a timing-only private upload, in a separate per-client slot. Require configured private-reporting consent/token, recheck cancellation/token ownership, verify repository privacy and read back the upload before reporting success. Do not collect Kodi logs or playback history for this action.
+- Preserve manual requests after thread-start failure and show upload failure/cancellation status. Existing source snapshots remain readable; no extra provider requests are made. Includes all 1.8.146 fixes; player skin remains 0.1.26 and installer remains 1.0.4. Native rendering and actual device upload still require normal-use validation.
+
+1.8.146
+
+- Extend normal source-search timing snapshots with request/response, local parsing, callback delivery, elapsed successful callback completion and retry counts. Reuse the existing worker and save; do not add provider requests, polling, threads or automatic uploads.
+- Retain at most 40 rows with finite bounded numbers and fixed provider families for the existing explicit performance report. Exclude configured names, source URLs, titles, account data and exception text; revalidate saved rows before reporting.
+- Sum retry durations without claiming successful callback completion on failure. Measurements do not identify upstream internal work, native rendered frames or stream startup. Includes all 1.8.145 fixes; player skin remains 0.1.26 and installer remains 1.0.4. Actual delay attribution requires normal-use measurements.
+
+1.8.145
+
+- Recognise icon-prefixed AIOStreams Ready (TB/RD) reports: the details viewer hid the icon while the service parser rejected it, leaving the card badge empty. Normalize bounded display icons, markup and Kodi line breaks before reading explicit service evidence.
+- Preserve structured/normalized service precedence, negative words, conflicting-report rejection, URL/filename exclusions, grouping, ranking and playback URLs. Previously cached unknown rows require Refresh after updating.
+- Includes all 1.8.144 fixes. Player skin remains 0.1.26 and installer remains 1.0.4. Source-to-card property and details tests pass; actual native rendering remains subject to normal use and bug reports.
+
+1.8.144
+
+- Recognise explicit Ready (TB) / Ready (RD) service reports, including Comet labels, for the source-card corner badge. Keep structured service precedence and reject conflicting reports; do not infer services from filenames or URLs.
+- Show Service: TorBox (TB) or Service: Real-Debrid (RD) in the source-details dialog. Previously cached unknown service rows require Refresh after updating.
+- Isolate the existing preloaded skip-credits test fixture from background lookups; no playback runtime change. Includes all 1.8.143 fixes. Player skin remains 0.1.26 and installer remains 1.0.4. Actual native appearance remains subject to normal-use testing.
+
+1.8.143
+
+- Give movie/episode source providers 30 seconds and one 15-second recovery attempt for transient timeout, connection or server failures. Do not retry healthy empty responses, denied access, rate limits, invalid replies or server-requested backoff. Live and catalogue badge-only requests retain 15 seconds without retry.
+- Keep healthy partial results selectable, refresh incomplete cached searches before best-quality autoplay and Up Next, and preserve Fastest start using fresh arrivals. Safely share cancellation and profile ownership; budget retries and distinguish failure categories.
+- Show RD/TB in the top-right source-card corner when Real-Debrid/TorBox is explicitly reported. Preserve the normalized service through caching and keep service alternatives separate. Unknown reports stay unbadged; no URL/filename guessing or new provider requests.
+- Includes all 1.8.142 fixes. Player skin remains 0.1.26 and installer remains 1.0.4. Provider/device behavior and native badge appearance remain subject to normal use and bug reports.
+
+1.8.142
+
+- Query up to eight distinct enabled source providers concurrently, retaining existing request counts, timeouts, provider order and failure handling. Avoid repeated source-label parsing while ranking and filtering results.
+- Select the top visible manual result once searching finishes, including Refresh and manual fallback from automatic loading. Preserve partial-result navigation, filter focus, subsequent selection and configured autoplay/Select best behavior.
+- Keep the EPG highlight, selected-event text and navigation aligned during delayed or out-of-order native focus updates. Ignore activations for a different row while focus is changing; preserve normal pointer/toolbar focus after acknowledgement.
+- Includes all 1.8.141 fixes. Player skin remains 0.1.26 and installer remains 1.0.4. Synthetic component measurements show improvements; actual provider speed and native Kodi behavior remain subject to normal use and bug reports.
+
+1.8.141
+
+- Move Sports catalogue and fixture loading off input callbacks with cancellable loading and safe retirement; preserve existing pages and provider cursors after failures.
+- Preserve guide selection, timeline and competition filters across source selection and return; suppress stale source results and replacement-playback updates.
+- Match fixtures using explicit dates and senior/women/youth/reserve team identity, share bounded schedule lookups, and preserve the true age of observed live results.
+- Hide postponed/cancelled fixtures only from Live Now; show their status and retain selection elsewhere without inventing kickoff times or durations.
+- Refresh a visible idle guide once per minute through the existing UI cadence, with no extra provider requests, threads or timers; suspend redraw for dialogs, playback and retired windows.
+- Handle malformed provider metadata, timestamps and recovery markers while preserving healthy results. Player skin remains 0.1.26 and installer remains 1.0.4. Untimed midnight fixtures and native device/provider behavior remain unverified; the user will test normally and report bugs.
+
+1.8.140
+
+- Reconcile IMDb series episode titles and numbering against an independent cached reference while preserving preferred artwork and watched-history IDs. Reject explicit episode-identity conflicts; source labels still cannot prove actual video contents.
+- Preserve other-episode resume positions and durable offline progress, distinguish overlapping checkpoints from competing viewer edits, verify manual movie watched updates, and avoid counting the same viewing twice.
+- Guard details-window retirement, optional service setup, worker-start failures, malformed metadata/cache/preferences/progress values, and error presentation when diagnostic storage fails.
+- Consume custom unpause recap once, refresh owned playback filenames, retain player controls through legitimate transitions, and load skip segments for replacement episodes. The companion pause button filters repeated activations while retaining native pause/play behavior.
+- Reduce repeated cache I/O and local Home worker startup; load Discover catalogues and ranking away from input callbacks, preserving collection entry/return focus. Bound the add-on artwork URL ledger without deleting Kodi's global texture database.
+- Includes player skin 0.1.26; installer remains 1.0.4. Held-Back versus deliberate double-Back remains unresolved. Actual source contents, native crashes, physical remote/CEC behavior and playback/audio/HDR remain subject to device validation.
+
+1.8.139
+
+- Place Streaming services directly below Highlights in Discover.
+- Promote already-loaded Popular/Trending titles within streaming-service genre results, including All lists and loaded pages; preserve provider order when ranking is unavailable.
+- Fit Sports loading artwork in a larger landscape frame so both team logos remain visible; preserve portrait movie/series layouts.
+- Cache chart rankings for five minutes without inserting titles from other services. Skin remains 0.1.25 and installer remains 1.0.4. Native Kodi/provider validation remains pending.
+
+1.8.138
+
+- Filter Discover All lists by genre across supporting catalogues, preserving original provider options and restarting pagination.
+- Distinguish sports leagues by stable API identity and country so equal league names cannot mix competitions.
+- Allow Aerial after the configured idle interval while video is paused; active playback remains protected.
+- Skin remains 0.1.25 and installer remains 1.0.4. Native Kodi/provider validation remains pending.
+
+1.8.137
+
+- Show a visible streaming-service filter control in Discover when the selected Movies or Series catalogue supplies usable options, such as Genre: Horror.
+- Offer only filter choices shared by all contributing catalogue suppliers; changing a filter resets paging and optional filters can be cleared with All.
+- Remove personal favourites, watchlists, watch history and recommendations from Discover choices. Preserve Community Favourites, saved membership and Sports catalogues.
+- Filter availability depends on installed catalogue add-ons. No age-range filter is added.
+- Skin remains 0.1.25 and installer remains 1.0.4. Native Kodi layout and real catalogue filter coverage remain to be checked.
+
+1.8.136
+
+- Keep technical quality tiers ahead of provider-health penalties in quality mode, including resumed playback; health breaks technical ties while failed session sources stay excluded.
+- Retry another eligible source after 12 continuous seconds of explicit, owned, unpaused automatic VOD buffering. Preserve episode identity and latest position, including redirects, using the existing attempt budget.
+- Reset buffering observation on pause, missing observations or replacement playback. A stationary clock alone does not trigger retry; live sports retain their separate recovery owner.
+- Put Report wrong episode first in Settings.
+- Refresh viewer conflict choices if progress changes while the dialog is open, handle already-resolved conflicts and confirm successful choices.
+- Skin remains 0.1.25 and installer remains 1.0.4. Native Kodi/provider resume quality, buffering recovery and dialog behavior remain unverified.
+
+1.8.135
+
+- Keep the details progress/recovery watcher alive when a polling pass encounters a transient recovery, native player/window or details-update exception.
+- Retry polling after the existing 250ms delay, preserving playback recovery, deferred artwork updates and post-playback focus refresh.
+- A regression verifies that recovery polling continues after recovery-tick, native-player and details-update failures; the previous implementation failed all three scenarios.
+- Skin remains 0.1.25 and installer remains 1.0.4. Native Kodi/provider transitions remain unverified.
+
+1.8.134
+
+- Preserve automatic startup attempts when native file queries fail during AV callbacks or ambiguous Stop/End callbacks arrive before an owned opening.
+- Keep the existing 45-second startup timeout and bounded alternate-source retry flow, retaining the episode identity and resume point.
+- Add fixed-field startup callback traces without native exception text. A simulated callback-to-source-picker regression verifies same-episode alternate-source recovery.
+- Skin remains 0.1.25 and installer remains 1.0.4. Native Kodi/provider playback behavior remains unverified.
+
+1.8.133
+
+- Treat an owned automatic source stopping before AV starts as a startup failure eligible for the existing bounded alternate-source retry flow. Preserve the selected episode identity.
+- Keep explicit double-Back cancellation effective when Kodi clears the playing-file value or reports it unavailable before the Stop callback; stale or unrelated markers do not suppress recovery.
+- Pin the broadcast-card integration test clock so its fixed fixture dates remain deterministic.
+- Skin remains 0.1.25 and installer remains 1.0.4. Native Kodi/provider startup and cancellation behavior remain unverified.
+
+1.8.132
+
+- Explicit source-unavailable responses expire untimed live events and API-confirmed finished matches. Live Now removes them; other sports lists show Unavailable without a timeline block.
+- Preserve the in-progress 180-minute allowance and continuous 24hr Feeds. Network failures and ordinary empty results do not expire events.
+- Clear unavailable state when playable sources return.
+- Remove the redundant bottom remote-control hint strip and expand the event description.
+- Skin remains 0.1.25 and installer remains 1.0.4. Native provider/device behavior remains unverified.
+
+1.8.131
+
+- Untimed live events keep their LIVE badge and Live stream label without a full-width interval; only continuous 24hr Feeds use an untimed full-width lane.
+- Accept reversed catalogue club order and a small set of common football aliases while requiring both clubs to identify one unique fixture.
+- Refresh fixture metadata before opening the guide so rows do not move after navigation begins. Cache the daily list for five minutes; failed refreshes preserve existing rows.
+- Update the Sports guide settings description to reflect the five-minute cache.
+- Skin remains 0.1.25 and installer remains 1.0.4. Real-provider latency/coverage and native Kodi/CoreELEC rendering remain unverified.
+
+1.8.130
+
+- Retain matched football competition names and add a second sports-guide selector with alphabetically sorted competitions.
+- Filter locally without another API request. All competitions keeps every listing; unmatched events are never guessed into a league.
+- Hide the selector when no matched competitions exist and reset it when the sports list changes.
+- Preserve competition-selector focus across minute refreshes; a regression test reproduced the focus loss before correction.
+- Skin remains 0.1.25 and installer remains 1.0.4. Real-provider competition coverage and native Kodi/CoreELEC layout/focus remain unverified.
+
+1.8.129
+
+- Add optional Live Football API enrichment for confidently matched football guide rows using a locally configured key and an hourly cached daily fixture list.
+- Preserve provider times, require both teams to identify one fixture, and convert UTC kick-off times to UK GMT/BST once.
+- Show already-live pre-match coverage before the separate kick-off marker; extend estimated coverage for live extra time or penalties without removing possible post-match coverage early.
+- Include the optional key in diagnostic redaction and explicitly approved private device setup. No credential is shipped.
+- Skin remains 0.1.25 and installer remains 1.0.4. Real API matching, credit usage and Kodi/CoreELEC rendering remain unverified.
+
+1.8.128
+
+- Cover transitions from the Sports guide until the chosen destination is ready, avoiding flashes of the underlying catalogue. Sports and Back return directly to the live guide.
+- Show the active viewer as a distinct clickable sidebar header beneath the clock/date; keep seven navigation destinations and stable refresh focus.
+- Refresh sidebar icons with consistent rounded outlines at 256px.
+- Simplify upcoming episode broadcast labels while retaining matched UK airing times and broadcaster names.
+- Skin remains 0.1.25 and installer remains 1.0.4. Physical Kodi/CoreELEC rendering and remote validation remain pending.
+
+1.8.127
+
+- Move the active viewer to the top of the sidebar with a divider beneath it.
+- Open the sidebar over the visible Sports EPG; cancelling or choosing Sports returns to the same guide, while other destinations perform their normal handoff.
+- Match upcoming episodes to TVmaze broadcast listings by IMDb ID, season, episode and nearby date; show UK broadcast times and network attribution.
+- Restore explicit Mark as Watched and Mark as Unwatched actions in Continue Watching and clarify the share-forward arrow.
+- Skin remains 0.1.25 and installer remains 1.0.4. Physical Kodi/CoreELEC checks remain pending.
+
+1.8.126
+
+- Return from Sports guide Back/Close to the main sidebar while retaining source-selection return.
+- Separate the viewer row, improve the default avatar and cover profile-switch transitions.
+- Show future episode air schedules on artwork and prevent early source searches.
+- Remove More Info and Artwork details from media menus; clarify Share Watch Progress with a share icon.
+- Skin remains 0.1.25; repository installer remains 1.0.4. Native Kodi/CoreELEC validation remains pending.
+
 1.8.125
 
 - Show the current viewer in the main sidebar with direct switching. Master remains available through Settings only; unchanged Main labels become Master.

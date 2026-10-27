@@ -1,3 +1,8 @@
+1.8.150
+
+- Fix review of viewer progress conflicts when a queued playback checkpoint detects a competing Stremio update before that remote title has been imported into the local viewer library. An unchanged synced baseline can now be resolved; newer local progress still requires review.
+- Includes all 1.8.149 fixes; player skin remains 0.1.26 and installer remains 1.0.4. Viewer-conflict resolution still needs confirmation on the affected devices after updating.
+
 1.8.149
 
 - Reuse derived card, presentation and trait values within each source-list update across format availability, ranking, filtering, grouping and rendering. Rebuild the batch on later updates; keep derived values off source rows and preserve cached-card/structured precedence.
