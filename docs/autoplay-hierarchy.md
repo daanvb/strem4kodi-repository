@@ -34,8 +34,23 @@ Temporary provider health penalties break technical ties before provider prefere
 they do not promote a lower video, resolution, release, audio, bitrate or size tier.
 Per-session failed sources remain excluded from automatic playback.
 
-Source searches query up to eight distinct enabled providers concurrently, with
-the existing provider timeouts and no additional requests. The manual picker
+Source searches query up to eight distinct enabled providers concurrently. Movie
+and episode searches allow a 30-second network timeout and one recovery attempt
+with a 15-second timeout for transient connection, timeout or server failures.
+Healthy replies, empty results, rate limits, access denials, malformed replies,
+and server-requested backoff are not automatically retried. Live searches keep
+their original 15-second timeout without these VOD retries. These are network
+timeouts, not a guaranteed whole-search deadline.
+Catalogue badge-only scans also keep their original timeout and request count.
+
+An incomplete saved list remains available for manual selection while a fresh
+search runs. Best quality waits for that search and its recovery attempts before
+comparing results; Fastest start may use an eligible fresh arrival. Incomplete
+cache entries do not trigger early playback or renew complete verification.
+Shared searches continue while any subscriber still needs them, and stop new
+attempts after every subscriber cancels. Up Next uses the same recovery policy.
+
+The manual picker
 preserves selection while partial replies arrive, then selects the top visible
 result once the search completes, including Refresh. Subsequent navigation and
 filter focus are retained. Failed/abandoned searches do not reset a partial
@@ -92,3 +107,18 @@ count, preserving the active track on equal quality and respecting manual audio
 choices. Missing English leaves the existing fallback available.
 Publication is gated on package/source agreement, ZIP integrity, Python/XML,
 credentials, exact-source Linux CI and public-feed download verification.
+
+## Reported service badges
+
+Source cards show **RD** (Real-Debrid) or **TB** (TorBox) in the upper-right corner
+when the returned source explicitly reports that service. AIOStreams structured
+`streamData.service.id` takes precedence; clear formatted tags such as `[RD+]`
+and `[TB]` are also supported. Missing, unsupported or contradictory reports stay
+unbadged. The badge is never inferred from a playback URL or release filename.
+
+RD and TB copies of the same release remain separate cards, while duplicates
+within one reported service may still be grouped. Badges do not change automatic
+ranking or add a service preference. If your AIOStreams format omits service
+information, its [custom formatter](https://github.com/Viren070/AIOStreams/blob/main/packages/docs/content/docs/reference/custom-formatter.mdx)
+can include `[{service.shortName}]` or a separate `{service.name}` field. S4K does
+not change that configuration or request additional provider data for badges.

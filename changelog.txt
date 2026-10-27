@@ -1,3 +1,10 @@
+1.8.143
+
+- Give movie/episode source providers 30 seconds and one 15-second recovery attempt for transient timeout, connection or server failures. Do not retry healthy empty responses, denied access, rate limits, invalid replies or server-requested backoff. Live and catalogue badge-only requests retain 15 seconds without retry.
+- Keep healthy partial results selectable, refresh incomplete cached searches before best-quality autoplay and Up Next, and preserve Fastest start using fresh arrivals. Safely share cancellation and profile ownership; budget retries and distinguish failure categories.
+- Show RD/TB in the top-right source-card corner when Real-Debrid/TorBox is explicitly reported. Preserve the normalized service through caching and keep service alternatives separate. Unknown reports stay unbadged; no URL/filename guessing or new provider requests.
+- Includes all 1.8.142 fixes. Player skin remains 0.1.26 and installer remains 1.0.4. Provider/device behavior and native badge appearance remain subject to normal use and bug reports.
+
 1.8.142
 
 - Query up to eight distinct enabled source providers concurrently, retaining existing request counts, timeouts, provider order and failure handling. Avoid repeated source-label parsing while ranking and filtering results.
