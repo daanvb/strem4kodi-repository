@@ -1,3 +1,8 @@
+1.8.151
+
+- Automatically resolve matching viewer progress and compatible forward checkpoints. Keep resets and incompatible progress for review.
+- Fix stuck conflict review when current device progress differs from both recorded versions, and retain unresolved conflicts if an upload fails. Device validation remains required.
+
 1.8.150
 
 - Fix review of viewer progress conflicts when a queued playback checkpoint detects a competing Stremio update before that remote title has been imported into the local viewer library. An unchanged synced baseline can now be resolved; newer local progress still requires review.
