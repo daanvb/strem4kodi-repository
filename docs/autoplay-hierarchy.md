@@ -116,6 +116,9 @@ when the returned source explicitly reports that service. AIOStreams structured
 and `[TB]`, plus reported `Ready (RD) Comet` / `Ready (TB) Comet` lines, are also supported.
 The source-details dialog names the reported service explicitly. Missing, unsupported or contradictory reports stay
 unbadged. The badge is never inferred from a playback URL or release filename.
+Formatter icons and display markup are ignored when recognising a reported
+service, including AIOStreams' `⚡Ready (TB) 🔍Comet` format; explicit words and
+conflicting service reports still count.
 
 RD and TB copies of the same release remain separate cards, while duplicates
 within one reported service may still be grouped. Badges do not change automatic
