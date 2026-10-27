@@ -1,3 +1,9 @@
+1.8.147
+
+- Put Last source search, Send source-search report and Source-search upload first in Troubleshooting. Display existing bounded provider snapshots without Home startup data or playback; explain empty, old and cached-search reports clearly.
+- Add an addon-owned Send/Cancel review and use the existing service for a timing-only private upload, in a separate per-client slot. Require configured private-reporting consent/token, recheck cancellation/token ownership, verify repository privacy and read back the upload before reporting success. Do not collect Kodi logs or playback history for this action.
+- Preserve manual requests after thread-start failure and show upload failure/cancellation status. Existing source snapshots remain readable; no extra provider requests are made. Includes all 1.8.146 fixes; player skin remains 0.1.26 and installer remains 1.0.4. Native rendering and actual device upload still require normal-use validation.
+
 1.8.146
 
 - Extend normal source-search timing snapshots with request/response, local parsing, callback delivery, elapsed successful callback completion and retry counts. Reuse the existing worker and save; do not add provider requests, polling, threads or automatic uploads.
