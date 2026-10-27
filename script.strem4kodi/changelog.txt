@@ -1,3 +1,10 @@
+1.8.152
+
+- Keep conflict review open in Settings after each choice and refresh Home without switching profiles.
+- Close the slide-out menu when Discover is selected while preserving restored content focus.
+- Give TorBox and Real-Debrid source badges distinct teal and gold outlines.
+- Native device behaviour remains to be verified. Aerial black screen after TV wake remains under investigation.
+
 1.8.151
 
 - Automatically resolve matching viewer progress and compatible forward checkpoints. Keep resets and incompatible progress for review.
