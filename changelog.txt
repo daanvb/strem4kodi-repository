@@ -1,3 +1,9 @@
+1.8.148
+
+- Fix first-time source-search report creation: accept an HTTP 404 GET only for the exact per-client diagnostics-source report path. The missing initial file was previously treated as a private token-access failure before the upload could create it.
+- Preserve rejection of malformed paths, repository-root errors, PUT failures, denied access and public repositories. Verify created and updated reports through the actual shared HTTP-response handling with synthetic responses, including SHA-preserving updates and corrupt-readback rejection.
+- Retry Send source-search report after updating; existing measurements are kept. Includes all 1.8.147 fixes; player skin remains 0.1.26 and installer remains 1.0.4. No actual private records or device uploads were used for verification.
+
 1.8.147
 
 - Put Last source search, Send source-search report and Source-search upload first in Troubleshooting. Display existing bounded provider snapshots without Home startup data or playback; explain empty, old and cached-search reports clearly.
