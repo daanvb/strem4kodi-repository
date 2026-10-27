@@ -1,3 +1,9 @@
+1.8.144
+
+- Recognise explicit Ready (TB) / Ready (RD) service reports, including Comet labels, for the source-card corner badge. Keep structured service precedence and reject conflicting reports; do not infer services from filenames or URLs.
+- Show Service: TorBox (TB) or Service: Real-Debrid (RD) in the source-details dialog. Previously cached unknown service rows require Refresh after updating.
+- Isolate the existing preloaded skip-credits test fixture from background lookups; no playback runtime change. Includes all 1.8.143 fixes. Player skin remains 0.1.26 and installer remains 1.0.4. Actual native appearance remains subject to normal-use testing.
+
 1.8.143
 
 - Give movie/episode source providers 30 seconds and one 15-second recovery attempt for transient timeout, connection or server failures. Do not retry healthy empty responses, denied access, rate limits, invalid replies or server-requested backoff. Live and catalogue badge-only requests retain 15 seconds without retry.

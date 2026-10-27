@@ -113,7 +113,8 @@ credentials, exact-source Linux CI and public-feed download verification.
 Source cards show **RD** (Real-Debrid) or **TB** (TorBox) in the upper-right corner
 when the returned source explicitly reports that service. AIOStreams structured
 `streamData.service.id` takes precedence; clear formatted tags such as `[RD+]`
-and `[TB]` are also supported. Missing, unsupported or contradictory reports stay
+and `[TB]`, plus reported `Ready (RD) Comet` / `Ready (TB) Comet` lines, are also supported.
+The source-details dialog names the reported service explicitly. Missing, unsupported or contradictory reports stay
 unbadged. The badge is never inferred from a playback URL or release filename.
 
 RD and TB copies of the same release remain separate cards, while duplicates
@@ -122,3 +123,5 @@ ranking or add a service preference. If your AIOStreams format omits service
 information, its [custom formatter](https://github.com/Viren070/AIOStreams/blob/main/packages/docs/content/docs/reference/custom-formatter.mdx)
 can include `[{service.shortName}]` or a separate `{service.name}` field. S4K does
 not change that configuration or request additional provider data for badges.
+Previously cached rows recorded with an unknown service remain unknown until
+Refresh obtains a fresh report; labels do not override an explicit structured unknown.
