@@ -1,3 +1,9 @@
+1.8.153
+
+- Simplify settings, descriptions and navigation, with category scrolling and clearer sync statuses.
+- Review viewer progress conflicts directly from Viewer sync, retaining current conflict protections.
+- Settings layout and remote navigation need device verification.
+
 1.8.152
 
 - Keep conflict review open in Settings after each choice and refresh Home without switching profiles.
