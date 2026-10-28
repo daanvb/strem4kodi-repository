@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.23" provider-name="daanvb">
+<addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.27" provider-name="daanvb">
   <requires>
     <import addon="xbmc.gui" version="5.17.0" />
+    <import addon="screensaver.atv4" version="3.0.3" />
   </requires>
   <extension point="xbmc.gui.skin" debugging="false">
     <res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
