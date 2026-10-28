@@ -1,3 +1,10 @@
+1.8.154
+
+- Reorganise settings by priority and group related account, sync and provider controls.
+- Move wrong-episode reporting to Troubleshooting and remove fixed ordering information rows.
+- Colour viewer-sync and diagnostic results consistently, while keeping waiting and off states neutral.
+- Kodi device layout, navigation and sync status colours need verification.
+
 1.8.153
 
 - Simplify settings, descriptions and navigation, with category scrolling and clearer sync statuses.
