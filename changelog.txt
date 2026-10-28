@@ -1,3 +1,9 @@
+1.8.156
+
+- Improve Home hero readability and spacing for title metadata, credits, actions and quality badges.
+- Soften static Home and title-detail backgrounds using Kodi texture-cache bilinear scaling. This is a cached softness effect; trailer video itself is not blurred.
+- Player skin remains 0.1.27. Native Kodi rendering and device performance still need verification.
+
 1.8.155
 
 - Refresh Home and title details with larger artwork, trailer backgrounds and modern navigation.
