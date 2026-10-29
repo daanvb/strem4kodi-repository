@@ -1,3 +1,10 @@
+1.8.159
+
+- Refine Home and detail hero layouts, compact format badges, finish times and credits.
+- Refresh the sidebar and use scalable navigation, action and player icons.
+- Use SF Pro Display typography and allow Up on Play to reveal a playing trailer; Down or Back restores the controls.
+- Kodi device rendering, remote navigation and player behavior remain to be verified.
+
 1.8.158
 
 - Use bundled Remix icons for navigation and distinct context-menu actions, with circular grey sidebar backings and white rounded focus.
