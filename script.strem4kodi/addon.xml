@@ -1,4 +1,4 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.159" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.160" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.28" />
@@ -19,7 +19,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.159: Refresh hero layouts, navigation and action icons, typography and trailer viewing. Player skin 0.1.28.</news>
+    <news>1.8.160: Improve sidebar icon visibility and hero readability on Kodi. Player skin 0.1.28.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>

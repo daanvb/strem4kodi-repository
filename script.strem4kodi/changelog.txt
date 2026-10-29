@@ -1,3 +1,9 @@
+1.8.160
+
+- Restore visible sidebar, hero action and clock icons; use a smaller, more rounded sidebar with Exit inside.
+- Reduce hero text and logo sizes, make episode titles wrap, align cast and director credits, and improve compact format logos.
+- Kodi device rendering and remote navigation still need validation.
+
 1.8.159
 
 - Refine Home and detail hero layouts, compact format badges, finish times and credits.
