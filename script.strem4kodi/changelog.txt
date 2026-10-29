@@ -1,8 +1,14 @@
-1.8.156
+1.8.158
 
-- Improve Home hero readability and spacing for title metadata, credits, actions and quality badges.
-- Soften static Home and title-detail backgrounds using Kodi texture-cache bilinear scaling. This is a cached softness effect; trailer video itself is not blurred.
-- Player skin remains 0.1.27. Native Kodi rendering and device performance still need verification.
+- Use bundled Remix icons for navigation and distinct context-menu actions, with circular grey sidebar backings and white rounded focus.
+- Replace synopsis fade strips with rounded translucent grey panels; scale the focused poster, badges and watch-progress bar together.
+- Kodi TV rendering and remote focus still need device validation. Synopsis panels are translucent; Kodi does not support live blur behind individual controls.
+
+1.8.157
+
+- Add circular grey backings to navigation icons in the Home drawer and guide sidebar, with a light disc and dark icon on focus.
+- Keep selected add-on cards neutral charcoal and white across themes; retain the existing Home hero layout, readable metadata bands and cached soft background treatment.
+- Kodi TV rendering and remote navigation still need device validation.
 
 1.8.155
 

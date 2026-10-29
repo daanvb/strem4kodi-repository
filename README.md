@@ -8,7 +8,18 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.156.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.158.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.158
+
+- Refresh navigation and context menus with bundled Remix icons, circular grey sidebar backings and clear white selections.
+- Enlarge focused posters with their quality badges and progress bar; add rounded translucent synopsis panels.
+- Player skin remains **0.1.27**. Kodi TV rendering still needs device validation.
+
+## What's new in 1.8.157
+
+- Add circular grey backings to the Home drawer and guide sidebar icons, with light backing and dark glyph on focus.
+- Use neutral charcoal and white focused add-on cards; correct Home and details layout.
 
 ## What's new in 1.8.156
 
