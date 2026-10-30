@@ -8,37 +8,7 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.203.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
-
-## What's new in 1.8.203
-
-- Narrow TorBox and Real-Debrid source tiles to 52×34, with the labels centred.
-- Make the Dolby Vision and Atmos hero marks slightly smaller and centred; other format badges stay unchanged.
-- Player skin remains **0.1.33**. Kodi TV rendering still needs device validation.
-
-## What's new in 1.8.202
-
-- Use border-free enlarged card selection and bounded wide-card growth.
-- Make Charcoal the default app palette and match the player defaults, while retaining other themes.
-- Refine native-size Dolby and UK age artwork; use neutral white TB and grey RD source tiles.
-- Player skin **0.1.33**. Kodi TV rendering remains unverified.
-
-## What's new in 1.8.158
-
-- Refresh navigation and context menus with bundled Remix icons, circular grey sidebar backings and clear white selections.
-- Enlarge focused posters with their quality badges and progress bar; add rounded translucent synopsis panels.
-- Player skin remains **0.1.27**. Kodi TV rendering still needs device validation.
-
-## What's new in 1.8.157
-
-- Add circular grey backings to the Home drawer and guide sidebar icons, with light backing and dark glyph on focus.
-- Use neutral charcoal and white focused add-on cards; correct Home and details layout.
-
-## What's new in 1.8.156
-
-- Improve Home hero readability and spacing for title metadata, credits, actions and quality badges.
-- Soften static Home and title-detail backgrounds using Kodi texture-cache bilinear scaling. Trailer video itself is not blurred.
-- Preserve the player skin at **0.1.27**. Native Kodi rendering and device performance still need verification.
+**Latest release: 1.8.149.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
 
 ## What's new in 1.8.149
 

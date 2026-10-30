@@ -1,3 +1,6 @@
+1.8.204
+- Add P3i codec startup logos and controls, CPU/RAM top-bar options, and video OSD options to the companion skin.
+
 1.8.203
 - Narrow TorBox and Real-Debrid tiles while keeping their labels centred.
 - Slightly reduce only the Dolby Vision and Atmos hero logos; leave other format badges unchanged.
