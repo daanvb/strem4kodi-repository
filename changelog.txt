@@ -1,3 +1,6 @@
+1.8.207
+- Show each Home row heading once while preserving full-size poster focus.
+
 1.8.206
 - Keep selected Home posters clear of section headings without reducing their focus size.
 
