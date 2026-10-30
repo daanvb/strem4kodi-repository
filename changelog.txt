@@ -1,3 +1,9 @@
+1.8.206
+- Keep selected Home posters clear of section headings without reducing their focus size.
+
+1.8.205
+- Add a CoreELEC settings tile to the companion skin when the CoreELEC settings add-on is enabled. Kodi's built-in Player and System settings expose device-supported HDR, video and audio options.
+
 1.8.204
 - Add P3i codec startup logos and controls, CPU/RAM top-bar options, and video OSD options to the companion skin.
 
