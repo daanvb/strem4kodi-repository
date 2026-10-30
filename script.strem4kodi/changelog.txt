@@ -1,3 +1,186 @@
+1.8.203
+- Narrow TorBox and Real-Debrid tiles while keeping their labels centred.
+- Slightly reduce only the Dolby Vision and Atmos hero logos; leave other format badges unchanged.
+
+1.8.202
+- Use border-free enlarged card selection, with stronger poster focus and bounded wide-card growth.
+- Add Charcoal styling throughout the app and matching player defaults; retain Purple as an alternative.
+- Refine native-size Dolby and UK age badges; use white TB and grey RD resolution-style tiles.
+
+1.8.201
+- Prefilter quality badges for their existing 64x28 size on a 1080p GUI, retaining branded artwork and dimensions.
+
+1.8.200
+- Refine the compact Dolby Atmos, Digital and Digital Plus logos.
+
+1.8.199
+- Give compact quality badges more rendering space and refine Dolby master artwork.
+
+1.8.198
+- Restore the earlier quality badge artwork after the recent rendering regression.
+
+1.8.197
+- Render compact resolution and HDR labels as native text and preserve original Dolby wordmarks.
+
+1.8.196
+- Sharpen compact hero quality badges using higher-resolution artwork.
+
+1.8.195
+- Show Home-style cast and film director credits on Favourites and Watch Later.
+
+1.8.194
+- Restore recent series and reminder rows; hide completed poster progress.
+- Fix Library hero spacing and tighten episode rating and date spacing.
+
+1.8.193
+- Reconcile completed episode resume, finish time and Continue Watching.
+
+1.8.192
+- Lower the media hero controls and episode cards closer to episode ratings.
+
+1.8.191
+- Add a little breathing room above media hero actions and episode rows.
+
+1.8.190
+- Fade to trailers after seven idle seconds, including after returning to controls.
+- Fine-tune media hero runtime and ratings spacing.
+
+1.8.189
+- Refine media hero and sidebar spacing, and automatically reveal trailers after ten seconds.
+
+1.8.188
+- Center Home through Settings between Search and Exit in the sidebar.
+
+1.8.187
+- Match media hero synopsis and episode heading font size to Home.
+- Move the media runtime row slightly down.
+
+1.8.186
+- Lower the Home runtime and ratings while keeping room above the first row.
+
+1.8.185
+- Keep the Home hero at its previous height while raising the runtime and rating rows.
+
+1.8.184
+- Rebalance Home and media hero spacing.
+- Open context menus after one second of holding Select.
+
+1.8.183
+- Keep Home content stationary when the sidebar opens.
+- Improve selected Play and Resume icon contrast.
+- Select Watch trailer from the long-press menu to view it without the overlay.
+- Open context menus after a 1.5-second Select hold, with repeat protection.
+- Enlarge the sidebar clock and add space above the profile.
+- Move Home and media hero content down closer to their rows.
+- Narrow the 4K badge and add spacing between quality marks.
+- Move ratings below runtime while keeping the certificate by the genre.
+
+1.8.182
+- Add space and a circular icon to Play/Resume; enlarge episode titles and raise air dates.
+- Replace the hero information icon with a high-resolution paper icon.
+- Explicitly use San Francisco for season, episode and time labels.
+- Enlarge Home hero tagline and synopsis and rebalance its metadata spacing.
+- Keep recognizing an Up hold while selection moves, including on LG remotes.
+- Stop content rows from wrapping at their ends.
+
+1.8.181
+- Remove Home hero Play and information buttons.
+- Hold Up at the top of the hero to reveal the playing trailer; Down or Back restores details.
+
+1.8.180
+- Match media Play and Resume text to Home and make room for Resume.
+- Enlarge episode titles and move their ratings and dates up.
+
+1.8.179
+- Narrow Season and Episodes selectors and their menus.
+
+1.8.178
+- Shorten Home and detail Play pills and align their contents.
+
+1.8.177
+- Match and tighten hero Play and Resume pills.
+
+1.8.176
+- Center hero actions, reorder title actions, and hold Play to choose a source.
+
+1.8.175
+- Center hero Play and Resume labels, use round information buttons, and compact media selectors.
+
+1.8.174
+- Fix Home action labels and refine media buttons, selectors and Settings transparency.
+
+1.8.173
+
+- Position hero credits lower and align action icons and labels on matching pill buttons.
+- Kodi device rendering remains to be checked.
+
+1.8.172
+
+- Separate cast and movie director credits; hide series directors.
+- Enlarge hero action icons and standardise spacing between quality marks.
+- Kodi device rendering remains to be checked.
+
+1.8.171
+
+- Improve credit lookup and simplify hero actions, with clearer finish-time and compact formats.
+- Adjust sidebar labels and icon circles, and use white for ordinary app text.
+- Kodi device rendering and availability of provider credits remain to be checked.
+
+1.8.170
+
+- Improve hero certificate and metadata spacing, enlarge action labels and credits, and bold credit headings.
+- Kodi device rendering remains to be checked.
+
+1.8.169
+
+- Align age ratings and compact hero rating, runtime and format rows.
+- Display each credited person on a separate line and enlarge action text.
+- Correct Dolby symbols and remove backdrop softening.
+- Kodi device rendering remains to be checked.
+
+1.8.168
+
+- Make the hero genre larger and bold and bring ratings closer together.
+- Keep the existing age-rating icons.
+- Kodi device rendering remains to be checked.
+
+1.8.167
+
+- Restore the earlier synopsis and heading font sizes with SF Pro.
+- Kodi device rendering remains to be checked.
+
+1.8.166
+
+- Fix SF Pro font loading in Kodi 21 by using Kodi-compatible font filenames.
+- Kodi device rendering remains to be checked.
+
+1.8.165
+
+- Set synopsis text to size 10 and tagline or episode heading to size 15.
+- Refresh the heading layout when its height changes to help prevent clipping.
+- Kodi device rendering remains to be checked.
+
+1.8.164
+
+- Reduce synopsis text size on Home and details using the SF Pro Display font definition.
+- Kodi device rendering remains to be checked.
+
+1.8.163
+
+- Enlarge and rearrange the sidebar, text, icons and icon circles.
+- Kodi device rendering remains to be checked.
+
+1.8.162
+
+- Slightly enlarge the sidebar, its text and navigation icons.
+- Kodi device rendering remains to be checked.
+
+1.8.161
+
+- Refine sidebar text and icons; reduce hero text and improve compact format marks.
+- Split long episode titles and cast/director credits into separate lines.
+- Kodi device rendering and remote navigation need validation.
+
 1.8.160
 
 - Restore visible sidebar, hero action and clock icons; use a smaller, more rounded sidebar with Exit inside.

@@ -8,7 +8,20 @@
 
 Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.158.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: 1.8.203.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+
+## What's new in 1.8.203
+
+- Narrow TorBox and Real-Debrid source tiles to 52×34, with the labels centred.
+- Make the Dolby Vision and Atmos hero marks slightly smaller and centred; other format badges stay unchanged.
+- Player skin remains **0.1.33**. Kodi TV rendering still needs device validation.
+
+## What's new in 1.8.202
+
+- Use border-free enlarged card selection and bounded wide-card growth.
+- Make Charcoal the default app palette and match the player defaults, while retaining other themes.
+- Refine native-size Dolby and UK age artwork; use neutral white TB and grey RD source tiles.
+- Player skin **0.1.33**. Kodi TV rendering remains unverified.
 
 ## What's new in 1.8.158
 
