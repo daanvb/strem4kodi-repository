@@ -1,3 +1,26 @@
+1.8.210
+- Render each Home section heading once outside the scrolling rows.
+- Move Save collection clear of ratings and refresh the Details Auto Play setting.
+
+1.8.209
+- Keep Home section headings visible while scrolling; fit the full “Choose source” label in its existing button.
+
+1.8.208
+- Show Dolby Vision profile, alternate HDR type and immersive audio formats in media info.
+- Include Home heading visibility fix.
+
+1.8.207
+- Show each Home row heading once while preserving full-size poster focus.
+
+1.8.206
+- Keep selected Home posters clear of section headings without reducing their focus size.
+
+1.8.205
+- Add a CoreELEC settings tile to the companion skin when the CoreELEC settings add-on is enabled. Kodi's built-in Player and System settings expose device-supported HDR, video and audio options.
+
+1.8.204
+- Add P3i codec startup logos and controls, CPU/RAM top-bar options, and video OSD options to the companion skin.
+
 1.8.203
 - Narrow TorBox and Real-Debrid tiles while keeping their labels centred.
 - Slightly reduce only the Dolby Vision and Atmos hero logos; leave other format badges unchanged.
