@@ -1,3 +1,8 @@
+1.8.215
+- Fix cast poster loading and leave more space below Similar ratings.
+- Preserve explicitly detected Dolby badges through incomplete metadata refreshes.
+- Preserve seek recovery while audio or video queues refill.
+
 1.8.214
 - Restore custom Dolby artwork with explicit FEL and TrueHD Atmos detection.
 - Align Similar posters and add Rotten Tomatoes and Popcornmeter scores.
