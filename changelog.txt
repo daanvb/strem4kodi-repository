@@ -1,3 +1,8 @@
+1.8.214
+- Restore custom Dolby artwork with explicit FEL and TrueHD Atmos detection.
+- Align Similar posters and add Rotten Tomatoes and Popcornmeter scores.
+- Add bounded private seek and buffering diagnostics.
+
 1.8.213
 - Keep Discover ratings clear of filters and improve UK certificate badges.
 - Keep Media info scrolling stable and use player artwork for format badges.
