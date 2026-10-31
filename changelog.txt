@@ -1,3 +1,6 @@
+1.8.211
+- Raise Home metadata together to clear the section heading and align cast/director credits with ratings.
+
 1.8.210
 - Render each Home section heading once outside the scrolling rows.
 - Move Save collection clear of ratings and refresh the Details Auto Play setting.
