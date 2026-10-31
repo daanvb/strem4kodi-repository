@@ -1,3 +1,8 @@
+1.8.213
+- Keep Discover ratings clear of filters and improve UK certificate badges.
+- Keep Media info scrolling stable and use player artwork for format badges.
+- Improve automatic playback recovery during resume and buffer refills.
+
 1.8.212
 - Complete missing skin settings labels and choices.
 - Add the full P3i playback and Dolby Vision/HDR process panel, runtime DV profiles and MEL/FEL startup indicators.
