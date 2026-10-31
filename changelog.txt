@@ -1,3 +1,8 @@
+1.8.212
+- Complete missing skin settings labels and choices.
+- Add the full P3i playback and Dolby Vision/HDR process panel, runtime DV profiles and MEL/FEL startup indicators.
+- Update companion player skin to 0.1.37.
+
 1.8.211
 - Raise Home metadata together to clear the section heading and align cast/director credits with ratings.
 

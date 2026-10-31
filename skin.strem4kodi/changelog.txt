@@ -1,3 +1,10 @@
+[B]0.1.37[/B]
+- Complete codec-logo settings labels and choices.
+- Add P3i playback/Dolby Vision process panels and a runtime MEL startup label.
+
+[B]0.1.34[/B]
+- Add P3i codec startup logos and controls, CPU/RAM top-bar options, and video OSD options. Weather and fanart settings are excluded.
+
 [B]0.1.33[/B]
 - Match the app with neutral Charcoal player defaults and colour scheme.
 

@@ -149,7 +149,23 @@ Kodi 22 adds `VideoPlayer.HdrDetail`, allowing Dolby Vision profiles and FEL/MEL
 to appear when Kodi reports them. Kodi 21 still shows the rest of the panel;
 unavailable fields say so. A FEL label does not prove enhancement-layer
 processing on the device. This reads playback metadata without downloading or
-probing the media file. Details are a snapshot when the panel opens.
+probing the media file. Details refresh while the panel is open.
+
+CoreELEC/P3i builds also supply runtime DV profile/compatibility and FEL/MEL,
+metadata version, VS10 mode, output dynamic range, bit depth, color range and
+primaries. These fields use `Player.Process(...)` values, never filenames or
+provider claims. Choose **Player details** for the three-column P3i process panel
+and its **Dolby Vision - HDR** tab, including configuration, metadata/luminance,
+active-area information, display/output, live bitrates and queue/cache graphs.
+Standard Kodi retains its existing process panel when P3i fields are absent.
+
+Under **Skin settings > General**, codec startup logos have duration, position,
+animation, color, vertical stacking, active-area and preview controls. FEL uses
+the P3i artwork; MEL adds a separate label when the live enhancement-layer type
+is `minimum` and output is Dolby Vision. These indicators report runtime metadata;
+they do not independently certify enhancement-layer processing. All skin-owned
+localization references and settings selector choices have an English fallback.
+The panel and artwork retain P3i attribution and its license notice.
 
 Small format logos accompany the detected metadata. Dolby Atmos is shown only
 when Kodi reports an Atmos codec extension for the current audio format; a
@@ -158,8 +174,9 @@ readable text. Asset provenance is recorded alongside the bundled logos.
 
 ## Seek bar and chapter access
 
-The seek line is 14 pixels high, with taller contrasting chapter ticks for
-embedded chapters. The playback and temporary seek bars use the same styling;
+The seek line is 14 pixels high, with slim, rounded 3-pixel chapter ticks for
+embedded chapters. All four timelines use 18-pixel pale lavender markers centred
+on the track, with a larger white playhead. The player bar and timelines use a neutral charcoal and white palette with outline icons; audio/subtitle pickers and media panels retain theme-aware focus colors. The playback and temporary seek bars use the same styling;
 the seek thumb remains centred on the line. The current chapter number/title
 appears above the line when supplied by the file.
 
@@ -390,3 +407,5 @@ As of 1.8.39, automatic background stream searches are disabled for every addon,
 Explicit catalogue technical fields (quality/resolution/HDR/audio and format lists) are displayed locally on hero focus, without additional stream searches. Names, descriptions and poster art are never treated as quality evidence. Retained source-format summaries take precedence. Catalogue format claims are not saved as verified source availability.
 
 Automatic title-opening checks use a persistent shared budget: one minute per selected stream addon plus one additional minute between checks. Fresh cached sources and catalogue badges spend no budget. Failed checks pause automatic checks for at least 15 minutes. Manual source opening/refresh remains deliberate and uses provider allowance normally; other apps/devices can also consume that allowance.
+
+Player skin 0.1.15 changes the owned player controls to purple and replaces oversized chapter blocks with slim rounded ticks. The app requires this skin version so the main bar and app-owned scrub/chapter panels update together. Build the neutral chrome masks with `python tools/build-player-assets.py`; Pillow is a build-time dependency only.
