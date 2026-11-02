@@ -1,3 +1,10 @@
+1.8.219
+- Restore the original inline quality logos and lower-right credits across media screens.
+
+1.8.218
+- Restore right-side credits and quality badges across detail and browse views.
+- Repair Similar and filmography ratings with Kodi-supported card controls.
+
 1.8.217
 - Add translucent rounded settings panels.
 - Show only released titles in cast and crew filmographies.
