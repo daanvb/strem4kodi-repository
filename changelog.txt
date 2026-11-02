@@ -1,3 +1,8 @@
+1.8.217
+- Show only released titles in cast and crew filmographies.
+- Centre card rating groups and align hero quality marks and credits.
+- Keep Save collection in the ordinary left toolbar.
+
 1.8.216
 - Preserve detected Dolby hero badges across metadata refreshes.
 - Align detail credits and add IMDb scores to film cards.
