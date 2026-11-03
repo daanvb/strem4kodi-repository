@@ -1,3 +1,9 @@
+1.8.222
+- Extend frosted styling to Discover, Sports and playback pop-ups.
+- Keep modeless pop-up artwork bound to its own controls.
+- Add white Sports selection frames and styled native double-Back notifications.
+- Require companion skin 0.1.38 for the updated notification layout.
+
 1.8.221
 - Apply softened artwork to Settings and app context menus with opaque fallbacks.
 - Correct technical source parsing, provider preference and cache freshness.

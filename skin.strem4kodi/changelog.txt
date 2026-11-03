@@ -1,3 +1,6 @@
+[B]0.1.38[/B]
+- Add frosted artwork and white text to the native double-Back notification.
+
 [B]0.1.37[/B]
 - Complete codec-logo settings labels and choices.
 - Add P3i playback/Dolby Vision process panels and a runtime MEL startup label.
