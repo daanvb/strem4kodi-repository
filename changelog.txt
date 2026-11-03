@@ -1,3 +1,9 @@
+1.8.221
+- Apply softened artwork to Settings and app context menus with opaque fallbacks.
+- Correct technical source parsing, provider preference and cache freshness.
+- Persist confirmed failed-link exclusions locally with a Troubleshooting reset.
+- Add bounded privacy-safe source selection evidence to diagnostic reports.
+
 1.8.220
 - Frost Home sidebar artwork and improve Settings focus contrast and white selection frames.
 - Recover eligible premature playback endings and failed source handoffs.
