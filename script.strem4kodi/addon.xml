@@ -1,4 +1,4 @@
-<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.222" provider-name="daanvb">
+<addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.223" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.38" />
@@ -19,7 +19,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/strem4kodi-repository/</website>
     <source>https://github.com/daanvb/strem4kodi-repository</source>
-    <news>1.8.212: Complete skin settings labels and add P3i playback data, Dolby Vision profile and MEL/FEL indicators. Player skin 0.1.37.</news>
+    <news>1.8.223: BBC Live TV preview with HD-only channel playback and session cleanup. Other broadcasters and programme guide are not included. Skin remains 0.1.38.</news>
     <assets>
       <icon>resources/branding/strem4kodi-icon-v2.png</icon>
       <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
