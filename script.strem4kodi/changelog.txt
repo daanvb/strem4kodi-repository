@@ -1,3 +1,8 @@
+1.8.220
+- Frost Home sidebar artwork and improve Settings focus contrast and white selection frames.
+- Recover eligible premature playback endings and failed source handoffs.
+- Retry eligible source-search report upload failures once with refreshed consent and state.
+
 1.8.219
 - Restore the original inline quality logos and lower-right credits across media screens.
 
