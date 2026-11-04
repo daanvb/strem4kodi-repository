@@ -1,10 +1,14 @@
+1.8.228
+- Retain Sports fixtures beyond the first 100 catalogue rows.
+- Preserve complete Sports paging offsets and the existing movie/series page limit.
+
 1.8.227
-- Add Channel 4, E4, More4, Film4 and 4seven with HD-only manifests and native Widevine licence handling.
-- Player skin unchanged at 0.1.39. Channel 4 live authorisation does not require account sign-in; device playback remains unverified.
+- Add Channel 4, E4, More4, Film4 and 4seven via full-quality broadcaster manifests and native Widevine licence handling.
+- Preserve HD-only filtering and device-local authorisation; no Channel 4 account required by the live resolver.
 
 1.8.226
-- BBC 1080p HEVC live feeds with verified resolution, HD fallback and a 720p compatibility option.
-- Player skin unchanged at 0.1.39. Channel 4 remains unavailable.
+- Prefer verified BBC 1080p HEVC live feeds, with HD fallback and a 720p compatibility option in Live TV setup.
+- Channel 4 remains unavailable; authenticated HD playback is not implemented.
 
 1.8.225
 - Keep Back responsive during Sports source searches.
