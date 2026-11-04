@@ -1,3 +1,9 @@
+1.8.225
+- Keep Back responsive during Sports source searches.
+- Open Sports on Live Now and simplify selectors with supplied channel logos.
+- Add native HD-only ITV and Channel 5 adapters with device-local ITV sign-in and Widevine setup.
+- Commercial-channel authenticated/DRM playback remains unverified on devices.
+
 1.8.224
 - Restore charcoal pop-ups and remove distracting Discover/Sports artwork panels.
 - Improve startup, responsive details/search and bounded poster scheduling.
