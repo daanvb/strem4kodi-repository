@@ -1,3 +1,7 @@
+1.8.226
+- Prefer verified BBC 1080p HEVC live feeds, with HD fallback and a 720p compatibility option in Live TV setup.
+- Channel 4 remains unavailable; authenticated HD playback is not implemented.
+
 1.8.225
 - Keep Back responsive during Sports source searches.
 - Open Sports on Live Now and simplify selectors with supplied channel logos.

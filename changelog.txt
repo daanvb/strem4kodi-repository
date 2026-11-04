@@ -1,3 +1,7 @@
+1.8.226
+- BBC 1080p HEVC live feeds with verified resolution, HD fallback and a 720p compatibility option.
+- Player skin unchanged at 0.1.39. Channel 4 remains unavailable.
+
 1.8.225
 - Keep Back responsive during Sports source searches.
 - Open Sports on Live Now and simplify selectors with supplied channel logos.
