@@ -1,3 +1,6 @@
+[B]0.1.39[/B]
+- Restore opaque charcoal native notifications without artwork frost.
+
 [B]0.1.38[/B]
 - Add frosted artwork and white text to the native double-Back notification.
 

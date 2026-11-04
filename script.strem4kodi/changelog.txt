@@ -1,3 +1,17 @@
+1.8.224
+- Restore charcoal pop-ups and remove distracting Discover/Sports artwork panels.
+- Improve startup, responsive details/search and bounded poster scheduling.
+- Fix BBC Live TV DASH manifest compatibility.
+- Prefer reported TorBox for technically tied quality-mode streams.
+- Update companion skin to 0.1.39 for charcoal native notifications.
+
+1.8.223
+- Add a BBC Live TV preview in the sidebar with HD-only streaming.
+- Retain HD/UHD manifest variants and clean up live playback sessions.
+- BBC entries currently offer 720p; other broadcasters and programme guide are not included.
+- InputStream Adaptive must be installed and enabled. Native device playback remains unverified.
+- Companion skin remains 0.1.38.
+
 1.8.222
 - Extend frosted styling to Discover, Sports and playback pop-ups.
 - Keep modeless pop-up artwork bound to its own controls.
