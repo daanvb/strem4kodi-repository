@@ -1,14 +1,16 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/daanvb/strem4kodi-repository/main/script.strem4kodi/icon.png" width="160" alt="Strem4Kodi blue play logo">
+  <img src="https://raw.githubusercontent.com/daanvb/freeBird-repository/main/script.strem4kodi/resources/branding/freebird-icon-v1.png" width="160" alt="freeBird logo">
 </p>
 
-# Strem4Kodi
+# freeBird
 
 **Your Stremio library, built for the Kodi remote.**
 
-Strem4Kodi is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; Strem4Kodi supplies its own browsing interface and an optional companion player skin.
+freeBird is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; freeBird supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: 1.8.227.** [Install and update](https://daanvb.github.io/strem4kodi-repository/) · [Full changelog](changelog.txt)
+**Latest release: freeBird 1.8.232 · Player 0.1.42 · Repository 1.0.5.** [Install and update](https://daanvb.github.io/freeBird-repository/) · [Full changelog](changelog.txt)
+
+**Upgrading from Strem4Kodi:** install [repository 1.0.5](repository.strem4kodi.zip) once to reconnect updates after the address change. Addon IDs and saved settings are preserved.
 
 ## What's new in 1.8.212
 
@@ -464,10 +466,10 @@ Build the update feed using an explicit HTTPS `--feed-url` with `tools/build-kod
 
 ## Install and configure
 
-Requires **Kodi 21 or later**. Install the repository ZIP, then install Strem4Kodi from **Program add-ons**. The required player skin installs automatically. Restart Kodi after updating both packages.
+Requires **Kodi 21 or later**. Install the repository ZIP, then install freeBird from **Program add-ons**. The required player skin installs automatically. Restart Kodi after updating both packages.
 
-- [Install / update and current downloads](https://daanvb.github.io/strem4kodi-repository/)
-- TV installation: add `https://daanvb.github.io/strem4kodi-repository/` in Kodi's
+- [Install / update and current downloads](https://daanvb.github.io/freeBird-repository/)
+- TV installation: add `https://daanvb.github.io/freeBird-repository/` in Kodi's
   File manager, then Install from zip file → that source → `repository.strem4kodi.zip`.
 - [Configuration guide](docs/configuration.md)
 - [New lists, categories and Discover](docs/discovery.md)

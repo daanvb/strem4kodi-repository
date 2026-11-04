@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="Strem4Kodi" version="1.8.231" provider-name="daanvb">
+<addons><addon id="script.strem4kodi" name="freeBird" version="1.8.232" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="skin.strem4kodi" version="0.1.41" />
+    <import addon="skin.strem4kodi" version="0.1.42" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
     <import addon="script.module.inputstreamhelper" version="0.6.1" />
     <import addon="script.module.pycryptodome" version="3.4.3" />
@@ -17,48 +17,48 @@
   <extension point="xbmc.service" library="service.py" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en_GB">Stremio experience on Kodi</summary>
-    <description lang="en_GB">Strem4Kodi brings your Stremio library to Kodi with cinematic browsing, configurable automatic playback, clear source selection, shared progress and IntroDB skip controls. Kodi handles video playback.</description>
+    <description lang="en_GB">freeBird brings your Stremio library to Kodi with cinematic browsing, configurable automatic playback, clear source selection, shared progress and IntroDB skip controls. Kodi handles video playback.</description>
     <platform>all</platform>
     <license>GPL-2.0-or-later</license>
-    <website>https://daanvb.github.io/strem4kodi-repository/</website>
-    <source>https://github.com/daanvb/strem4kodi-repository</source>
+    <website>https://daanvb.github.io/freeBird-repository/</website>
+    <source>https://github.com/daanvb/freeBird-repository</source>
     <news>1.8.227: Add Channel 4, E4, More4, Film4 and 4seven with HD-only manifests and native Widevine licence handling. No Channel 4 account sign-in required. Device playback remains to be verified.</news>
     <assets>
-      <icon>resources/branding/strem4kodi-icon-v2.png</icon>
-      <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
+      <icon>resources/branding/freebird-icon-v1.png</icon>
+      <fanart>resources/branding/freebird-fanart-v1.png</fanart>
       <screenshot>resources/previews/home.jpg</screenshot>
       <screenshot>resources/previews/episodes.jpg</screenshot>
       <screenshot>resources/previews/streams.jpg</screenshot>
       <screenshot>resources/previews/addons.jpg</screenshot>
     </assets>
   </extension>
-</addon><addon id="repository.strem4kodi" name="Strem4Kodi Repository" version="1.0.4" provider-name="daanvb">
-  <extension point="xbmc.addon.repository" name="Strem4Kodi Repository">
+</addon><addon id="repository.strem4kodi" name="freeBird Repository" version="1.0.5" provider-name="daanvb">
+  <extension point="xbmc.addon.repository" name="freeBird Repository">
     <dir>
-      <info compressed="false">https://daanvb.github.io/strem4kodi-repository/addons.xml</info>
-      <checksum verify="sha256">https://daanvb.github.io/strem4kodi-repository/addons.xml.sha256</checksum>
-      <datadir zip="true">https://daanvb.github.io/strem4kodi-repository/</datadir>
+      <info compressed="false">https://daanvb.github.io/freeBird-repository/addons.xml</info>
+      <checksum verify="sha256">https://daanvb.github.io/freeBird-repository/addons.xml.sha256</checksum>
+      <datadir zip="true">https://daanvb.github.io/freeBird-repository/</datadir>
       <hashes>false</hashes>
     </dir>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Install and update Strem4Kodi</summary>
-    <description lang="en_GB">Independent Strem4Kodi addon repository maintained by daanvb.</description>
+    <summary lang="en_GB">Install and update freeBird</summary>
+    <description lang="en_GB">Independent freeBird addon repository maintained by daanvb.</description>
     <platform>all</platform>
     <license>GPL-2.0-or-later</license>
-    <website>https://daanvb.github.io/strem4kodi-repository/</website>
-    <source>https://github.com/daanvb/strem4kodi-repository</source>
+    <website>https://daanvb.github.io/freeBird-repository/</website>
+    <source>https://github.com/daanvb/freeBird-repository</source>
     <assets>
-      <icon>resources/branding/strem4kodi-icon-v2.png</icon>
-      <fanart>resources/branding/strem4kodi-fanart-v2.png</fanart>
+      <icon>resources/branding/freebird-icon-v1.png</icon>
+      <fanart>resources/branding/freebird-fanart-v1.png</fanart>
       <screenshot>resources/previews/home.jpg</screenshot>
       <screenshot>resources/previews/episodes.jpg</screenshot>
       <screenshot>resources/previews/streams.jpg</screenshot>
       <screenshot>resources/previews/addons.jpg</screenshot>
     </assets>
-    <news>1.0.4: fresh Strem4Kodi artwork paths replace cached legacy branding.</news>
+    <news>1.0.5: freeBird branding and the renamed public update feed.</news>
   </extension>
-</addon><addon id="skin.strem4kodi" name="Strem4Kodi Player" version="0.1.41" provider-name="daanvb">
+</addon><addon id="skin.strem4kodi" name="freeBird Player" version="0.1.42" provider-name="daanvb">
   <requires>
     <import addon="xbmc.gui" version="5.17.0" />
     <import addon="screensaver.atv4" version="3.0.3" />
@@ -76,12 +76,12 @@
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
     <license>GPL-2.0-only, CC-BY-SA-4.0</license>
-    <summary lang="en_GB">Strem4Kodi playback controls with Kodi settings available</summary>
-    <description lang="en_GB">Companion skin installed alongside Strem4Kodi, with a clean playback bar and readable active audio tracks. Choose this skin in Kodiâ€™s interface settings to activate it. Other screens retain Kodiâ€™s Estuary layout; normal Kodi controls remain available without the app.</description>
-    <source>https://github.com/daanvb/strem4kodi-repository</source>
+    <summary lang="en_GB">freeBird playback controls with Kodi settings available</summary>
+    <description lang="en_GB">Companion skin installed alongside freeBird, with a clean playback bar and readable active audio tracks. Choose this skin in Kodiâ€™s interface settings to activate it. Other screens retain Kodiâ€™s Estuary layout; normal Kodi controls remain available without the app.</description>
+    <source>https://github.com/daanvb/freeBird-repository</source>
     <assets>
-      <icon>resources/strem4kodi-icon.png</icon>
-      <fanart>resources/strem4kodi-fanart.png</fanart>
+      <icon>resources/freebird-icon-v1.png</icon>
+      <fanart>resources/freebird-fanart-v1.png</fanart>
     </assets>
   </extension>
 </addon></addons>

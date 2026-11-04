@@ -1,10 +1,10 @@
-# Strem4Kodi public Kodi feed — Codex guidance
+# freeBird public Kodi feed — Codex guidance
 
-This **public** repository (`daanvb/strem4kodi-repository`, `main`) hosts the GitHub Pages install site, Kodi addon index, release ZIPs and retained rollback packages. It is **not the Strem4Kodi development repository**.
+This **public** repository (`daanvb/freeBird-repository`, `main`) hosts the GitHub Pages install site, Kodi addon index, release ZIPs and retained rollback packages. It is **not the freeBird development repository**.
 
 ## Where development happens
-- Application source, unit tests and release tooling: **private** `daanvb/Stremio-for-Kodi-private`, active `strem4kodi` branch. Start coding sessions there; follow its root `AGENTS.md`, `STATUS.md` and `docs/repository-layout.md`.
-- Private device sync and diagnostic data: separate `daanvb/strem4kodi-sync`. Never copy that data, tokens or sensitive configuration into this public feed.
+- Application source, unit tests and release tooling: **private** `daanvb/freeBird-private`, active `strem4kodi` branch. Start coding sessions there; follow its root `AGENTS.md`, `STATUS.md` and `docs/repository-layout.md`.
+- Private device sync and diagnostic data: separate `daanvb/freeBird-sync`. Never copy that data, tokens or sensitive configuration into this public feed.
 
 ## Feed safety
 - Do not edit `addons.xml`, `addons.xml.sha256`, addon XML, `script.strem4kodi/`, `skin.strem4kodi/`, installer ZIPs, `index.html` or release package archives for a normal coding or documentation task.

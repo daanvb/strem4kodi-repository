@@ -1,3 +1,8 @@
+1.8.232
+- Introduce freeBird branding while preserving addon IDs and saved settings.
+- Use renamed source, public update and private sync repository endpoints.
+- Existing installations: install repository 1.0.5 from the new freeBird download page once to resume updates.
+
 1.8.231
 - Refine the sidebar frost, icons and labels from TV feedback.
 - Widen the EPG programme grid with a compact channel-logo column.
