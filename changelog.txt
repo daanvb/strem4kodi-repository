@@ -1,3 +1,7 @@
+1.8.227
+- Add Channel 4, E4, More4, Film4 and 4seven with HD-only manifests and native Widevine licence handling.
+- Player skin unchanged at 0.1.39. Channel 4 live authorisation does not require account sign-in; device playback remains unverified.
+
 1.8.226
 - BBC 1080p HEVC live feeds with verified resolution, HD fallback and a 720p compatibility option.
 - Player skin unchanged at 0.1.39. Channel 4 remains unavailable.

@@ -1,3 +1,7 @@
+1.8.227
+- Add Channel 4, E4, More4, Film4 and 4seven via full-quality broadcaster manifests and native Widevine licence handling.
+- Preserve HD-only filtering and device-local authorisation; no Channel 4 account required by the live resolver.
+
 1.8.226
 - Prefer verified BBC 1080p HEVC live feeds, with HD fallback and a 720p compatibility option in Live TV setup.
 - Channel 4 remains unavailable; authenticated HD playback is not implemented.
