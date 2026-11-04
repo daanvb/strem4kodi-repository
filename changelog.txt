@@ -1,3 +1,7 @@
+1.8.229
+- Add a native three-hour Live TV programme guide for all 23 channels.
+- Show UK programme times and descriptions with missing-schedule fallback and live-channel playback.
+
 1.8.228
 - Retain Sports fixtures beyond the first 100 catalogue rows.
 - Preserve complete Sports paging offsets and the existing movie/series page limit.
