@@ -1,3 +1,7 @@
+[B]0.1.40[/B]
+- Compact rounded notifications, busy and progress windows.
+- Keep progress cards within the screen during playback and information dialogs.
+
 [B]0.1.39[/B]
 - Restore opaque charcoal native notifications without artwork frost.
 

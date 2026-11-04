@@ -1,3 +1,8 @@
+1.8.230
+- Stop EPG control rebuilds, add channel logos and fit all sidebar entries.
+- Move Live TV setup into Playback settings and use the S4K live player bar.
+- Make loading and notification windows compact with rounded charcoal surfaces.
+
 1.8.229
 - Add a native three-hour Live TV programme guide for all 23 channels.
 - Show UK programme times and descriptions with missing-schedule fallback and live-channel playback.
