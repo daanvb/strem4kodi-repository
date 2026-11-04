@@ -1,3 +1,8 @@
+1.8.231
+- Refine the sidebar frost, icons and labels from TV feedback.
+- Widen the EPG programme grid with a compact channel-logo column.
+- Improve settings selection, neutral scrollbars and compact loading/notification layouts.
+
 1.8.230
 - Stop EPG control rebuilds, add channel logos and fit all sidebar entries.
 - Move Live TV setup into Playback settings and use the S4K live player bar.

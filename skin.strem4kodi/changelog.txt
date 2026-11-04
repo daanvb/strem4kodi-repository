@@ -1,3 +1,6 @@
+[B]0.1.41[/B]
+- Narrow native notification cards while retaining readable text and icons.
+
 [B]0.1.40[/B]
 - Compact rounded notifications, busy and progress windows.
 - Keep progress cards within the screen during playback and information dialogs.
