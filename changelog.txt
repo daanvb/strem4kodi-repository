@@ -1,3 +1,6 @@
+1.8.240
+- Show the programme title, time slot and synopsis at the watched position on built-in live channels when listings are available.
+
 1.8.239
 - Return to the selected channel in the TV guide after fullscreen playback.
 - Player 0.1.47 shows the live rewind window, delay and Go live control on seekable streams.
