@@ -170,14 +170,14 @@ Watch-progress sync uses Stremio’s library state, watched flags and episode st
 
 ## Source, builds and credits
 
-Development source: **`daanvb/Stremio-for-Kodi-private`**, branch **`strem4kodi`**. Public Kodi feed: **`daanvb/strem4kodi-repository`**, branch **`main`**. The source repository requires access; installable ZIPs contain the addon source.
+Development source: **`daanvb/freeBird-private`**, branch **`firebird`**. Public Kodi feed: **`daanvb/freeBird-repository`**, branch **`main`**. The source repository requires access; installable ZIPs contain the addon source.
 
 ```sh
 python -m unittest discover -s tests
 python tools/build-stremio-addon.py --output dist
 ```
 
-Strem4Kodi develops independently from the original project. Useful upstream fixes can be reviewed on demand with `python tools/review-upstream.py --output dist/upstream-review.md`, then adapted individually. Nothing is merged automatically. See the [upstream review guide](https://github.com/daanvb/Stremio-for-Kodi-private/blob/strem4kodi/docs/upstream-review.md).
+Strem4Kodi develops independently from the original project. Useful upstream fixes can be reviewed on demand with `python tools/review-upstream.py --output dist/upstream-review.md`, then adapted individually. Nothing is merged automatically. See the [upstream review guide](https://github.com/daanvb/freeBird-private/blob/firebird/docs/upstream-review.md).
 
 The addon ID is **`script.strem4kodi`**; repository ID is **`repository.strem4kodi`**. The repository builder requires an explicit HTTPS `--feed-url`. Use a new version for a new published build rather than replacing an existing release ZIP.
 
