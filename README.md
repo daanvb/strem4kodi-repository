@@ -27,7 +27,7 @@ Use the same Python interpreter for dependency installation and testing. The run
 
 Build the update feed using an explicit HTTPS `--feed-url` with `tools/build-kodi-repository.py`. The landing page is generated from the same package versions as the feed, so its download links stay current. App and skin versions must satisfy the declared dependency. Never replace an already published version's package.
 
-Source development and validation records live in the [private development repository](https://github.com/daanvb/freeBird-private/tree/strem4kodi) (access required).
+Source development and validation records live in the [private development repository](https://github.com/daanvb/freeBird-private/tree/firebird) (access required).
 
 ## Install and configure
 
@@ -46,7 +46,7 @@ Requires **Kodi 21 or later**. Install the repository ZIP, then install freeBird
 
 | Repository | Purpose |
 | --- | --- |
-| [Private development source](https://github.com/daanvb/freeBird-private/tree/strem4kodi) | Active code, tests and build tools on `strem4kodi`. Access required. |
+| [Private development source](https://github.com/daanvb/freeBird-private/tree/firebird) | Active code, tests and build tools on `firebird`. Access required. |
 | [Public installation feed](https://github.com/daanvb/freeBird-repository) | Kodi update packages, installation guide and public pre-roll release assets. |
 
 The live feed retains the current release and one previous version for rollback. Earlier packages remain in Git history. See [repository layout and maintenance](docs/repository-layout.md).
