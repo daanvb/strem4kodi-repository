@@ -1,3 +1,12 @@
+1.8.234
+- Improve TV guide loading, Discover spacing and loading artwork.
+- Add compact playback controls and browsable cast profiles. Preserve singleton cast and improve person photo selection.
+
+1.8.233 (prepared)
+- Adopt script.freebird with renamed packages, helper and dialog files.
+- Import missing legacy app/player data once; stop startup while old app/skin is active.
+- Preserve original profiles and provide migration/rollback instructions.
+
 1.8.232
 - Introduce freeBird branding while preserving addon IDs and saved settings.
 - Use renamed source, public update and private sync repository endpoints.
