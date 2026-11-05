@@ -1,3 +1,7 @@
+1.8.236
+- Recognize the UGOOS AM6B device name for Dolby Vision FEL badges.
+- Place Cast beside Play/Pause and Info at the far right. Profiles show acting and director credits.
+
 1.8.235
 - Recover interrupted Kodi migrations and retain the selected player skin across sessions.
 - Correct playback icons, synopsis, fades and timelines. Cast biographies and filmographies scroll separately.
