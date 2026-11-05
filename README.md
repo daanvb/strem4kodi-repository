@@ -27,7 +27,7 @@ Use the same Python interpreter for dependency installation and testing. The run
 
 Build the update feed using an explicit HTTPS `--feed-url` with `tools/build-kodi-repository.py`. The landing page is generated from the same package versions as the feed, so its download links stay current. App and skin versions must satisfy the declared dependency. Never replace an already published version's package.
 
-[Final release audit](docs/release-audit-2026-10-09.md) · [Upstream review](docs/upstream-review.md)
+Source development and validation records live in the [private development repository](https://github.com/daanvb/freeBird-private/tree/strem4kodi) (access required).
 
 ## Install and configure
 
