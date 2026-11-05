@@ -1,3 +1,7 @@
+1.8.235
+- Recover interrupted Kodi migrations and retain the selected player skin across sessions.
+- Correct playback icons, synopsis, fades and timelines. Cast biographies and filmographies scroll separately.
+
 1.8.234
 - Improve TV guide loading, Discover spacing and loading artwork.
 - Add compact playback controls and browsable cast profiles. Preserve singleton cast and improve person photo selection.
