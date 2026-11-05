@@ -1,3 +1,7 @@
+1.8.239
+- Return to the selected channel in the TV guide after fullscreen playback.
+- Player 0.1.47 shows the live rewind window, delay and Go live control on seekable streams.
+
 1.8.238
 - Improve Home and Discover navigation, compact genre controls and put directors first in Cast.
 - Skip Ultimate Library status videos and look up indexer streams when available.
