@@ -1,3 +1,8 @@
+1.8.238
+- Improve Home and Discover navigation, compact genre controls and put directors first in Cast.
+- Skip Ultimate Library status videos and look up indexer streams when available.
+- Reduce repeated catalogue identity, artwork and card-rating work.
+
 1.8.237
 - Show which migration step failed and distinguish common settings and storage errors.
 - Remove an unnecessary player skin lookup before copying profiles.
