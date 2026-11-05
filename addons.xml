@@ -1,12 +1,98 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.strem4kodi" name="freeBird" version="1.8.232" provider-name="daanvb">
+<addons><addon id="script.freebird" name="freeBird" version="1.8.233" provider-name="daanvb">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="skin.freebird" version="0.1.43" />
+    <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
+    <import addon="script.module.inputstreamhelper" version="0.6.1" />
+    <import addon="inputstream.adaptive" version="2.4.0" />
+    <import addon="script.module.pycryptodome" version="3.4.3" />
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.python.pluginsource" library="plugin.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.subtitle.module" library="subtitle_service.py" />
+  <extension point="xbmc.service" library="service.py" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Stremio experience on Kodi</summary>
+    <description lang="en_GB">freeBird brings your Stremio library to Kodi with cinematic browsing, configurable automatic playback, clear source selection, shared progress and IntroDB skip controls. Kodi handles video playback.</description>
+    <platform>all</platform>
+    <license>GPL-2.0-or-later</license>
+    <website>https://daanvb.github.io/freeBird-repository/</website>
+    <source>https://github.com/daanvb/freeBird-repository</source>
+    <news>1.8.233: Guided freeBird migration preserves existing profiles and settings. Choose Continue, close and reopen Kodi, then choose freeBird Player. InputStream Adaptive installs with the app for Live TV playback.</news>
+    <assets>
+      <icon>resources/branding/freebird-icon-v1.png</icon>
+      <fanart>resources/branding/freebird-fanart-v1.png</fanart>
+      <screenshot>resources/previews/home.jpg</screenshot>
+      <screenshot>resources/previews/episodes.jpg</screenshot>
+      <screenshot>resources/previews/streams.jpg</screenshot>
+      <screenshot>resources/previews/addons.jpg</screenshot>
+    </assets>
+  </extension>
+</addon><addon id="repository.freebird" name="freeBird Repository" version="1.0.6" provider-name="daanvb">
+  <extension point="xbmc.addon.repository" name="freeBird Repository">
+    <dir>
+      <info compressed="false">https://daanvb.github.io/freeBird-repository/addons.xml</info>
+      <checksum verify="sha256">https://daanvb.github.io/freeBird-repository/addons.xml.sha256</checksum>
+      <datadir zip="true">https://daanvb.github.io/freeBird-repository/</datadir>
+      <hashes>false</hashes>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Install and update freeBird</summary>
+    <description lang="en_GB">Independent freeBird addon repository maintained by daanvb.</description>
+    <platform>all</platform>
+    <license>GPL-2.0-or-later</license>
+    <website>https://daanvb.github.io/freeBird-repository/</website>
+    <source>https://github.com/daanvb/freeBird-repository</source>
+    <assets>
+      <icon>resources/branding/freebird-icon-v1.png</icon>
+      <fanart>resources/branding/freebird-fanart-v1.png</fanart>
+      <screenshot>resources/previews/home.jpg</screenshot>
+      <screenshot>resources/previews/episodes.jpg</screenshot>
+      <screenshot>resources/previews/streams.jpg</screenshot>
+      <screenshot>resources/previews/addons.jpg</screenshot>
+    </assets>
+    <news>1.0.6: New repository.freebird identity. Existing installations require the documented one-time app/profile migration.</news>
+  </extension>
+</addon><addon id="skin.freebird" name="freeBird Player" version="0.1.43" provider-name="daanvb">
+  <requires>
+    <import addon="xbmc.gui" version="5.17.0" />
+    <import addon="screensaver.atv4" version="3.0.3" />
+  </requires>
+  <extension point="xbmc.gui.skin" debugging="false">
+    <res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
+    <res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
+    <res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
+    <res width="2040" height="1080" aspect="17:9" default="false" folder="xml" />
+    <res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+    <res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
+    <res width="2338" height="1080" aspect="19.5:9" default="false" folder="xml" />
+    <res width="2160" height="1080" aspect="18:9" default="false" folder="xml" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <license>GPL-2.0-only, CC-BY-SA-4.0</license>
+    <summary lang="en_GB">freeBird playback controls with Kodi settings available</summary>
+    <description lang="en_GB">Companion skin installed alongside freeBird, with a clean playback bar and readable active audio tracks. Choose this skin in Kodiâ€™s interface settings to activate it. Other screens retain Kodiâ€™s Estuary layout; normal Kodi controls remain available without the app.</description>
+    <source>https://github.com/daanvb/freeBird-repository</source>
+    <assets>
+      <icon>resources/freebird-icon-v1.png</icon>
+      <fanart>resources/freebird-fanart-v1.png</fanart>
+    </assets>
+  </extension>
+</addon><addon id="script.strem4kodi" name="freeBird" version="1.8.233" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="skin.strem4kodi" version="0.1.42" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
     <import addon="script.module.inputstreamhelper" version="0.6.1" />
     <import addon="script.module.pycryptodome" version="3.4.3" />
-  </requires>
+  <import addon="script.freebird" version="1.8.233" /></requires>
   <extension point="xbmc.python.script" library="default.py">
     <provides>executable</provides>
   </extension>
@@ -31,32 +117,6 @@
       <screenshot>resources/previews/streams.jpg</screenshot>
       <screenshot>resources/previews/addons.jpg</screenshot>
     </assets>
-  </extension>
-</addon><addon id="repository.strem4kodi" name="freeBird Repository" version="1.0.5" provider-name="daanvb">
-  <extension point="xbmc.addon.repository" name="freeBird Repository">
-    <dir>
-      <info compressed="false">https://daanvb.github.io/freeBird-repository/addons.xml</info>
-      <checksum verify="sha256">https://daanvb.github.io/freeBird-repository/addons.xml.sha256</checksum>
-      <datadir zip="true">https://daanvb.github.io/freeBird-repository/</datadir>
-      <hashes>false</hashes>
-    </dir>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Install and update freeBird</summary>
-    <description lang="en_GB">Independent freeBird addon repository maintained by daanvb.</description>
-    <platform>all</platform>
-    <license>GPL-2.0-or-later</license>
-    <website>https://daanvb.github.io/freeBird-repository/</website>
-    <source>https://github.com/daanvb/freeBird-repository</source>
-    <assets>
-      <icon>resources/branding/freebird-icon-v1.png</icon>
-      <fanart>resources/branding/freebird-fanart-v1.png</fanart>
-      <screenshot>resources/previews/home.jpg</screenshot>
-      <screenshot>resources/previews/episodes.jpg</screenshot>
-      <screenshot>resources/previews/streams.jpg</screenshot>
-      <screenshot>resources/previews/addons.jpg</screenshot>
-    </assets>
-    <news>1.0.5: freeBird branding and the renamed public update feed.</news>
   </extension>
 </addon><addon id="skin.strem4kodi" name="freeBird Player" version="0.1.42" provider-name="daanvb">
   <requires>
