@@ -1,3 +1,7 @@
+1.8.237
+- Show which migration step failed and distinguish common settings and storage errors.
+- Remove an unnecessary player skin lookup before copying profiles.
+
 1.8.236
 - Recognize the UGOOS AM6B device name for Dolby Vision FEL badges.
 - Place Cast beside Play/Pause and Info at the far right. Profiles show acting and director credits.
