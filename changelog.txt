@@ -1,3 +1,7 @@
+1.8.241
+- Match circular person portraits across title details and player profiles.
+- Improve biography and filmography scrolling, retry incomplete credits and preserve distinct people with matching names.
+
 1.8.240
 - Show the programme title, time slot and synopsis at the watched position on built-in live channels when listings are available.
 
