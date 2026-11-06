@@ -1,3 +1,8 @@
+1.8.245
+- Remove freeBird from sidebar headings and restore the installed version in Settings.
+- Restore circular player controls, bottom fade and synopsis below the title in Player 0.1.51.
+- Narrow playback pickers, align selected-track dots and preserve readable focused text.
+
 1.8.244
 - Improve sidebar icon sampling and profile avatar clarity using new texture paths.
 - Preserve avatar colours, saved selections and sidebar navigation.
