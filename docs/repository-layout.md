@@ -14,9 +14,9 @@ folders and installer aliases from the active feed and website. Historical
 recovery files remain in Git history; no history is rewritten. Installed legacy
 addons are not uninstalled remotely.
 
-Migration removal is prepared in PR #260 and must be integrated before publishing
-the next fresh-install-only app. The cleanup itself keeps app 1.8.241 and player
-0.1.48 unchanged, including their existing runtime behavior.
+Release 1.8.242 integrates migration removal from PR #260 and uses ordinary
+freeBird setup. The preceding feed cleanup left app 1.8.241 and player 0.1.48
+unchanged.
 
 ## Public feed
 

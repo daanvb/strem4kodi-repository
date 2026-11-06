@@ -1,3 +1,9 @@
+1.8.242
+- Use ordinary freeBird setup without the legacy migration wizard or startup gate. Existing profile data is retained.
+- Reduce browse storage work and bound response-cache memory.
+- Preview live seeks, expose stream subtitles, improve Go live navigation and hide idle controls.
+- Keep viewer progress conflict review in Settings. Player 0.1.49 is required.
+
 1.8.241
 - Match circular person portraits across title details and player profiles.
 - Improve biography and filmography scrolling, retry incomplete credits and preserve distinct people with matching names.
