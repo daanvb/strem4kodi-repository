@@ -1,3 +1,9 @@
+1.8.246
+- Size playback and selection menus to their contents with overflow scrolling.
+- Simplify playback details and hide unavailable metadata while retaining zero counters.
+- Keep Info footer actions reachable and report status clear of buttons.
+- Update Player to 0.1.52.
+
 1.8.245
 - Remove freeBird from sidebar headings and restore the installed version in Settings.
 - Restore circular player controls, bottom fade and synopsis below the title in Player 0.1.51.

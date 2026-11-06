@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.freebird" name="freeBird" version="1.8.245" provider-name="daanvb">
+<addons><addon id="script.freebird" name="freeBird" version="1.8.246" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="skin.freebird" version="0.1.51" />
+    <import addon="skin.freebird" version="0.1.52" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
     <import addon="script.module.inputstreamhelper" version="0.6.1" />
     <import addon="inputstream.adaptive" version="2.4.0" />
@@ -23,7 +23,7 @@
     <license>GPL-2.0-or-later</license>
     <website>https://daanvb.github.io/freeBird-repository/</website>
     <source>https://github.com/daanvb/freeBird-repository</source>
-    <news>1.8.245 restores circular player controls, compacts playback pickers and cleans sidebar and Settings headers.</news>
+    <news>1.8.246 sizes menus to their contents and simplifies playback information with Player 0.1.52.</news>
     <assets>
       <icon>resources/branding/freebird-icon-v1.png</icon>
       <fanart>resources/branding/freebird-fanart-v1.png</fanart>
@@ -59,7 +59,7 @@
     </assets>
     <news>1.0.6: New repository.freebird identity. Existing installations require the documented one-time app/profile migration.</news>
   </extension>
-</addon><addon id="skin.freebird" name="freeBird Player" version="0.1.51" provider-name="daanvb">
+</addon><addon id="skin.freebird" name="freeBird Player" version="0.1.52" provider-name="daanvb">
   <requires>
     <import addon="xbmc.gui" version="5.17.0" />
     <import addon="screensaver.atv4" version="3.0.3" />
