@@ -1,3 +1,10 @@
+1.8.244
+- Improve sidebar icon sampling and profile avatar clarity using new texture paths.
+- Preserve avatar colours, saved selections and sidebar navigation.
+- Clarify cast portraits with opaque masks and even focus rings.
+- Simplify the Settings header.
+- Use native display modes and the selected stream-quality limit in Home and media detail badges.
+
 1.8.243
 - Refresh the glass sidebar with concise navigation, v2 icons and selectable profile avatars.
 - Keep background updates and held Back presses from unexpectedly toggling the sidebar.
