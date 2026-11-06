@@ -1,3 +1,8 @@
+1.8.243
+- Refresh the glass sidebar with concise navigation, v2 icons and selectable profile avatars.
+- Keep background updates and held Back presses from unexpectedly toggling the sidebar.
+- Match media/context actions and the labelled glass player bar to the v2 icon family. Player 0.1.50 is required.
+
 1.8.242
 - Use ordinary freeBird setup without the legacy migration wizard or startup gate. Existing profile data is retained.
 - Reduce browse storage work and bound response-cache memory.

@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="script.freebird" name="freeBird" version="1.8.242" provider-name="daanvb">
+<addons><addon id="script.freebird" name="freeBird" version="1.8.243" provider-name="daanvb">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
-    <import addon="skin.freebird" version="0.1.49" />
+    <import addon="skin.freebird" version="0.1.50" />
     <import addon="script.module.qrcode" version="6.1.0+matrix.3" optional="true" />
     <import addon="script.module.inputstreamhelper" version="0.6.1" />
     <import addon="inputstream.adaptive" version="2.4.0" />
@@ -59,7 +59,7 @@
     </assets>
     <news>1.0.6: New repository.freebird identity. Existing installations require the documented one-time app/profile migration.</news>
   </extension>
-</addon><addon id="skin.freebird" name="freeBird Player" version="0.1.49" provider-name="daanvb">
+</addon><addon id="skin.freebird" name="freeBird Player" version="0.1.50" provider-name="daanvb">
   <requires>
     <import addon="xbmc.gui" version="5.17.0" />
     <import addon="screensaver.atv4" version="3.0.3" />
