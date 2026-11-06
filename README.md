@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/daanvb/freeBird-repository/main/script.strem4kodi/resources/branding/freebird-icon-v1.png" width="160" alt="freeBird logo">
+  <img src="https://raw.githubusercontent.com/daanvb/freeBird-repository/main/script.freebird/resources/branding/freebird-icon-v1.png" width="160" alt="freeBird logo">
 </p>
 
 # freeBird
@@ -10,7 +10,7 @@ freeBird is daanvb’s independent Kodi addon: a cinematic browsing interface, c
 
 **Latest release: freeBird 1.8.241 · Player 0.1.48 · Repository 1.0.6.** [Install and update](https://daanvb.github.io/freeBird-repository/) · [Full changelog](changelog.txt)
 
-**Upgrading from Strem4Kodi:** install [repository 1.0.6](repository.freebird.zip), then install and open freeBird. Follow its guided migration, close and reopen Kodi when prompted, and reopen freeBird after keeping the player skin. The migration copies settings and account data into new addon profiles while retaining originals for recovery.
+**Repository cleanup:** obsolete Strem4Kodi app/player entries and installer downloads have been removed. Current freeBird packages and the previous app/player versions are retained unchanged. The migration-free app is prepared in source but is not yet released.
 
 [Earlier release highlights](docs/release-highlights.md) describe past releases; the installation page lists current downloads.
 
@@ -19,7 +19,7 @@ freeBird is daanvb’s independent Kodi addon: a cinematic browsing interface, c
 ```sh
 python -m pip install -r requirements-test.txt
 python tools/run-tests.py
-python tools/build-stremio-addon.py --output dist
+python tools/build-freebird-addon.py --output dist
 python tools/build-player-skin.py --output dist
 ```
 
@@ -35,7 +35,7 @@ Requires **Kodi 21 or later**. Install the repository ZIP, then install freeBird
 
 - [Install / update and current downloads](https://daanvb.github.io/freeBird-repository/)
 - TV installation: add `https://daanvb.github.io/freeBird-repository/` in Kodi's
-  File manager, then Install from zip file → that source → `repository.strem4kodi.zip`.
+  File manager, then Install from zip file → that source → `repository.freebird.zip`.
 - [Configuration guide](docs/configuration.md)
 - [New lists, categories and Discover](docs/discovery.md)
 - [Shared format / logo database](docs/format-database.md)

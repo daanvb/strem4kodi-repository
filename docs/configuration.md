@@ -179,7 +179,7 @@ python tools/build-stremio-addon.py --output dist
 
 Strem4Kodi develops independently from the original project. Useful upstream fixes can be reviewed on demand with `python tools/review-upstream.py --output dist/upstream-review.md`, then adapted individually. Nothing is merged automatically. See the [upstream review guide](https://github.com/daanvb/freeBird-private/blob/firebird/docs/upstream-review.md).
 
-The addon ID is **`script.strem4kodi`**; repository ID is **`repository.strem4kodi`**. The repository builder requires an explicit HTTPS `--feed-url`. Use a new version for a new published build rather than replacing an existing release ZIP.
+The addon ID is **`script.freebird`**; repository ID is **`repository.freebird`**. The repository builder requires an explicit HTTPS `--feed-url`. Use a new version for a new published build rather than replacing an existing release ZIP.
 
 Based on [Stremio-for-Kodi](https://github.com/0eroiQ/Stremio-for-Kodi), with Nimbus layouts/artwork credited to Ivar Brandt. Original contributor credits, Git history, bundled third-party notices and the **GPL-2.0-or-later** license are retained. [IntroDB](https://introdb.app/), TMDB, IMDb and MDbList supply the respective external metadata; the [community FEL disc catalogue](https://github.com/Appz4Fun/fel-dolby-vision-movies) supplies disc hints.
 

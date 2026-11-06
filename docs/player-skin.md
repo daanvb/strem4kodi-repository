@@ -22,7 +22,7 @@ This version does not replace Kodi's home screen with the Strem4Kodi app.
 
 ## Automatic installation from the repository
 
-The app declares `skin.strem4kodi` as a required dependency. The repository feed
+The app declares `skin.freebird` as a required dependency. The repository feed
 includes both ZIPs and their metadata, so Kodi resolves and installs the skin
 when installing or updating Strem4Kodi. Kodi manages future updates normally.
 The skin does not declare a dependency on the app, avoiding a dependency loop;
@@ -112,7 +112,7 @@ five seconds; pause, seeking and open submenus keep the controls available.
 
 ## Build and verification
 
-The complete skin sources are in `companion/skin.strem4kodi`. Build with:
+The complete skin sources are in `companion/skin.freebird`. Build with:
 
 ```text
 python tools/build-player-skin.py --output dist
