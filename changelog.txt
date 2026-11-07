@@ -1,3 +1,8 @@
+1.8.248
+- Move playback badges into the top-right header beside the title.
+- Expand the scrollable detail columns while preserving footer navigation.
+- Player remains 0.1.52.
+
 1.8.247
 - Remove dark divider lines from Home and guide sidebars, including generated footers.
 - Match quality badges across hero and playback views.
