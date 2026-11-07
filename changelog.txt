@@ -1,3 +1,9 @@
+1.8.247
+- Remove dark divider lines from Home and guide sidebars, including generated footers.
+- Match quality badges across hero and playback views.
+- Compact Info actions and suppress unresolved or inactive runtime details.
+- Preserve existing navigation and Player 0.1.52.
+
 1.8.246
 - Size playback and selection menus to their contents with overflow scrolling.
 - Simplify playback details and hide unavailable metadata while retaining zero counters.

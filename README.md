@@ -8,7 +8,7 @@
 
 freeBird is daanvb’s independent Kodi addon: a cinematic browsing interface, clearer source selection and configurable playback, using your Stremio account and installed addons. Kodi handles video playback; freeBird supplies its own browsing interface and an optional companion player skin.
 
-**Latest release: freeBird 1.8.246 · Player 0.1.52 · Repository 1.0.6.** [Install and update](https://daanvb.github.io/freeBird-repository/) · [Full changelog](changelog.txt)
+**Latest release: freeBird 1.8.247 · Player 0.1.52 · Repository 1.0.6.** [Install and update](https://daanvb.github.io/freeBird-repository/) · [Full changelog](changelog.txt)
 
 **Repository cleanup:** obsolete Strem4Kodi app/player entries and installer downloads have been removed. Current freeBird packages and the previous app/player versions are retained unchanged. Release 1.8.242 uses ordinary freeBird setup without the legacy migration wizard. Existing profile data is retained.
 
