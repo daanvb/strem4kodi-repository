@@ -1,3 +1,7 @@
+1.8.249
+- Restore compact SF quality badges on Home and media heroes with new asset paths.
+- Preserve playback-info layout and Player 0.1.52.
+
 1.8.248
 - Move playback badges into the top-right header beside the title.
 - Expand the scrollable detail columns while preserving footer navigation.
